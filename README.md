@@ -68,13 +68,49 @@ can set them directly without a file.
 python chaoss_agent.py go-gitea/gitea
 ```
 
-Takes a minute or two. Prints a summary and writes `chaoss_report.json`.
+Takes a minute or two, then writes two files:
+
+- **`chaoss_report.md`** — a policy coverage matrix in the shape the metric
+  asks for, with evidence quotes and suggested improvements
+- **`chaoss_report.json`** — the same data, machine-readable
+
+### Point it at exact files
+
+By default it looks for `CONTRIBUTING`, `CODE_OF_CONDUCT` and `README` (repo
+root or `.github/`), plus any file whose name declares it an AI policy —
+`AI_POLICY.md`, `docs/ai-policy.md`, `.NO_AI/README.md` and so on.
+
+If you already know where the policy lives, name it. Faster, cheaper, and it
+cannot wander:
 
 ```bash
-python chaoss_agent.py chaoss/wg-ai-alignment --out chaoss.json
+python chaoss_agent.py go-gitea/gitea --files CONTRIBUTING.md
 ```
 
+```bash
+python chaoss_agent.py some/project --files CONTRIBUTING.md docs/policies/ai.md
+```
+
+With `--files` the agent gets `read_file` and nothing else — it cannot browse
+or search. **That changes what a `no` means**: not addressed *in those files*,
+rather than not addressed in the repository. The report says so, in both
+formats, so nobody reads a narrow scan as a repo-wide verdict.
+
+The scan errors out if a named file isn't in the repo, rather than quietly
+scoring nothing.
+
+### Keeping the cost down
+
+Most of the cost is the agent reading files, so the default filter is
+deliberately tight — a wide net on a large repo turns one scan into dozens of
+reads. `list_files` returns documentation files only, capped at 250.
+
+If a project keeps its policy somewhere unusual, use `--files` rather than
+widening the filter. `GOVERNANCE.md` in particular is *not* scanned by default;
+name it if your project puts AI rules there.
+
 ## Reading the output
+
 
 ```
 area                     addressed  where

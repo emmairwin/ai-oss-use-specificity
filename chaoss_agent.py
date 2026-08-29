@@ -157,8 +157,18 @@ AGENT_FILES = [
     ".github/copilot-instructions.md", ".windsurfrules", "GEMINI.md",
     ".aider.conf.yml", ".continue/config.json",
 ]
-POLICY_HINTS = re.compile(
-    r"(contributing|governance|code[-_]of[-_]conduct|policy|ai[-_]|_ai\b|agents?)",
+# The three files that almost always carry contributor policy, at the repo root
+# or under .github/. Keeping the default this tight matters: every extra
+# candidate is a file the agent may read, and reading is where the tokens go.
+CORE_POLICY_FILES = re.compile(
+    r"^(\.github/)?(CONTRIBUTING|CODE[-_]OF[-_]CONDUCT|README)(\.[a-z]+)?$",
+    re.I,
+)
+
+# A dedicated AI policy, wherever the project chose to put it.
+DECLARED_AI_POLICY = re.compile(
+    r"(ai[-_. ]?policy|policy[-_. ]?ai|ai[-_. ]?use|ai[-_. ]?agreement|"
+    r"ai[-_. ]?tool|llm[-_. ]?polic|generative[-_. ]?ai|no[-_.]ai)",
     re.I,
 )
 BOT_HINT = re.compile(r"(dependabot|renovate|copilot|codex|claude|gpt|llm|"
@@ -194,11 +204,19 @@ def scan_composition(repo: Repo, tree: list[str]) -> dict:
 
 
 def candidate_policy_files(tree: list[str]) -> list[str]:
-    """Shortlist so the agent doesn't burn context on a full tree dump."""
-    hits = [p for p in tree
-            if POLICY_HINTS.search(p) and p.lower().endswith((".md", ".rst", ".txt"))]
-    hits += [p for p in AGENT_FILES if p in tree]
-    return sorted(set(hits))[:120]
+    """CONTRIBUTING, CODE_OF_CONDUCT and README, plus any file whose name
+    declares it an AI policy.
+
+    Deliberately narrow. A wide net costs real money: the agent tends to read
+    what it is shown, and on a large repo a loose filter turns one scan into
+    dozens of file reads. If a project keeps its policy somewhere unusual, name
+    it with --files rather than widening this.
+    """
+    core = [p for p in tree if CORE_POLICY_FILES.match(p)]
+    declared = [p for p in tree
+                if DECLARED_AI_POLICY.search(p)
+                and p.lower().endswith((".md", ".rst", ".txt"))]
+    return sorted(set(core + declared))[:20]
 
 
 # --- Agent tools ------------------------------------------------------------
@@ -206,8 +224,9 @@ def candidate_policy_files(tree: list[str]) -> list[str]:
 TOOLS = [
     {
         "name": "list_files",
-        "description": "List all file paths in the repo. Use if the shortlist you "
-                       "were given looks incomplete.",
+        "description": "List documentation files (.md/.rst/.txt) in the repo. Use "
+                       "only if the shortlist you were given looks incomplete - it "
+                       "is capped, and on a large repo it is expensive.",
         "input_schema": {"type": "object", "properties": {}, "required": []},
     },
     {
@@ -300,12 +319,28 @@ SUBMIT = {
                                            "still score addressed='no'. Otherwise "
                                            "empty string.",
                         },
+                        "suggested_improvement": {
+                            "type": "string",
+                            "description": "For 'no' and 'partial' only: one "
+                                           "concrete sentence saying what the "
+                                           "policy would need to state to close "
+                                           "this gap - naming the missing "
+                                           "attribute (supervision level, scope "
+                                           "limit, accountability holder, or "
+                                           "proportionality). Describe what is "
+                                           "missing; do not prescribe how "
+                                           "permissive or restrictive the rule "
+                                           "should be, which is the community's "
+                                           "decision. Empty string when "
+                                           "addressed='yes'.",
+                        },
                         "reasoning": {"type": "string"},
                     },
                     "required": ["domain", "supervision_level",
                                  "scope_or_volume_limits", "accountability_holder",
                                  "proportionality", "addressed", "evidence",
-                                 "rationale_only_mention", "reasoning"],
+                                 "rationale_only_mention", "suggested_improvement",
+                                 "reasoning"],
                 },
             },
             "unscoped_statements": {
@@ -409,10 +444,27 @@ wording that does not name it. "no" when the policy does not address it.
 
 - Judge only what is written in this repository. Not the maintainer's reputation, \
 not what similar projects do, not what a project like this probably intends.
+
+- SUGGESTED IMPROVEMENTS. For every domain scored "no" or "partial", write one \
+concrete sentence naming the attribute that is missing - supervision level, \
+scope limit, accountability holder, or proportionality threshold. Say what the \
+policy does not state, not what it ought to permit or forbid. "The policy does \
+not say whether maintainers may use AI to review contributions" is useful. \
+"The project should ban AI review" is not: how permissive to be is the \
+community's decision, and this metric measures specificity, not strictness. \
+Leave it empty for domains scored "yes".
 """
 
 
-def run(repo: Repo, shortlist: list[str], log_path: Path) -> dict:
+def run(repo: Repo, shortlist: list[str], log_path: Path,
+        only_files: bool = False) -> dict:
+    """Score one repo.
+
+    only_files=True means the caller named the policy files explicitly. The
+    agent then gets read_file alone - it cannot browse or search - so a domain
+    scored "no" means "not addressed in these files", not "not addressed in
+    this repo".
+    """
     client = anthropic.Anthropic()
     log = log_path.open("w", encoding="utf-8")
 
@@ -421,19 +473,48 @@ def run(repo: Repo, shortlist: list[str], log_path: Path) -> dict:
         log.flush()
 
     domain_list = "\n".join(f"- {k}: {label}" for k, label in DOMAINS)
+
+    if only_files:
+        scope = (
+            "Assess ONLY these files. They were named explicitly, so do not go "
+            "looking for others - you have no tool to browse or search:\n"
+            + "\n".join(shortlist) +
+            "\n\nRead every one of them in full before scoring. Because scope "
+            'is limited to these files, "no" means the domain is not addressed '
+            "in them. Do not claim anything about the rest of the repository."
+        )
+    else:
+        scope = (
+            "Candidate policy files found by pre-filter (read the relevant "
+            "ones; use list_files if this looks wrong):\n"
+            + "\n".join(shortlist)
+        )
+
     messages = [{
         "role": "user",
         "content": (
             f"Repository: {repo.slug} (branch {repo.default_branch})\n\n"
             f"Domains to assess:\n{domain_list}\n\n"
-            f"Candidate policy files found by pre-filter (read the relevant ones; "
-            f"use list_files if this looks wrong):\n" + "\n".join(shortlist) +
+            f"{scope}"
             "\n\nGather evidence, then call submit_specificity."
         ),
     }]
 
+    tools = [t for t in TOOLS if t["name"] == "read_file"] if only_files else TOOLS
+
+    def doc_listing(_):
+        """Docs only, capped. Dumping a full tree was the single biggest token
+        sink - a 6,000-file repo put 6,000 paths into context in one call."""
+        docs = [p for p in repo.tree()
+                if p.lower().endswith((".md", ".rst", ".txt"))]
+        if len(docs) > 250:
+            return ("\n".join(docs[:250]) +
+                    f"\n...[{len(docs)} documentation files total, truncated. "
+                    f"Re-run with --files if the policy is not listed above.]")
+        return "\n".join(docs)
+
     dispatch = {
-        "list_files": lambda _: "\n".join(repo.tree()),
+        "list_files": doc_listing,
         "read_file": lambda a: repo.read(a["path"]),
         "search_code": lambda a: "\n".join(repo.search(a["query"])) or "No matches.",
     }
@@ -444,7 +525,7 @@ def run(repo: Repo, shortlist: list[str], log_path: Path) -> dict:
             model=MODEL,
             max_tokens=12000,
             system=SYSTEM,
-            tools=TOOLS + [SUBMIT],
+            tools=tools + [SUBMIT],
             tool_choice=({"type": "tool", "name": "submit_specificity"} if force
                          else {"type": "auto"}),
             messages=messages,
@@ -565,11 +646,130 @@ def print_summary(grid: dict) -> None:
         print(f"  leaves unnamed: {left or 'none'}")
 
 
+def write_markdown(report: dict, path: Path) -> None:
+    """Policy coverage matrix, in the shape the metric asks for:
+    'a policy coverage matrix that shows which areas are clear, partial, or
+    missing', with the four consent-type attributes as columns."""
+    labels = dict(DOMAINS)
+    order = {k: i for i, (k, _) in enumerate(DOMAINS)}
+    grid = report["consent_policy_specificity"]
+    rows = sorted(grid["domains"], key=lambda x: order.get(x["domain"], 99))
+    tick = lambda v: "–" if not v or v.lower() in {"not_specified",
+                                                  "not_applicable"} else "✓"
+    L = []
+    w = L.append
+
+    w(f"# AI policy coverage — {report['repo']}")
+    w("")
+    w("**Metric:** [Consent Policy Specificity](https://github.com/chaoss/"
+      "wg-ai-alignment/blob/main/metrics/ai-alignment-community-governed-use/"
+      "ai-use-consent-policy-specificity.md) "
+      "· CHAOSS AI Alignment, *Community Governed Use*")
+    if report.get("commit_sha"):
+        w(f"**Commit:** `{report['commit_sha']}`")
+    scope = report.get("scope", {})
+    w(f"**Files assessed:** {', '.join(f'`{f}`' for f in scope.get('files_assessed', [])) or '—'}")
+    if scope.get("mode") == "named_files":
+        w("")
+        w("> Scope was limited to the files named above, so **not addressed** "
+          "here means *not addressed in those files* — not that the project is "
+          "silent repository-wide.")
+    w("")
+
+    w("## Coverage matrix")
+    w("")
+    w("| Domain | Addressed | Supervision | Scope | Accountability | Proportionality |")
+    w("|---|---|---|:-:|:-:|:-:|")
+    for d in rows:
+        sup = d["supervision_level"]
+        sup_cell = "–" if sup == "not_specified" else f"`{sup}`"
+        w(f"| {labels[d['domain']].split(' (')[0]} | **{d['addressed']}** | "
+          f"{sup_cell} | {tick(d['scope_or_volume_limits'])} | "
+          f"{tick(d['accountability_holder'])} | {tick(d['proportionality'])} |")
+    w("")
+
+    for state, header in (("yes", "Addressed"), ("partial", "Partial"),
+                          ("no", "Not addressed")):
+        names = [labels[d["domain"]].split(" (")[0]
+                 for d in rows if d["addressed"] == state]
+        w(f"**{header} ({len(names)}):** {', '.join(names) if names else '— none —'}")
+    w("")
+    w(f"**Overall posture:** {grid['overall_posture']}")
+    w("")
+
+    w("## Evidence")
+    w("")
+    for d in rows:
+        w(f"### {labels[d['domain']]} — {d['addressed']}")
+        for ev in d["evidence"]:
+            loc = f"{ev['path']}:{ev['line']}" if ev.get("line") else ev["path"]
+            w(f"> {ev['quote']}")
+            w("")
+            w(f"`{loc}`")
+            w("")
+        if d.get("rationale_only_mention"):
+            w(f"*Raised as rationale for another rule, not as a rule about this "
+              f"domain:* “{d['rationale_only_mention']}”")
+            w("")
+        if not d["evidence"] and not d.get("rationale_only_mention"):
+            w(f"{d['reasoning']}")
+            w("")
+
+    gaps = [d for d in rows if d["addressed"] != "yes"
+            and d.get("suggested_improvement")]
+    if gaps:
+        w("## Suggested improvements")
+        w("")
+        w("What the policy would need to state to close each gap. These describe "
+          "*missing specificity*, not a recommended position — how permissive or "
+          "restrictive to be is the community's decision.")
+        w("")
+        for d in gaps:
+            w(f"- **{labels[d['domain']].split(' (')[0]}** "
+              f"({d['addressed']}) — {d['suggested_improvement']}")
+        w("")
+
+    unscoped = grid.get("unscoped_statements", [])
+    if unscoped:
+        w("## Blanket statements")
+        w("")
+        w("Statements about AI that do not name the areas they apply to. Each is "
+          "a finding in its own right: a reader may assume coverage the wording "
+          "does not actually provide.")
+        w("")
+        for u in unscoped:
+            loc = f"{u['path']}:{u['line']}" if u.get("line") else u["path"]
+            w(f"> {u['quote']}")
+            w("")
+            w(f"`{loc}` — names: "
+              f"{', '.join(labels[a].split(' (')[0] for a in u['areas_named']) or 'nothing specific'}"
+              f"; leaves ambiguous: "
+              f"{', '.join(labels[a].split(' (')[0] for a in u['domains_left_ambiguous']) or 'nothing'}")
+            w("")
+
+    if report.get("validation_problems"):
+        w("## Validation problems")
+        w("")
+        for prob in report["validation_problems"]:
+            w(f"- {prob}")
+        w("")
+
+    path.write_text("\n".join(L) + "\n", encoding="utf-8")
+
+
 def main():
     p = argparse.ArgumentParser(
         description="Score any GitHub repo for AI policy specificity.")
     p.add_argument("repo", help="owner/name")
-    p.add_argument("--out", default="chaoss_report.json")
+    p.add_argument("--files", nargs="+", metavar="PATH",
+                   help="Assess only these files instead of searching the repo. "
+                        "Paths are repo-relative, e.g. --files CONTRIBUTING.md "
+                        "docs/ai-policy.md. Scoring is then confined to them.")
+    p.add_argument("--out", default="chaoss_report.json",
+                   help="JSON output path (default: chaoss_report.json)")
+    p.add_argument("--md", metavar="PATH",
+                   help="Markdown coverage-matrix report path "
+                        "(default: alongside --out, with a .md suffix)")
     p.add_argument("--skip-composition", action="store_true")
     args = p.parse_args()
 
@@ -578,16 +778,40 @@ def main():
 
     repo = Repo(args.repo)
     tree = repo.tree()
-    shortlist = candidate_policy_files(tree)
-    print(f"{len(tree)} files, {len(shortlist)} policy candidates", file=sys.stderr)
 
-    grid = run(repo, shortlist, Path("transcript.jsonl"))
+    if args.files:
+        missing = [f for f in args.files if f not in set(tree)]
+        if missing:
+            sys.exit(f"not in {args.repo} on branch {repo.default_branch}: "
+                     + ", ".join(missing))
+        shortlist = list(args.files)
+        print(f"{len(tree)} files in repo; assessing {len(shortlist)} named "
+              f"file(s) only", file=sys.stderr)
+    else:
+        shortlist = candidate_policy_files(tree)
+        print(f"{len(tree)} files, {len(shortlist)} policy candidates",
+              file=sys.stderr)
+        if not shortlist:
+            sys.exit("no policy candidates found. Name the files yourself with "
+                     "--files if you know where the policy is.")
+
+    grid = run(repo, shortlist, Path("transcript.jsonl"),
+               only_files=bool(args.files))
     problems = validate(grid, repo, tree)
 
     report = {
         "repo": args.repo,
         "commit_sha": repo.head_sha(),
         "metric_model": "CHAOSS AI Alignment - Community Governed Use",
+        # How the files were chosen changes what "no" means, so record it.
+        "scope": {
+            "mode": "named_files" if args.files else "repo_search",
+            "files_assessed": shortlist,
+            "note": ("Scoring confined to the files named on the command line; "
+                     "'no' means not addressed in those files."
+                     if args.files else
+                     "Files chosen by pre-filter over the whole repo tree."),
+        },
         "consent_policy_specificity": grid,
         "validation_problems": problems,
     }
@@ -610,15 +834,33 @@ def main():
                    "based AI detectors are unreliable, and license-laundering and "
                    "wrongful-accusation incidents need maintainer self-report.",
     }
-    Path(args.out).write_text(json.dumps(report, indent=2), encoding="utf-8")
+    out_json = Path(args.out)
+    out_json.write_text(json.dumps(report, indent=2), encoding="utf-8")
+    out_md = Path(args.md) if args.md else out_json.with_suffix(".md")
+    write_markdown(report, out_md)
 
     print_summary(grid)
+
+    if args.files:
+        print("\nscope: only the files named on the command line, so "
+              "'not addressed' means not addressed in those files")
+
+    gaps = [d for d in grid["domains"]
+            if d["addressed"] != "yes" and d.get("suggested_improvement")]
+    if gaps:
+        labels = dict(DOMAINS)
+        order = {k: i for i, (k, _) in enumerate(DOMAINS)}
+        print("\nsuggested improvements:")
+        for d in sorted(gaps, key=lambda x: order.get(x["domain"], 99)):
+            print(f"  {d['domain']} ({d['addressed']})")
+            print(f"    {d['suggested_improvement']}")
 
     if problems:
         print(f"\n{len(problems)} validation problem(s):", file=sys.stderr)
         for prob in problems:
             print(f"  - {prob}", file=sys.stderr)
-    print(f"\nreport: {args.out}")
+    print(f"\nreport: {out_json}")
+    print(f"        {out_md}")
 
 
 if __name__ == "__main__":
