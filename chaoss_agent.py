@@ -342,6 +342,27 @@ SUBMIT = {
                                            "still score addressed='no'. Otherwise "
                                            "empty string.",
                         },
+                        "lean": {
+                            "type": "string",
+                            "enum": ["restrictive", "permissive", "none"],
+                            "description": "Direction the policy leans on this "
+                                           "domain WITHOUT having set a rule. Use "
+                                           "'restrictive' when it voices concern, "
+                                           "objection or caution (e.g. citing "
+                                           "energy and water use as a reason to "
+                                           "ban AI elsewhere - that is a lean on "
+                                           "environmental impact). Use "
+                                           "'permissive' when it signals openness "
+                                           "or explicitly declines to restrict. "
+                                           "Use 'none' when the policy gives no "
+                                           "indication either way, which is the "
+                                           "common case - do not infer a lean from "
+                                           "the project's overall tone or from "
+                                           "rules about other domains. Always "
+                                           "'none' when addressed='yes', since the "
+                                           "supervision level already states the "
+                                           "direction.",
+                        },
                         "suggested_improvement": {
                             "type": "string",
                             "description": "For 'no' and 'partial' only: a SHORT "
@@ -365,7 +386,8 @@ SUBMIT = {
                     "required": ["domain", "supervision_level",
                                  "scope_or_volume_limits", "accountability_holder",
                                  "proportionality", "addressed", "evidence",
-                                 "rationale_only_mention", "suggested_improvement",
+                                 "rationale_only_mention", "lean",
+                                 "suggested_improvement",
                                  "reasoning"],
                 },
             },
@@ -459,6 +481,18 @@ code contributions - it sets no supervision level for environmental impact. Scor
 that domain "no" and put the quote in rationale_only_mention. This applies \
 hardest to environmental, infrastructure and training_data, where rationale is \
 usually the only place those concerns appear.
+
+- LEAN. Scoring a domain "no" and stopping there throws away real information \
+when the policy plainly is not neutral about it. Set "lean" to record the \
+direction: "restrictive" where the policy voices concern, objection or caution \
+about that domain, "permissive" where it signals openness or explicitly \
+declines to restrict, "none" where it gives no indication - the common case. \
+Servo citing energy and water as a reason to ban AI in contributions is a \
+restrictive lean on environmental impact, with addressed still "no". A lean \
+never changes the addressed score; it records disposition, not policy. Do NOT \
+infer a lean from a project's general tone, from how strict it is on other \
+domains, or from what a project like this probably thinks - only from text \
+about that domain.
 
 - A domain the policy does not address is a real, reportable result. Most repos \
 do not address most domains. A grid that is mostly "no" is very likely correct.
@@ -680,6 +714,12 @@ def print_summary(grid: dict) -> None:
                  for d in rows if d["addressed"] == state]
         print(f"{header + ':':16} {', '.join(names) if names else '- none -'}")
 
+    leaning = [d for d in rows if d.get("lean") not in ("none", "", None)]
+    if leaning:
+        print("\nleans (direction stated, no rule):")
+        for d in leaning:
+            print(f"  {d['domain']:24} {d['lean']}")
+
     print(f"\nposture: {grid['overall_posture']}")
 
     for d in rows:
@@ -727,15 +767,29 @@ def write_markdown(report: dict, path: Path) -> None:
 
     w("## Coverage matrix")
     w("")
-    w("| Domain | Addressed | Supervision | Scope | Accountability | Proportionality |")
-    w("|---|---|---|:-:|:-:|:-:|")
+    w("| Domain | Addressed | Lean | Supervision | Scope | Accountability | Proportionality |")
+    w("|---|---|---|---|:-:|:-:|:-:|")
     for d in rows:
         sup = d["supervision_level"]
         sup_cell = "–" if sup == "not_specified" else f"`{sup}`"
+        lean = d.get("lean", "none")
+        lean_cell = "–" if lean in ("none", "", None) else f"*{lean}*"
         w(f"| {labels[d['domain']].split(' (')[0]} | **{d['addressed']}** | "
-          f"{sup_cell} | {tick(d['scope_or_volume_limits'])} | "
+          f"{lean_cell} | {sup_cell} | {tick(d['scope_or_volume_limits'])} | "
           f"{tick(d['accountability_holder'])} | {tick(d['proportionality'])} |")
     w("")
+
+    leaning = [d for d in rows if d.get("lean") not in ("none", "", None)]
+    if leaning:
+        w(f"**Leans without a rule ({len(leaning)}):** " + ", ".join(
+            f"{labels[d['domain']].split(' (')[0]} (*{d['lean']}*)"
+            for d in leaning))
+        w("")
+        w("These domains have no rule, but the policy shows a direction — a "
+          "stated concern, objection, or openness. Quoted under *Evidence*. "
+          "Worth knowing if you are deciding whether to contribute: it is "
+          "where a project is likely to go next.")
+        w("")
 
     for state, header in (("yes", "Addressed"), ("partial", "Partial"),
                           ("no", "Not addressed")):
@@ -758,6 +812,13 @@ def write_markdown(report: dict, path: Path) -> None:
     w("| `partial` | the domain is named but only one attribute is stated, or "
       "it is covered only by general wording that never names it |")
     w("| `no` | checked; the policy does not address this domain |")
+    w("")
+    w("**Lean** — a direction without a rule. A project that cites energy and "
+      "water use as a reason to ban AI in code has not set an environmental "
+      "*rule*, but it is plainly not neutral either. `restrictive` means it "
+      "voices concern or caution; `permissive` means it signals openness or "
+      "declines to restrict; `–` means no indication either way. A lean never "
+      "changes **Addressed** — it records disposition, not policy.")
     w("")
     w("**Attributes** — the four consent-type attributes from the metric. "
       "`✓` means stated, `–` means not stated. `–` is a finding, not a gap in "
