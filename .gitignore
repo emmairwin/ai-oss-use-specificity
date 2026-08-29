@@ -1,0 +1,4 @@
+__pycache__/
+*.pyc
+chaoss_report.json
+transcript.jsonl
