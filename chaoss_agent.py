@@ -78,6 +78,13 @@ DOMAINS = [
     ("training_data", "Data use for training (platform user data)"),
 ]
 
+# The two domains the metric names without a parenthetical gloss. Used only in
+# the report legend, so a reader knows what was looked for.
+DOMAIN_HINTS = {
+    "moderation": "AI flagging, hiding, tagging, deleting, or triaging",
+    "autonomous": "agents acting without a human in the loop per action",
+}
+
 # "not_specified" rather than "silent": the metric describes what a document
 # says, not whether a community chose to speak.
 SUPERVISION_LEVELS = [
@@ -568,6 +575,16 @@ def run(repo: Repo, shortlist: list[str], log_path: Path,
              "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0,
              "api_calls": 0}
 
+    # What the agent actually opened, in order. A "no" is only as good as the
+    # reading behind it, so the report distinguishes offered from read.
+    files_read: list[str] = []
+
+    def read_and_record(a):
+        path = a["path"]
+        if path not in files_read:
+            files_read.append(path)
+        return repo.read(path)
+
     def doc_listing(_):
         """Docs only, capped. Dumping a full tree was the single biggest token
         sink - a 6,000-file repo put 6,000 paths into context in one call."""
@@ -581,7 +598,7 @@ def run(repo: Repo, shortlist: list[str], log_path: Path,
 
     dispatch = {
         "list_files": doc_listing,
-        "read_file": lambda a: repo.read(a["path"]),
+        "read_file": read_and_record,
         "search_code": lambda a: "\n".join(repo.search(a["query"])) or "No matches.",
     }
 
@@ -625,6 +642,7 @@ def run(repo: Repo, shortlist: list[str], log_path: Path,
         results = []
         for call in calls:
             if call.name == "submit_specificity":
+                usage["files_read"] = files_read
                 log.close()
                 return call.input, usage
             try:
@@ -757,26 +775,81 @@ def write_markdown(report: dict, path: Path) -> None:
     if report.get("commit_sha"):
         w(f"**Commit:** `{report['commit_sha']}`")
     scope = report.get("scope", {})
-    w(f"**Files assessed:** {', '.join(f'`{f}`' for f in scope.get('files_assessed', [])) or '—'}")
+    offered = scope.get("files_assessed", [])
+    read = (report.get("usage") or {}).get("files_read", [])
+    fmt = lambda paths: ", ".join(f"`{p}`" for p in paths) or "—"
+
     if scope.get("mode") == "named_files":
-        w("")
-        w("> Scope was limited to the files named above, so **not addressed** "
-          "here means *not addressed in those files* — not that the project is "
-          "silent repository-wide.")
+        w(f"**Files scanned:** {fmt(offered)}")
+        unread = [p for p in offered if p not in read]
+        if read and unread:
+            w(f"**Not opened:** {fmt(unread)} — a `no` resting on an unread "
+              f"file is weak evidence.")
+    else:
+        w(f"**Files offered to the scan:** {fmt(offered)}")
+        w(f"**Files actually read:** {fmt(read)}")
     w("")
+    if scope.get("mode") == "named_files":
+        w("> Scope was limited to the files above, so **not addressed** here "
+          "means *not addressed in those files* — not that the project says "
+          "nothing repository-wide.")
+        w("")
+
+    # Footnotes carry the quote and file:line behind each populated cell, so a
+    # reader can check any claim without scrolling to Evidence and back.
+    notes: list[tuple[str, str]] = []
+
+    def note(quote: str, path: str, line, prefix: str = "") -> str:
+        if not quote:
+            return ""
+        key = f"fn{len(notes) + 1}"
+        if path and line:
+            loc = f" — `{path}:{line}`"
+        elif path:
+            loc = f" — `{path}`"
+        else:
+            loc = ""  # rationale quotes often have no evidence row to anchor to
+        notes.append((key, f"{prefix}“{quote}”{loc}"))
+        return f"[^{key}]"
 
     w("## Coverage matrix")
+    w("")
+    w("Every populated cell is footnoted to the line it rests on.")
     w("")
     w("| Domain | Addressed | Lean | Supervision | Scope | Accountability | Proportionality |")
     w("|---|---|---|---|:-:|:-:|:-:|")
     for d in rows:
+        ev = d["evidence"][0] if d["evidence"] else None
         sup = d["supervision_level"]
-        sup_cell = "–" if sup == "not_specified" else f"`{sup}`"
+        if sup == "not_specified":
+            sup_cell = "–"
+        else:
+            marker = note(ev["quote"], ev["path"], ev.get("line")) if ev else ""
+            sup_cell = f"`{sup}`{marker}"
+
         lean = d.get("lean", "none")
-        lean_cell = "–" if lean in ("none", "", None) else f"*{lean}*"
+        if lean in ("none", "", None):
+            lean_cell = "–"
+        else:
+            marker = note(d.get("rationale_only_mention", ""), ev["path"]
+                          if ev else (d["evidence"][0]["path"] if d["evidence"]
+                                      else ""), None,
+                          prefix="rationale, not a rule: ") \
+                if d.get("rationale_only_mention") else ""
+            lean_cell = f"*{lean}*{marker}"
+
+        def attr(value: str) -> str:
+            """✓ with the stated value as a footnote, so the reader sees what
+            the tick is actually claiming."""
+            if not value or value.lower() in {"not_specified", "not_applicable"}:
+                return "–"
+            key = f"fn{len(notes) + 1}"
+            notes.append((key, value))
+            return f"✓[^{key}]"
+
         w(f"| {labels[d['domain']].split(' (')[0]} | **{d['addressed']}** | "
-          f"{lean_cell} | {sup_cell} | {tick(d['scope_or_volume_limits'])} | "
-          f"{tick(d['accountability_holder'])} | {tick(d['proportionality'])} |")
+          f"{lean_cell} | {sup_cell} | {attr(d['scope_or_volume_limits'])} | "
+          f"{attr(d['accountability_holder'])} | {attr(d['proportionality'])} |")
     w("")
 
     leaning = [d for d in rows if d.get("lean") not in ("none", "", None)]
@@ -840,7 +913,7 @@ def write_markdown(report: dict, path: Path) -> None:
     w("|---|---|")
     for key, label in DOMAINS:
         name, _, detail = label.partition(" (")
-        w(f"| {name} | {detail.rstrip(')') or name.lower()} |")
+        w(f"| {name} | {detail.rstrip(')') or DOMAIN_HINTS.get(key, '')} |")
     w("")
     w("A statement counts for a domain only if it names that activity. A "
       "blanket line such as “AI-assisted contributions must be disclosed” is "
@@ -933,6 +1006,11 @@ def write_markdown(report: dict, path: Path) -> None:
         w(f"*Generated with `{u.get('model', MODEL)}` — "
           f"{' / '.join(bits)} tokens over {u['api_calls']} API "
           f"call{'s' if u['api_calls'] != 1 else ''}{money}.*")
+        w("")
+
+    for key, text in notes:
+        w(f"[^{key}]: {text}")
+    if notes:
         w("")
 
     path.write_text("\n".join(L) + "\n", encoding="utf-8")
