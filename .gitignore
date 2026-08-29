@@ -1,6 +1,6 @@
 __pycache__/
 *.pyc
 .env
-chaoss_report.json
+reports/
 transcript.jsonl
 eval/comparisons/
