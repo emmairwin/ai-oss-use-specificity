@@ -112,3 +112,39 @@ published metric, or whether something like `specific / general / not
 addressed` reads better in a coverage matrix a maintainer sees. That is a
 labelling choice only — the three underlying states and the rule that
 separates them do not change.
+
+## Scanning the CHAOSS list
+
+`targets.txt` holds the policies from `chaoss/wg-ai-alignment`'s
+`moderation/README.md` that this tool can actually reach — GitHub-hosted, with
+the policy text in a repo file. Every path was verified against the GitHub API
+on 2026-08-29.
+
+Roughly a third of the catalogued policies are **not** reachable: Forgejo is on
+Codeberg, Redox and postmarketOS on GitLab, Gentoo and KDE on wikis, and
+several foundations publish on their own sites. Use the Claude Code agent in
+`.claude/agents/` for those — it can fetch any URL.
+
+Run them all, from the repo root:
+
+```bash
+while read -r slug path; do case "$slug" in ''|\#*) continue;; esac; python chaoss_agent.py "$slug" --files "$path"; done < eval/targets.txt
+```
+
+Reports land in `reports/` as `YYYY-MM-DD-owner-name.md`, one per project.
+
+**This costs real money** — roughly $0.10–0.20 per scan on Sonnet 5, so the
+full list is a few dollars. Each run prints its own token count and cost.
+Start with two or three before committing to all seventeen.
+
+### Where to start
+
+- **`servo/book`** — says AI burns "an unreasonable amount of energy and water"
+  but sets no environmental rule. Correct output is environmental `no`, with
+  that quote under `rationale_only_mention`. If it comes back `yes`, the
+  rationale rule isn't holding, and that is the finding most worth knowing.
+- **`yt-dlp/yt-dlp`** — 120 words, blanket ban, but enumerated per activity.
+  Tests whether short-and-absolute still resolves per domain.
+- **`scikit-learn/scikit-learn`** — the policy sits in a Code of Conduct and is
+  framed as etiquette rather than rules. Tests whether that still reads as
+  binding policy.

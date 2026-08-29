@@ -1,0 +1,36 @@
+# Policies from chaoss/wg-ai-alignment moderation/README.md that this tool can
+# actually reach: GitHub-hosted, with the policy text in a repo file.
+# Every path below was verified against the GitHub API on 2026-08-29.
+#
+# Format: <owner/repo> <path>
+# Run one:   python chaoss_agent.py <owner/repo> --files <path>
+# Run all:   see eval/README.md
+#
+# Not listed, and not reachable by chaoss_agent.py - these live on Codeberg,
+# GitLab, wikis, or project websites. Use the Claude Code agent in
+# .claude/agents/ for them; it can fetch any URL.
+#   Forgejo (Codeberg) · Redox OS (GitLab) · postmarketOS (GitLab)
+#   Gentoo (wiki) · KDE (wiki) · Haiku (Gerrit) · AFNix · GCC · NLnet Labs
+#   curl · Castle Game Engine · Oxide · W3C · Apache · Linux Foundation
+#   OpenInfra · OpenJDK · Flathub
+#
+# LLVM's policy renders at llvm.org/docs/AIToolPolicy.html but the source path
+# in llvm/llvm-project did not resolve; find it before adding.
+
+zulip/zulip CONTRIBUTING.md
+LadybirdBrowser/ladybird CONTRIBUTING.md
+mastodon/.github AI_POLICY.md
+ghostty-org/ghostty AI_POLICY.md
+sunpy/sunpy README.rst
+scikit-learn/scikit-learn CODE_OF_CONDUCT.md
+astropy/astropy-project policies/ai-policy.md
+OSGeo/PROJ docs/source/community/ai_tool_policy.rst
+keepassxreboot/keepassxc .github/CONTRIBUTING.md
+go-gitea/gitea CONTRIBUTING.md
+teamtype/teamtype CONTRIBUTING.md
+yt-dlp/yt-dlp .NO_AI/README.md
+qgis/QGIS-Enhancement-Proposals qep-408-ai-tool-policy.md
+servo/book src/contributing/getting-started.md
+torvalds/linux Documentation/process/coding-assistants.rst
+matplotlib/matplotlib doc/devel/contribute.rst
+jellyfin/jellyfin.org docs/general/contributing/llm-policies.md
