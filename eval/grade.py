@@ -163,10 +163,14 @@ def cmd_check(args) -> int:
 def main() -> int:
     p = argparse.ArgumentParser(description=__doc__,
                                 formatter_class=argparse.RawDescriptionHelpFormatter)
-    p.add_argument("--out-dir", default="grades")
     sub = p.add_subparsers(dest="cmd", required=True)
 
-    new = sub.add_parser("new", help="write a blank grade template")
+    # Shared so --out-dir works after the subcommand, where people type it.
+    common = argparse.ArgumentParser(add_help=False)
+    common.add_argument("--out-dir", default="grades")
+
+    new = sub.add_parser("new", parents=[common],
+                         help="write a blank grade template")
     new.add_argument("repo", help="owner/name")
     new.add_argument("--grader", help="grader name; needed for a second grader "
                                       "on the same repo")
@@ -174,7 +178,8 @@ def main() -> int:
     new.add_argument("--no-sha", action="store_true", help="skip the GitHub call")
     new.set_defaults(func=cmd_new)
 
-    chk = sub.add_parser("check", help="report grade files with unset domains")
+    chk = sub.add_parser("check", parents=[common],
+                         help="report grade files with unset domains")
     chk.set_defaults(func=cmd_check)
 
     args = p.parse_args()
