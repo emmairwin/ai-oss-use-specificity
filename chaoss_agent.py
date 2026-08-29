@@ -1024,9 +1024,11 @@ def main():
                    help="Assess only these files instead of searching the repo. "
                         "Paths are repo-relative, e.g. --files CONTRIBUTING.md "
                         "docs/ai-policy.md. Scoring is then confined to them.")
+    p.add_argument("--out-dir", metavar="DIR", default="reports",
+                   help="where reports are written (default: reports/)")
     p.add_argument("--out", metavar="PATH",
-                   help="JSON output path "
-                        "(default: reports/YYYY-MM-DD-owner-name.json)")
+                   help="JSON output path, overriding --out-dir "
+                        "(default: <out-dir>/YYYY-MM-DD-owner-name.json)")
     p.add_argument("--md", metavar="PATH",
                    help="Markdown coverage-matrix report path "
                         "(default: alongside --out, with a .md suffix)")
@@ -1069,7 +1071,18 @@ def main():
             sys.exit("no policy candidates found. Name the files yourself with "
                      "--files if you know where the policy is.")
 
-    grid, usage = run(repo, shortlist, Path("transcript.jsonl"),
+    # Every artefact from a run - report, matrix, transcript - shares one stem
+    # and lives in reports/, so nothing is left loose in the working directory.
+    # Date first so a directory of scans sorts chronologically, and rescanning
+    # a project keeps both runs instead of overwriting.
+    out_json = Path(args.out) if args.out else Path(args.out_dir) / (
+        f"{date.today().isoformat()}-"
+        f"{re.sub(r'[^a-z0-9]+', '-', args.repo.lower()).strip('-')}.json")
+    out_json.parent.mkdir(parents=True, exist_ok=True)
+    out_md = Path(args.md) if args.md else out_json.with_suffix(".md")
+    transcript = out_json.with_name(out_json.stem + ".transcript.jsonl")
+
+    grid, usage = run(repo, shortlist, transcript,
                       only_files=bool(args.files))
     problems = validate(grid, repo, tree)
     usage["model"] = MODEL
@@ -1113,12 +1126,7 @@ def main():
     }
     # Date first so a directory of scans sorts chronologically, and the same
     # project scanned twice keeps both runs instead of overwriting.
-    out_json = Path(args.out) if args.out else Path("reports") / (
-        f"{date.today().isoformat()}-"
-        f"{re.sub(r'[^a-z0-9]+', '-', args.repo.lower()).strip('-')}.json")
-    out_json.parent.mkdir(parents=True, exist_ok=True)
     out_json.write_text(json.dumps(report, indent=2), encoding="utf-8")
-    out_md = Path(args.md) if args.md else out_json.with_suffix(".md")
     write_markdown(report, out_md)
 
     print_summary(grid)
@@ -1150,8 +1158,9 @@ def main():
         print(f"\n{len(problems)} validation problem(s):", file=sys.stderr)
         for prob in problems:
             print(f"  - {prob}", file=sys.stderr)
-    print(f"\nreport: {out_json}")
-    print(f"        {out_md}")
+    print(f"\nreport:     {out_md}")
+    print(f"data:       {out_json}")
+    print(f"transcript: {transcript}")
 
 
 if __name__ == "__main__":
