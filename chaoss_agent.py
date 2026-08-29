@@ -1028,7 +1028,7 @@ def main():
                    help="where reports are written (default: reports/)")
     p.add_argument("--out", metavar="PATH",
                    help="JSON output path, overriding --out-dir "
-                        "(default: <out-dir>/YYYY-MM-DD-owner-name.json)")
+                        "(default: <out-dir>/owner-name/YYYY-MM-DD.json)")
     p.add_argument("--md", metavar="PATH",
                    help="Markdown coverage-matrix report path "
                         "(default: alongside --out, with a .md suffix)")
@@ -1075,9 +1075,9 @@ def main():
     # and lives in reports/, so nothing is left loose in the working directory.
     # Date first so a directory of scans sorts chronologically, and rescanning
     # a project keeps both runs instead of overwriting.
-    out_json = Path(args.out) if args.out else Path(args.out_dir) / (
-        f"{date.today().isoformat()}-"
-        f"{re.sub(r'[^a-z0-9]+', '-', args.repo.lower()).strip('-')}.json")
+    slug = re.sub(r"[^a-z0-9]+", "-", args.repo.lower()).strip("-")
+    out_json = Path(args.out) if args.out else (
+        Path(args.out_dir) / slug / f"{date.today().isoformat()}.json")
     out_json.parent.mkdir(parents=True, exist_ok=True)
     out_md = Path(args.md) if args.md else out_json.with_suffix(".md")
     transcript = out_json.with_name(out_json.stem + ".transcript.jsonl")
