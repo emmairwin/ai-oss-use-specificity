@@ -32,24 +32,35 @@ git clone https://github.com/emmairwin/ai-oss-specificity.git
 cd ai-oss-specificity && pip install -r requirements.txt
 ```
 
-**3. Get an Anthropic API key** from [console.anthropic.com](https://console.anthropic.com/).
-This is a paid key and each scan costs a few cents. It is not the same as a
-Claude subscription.
+**3. Create your `.env`:**
 
 ```bash
-export ANTHROPIC_API_KEY=sk-ant-...
+cp .env.example .env
 ```
 
-**4. Optional but recommended — a GitHub token.** Without one you get 60 API
-requests an hour, which one scan can exhaust. Create a token with no scopes at
-[github.com/settings/tokens](https://github.com/settings/tokens):
+Then open `.env` and fill in:
 
-```bash
-export GITHUB_TOKEN=ghp_...
+```
+ANTHROPIC_API_KEY=sk-ant-...
+GITHUB_TOKEN=ghp_...
 ```
 
-On Windows PowerShell use `$env:ANTHROPIC_API_KEY = "sk-ant-..."` instead of
-`export`.
+**`ANTHROPIC_API_KEY`** is required — get one at
+[console.anthropic.com](https://console.anthropic.com/). It is a paid API key,
+not your Claude subscription, and each scan costs a few cents.
+
+**`GITHUB_TOKEN`** is optional but recommended. Without it GitHub allows 60
+requests an hour and a single scan can exhaust that. Create one at
+[github.com/settings/tokens](https://github.com/settings/tokens) — no scopes
+needed, it only reads public repos.
+
+`.env` is gitignored. Never commit it: a key pushed to a public repo is
+scraped within minutes, and the charges are yours. If you ever do commit one,
+revoke it immediately rather than deleting the commit — the history is already
+public by then.
+
+Real environment variables still work and take precedence over `.env`, so CI
+can set them directly without a file.
 
 ## Run it
 

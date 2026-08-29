@@ -22,6 +22,13 @@ from pathlib import Path
 
 import requests
 
+try:
+    from dotenv import load_dotenv
+
+    load_dotenv()
+except ImportError:
+    pass
+
 GH = "https://api.github.com"
 
 # Keys must match the agent's schema exactly (chaoss_agent.py DOMAINS).

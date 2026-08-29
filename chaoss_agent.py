@@ -28,6 +28,15 @@ from pathlib import Path
 import anthropic
 import requests
 
+# Load ANTHROPIC_API_KEY / GITHUB_TOKEN from a .env file if one is present.
+# Optional: real environment variables still work and take precedence.
+try:
+    from dotenv import load_dotenv
+
+    load_dotenv()
+except ImportError:
+    pass
+
 MODEL = "claude-sonnet-5"
 MAX_TURNS = 30
 GH = "https://api.github.com"
