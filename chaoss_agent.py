@@ -307,8 +307,18 @@ SUBMIT = {
                         },
                         "accountability_holder": {
                             "type": "string",
-                            "description": "Who the policy makes accountable, or "
-                                           "'not_specified'.",
+                            "description": "Who is answerable FOR THE AI-ASSISTED "
+                                           "OUTPUT - authorship accountability. "
+                                           "Enforcement authority is NOT this: "
+                                           "'maintainers may close non-compliant "
+                                           "PRs' names who polices the rule, not "
+                                           "who owns the work, and is "
+                                           "'not_specified'. 'Contributors are "
+                                           "responsible for all submitted content' "
+                                           "IS this. If the policy only says who "
+                                           "enforces, answer 'not_specified' and "
+                                           "note the enforcement clause in "
+                                           "reasoning.",
                         },
                         "proportionality": {
                             "type": "string",
@@ -500,6 +510,16 @@ never changes the addressed score; it records disposition, not policy. Do NOT \
 infer a lean from a project's general tone, from how strict it is on other \
 domains, or from what a project like this probably thinks - only from text \
 about that domain.
+
+- ACCOUNTABILITY MEANS AUTHORSHIP, NOT ENFORCEMENT. The attribute asks who is \
+answerable for the AI-assisted output. A clause naming who may reject, close, \
+suspend or ban is enforcement - it says who polices the rule, not who owns the \
+work. Servo's "maintainers may close non-compliant PRs" is enforcement: \
+accountability_holder is "not_specified". Astropy's "Contributors are \
+responsible for all submitted content" is authorship: the holder is the \
+contributor. Getting this wrong inflates a domain from "partial" to "yes", so \
+when only enforcement is stated, answer "not_specified" and mention the \
+enforcement clause in reasoning instead.
 
 - A domain the policy does not address is a real, reportable result. Most repos \
 do not address most domains. A grid that is mostly "no" is very likely correct.
@@ -1016,6 +1036,81 @@ def write_markdown(report: dict, path: Path) -> None:
     path.write_text("\n".join(L) + "\n", encoding="utf-8")
 
 
+# Stub: point this at wherever corrections should land once the repo is public.
+IMPROVE_BASE = "https://github.com/emmairwin/ai-oss-use-specificity/issues/new"
+
+
+def write_index(out_dir: Path) -> Path:
+    """Rebuild reports/README.md: one row per scan, newest first.
+
+    Regenerated from the JSON on disk rather than appended to, so deleting a
+    scan directory removes it from the index and nothing goes stale."""
+    rows = []
+    for jf in sorted(out_dir.glob("*/*.json")):
+        try:
+            d = json.loads(jf.read_text(encoding="utf-8"))
+            grid = d["consent_policy_specificity"]
+            domains = grid["domains"]
+        except (OSError, json.JSONDecodeError, KeyError):
+            continue
+        counts = {s: sum(1 for x in domains if x["addressed"] == s)
+                  for s in ("yes", "partial", "no")}
+        leans = [x["domain"] for x in domains
+                 if x.get("lean") not in ("none", "", None)]
+        rows.append({
+            "repo": d.get("repo", jf.parent.name),
+            "date": jf.stem,
+            "md": f"{jf.parent.name}/{jf.stem}.md",
+            "counts": counts,
+            "leans": len(leans),
+            "posture": grid.get("overall_posture", ""),
+            "problems": len(d.get("validation_problems") or []),
+            "scope": (d.get("scope") or {}).get("mode", ""),
+        })
+    rows.sort(key=lambda r: (r["date"], r["repo"]), reverse=True)
+
+    L = ["# Scan index", "",
+         f"{len(rows)} scan{'s' if len(rows) != 1 else ''} against the CHAOSS "
+         "[Consent Policy Specificity](https://github.com/chaoss/wg-ai-alignment/"
+         "blob/main/metrics/ai-alignment-community-governed-use/"
+         "ai-use-consent-policy-specificity.md) metric. Each row links to the "
+         "full report, which carries the evidence quotes and line numbers behind "
+         "every cell.", "",
+         "`✓` addressed · `~` partial · `·` not addressed, out of nine domains. "
+         "**Leans** counts domains with no rule where the policy still shows a "
+         "direction.", "",
+         "| Project | Scanned | ✓ | ~ | · | Leans | Summary | | |",
+         "|---|---|:-:|:-:|:-:|:-:|---|---|---|"]
+    for r in rows:
+        posture = r["posture"]
+        if len(posture) > 150:
+            posture = posture[:147].rsplit(" ", 1)[0] + "…"
+        flag = " ⚠" if r["problems"] else ""
+        narrow = " ᶠ" if r["scope"] == "named_files" else ""
+        improve = (f"{IMPROVE_BASE}?title=Report%20correction%3A%20"
+                   f"{r['repo'].replace('/', '%2F')}"
+                   f"&body=Report%3A%20{r['md']}%0ADomain%3A%0AReported%20as%3A"
+                   f"%0AShould%20be%3A%0AQuote%20from%20the%20policy%3A%0A")
+        L.append(f"| `{r['repo']}`{narrow} | {r['date']}{flag} | "
+                 f"{r['counts']['yes']} | {r['counts']['partial']} | "
+                 f"{r['counts']['no']} | {r['leans'] or '–'} | {posture} | "
+                 f"[report]({r['md']}) | [improve]({improve}) |")
+    L += ["",
+          "ᶠ scope was limited to named files, so `·` means *not addressed in "
+          "those files* rather than repository-wide.",
+          "",
+          "⚠ the scan cited a quote that could not be found in the file it "
+          "named. Read that report's *Validation problems* section before "
+          "trusting its grid.",
+          "",
+          "*The improve links are a stub — they point at an issue tracker that "
+          "may not exist yet. Change `IMPROVE_BASE` in `chaoss_agent.py` once "
+          "there is somewhere for corrections to go.*"]
+    path = out_dir / "README.md"
+    path.write_text("\n".join(L) + "\n", encoding="utf-8")
+    return path
+
+
 def main():
     p = argparse.ArgumentParser(
         description="Score any GitHub repo for AI policy specificity.")
@@ -1158,9 +1253,13 @@ def main():
         print(f"\n{len(problems)} validation problem(s):", file=sys.stderr)
         for prob in problems:
             print(f"  - {prob}", file=sys.stderr)
+    index = write_index(out_json.parent.parent) if not args.out else None
+
     print(f"\nreport:     {out_md}")
     print(f"data:       {out_json}")
     print(f"transcript: {transcript}")
+    if index:
+        print(f"index:      {index}")
 
 
 if __name__ == "__main__":

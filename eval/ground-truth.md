@@ -1,5 +1,13 @@
 # Ground truth
 
+> **Superseded in part, 2026-08-29.** These grids were derived from
+> `policy-survey.md`, and three of that table's rows have since been shown wrong
+> by tool runs. Treat every expected grid below as a hypothesis, not an answer.
+>
+> Case A (AFNix) has a live open question: the tool marked accountability `true`
+> on enforcement language. That was diagnosed as a defect and the prompt was
+> fixed on 2026-08-29 — the case needs re-running before its grid means anything.
+
 > **Provisional expected grids — derived from reading the policy text, not
 > from an independent human pass.**
 >

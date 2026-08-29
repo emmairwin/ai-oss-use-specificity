@@ -1,5 +1,20 @@
 # Policy survey — source material for the eval set
 
+> **Reliability warning, added 2026-08-29.** Three rows in this table have been
+> checked against a tool run: Gitea, Astropy and Servo. **All three were wrong.**
+> The hand pass missed an explicit agentic ban, missed an entire review section,
+> over-attributed the Content domain, and recorded an infrastructure mention that
+> is not in the text.
+>
+> Corrections are marked inline. The unchecked rows should be assumed to carry a
+> similar error rate — roughly one domain wrong per policy, mostly in the
+> direction of over-attribution.
+>
+> **Do not use this table as ground truth.** It was written to pick eval cases
+> and to see how the domains distribute, and it is fine for that. It is not a
+> measurement, and the expected grids in `ground-truth.md` that were derived
+> from it inherit the same problem.
+
 28 policies from [`moderation/README.md`](https://github.com/chaoss/wg-ai-alignment/blob/main/moderation/README.md), read
 2026-08-22 to pick eval cases and to see how the nine domains actually
 distribute in the wild.
@@ -16,7 +31,7 @@ Domain numbers: 1 code · 2 notetaker/meeting · 3 content · 4 moderation ·
 | **Forgejo** | **1, 3, 5, 6** | **4** | **repo file; per-domain supervision differs; explicit accountability clause** |
 | LLVM | 1, 3, 4, 6 | 4 | docs site; source of QGIS text |
 | yt-dlp | 1, 3, 5, 6 | 4 | 120 words; blanket ban, but enumerated per activity |
-| Servo | 1, 3, 7, 8, 9 | 5 | 7/8/9 appear only as rationale |
+| Servo | 1, 3, 5 (+7, 9 rationale) | 3 | **Corrected 2026-08-29 by a tool run.** Hand pass missed the review section ("Can I use an AI review tool? Yes, but please don't") and invented an infrastructure mention |
 | GCC | 1, 5, 6 | 3 | permits AI review "supporting human review, not replacing it" |
 | Mastodon | 1, 3, 6 | 3 | explicit agent ban |
 | NLnet Labs | 1, 3, 5 | 3 | explicitly *permits* AI review |
@@ -28,10 +43,10 @@ Domain numbers: 1 code · 2 notetaker/meeting · 3 content · 4 moderation ·
 | postmarketOS | 1, 7, 8 | 3 | 7/8 rationale only |
 | KDE GSoC | 1, 3 | 2 | scoped to GSoC, not the whole project |
 | Ghostty | 1, 3 | 2 | bans AI-generated media specifically |
-| Astropy | 1, 3 | 2 | strong on accountability |
+| Astropy | 1, 3, 6 | 3 | **Corrected 2026-08-29 by a tool run.** Hand pass missed an explicit agentic ban: "Autonomous workflows (&quot;agents&quot;) are not human contributors" |
 | Jellyfin | 1, 3 | 2 | ~1,850 words, mostly domain 1 detail |
 | Zulip | 1, 3 | 2 | ~1,100 words, mostly domain 1 detail |
-| Gitea | 1, 3 | 2 | disclosure + accountability |
+| Gitea | 1 | 1 | **Corrected 2026-08-29 by a tool run.** Hand pass read "issues and pull requests" as the Content domain; those are code-contribution artifacts, and Gitea never names docs, blogs or design |
 | AFNix | 1 | 1 | 160 words; single blanket sentence + exceptions. Agent re-scored domain 3 as `no` — the documentation reference is a source being summarized, not content being produced |
 | SunPy | 1, 3 | 2 | 70 words, 2 sentences |
 | KeePassXC | 1, 6 | 2 | disclosure for "agent-based or vibe coding" |

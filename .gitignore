@@ -1,6 +1,7 @@
 __pycache__/
 *.pyc
 .env
-reports/
+reports/*/
+!reports/README.md
 transcript.jsonl
 eval/comparisons/
