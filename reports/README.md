@@ -88,13 +88,14 @@ The taxonomy below maps to the CHAOSS AI specificity [metric found here](https:/
 
 ## Included in Policy
 Bar chart of metric taxonomy captured in policy documents.
+'partial' just means that the terminology used **leans** towards a given outcome , but might be more or less specific. Its worth capturing these, to see how language changes over time.
 
 ![Coverage by domain](coverage.svg)
 
 ##  Included in Rationale
 Bart chart of metric taxonomy captured in accompanying blog posts, or preamble to policy.
 
-Sometimes the *reason* for a policy will include one of our metric taxonomies (like enviornment) but not be specifically mentioned in the politcy itself Tgus seens worth capturing.
+Sometimes the *reason* for a policy will include one of our metric taxonomies (like enviornment) but not be specifically mentioned in the politcy itself seens worth capturing.
 
 ![Raised in policy rationale only](rationale.svg)
 
