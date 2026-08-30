@@ -1040,6 +1040,70 @@ def write_markdown(report: dict, path: Path) -> None:
 IMPROVE_BASE = "https://github.com/emmairwin/ai-oss-use-specificity/issues/new"
 
 
+def write_chart(out_dir: Path, tallies: dict, n_projects: int) -> Path | None:
+    """Horizontal stacked bar, one row per domain, segmented yes/partial/no.
+
+    Hand-written SVG so the tool stays dependency-free, with an explicit
+    background so it reads on GitHub's light and dark themes alike."""
+    if not n_projects:
+        return None
+
+    ROW, BAR, PAD, LABEL_W, BAR_W = 34, 20, 24, 210, 470
+    W = LABEL_W + BAR_W + 90
+    H = PAD * 2 + 54 + ROW * len(DOMAINS)
+    FILL = {"yes": "#2da44e", "partial": "#d4a72c", "no": "#d0d7de"}
+
+    s = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" '
+         f'viewBox="0 0 {W} {H}" font-family="-apple-system,BlinkMacSystemFont,'
+         f'Segoe UI,Helvetica,Arial,sans-serif">',
+         f'<rect width="{W}" height="{H}" fill="#ffffff"/>',
+         f'<text x="{PAD}" y="{PAD + 12}" font-size="14" font-weight="600" '
+         f'fill="#1f2328">AI policy coverage by domain</text>',
+         f'<text x="{PAD}" y="{PAD + 30}" font-size="11" fill="#656d76">'
+         f'{n_projects} projects &#183; CHAOSS Consent Policy Specificity</text>']
+
+    lx = PAD + LABEL_W + BAR_W - 250
+    for i, (state, text) in enumerate((("yes", "addressed"),
+                                       ("partial", "partial"),
+                                       ("no", "not addressed"))):
+        x = lx + i * 90
+        s.append(f'<rect x="{x}" y="{PAD + 2}" width="10" height="10" rx="2" '
+                 f'fill="{FILL[state]}"/>')
+        s.append(f'<text x="{x + 15}" y="{PAD + 11}" font-size="11" '
+                 f'fill="#656d76">{text}</text>')
+
+    y0 = PAD + 54
+    for i, (key, label) in enumerate(DOMAINS):
+        y = y0 + i * ROW
+        name = label.split(" (")[0]
+        s.append(f'<text x="{PAD + LABEL_W - 10}" y="{y + BAR - 6}" '
+                 f'font-size="12" fill="#1f2328" text-anchor="end">{name}</text>')
+        x = PAD + LABEL_W
+        counts = tallies.get(key, {})
+        for state in ("yes", "partial", "no"):
+            n = counts.get(state, 0)
+            if not n:
+                continue
+            w = BAR_W * n / n_projects
+            s.append(f'<rect x="{x:.1f}" y="{y}" width="{w:.1f}" '
+                     f'height="{BAR}" fill="{FILL[state]}"/>')
+            if w > 18:  # only label a segment wide enough to hold the number
+                tc = "#ffffff" if state != "no" else "#57606a"
+                s.append(f'<text x="{x + w / 2:.1f}" y="{y + BAR - 6}" '
+                         f'font-size="11" fill="{tc}" text-anchor="middle">'
+                         f'{n}</text>')
+            x += w
+        addressed = counts.get("yes", 0) + counts.get("partial", 0)
+        s.append(f'<text x="{PAD + LABEL_W + BAR_W + 10}" y="{y + BAR - 6}" '
+                 f'font-size="11" fill="#656d76">'
+                 f'{addressed}/{n_projects}</text>')
+
+    s.append("</svg>")
+    path = out_dir / "coverage.svg"
+    path.write_text("\n".join(s) + "\n", encoding="utf-8")
+    return path
+
+
 def write_index(out_dir: Path) -> Path:
     """Rebuild reports/README.md: one row per scan, newest first.
 
@@ -1066,8 +1130,21 @@ def write_index(out_dir: Path) -> Path:
             "posture": grid.get("overall_posture", ""),
             "problems": len(d.get("validation_problems") or []),
             "scope": (d.get("scope") or {}).get("mode", ""),
+            "per_domain": {x["domain"]: x["addressed"] for x in domains},
         })
     rows.sort(key=lambda r: (r["date"], r["repo"]), reverse=True)
+
+    # Chart counts each project once, using its most recent scan - otherwise a
+    # rescanned project would be double-counted and skew every bar.
+    latest, tallies = {}, {k: {"yes": 0, "partial": 0, "no": 0}
+                           for k, _ in DOMAINS}
+    for r in rows:
+        latest.setdefault(r["repo"], r)
+    for r in latest.values():
+        for dom, state in r["per_domain"].items():
+            if dom in tallies and state in tallies[dom]:
+                tallies[dom][state] += 1
+    chart = write_chart(out_dir, tallies, len(latest))
 
     L = ["# Scan index", "",
          f"{len(rows)} scan{'s' if len(rows) != 1 else ''} against the CHAOSS "
@@ -1106,6 +1183,14 @@ def write_index(out_dir: Path) -> Path:
           "*The improve links are a stub — they point at an issue tracker that "
           "may not exist yet. Change `IMPROVE_BASE` in `chaoss_agent.py` once "
           "there is somewhere for corrections to go.*"]
+
+    if chart:
+        L += ["", "## Coverage across all projects", "",
+              "![AI policy coverage by domain](coverage.svg)", "",
+              f"Each project counted once, using its most recent scan "
+              f"({len(latest)} project{'s' if len(latest) != 1 else ''}). The "
+              "trailing figure is how many address the domain at all — "
+              "addressed plus partial.", ""]
     path = out_dir / "README.md"
     path.write_text("\n".join(L) + "\n", encoding="utf-8")
     return path
