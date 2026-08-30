@@ -1,4 +1,4 @@
-# AI policy coverage across 38 projects
+# AI policy coverage summary of all (currently 38) projects
 
 The taxonomy below maps to the CHAOSS AI specificity [metric found here](https://github.com/chaoss/wg-ai-alignment/blob/main/metrics/ai-alignment-community-governed-use/ai-use-consent-policy-specificity.md#taxonomy-of-domains). 
 
