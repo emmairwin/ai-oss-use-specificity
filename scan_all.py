@@ -35,7 +35,13 @@ def main() -> int:
     p.add_argument("--targets", type=Path, default=HERE / "eval" / "targets.txt")
     p.add_argument("--only", help="substring filter on the repo slug")
     p.add_argument("--dry-run", action="store_true")
+    p.add_argument("--rescan", action="store_true",
+                   help="re-scan projects already done today")
     args = p.parse_args()
+
+    agent = HERE / "chaoss_agent.py"
+    if not agent.exists():
+        sys.exit(f"{agent} is missing - nothing to run")
 
     todo = targets(args.targets)
     if args.only:
@@ -48,6 +54,19 @@ def main() -> int:
         for slug, path in todo:
             print(f"  {slug} :: {path}")
         return 0
+
+    if not args.rescan:
+        from datetime import date
+        import re as _re
+        today = date.today().isoformat()
+        before = len(todo)
+        todo = [(s, p_) for s, p_ in todo
+                if not (HERE / "reports" /
+                        _re.sub(r"[^a-z0-9]+", "-", s.lower()).strip("-") /
+                        f"{today}.json").exists()]
+        if before != len(todo):
+            print(f"skipping {before - len(todo)} already scanned today "
+                  f"(--rescan to force)")
 
     failed = []
     start = time.monotonic()

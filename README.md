@@ -1,4 +1,4 @@
-# ai-oss-specificity
+# ai-oss-use-specificity
 
 Point it at **any** GitHub repository and it reports how specifically that
 project's AI policy addresses each of nine areas where AI shows up — rather
@@ -6,6 +6,10 @@ than whether it has one blanket statement covering everything.
 
 Implements [Consent Policy Specificity](https://github.com/chaoss/wg-ai-alignment/blob/main/metrics/ai-alignment-community-governed-use/ai-use-consent-policy-specificity.md)
 from the CHAOSS AI Alignment *Community Governed Use* metrics model.
+
+> **What's implemented and what's a stub:** see [STATUS.md](STATUS.md).
+> One metric of five is implemented; the rest are placeholders. Several
+> scoring rules are this tool's own and not in the CHAOSS definition.
 
 ## Who it's for
 
@@ -25,11 +29,11 @@ at.
 **2. Get the code and its dependencies:**
 
 ```bash
-git clone https://github.com/emmairwin/ai-oss-specificity.git
+git clone https://github.com/emmairwin/ai-oss-use-specificity.git
 ```
 
 ```bash
-cd ai-oss-specificity && pip install -r requirements.txt
+cd ai-oss-use-specificity && pip install -r requirements.txt
 ```
 
 **3. Create your `.env`:**
