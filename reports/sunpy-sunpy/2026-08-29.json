@@ -1,0 +1,192 @@
+{
+  "repo": "sunpy/sunpy",
+  "commit_sha": "fe86ad67c74595c520b855c73028ee84fc3c4816",
+  "metric_model": "CHAOSS AI Alignment - Community Governed Use",
+  "scope": {
+    "mode": "named_files",
+    "files_assessed": [
+      "README.rst"
+    ],
+    "note": "Scoring confined to the files named on the command line; 'no' means not addressed in those files."
+  },
+  "usage": {
+    "input_tokens": 11584,
+    "output_tokens": 3791,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0,
+    "api_calls": 2,
+    "files_read": [
+      "README.rst"
+    ],
+    "model": "claude-sonnet-5",
+    "estimated_cost_usd": 0.061078
+  },
+  "consent_policy_specificity": {
+    "domains": [
+      {
+        "domain": "code_contributions",
+        "supervision_level": "human_in_the_loop",
+        "scope_or_volume_limits": "not_specified",
+        "accountability_holder": "the contributor using the AI tool (\"you\" must fully understand and explain the changes)",
+        "proportionality": "not_specified",
+        "addressed": "yes",
+        "evidence": [
+          {
+            "path": "README.rst",
+            "quote": "If you use generative AI tools as an aid in developing code or documentation changes, ensure that you fully understand the proposed changes and can explain why they are the correct approach and an improvement to the current state.",
+            "line": 95
+          }
+        ],
+        "rationale_only_mention": "",
+        "lean": "none",
+        "suggested_improvement": "",
+        "reasoning": "The README explicitly names 'developing code ... changes' and requires the contributor to fully understand and be able to explain any AI-assisted change before submitting it, which functions as a human-in-the-loop supervision requirement with the contributor as the accountable party. No scope/volume limit or proportionality threshold is given."
+      },
+      {
+        "domain": "notetaker_bots",
+        "supervision_level": "not_specified",
+        "scope_or_volume_limits": "not_specified",
+        "accountability_holder": "not_specified",
+        "proportionality": "not_applicable",
+        "addressed": "no",
+        "evidence": [],
+        "rationale_only_mention": "",
+        "lean": "none",
+        "suggested_improvement": "no supervision level; no accountability holder; no scope named",
+        "reasoning": "README contains no mention of meeting recording, transcription, or notetaker bots of any kind."
+      },
+      {
+        "domain": "content",
+        "supervision_level": "human_in_the_loop",
+        "scope_or_volume_limits": "not_specified",
+        "accountability_holder": "the contributor using the AI tool (\"you\" must fully understand and explain the changes)",
+        "proportionality": "not_specified",
+        "addressed": "yes",
+        "evidence": [
+          {
+            "path": "README.rst",
+            "quote": "If you use generative AI tools as an aid in developing code or documentation changes, ensure that you fully understand the proposed changes and can explain why they are the correct approach and an improvement to the current state.",
+            "line": 95
+          }
+        ],
+        "rationale_only_mention": "",
+        "lean": "none",
+        "suggested_improvement": "",
+        "reasoning": "The same generative-AI clause explicitly names 'documentation changes' (a content domain) and applies the same understand-and-explain requirement, naming the contributor as accountable. No scope/volume limit or proportionality threshold stated, but the domain and both required attributes are present."
+      },
+      {
+        "domain": "moderation",
+        "supervision_level": "not_specified",
+        "scope_or_volume_limits": "not_specified",
+        "accountability_holder": "not_specified",
+        "proportionality": "not_applicable",
+        "addressed": "no",
+        "evidence": [],
+        "rationale_only_mention": "",
+        "lean": "none",
+        "suggested_improvement": "no supervision level; no accountability holder named",
+        "reasoning": "README does not mention AI use in moderation actions; it only points to a Code of Conduct link with no AI-specific content."
+      },
+      {
+        "domain": "review",
+        "supervision_level": "not_specified",
+        "scope_or_volume_limits": "not_specified",
+        "accountability_holder": "not_specified",
+        "proportionality": "not_applicable",
+        "addressed": "no",
+        "evidence": [],
+        "rationale_only_mention": "",
+        "lean": "none",
+        "suggested_improvement": "no supervision level; no accountability holder for AI-assisted review",
+        "reasoning": "The generative AI clause addresses the person producing code/documentation, not who or what may review it using AI. Review is not named."
+      },
+      {
+        "domain": "autonomous",
+        "supervision_level": "not_specified",
+        "scope_or_volume_limits": "not_specified",
+        "accountability_holder": "not_specified",
+        "proportionality": "not_applicable",
+        "addressed": "no",
+        "evidence": [],
+        "rationale_only_mention": "",
+        "lean": "none",
+        "suggested_improvement": "no supervision level or accountability holder for agentic/autonomous use",
+        "reasoning": "README does not mention autonomous or agentic AI operation distinct from a human using a tool as an aid."
+      },
+      {
+        "domain": "environmental",
+        "supervision_level": "not_specified",
+        "scope_or_volume_limits": "not_specified",
+        "accountability_holder": "not_specified",
+        "proportionality": "not_applicable",
+        "addressed": "no",
+        "evidence": [],
+        "rationale_only_mention": "",
+        "lean": "none",
+        "suggested_improvement": "no rule or rationale on energy/water/carbon impact",
+        "reasoning": "No mention of environmental impact, energy, water use, or carbon footprint anywhere in the README."
+      },
+      {
+        "domain": "infrastructure",
+        "supervision_level": "not_specified",
+        "scope_or_volume_limits": "not_specified",
+        "accountability_holder": "not_specified",
+        "proportionality": "not_applicable",
+        "addressed": "no",
+        "evidence": [],
+        "rationale_only_mention": "",
+        "lean": "none",
+        "suggested_improvement": "no rule or rationale on infrastructure/server load",
+        "reasoning": "No mention of infrastructure strain, server load, or hardware cost in relation to AI use."
+      },
+      {
+        "domain": "training_data",
+        "supervision_level": "not_specified",
+        "scope_or_volume_limits": "not_specified",
+        "accountability_holder": "not_specified",
+        "proportionality": "not_applicable",
+        "addressed": "no",
+        "evidence": [],
+        "rationale_only_mention": "",
+        "lean": "none",
+        "suggested_improvement": "no rule or rationale on training-data use/consent",
+        "reasoning": "The README does not discuss data used to train AI models or consent around platform user data for training purposes."
+      }
+    ],
+    "unscoped_statements": [],
+    "overall_posture": "The README gives one narrowly-scoped rule requiring human understanding and accountability for generative-AI-assisted code and documentation contributions, and is silent on every other domain (notetaker bots, moderation, review, autonomous use, environmental impact, infrastructure strain, and training data)."
+  },
+  "validation_problems": [],
+  "use_composition_partial": {
+    "agent_instruction_files": [],
+    "workflow_count": 9,
+    "workflows_with_ai_or_bot_signals": [
+      {
+        "path": ".github/workflows/stale_bot.yml",
+        "signals": [
+          "bot"
+        ]
+      }
+    ],
+    "awaiting_implementation": {
+      "specific_tools_in_use": "Awaiting implementation: named-product detection beyond known file signatures",
+      "model_type": "Awaiting implementation: underlying model/family",
+      "ai_tool_owner": "Awaiting implementation: ownership and data control",
+      "environmental_footprint": "Awaiting implementation: model/system card and ESG disclosure",
+      "proportionality": "Awaiting implementation: resource use relative to contributor count (needs platform usage data)"
+    },
+    "note": "Detection only. Absence of signal is not absence of use."
+  },
+  "policy_change": {
+    "status": "Awaiting implementation: Policy Change",
+    "blocker": "Draft classifier not wired in or validated against hand-graded history. Repo.history() and Repo.commit_patch() supply the diffs."
+  },
+  "use_compliance": {
+    "status": "Awaiting implementation: Use Compliance",
+    "blocker": "Derived metric. Requires disclosed-use data (Use Composition) checked against the specificity grid. Composition is only partially detectable, so the comparison is not yet sound."
+  },
+  "misuse": {
+    "status": "Awaiting implementation: Misuse",
+    "blocker": "Not automatable. CHAOSS marks the core signals unknown: text-based AI detectors are unreliable, and license-laundering and wrongful-accusation incidents need maintainer self-report."
+  }
+}

@@ -1,0 +1,238 @@
+{
+  "repo": "jellyfin/jellyfin.org",
+  "commit_sha": "e34525e7887652703b8dc95810f359b122398c1c",
+  "metric_model": "CHAOSS AI Alignment - Community Governed Use",
+  "scope": {
+    "mode": "named_files",
+    "files_assessed": [
+      "docs/general/contributing/llm-policies.md"
+    ],
+    "note": "Scoring confined to the files named on the command line; 'no' means not addressed in those files."
+  },
+  "usage": {
+    "input_tokens": 11311,
+    "output_tokens": 7375,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0,
+    "api_calls": 2,
+    "files_read": [
+      "docs/general/contributing/llm-policies.md"
+    ],
+    "model": "claude-sonnet-5",
+    "estimated_cost_usd": 0.096372
+  },
+  "consent_policy_specificity": {
+    "domains": [
+      {
+        "domain": "code_contributions",
+        "supervision_level": "human_in_the_loop",
+        "scope_or_volume_limits": "PRs must be concise and focused (no unrelated changes); large PRs must be broken into multiple small, manageable commits.",
+        "accountability_holder": "contributor (\"you are responsible for what you commit\")",
+        "proportionality": "not_specified",
+        "addressed": "yes",
+        "evidence": [
+          {
+            "path": "docs/general/contributing/llm-policies.md",
+            "quote": "LLM output is **expressly prohibited** for any direct communication, including the following: issues or comments, feature requests or comments, pull request bodies or comments",
+            "line": null
+          },
+          {
+            "path": "docs/general/contributing/llm-policies.md",
+            "quote": "the general principle is that \"pure 'vibe coding' will be rejected\" and \"you are responsible for what you commit\"",
+            "line": 26
+          },
+          {
+            "path": "docs/general/contributing/llm-policies.md",
+            "quote": "You must **review the output** and be able to **explain** in the PR body ... what is being changed and why",
+            "line": null
+          },
+          {
+            "path": "docs/general/contributing/llm-policies.md",
+            "quote": "Contributions should be **concise and focused**... a large PR must be **broken into multiple small, manageable commits**",
+            "line": null
+          },
+          {
+            "path": "docs/general/contributing/llm-policies.md",
+            "quote": "The **final discretion always lies with the reviewers**.",
+            "line": 38
+          }
+        ],
+        "rationale_only_mention": "",
+        "lean": "none",
+        "suggested_improvement": "",
+        "reasoning": "The policy directly and extensively addresses code contributions and direct communications (issues/PRs/comments), naming a human-in-the-loop supervision model (contributor must review, explain, and test LLM output), scope limits (concise, small commits), and accountability (contributor is responsible for what they commit). Final review authority rests with human reviewers, who may reject poor-quality or unreviewable submissions."
+      },
+      {
+        "domain": "notetaker_bots",
+        "supervision_level": "not_specified",
+        "scope_or_volume_limits": "not_specified",
+        "accountability_holder": "not_specified",
+        "proportionality": "not_applicable",
+        "addressed": "no",
+        "evidence": [],
+        "rationale_only_mention": "",
+        "lean": "none",
+        "suggested_improvement": "no mention of meeting/notetaker bots; no supervision level or holder named",
+        "reasoning": "The document is entirely about LLM use in code, communications, and community-shared tools/clients. It never mentions meetings, recording, or notetaker bots."
+      },
+      {
+        "domain": "content",
+        "supervision_level": "not_specified",
+        "scope_or_volume_limits": "not_specified",
+        "accountability_holder": "not_specified",
+        "proportionality": "not_applicable",
+        "addressed": "no",
+        "evidence": [],
+        "rationale_only_mention": "",
+        "lean": "none",
+        "suggested_improvement": "no rule for docs/blogs/design assets; no supervision level or holder named",
+        "reasoning": "The only content-adjacent provision is an exception for LLM-assisted translations of forum/chat posts, which concerns direct community communication rather than official documentation, blog posts, or design assets. No rule speaks to AI use in producing project content of that kind."
+      },
+      {
+        "domain": "moderation",
+        "supervision_level": "not_specified",
+        "scope_or_volume_limits": "not_specified",
+        "accountability_holder": "not_specified",
+        "proportionality": "not_applicable",
+        "addressed": "no",
+        "evidence": [],
+        "rationale_only_mention": "",
+        "lean": "none",
+        "suggested_improvement": "no statement on AI use in moderation actions themselves",
+        "reasoning": "The passage about moderators declining to 'play LLM police' concerns how strictly the community's disclosure rule for third-party tools is enforced, not whether moderators themselves may use AI to take moderation actions. No supervision level or accountability holder for AI-assisted moderation is stated."
+      },
+      {
+        "domain": "review",
+        "supervision_level": "not_specified",
+        "scope_or_volume_limits": "not_specified",
+        "accountability_holder": "not_specified",
+        "proportionality": "not_applicable",
+        "addressed": "no",
+        "evidence": [],
+        "rationale_only_mention": "",
+        "lean": "none",
+        "suggested_improvement": "no statement on whether reviewers may use AI tools",
+        "reasoning": "The policy states that 'final discretion always lies with the reviewers' and describes what contributors must do to satisfy reviewers, but it never addresses whether reviewers themselves may use AI to conduct or assist review."
+      },
+      {
+        "domain": "autonomous",
+        "supervision_level": "banned",
+        "scope_or_volume_limits": "Applies to all official Jellyfin projects; scope limited to code generation/commits, not broader agentic tasks.",
+        "accountability_holder": "contributor (\"you are responsible for what you commit\")",
+        "proportionality": "not_specified",
+        "addressed": "yes",
+        "evidence": [
+          {
+            "path": "docs/general/contributing/llm-policies.md",
+            "quote": "do not just let an LLM loose on the codebase with a vague vibe prompt and then commit the results as-is",
+            "line": 40
+          },
+          {
+            "path": "docs/general/contributing/llm-policies.md",
+            "quote": "the general principle is that \"pure 'vibe coding' will be rejected\" and \"you are responsible for what you commit\"",
+            "line": 26
+          }
+        ],
+        "rationale_only_mention": "",
+        "lean": "none",
+        "suggested_improvement": "",
+        "reasoning": "The policy explicitly bans fully autonomous/agentic code generation ('vibe coding', letting an LLM run unsupervised and committing its output as-is), requiring human review and understanding instead, and places accountability on the contributor for anything committed."
+      },
+      {
+        "domain": "environmental",
+        "supervision_level": "not_specified",
+        "scope_or_volume_limits": "not_specified",
+        "accountability_holder": "not_specified",
+        "proportionality": "not_applicable",
+        "addressed": "no",
+        "evidence": [],
+        "rationale_only_mention": "",
+        "lean": "none",
+        "suggested_improvement": "no mention of energy/water/hardware footprint as rationale or rule",
+        "reasoning": "The document gives no discussion, rule, or rationale touching energy use, water use, or carbon/hardware footprint of LLMs."
+      },
+      {
+        "domain": "infrastructure",
+        "supervision_level": "not_specified",
+        "scope_or_volume_limits": "not_specified",
+        "accountability_holder": "not_specified",
+        "proportionality": "not_applicable",
+        "addressed": "no",
+        "evidence": [],
+        "rationale_only_mention": "",
+        "lean": "none",
+        "suggested_improvement": "no mention of server/infrastructure strain as rationale or rule",
+        "reasoning": "No statement addresses infrastructure cost, server load, or hardware financing in relation to AI use."
+      },
+      {
+        "domain": "training_data",
+        "supervision_level": "not_specified",
+        "scope_or_volume_limits": "not_specified",
+        "accountability_holder": "not_specified",
+        "proportionality": "not_applicable",
+        "addressed": "no",
+        "evidence": [],
+        "rationale_only_mention": "",
+        "lean": "none",
+        "suggested_improvement": "no mention of platform user data used for AI training",
+        "reasoning": "The policy discusses licensing/attribution for third-party code reuse, but nothing about platform user data being used to train AI models."
+      }
+    ],
+    "unscoped_statements": [
+      {
+        "path": "docs/general/contributing/llm-policies.md",
+        "quote": "LLM output is **expressly prohibited** for any direct communication, including the following: issues or comments, feature requests or comments, pull request bodies or comments, forum/chat/etc. posts or comments",
+        "areas_named": [
+          "code_contributions"
+        ],
+        "domains_left_ambiguous": [
+          "content",
+          "moderation"
+        ],
+        "line": null
+      },
+      {
+        "path": "docs/general/contributing/llm-policies.md",
+        "quote": "Any primarily-LLM-developed projects should be **clearly marked as such**. It is up to users to decide if this is acceptable to them or not.",
+        "areas_named": [],
+        "domains_left_ambiguous": [
+          "code_contributions",
+          "content"
+        ],
+        "line": 46
+      }
+    ],
+    "overall_posture": "Jellyfin's LLM policy is highly specific about code contributions and agentic/\"vibe\" coding to official projects (human-in-the-loop review, contributor accountability, explicit ban on unsupervised commit dumping) and about direct community communications (LLM verbatim output banned except disclosed translations), but it is entirely silent on notetaker bots, project content/documentation, AI-assisted moderation or review tooling, environmental impact, infrastructure strain, and training-data use."
+  },
+  "validation_problems": [
+    "code_contributions: quote not found in docs/general/contributing/llm-policies.md",
+    "code_contributions: quote not found in docs/general/contributing/llm-policies.md",
+    "code_contributions: quote not found in docs/general/contributing/llm-policies.md",
+    "unscoped: quote not found in docs/general/contributing/llm-policies.md"
+  ],
+  "use_composition_partial": {
+    "agent_instruction_files": [],
+    "workflow_count": 4,
+    "workflows_with_ai_or_bot_signals": [],
+    "awaiting_implementation": {
+      "specific_tools_in_use": "Awaiting implementation: named-product detection beyond known file signatures",
+      "model_type": "Awaiting implementation: underlying model/family",
+      "ai_tool_owner": "Awaiting implementation: ownership and data control",
+      "environmental_footprint": "Awaiting implementation: model/system card and ESG disclosure",
+      "proportionality": "Awaiting implementation: resource use relative to contributor count (needs platform usage data)"
+    },
+    "note": "Detection only. Absence of signal is not absence of use."
+  },
+  "policy_change": {
+    "status": "Awaiting implementation: Policy Change",
+    "blocker": "Draft classifier not wired in or validated against hand-graded history. Repo.history() and Repo.commit_patch() supply the diffs."
+  },
+  "use_compliance": {
+    "status": "Awaiting implementation: Use Compliance",
+    "blocker": "Derived metric. Requires disclosed-use data (Use Composition) checked against the specificity grid. Composition is only partially detectable, so the comparison is not yet sound."
+  },
+  "misuse": {
+    "status": "Awaiting implementation: Misuse",
+    "blocker": "Not automatable. CHAOSS marks the core signals unknown: text-based AI detectors are unreliable, and license-laundering and wrongful-accusation incidents need maintainer self-report."
+  }
+}

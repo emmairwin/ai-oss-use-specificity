@@ -1,0 +1,262 @@
+{
+  "repo": "ghostty-org/ghostty",
+  "commit_sha": "7b47213f94058c3715205ce8fa73f7ae581a652c",
+  "metric_model": "CHAOSS AI Alignment - Community Governed Use",
+  "scope": {
+    "mode": "named_files",
+    "files_assessed": [
+      "AI_POLICY.md"
+    ],
+    "note": "Scoring confined to the files named on the command line; 'no' means not addressed in those files."
+  },
+  "usage": {
+    "input_tokens": 9775,
+    "output_tokens": 8007,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0,
+    "api_calls": 2,
+    "files_read": [
+      "AI_POLICY.md"
+    ],
+    "model": "claude-sonnet-5",
+    "estimated_cost_usd": 0.09962
+  },
+  "consent_policy_specificity": {
+    "domains": [
+      {
+        "domain": "code_contributions",
+        "supervision_level": "human_in_the_loop",
+        "scope_or_volume_limits": "Applies to code changes submitted as contributions; AI tool must be disclosed and human must fully understand the code.",
+        "accountability_holder": "The contributing individual (the human-in-the-loop who must understand and can explain the code)",
+        "proportionality": "not_specified",
+        "addressed": "yes",
+        "evidence": [
+          {
+            "path": "AI_POLICY.md",
+            "quote": "All AI usage in any form must be disclosed. You must state the tool you used",
+            "line": null
+          },
+          {
+            "path": "AI_POLICY.md",
+            "quote": "The human-in-the-loop must fully understand all code. If you can't explain what your changes do",
+            "line": null
+          }
+        ],
+        "rationale_only_mention": "",
+        "lean": "none",
+        "suggested_improvement": "",
+        "reasoning": "The policy names code contributions directly, requires disclosure of the AI tool used, and mandates a human-in-the-loop who must fully understand and be able to explain the code, placing accountability on the contributor who submits it."
+      },
+      {
+        "domain": "notetaker_bots",
+        "supervision_level": "not_specified",
+        "scope_or_volume_limits": "not_specified",
+        "accountability_holder": "not_specified",
+        "proportionality": "not_specified",
+        "addressed": "no",
+        "evidence": [],
+        "rationale_only_mention": "",
+        "lean": "none",
+        "suggested_improvement": "no mention of meeting/notetaker bot use or supervision",
+        "reasoning": "The policy contains no reference to recorded meetings, notetaker bots, or AI transcription/summarization of discussions."
+      },
+      {
+        "domain": "content",
+        "supervision_level": "banned",
+        "scope_or_volume_limits": "AI-generated media only (art, images, videos, audio, etc.); text is allowed subject to other rules in the policy",
+        "accountability_holder": "not_specified",
+        "proportionality": "not_specified",
+        "addressed": "partial",
+        "evidence": [
+          {
+            "path": "AI_POLICY.md",
+            "quote": "No AI-generated media is allowed (art, images, videos, audio, etc.). Text and code are the only acceptable AI-generated content, per the other rules in this policy.",
+            "line": null
+          }
+        ],
+        "rationale_only_mention": "",
+        "lean": "restrictive",
+        "suggested_improvement": "no accountability holder named for content/media rule; documentation and blogs not named",
+        "reasoning": "The policy explicitly bans AI-generated media (art, images, video, audio) but does not name documentation or blogs specifically, and does not state who is accountable for a violation of the media ban beyond the general enforcement mechanism (denouncement list), which is enforcement, not authorship accountability."
+      },
+      {
+        "domain": "moderation",
+        "supervision_level": "not_specified",
+        "scope_or_volume_limits": "not_specified",
+        "accountability_holder": "not_specified",
+        "proportionality": "not_specified",
+        "addressed": "no",
+        "evidence": [],
+        "rationale_only_mention": "",
+        "lean": "none",
+        "suggested_improvement": "no rule on AI use in moderation actions",
+        "reasoning": "The denouncement-list clause addresses consequences for bad AI-assisted contributions but says nothing about AI being used to perform moderation actions (e.g., auto-flagging, auto-banning); that is an enforcement mechanism against contributors, not a statement about AI-driven moderation."
+      },
+      {
+        "domain": "review",
+        "supervision_level": "not_specified",
+        "scope_or_volume_limits": "not_specified",
+        "accountability_holder": "not_specified",
+        "proportionality": "not_specified",
+        "addressed": "partial",
+        "evidence": [
+          {
+            "path": "AI_POLICY.md",
+            "quote": "Every discussion, issue, and pull request is read and reviewed by humans (and sometimes machines, too).",
+            "line": 41
+          }
+        ],
+        "rationale_only_mention": "",
+        "lean": "permissive",
+        "suggested_improvement": "no supervision level or accountability holder for AI-assisted review",
+        "reasoning": "The policy names review activity and acknowledges machines sometimes participate in reviewing discussions/PRs, but sets no supervision level, scope limit, or accountability holder for that machine review."
+      },
+      {
+        "domain": "autonomous",
+        "supervision_level": "human_in_the_loop",
+        "scope_or_volume_limits": "not_specified",
+        "accountability_holder": "not_specified",
+        "proportionality": "not_specified",
+        "addressed": "partial",
+        "evidence": [
+          {
+            "path": "AI_POLICY.md",
+            "quote": "The human-in-the-loop must fully understand all code.",
+            "line": 9
+          },
+          {
+            "path": "AI_POLICY.md",
+            "quote": "any content generated with AI must have been reviewed _and edited_ by a human before submission",
+            "line": 15
+          }
+        ],
+        "rationale_only_mention": "",
+        "lean": "restrictive",
+        "suggested_improvement": "no explicit rule naming autonomous/agentic AI use; no accountability holder",
+        "reasoning": "The policy never names 'autonomous' or 'agentic' AI use directly. It is only reached indirectly through the general human-in-the-loop requirements applied to code and to issues/discussions, which implicitly disallow unsupervised agentic submissions, but no accountability holder or scope is stated for autonomous use specifically."
+      },
+      {
+        "domain": "environmental",
+        "supervision_level": "not_specified",
+        "scope_or_volume_limits": "not_specified",
+        "accountability_holder": "not_specified",
+        "proportionality": "not_specified",
+        "addressed": "no",
+        "evidence": [],
+        "rationale_only_mention": "",
+        "lean": "none",
+        "suggested_improvement": "no mention of environmental impact anywhere in policy",
+        "reasoning": "The document never raises energy, water, hardware, or carbon-footprint concerns as rationale or rule."
+      },
+      {
+        "domain": "infrastructure",
+        "supervision_level": "not_specified",
+        "scope_or_volume_limits": "not_specified",
+        "accountability_holder": "not_specified",
+        "proportionality": "not_specified",
+        "addressed": "no",
+        "evidence": [],
+        "rationale_only_mention": "",
+        "lean": "none",
+        "suggested_improvement": "no mention of infrastructure or server-load impact",
+        "reasoning": "There is no discussion of infrastructure strain, server load, or hardware cost anywhere in the policy."
+      },
+      {
+        "domain": "training_data",
+        "supervision_level": "not_specified",
+        "scope_or_volume_limits": "not_specified",
+        "accountability_holder": "not_specified",
+        "proportionality": "not_specified",
+        "addressed": "no",
+        "evidence": [],
+        "rationale_only_mention": "",
+        "lean": "none",
+        "suggested_improvement": "no mention of training-data provenance or usage",
+        "reasoning": "The policy does not discuss the data used to train the AI tools contributors employ, nor any concerns about copyright or provenance of training data."
+      }
+    ],
+    "unscoped_statements": [
+      {
+        "path": "AI_POLICY.md",
+        "quote": "All AI usage in any form must be disclosed.",
+        "areas_named": [
+          "code_contributions"
+        ],
+        "domains_left_ambiguous": [
+          "notetaker_bots",
+          "content",
+          "moderation",
+          "review",
+          "autonomous",
+          "environmental",
+          "infrastructure",
+          "training_data"
+        ],
+        "line": 5
+      },
+      {
+        "path": "AI_POLICY.md",
+        "quote": "Maintainers are exempt from these rules and may use AI tools at their discretion; they've proven themselves trustworthy to apply good judgment.",
+        "areas_named": [],
+        "domains_left_ambiguous": [
+          "code_contributions",
+          "review",
+          "moderation",
+          "autonomous",
+          "content"
+        ],
+        "line": 33
+      }
+    ],
+    "overall_posture": "Ghostty's AI policy is fairly specific about code contributions and text-based issues/discussions (requiring disclosure and a human-in-the-loop who fully understands the work) and explicitly bans AI-generated media, but it never names notetaker bots, moderation, environmental impact, infrastructure strain, or training data, and only glancingly touches review and autonomous/agentic use through general human-in-the-loop language without stating accountability holders for those areas."
+  },
+  "validation_problems": [
+    "code_contributions: quote not found in AI_POLICY.md",
+    "code_contributions: quote not found in AI_POLICY.md",
+    "content: quote not found in AI_POLICY.md"
+  ],
+  "use_composition_partial": {
+    "agent_instruction_files": [
+      "AGENTS.md",
+      "CLAUDE.md"
+    ],
+    "workflow_count": 15,
+    "workflows_with_ai_or_bot_signals": [
+      {
+        "path": ".github/workflows/milestone.yml",
+        "signals": [
+          "bot",
+          "dependabot"
+        ]
+      },
+      {
+        "path": ".github/workflows/release-tip.yml",
+        "signals": [
+          "agent",
+          "bot",
+          "claude"
+        ]
+      }
+    ],
+    "awaiting_implementation": {
+      "specific_tools_in_use": "Awaiting implementation: named-product detection beyond known file signatures",
+      "model_type": "Awaiting implementation: underlying model/family",
+      "ai_tool_owner": "Awaiting implementation: ownership and data control",
+      "environmental_footprint": "Awaiting implementation: model/system card and ESG disclosure",
+      "proportionality": "Awaiting implementation: resource use relative to contributor count (needs platform usage data)"
+    },
+    "note": "Detection only. Absence of signal is not absence of use."
+  },
+  "policy_change": {
+    "status": "Awaiting implementation: Policy Change",
+    "blocker": "Draft classifier not wired in or validated against hand-graded history. Repo.history() and Repo.commit_patch() supply the diffs."
+  },
+  "use_compliance": {
+    "status": "Awaiting implementation: Use Compliance",
+    "blocker": "Derived metric. Requires disclosed-use data (Use Composition) checked against the specificity grid. Composition is only partially detectable, so the comparison is not yet sound."
+  },
+  "misuse": {
+    "status": "Awaiting implementation: Misuse",
+    "blocker": "Not automatable. CHAOSS marks the core signals unknown: text-based AI detectors are unreliable, and license-laundering and wrongful-accusation incidents need maintainer self-report."
+  }
+}

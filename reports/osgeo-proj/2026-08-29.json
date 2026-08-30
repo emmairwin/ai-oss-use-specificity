@@ -1,0 +1,241 @@
+{
+  "repo": "OSGeo/PROJ",
+  "commit_sha": "3641df4d02b1d7cea174282666bea15deda00466",
+  "metric_model": "CHAOSS AI Alignment - Community Governed Use",
+  "scope": {
+    "mode": "named_files",
+    "files_assessed": [
+      "docs/source/community/ai_tool_policy.rst"
+    ],
+    "note": "Scoring confined to the files named on the command line; 'no' means not addressed in those files."
+  },
+  "usage": {
+    "input_tokens": 11467,
+    "output_tokens": 7314,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0,
+    "api_calls": 2,
+    "files_read": [
+      "docs/source/community/ai_tool_policy.rst"
+    ],
+    "model": "claude-sonnet-5",
+    "estimated_cost_usd": 0.096074
+  },
+  "consent_policy_specificity": {
+    "domains": [
+      {
+        "domain": "code_contributions",
+        "supervision_level": "human_in_the_loop",
+        "scope_or_volume_limits": "Applies to code (PRs), RFCs/design proposals, issue or security vulnerability reports, and PR comments/feedback",
+        "accountability_holder": "contributor",
+        "proportionality": "not_specified",
+        "addressed": "yes",
+        "evidence": [
+          {
+            "path": "docs/source/community/ai_tool_policy.rst",
+            "quote": "there must be a human in the loop",
+            "line": 11
+          },
+          {
+            "path": "docs/source/community/ai_tool_policy.rst",
+            "quote": "The contributor is always the author and is fully accountable for their contributions.",
+            "line": 14
+          },
+          {
+            "path": "docs/source/community/ai_tool_policy.rst",
+            "quote": "Code, usually in the form of a pull request\n- RFCs or design proposals\n- Issue or security vulnerability reporting\n- Comments and feedback on pull requests",
+            "line": 58
+          }
+        ],
+        "rationale_only_mention": "",
+        "lean": "none",
+        "suggested_improvement": "",
+        "reasoning": "Policy explicitly names code, RFCs, issues, and PR comments, requires a human in the loop reviewing all AI-generated content before requesting review, mandates disclosure via checkbox/commit trailer, and states the contributor is always the accountable author."
+      },
+      {
+        "domain": "notetaker_bots",
+        "supervision_level": "not_specified",
+        "scope_or_volume_limits": "not_specified",
+        "accountability_holder": "not_specified",
+        "proportionality": "not_specified",
+        "addressed": "no",
+        "evidence": [],
+        "rationale_only_mention": "",
+        "lean": "none",
+        "suggested_improvement": "no mention of meeting/notetaker bot use, supervision, or accountability",
+        "reasoning": "The document never discusses recorded meetings, transcription, or notetaker bots in any capacity."
+      },
+      {
+        "domain": "content",
+        "supervision_level": "human_in_the_loop",
+        "scope_or_volume_limits": "Documentation generation only given as an example; blogs and design assets not mentioned",
+        "accountability_holder": "contributor",
+        "proportionality": "not_specified",
+        "addressed": "partial",
+        "evidence": [
+          {
+            "path": "docs/source/community/ai_tool_policy.rst",
+            "quote": "using an LLM to generate documentation, which a contributor manually reviews for correctness and relevance, edits, and then posts as a PR, is an approved use of tools under this policy",
+            "line": 79
+          }
+        ],
+        "rationale_only_mention": "",
+        "lean": "none",
+        "suggested_improvement": "no coverage of blogs or design assets, only documentation example given",
+        "reasoning": "The policy gives one illustrative example (LLM-generated documentation reviewed and edited by a contributor before posting), stating a human-in-the-loop level and contributor accountability for that case, but does not name blogs or design assets, so coverage of the broader 'content' domain is incomplete."
+      },
+      {
+        "domain": "moderation",
+        "supervision_level": "not_specified",
+        "scope_or_volume_limits": "not_specified",
+        "accountability_holder": "not_specified",
+        "proportionality": "not_specified",
+        "addressed": "no",
+        "evidence": [],
+        "rationale_only_mention": "",
+        "lean": "none",
+        "suggested_improvement": "no rule on whether AI may be used to take moderation actions",
+        "reasoning": "The 'Handling Violations' section describes human maintainers judging non-compliance, locking conversations, closing PRs, or banning accounts, but this is enforcement of the AI policy by humans, not a statement about AI being used to perform moderation itself. No supervision level or accountability holder is given for AI-assisted moderation."
+      },
+      {
+        "domain": "review",
+        "supervision_level": "human_in_the_loop",
+        "scope_or_volume_limits": "Automated review tools that publish comments without human review are banned; opt-in tools that keep a human in the loop are acceptable",
+        "accountability_holder": "not_specified",
+        "proportionality": "not_specified",
+        "addressed": "partial",
+        "evidence": [
+          {
+            "path": "docs/source/community/ai_tool_policy.rst",
+            "quote": "automated review tools that publish comments without human review are not allowed. However, an opt-in review tool that keeps a human in the loop is acceptable under this policy",
+            "line": null
+          }
+        ],
+        "rationale_only_mention": "",
+        "lean": "none",
+        "suggested_improvement": "no accountability holder named for AI-assisted review output",
+        "reasoning": "The policy sets a clear supervision rule for AI review tools (banning fully autonomous commenting bots, allowing human-in-the-loop opt-in tools), but never names who is accountable for an AI-assisted review's content, so the domain is only partially specified."
+      },
+      {
+        "domain": "autonomous",
+        "supervision_level": "banned",
+        "scope_or_volume_limits": "Agents that take action in digital spaces without human approval, e.g. the GitHub @claude agent",
+        "accountability_holder": "not_specified",
+        "proportionality": "not_applicable",
+        "addressed": "partial",
+        "evidence": [
+          {
+            "path": "docs/source/community/ai_tool_policy.rst",
+            "quote": "this policy bans agents that take action in our digital spaces without human approval, such as the GitHub @claude agent",
+            "line": null
+          }
+        ],
+        "rationale_only_mention": "",
+        "lean": "none",
+        "suggested_improvement": "no accountability holder named for autonomous/agentic use",
+        "reasoning": "Autonomous agentic action without human approval is explicitly banned and named with a concrete example, giving a clear supervision level and scope, but the document does not separately state who would be held accountable if such an agent were used, so accountability is left unnamed for this specific area."
+      },
+      {
+        "domain": "environmental",
+        "supervision_level": "not_specified",
+        "scope_or_volume_limits": "not_specified",
+        "accountability_holder": "not_specified",
+        "proportionality": "not_specified",
+        "addressed": "no",
+        "evidence": [],
+        "rationale_only_mention": "",
+        "lean": "none",
+        "suggested_improvement": "no mention of energy, water, or carbon-footprint considerations",
+        "reasoning": "The document never discusses energy or water consumption of AI tools; references to 'maintainer time and energy' concern human labor, not environmental impact."
+      },
+      {
+        "domain": "infrastructure",
+        "supervision_level": "not_specified",
+        "scope_or_volume_limits": "not_specified",
+        "accountability_holder": "not_specified",
+        "proportionality": "not_specified",
+        "addressed": "no",
+        "evidence": [],
+        "rationale_only_mention": "",
+        "lean": "none",
+        "suggested_improvement": "no mention of server load or hardware/infrastructure cost",
+        "reasoning": "The 'Extractive Contributions' rationale addresses maintainer review-time burden, not server infrastructure, hardware financing, or comparable strain; infrastructure is not named anywhere in the document."
+      },
+      {
+        "domain": "training_data",
+        "supervision_level": "not_specified",
+        "scope_or_volume_limits": "not_specified",
+        "accountability_holder": "not_specified",
+        "proportionality": "not_specified",
+        "addressed": "no",
+        "evidence": [],
+        "rationale_only_mention": "Using AI tools to regenerate copyrighted material does not remove the copyright, and contributors are responsible for ensuring that such material does not appear in their contributions.",
+        "lean": "restrictive",
+        "suggested_improvement": "no rule on the project's own use of data for AI training",
+        "reasoning": "The Copyright section raises concern that LLMs may regenerate copyrighted material (implicating how models were trained on such data) as a rationale for contributor copyright responsibility, but it sets no rule about training-data use itself, only about contributor liability for output content."
+      }
+    ],
+    "unscoped_statements": [],
+    "overall_posture": "PROJ's policy is highly specific about code-adjacent contributions (code, RFCs, issues, PR comments), requiring a human in the loop, disclosure, and contributor accountability, and it explicitly bans fully autonomous agentic action and unsupervised automated review tools; however it says nothing about notetaker bots, moderation, environmental impact, infrastructure strain, or training-data use, and leaves accountability unnamed for review and autonomous domains despite setting supervision levels there."
+  },
+  "validation_problems": [
+    "review: quote not found in docs/source/community/ai_tool_policy.rst",
+    "autonomous: quote not found in docs/source/community/ai_tool_policy.rst"
+  ],
+  "use_composition_partial": {
+    "agent_instruction_files": [],
+    "workflow_count": 18,
+    "workflows_with_ai_or_bot_signals": [
+      {
+        "path": ".github/workflows/auto_tag_stable.yml",
+        "signals": [
+          "bot"
+        ]
+      },
+      {
+        "path": ".github/workflows/backport.yml",
+        "signals": [
+          "bot"
+        ]
+      },
+      {
+        "path": ".github/workflows/doc_checks.yml",
+        "signals": [
+          "dependabot"
+        ]
+      },
+      {
+        "path": ".github/workflows/docker.yml",
+        "signals": [
+          "dependabot"
+        ]
+      },
+      {
+        "path": ".github/workflows/emscripten.yml",
+        "signals": [
+          "agent"
+        ]
+      }
+    ],
+    "awaiting_implementation": {
+      "specific_tools_in_use": "Awaiting implementation: named-product detection beyond known file signatures",
+      "model_type": "Awaiting implementation: underlying model/family",
+      "ai_tool_owner": "Awaiting implementation: ownership and data control",
+      "environmental_footprint": "Awaiting implementation: model/system card and ESG disclosure",
+      "proportionality": "Awaiting implementation: resource use relative to contributor count (needs platform usage data)"
+    },
+    "note": "Detection only. Absence of signal is not absence of use."
+  },
+  "policy_change": {
+    "status": "Awaiting implementation: Policy Change",
+    "blocker": "Draft classifier not wired in or validated against hand-graded history. Repo.history() and Repo.commit_patch() supply the diffs."
+  },
+  "use_compliance": {
+    "status": "Awaiting implementation: Use Compliance",
+    "blocker": "Derived metric. Requires disclosed-use data (Use Composition) checked against the specificity grid. Composition is only partially detectable, so the comparison is not yet sound."
+  },
+  "misuse": {
+    "status": "Awaiting implementation: Misuse",
+    "blocker": "Not automatable. CHAOSS marks the core signals unknown: text-based AI detectors are unreliable, and license-laundering and wrongful-accusation incidents need maintainer self-report."
+  }
+}

@@ -1,0 +1,216 @@
+{
+  "repo": "qgis/QGIS-Enhancement-Proposals",
+  "commit_sha": "9d87e2f0a470ceb32f738a91e8ae581b474f12d4",
+  "metric_model": "CHAOSS AI Alignment - Community Governed Use",
+  "scope": {
+    "mode": "named_files",
+    "files_assessed": [
+      "qep-408-ai-tool-policy.md"
+    ],
+    "note": "Scoring confined to the files named on the command line; 'no' means not addressed in those files."
+  },
+  "usage": {
+    "input_tokens": 11242,
+    "output_tokens": 4442,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0,
+    "api_calls": 2,
+    "files_read": [
+      "qep-408-ai-tool-policy.md"
+    ],
+    "model": "claude-sonnet-5",
+    "estimated_cost_usd": 0.066904
+  },
+  "consent_policy_specificity": {
+    "domains": [
+      {
+        "domain": "code_contributions",
+        "supervision_level": "human_in_the_loop",
+        "scope_or_volume_limits": "Applies to code (usually PRs), QEPs/design proposals, issues/security vulnerabilities, and comments/feedback on PRs.",
+        "accountability_holder": "contributor",
+        "proportionality": "not_specified",
+        "addressed": "yes",
+        "evidence": [
+          {
+            "path": "qep-408-ai-tool-policy.md",
+            "quote": "there must be a human in the loop. Contributors must read and review all Large Language Model (LLM)-generated code or text before they ask other project members to review it.",
+            "line": null
+          },
+          {
+            "path": "qep-408-ai-tool-policy.md",
+            "quote": "The contributor is always the author and is fully accountable for their contributions.",
+            "line": 29
+          },
+          {
+            "path": "qep-408-ai-tool-policy.md",
+            "quote": "Code, usually in the form of a pull request\n- QEPs or design proposals\n- Issues or security vulnerabilities\n- Comments and feedback on pull requests",
+            "line": 54
+          }
+        ],
+        "rationale_only_mention": "",
+        "lean": "none",
+        "suggested_improvement": "",
+        "reasoning": "The policy names code, PRs, issues and comments explicitly, sets a human-in-the-loop supervision level, requires disclosure/labelling, and states the contributor is always accountable as author."
+      },
+      {
+        "domain": "notetaker_bots",
+        "supervision_level": "not_specified",
+        "scope_or_volume_limits": "not_specified",
+        "accountability_holder": "not_specified",
+        "proportionality": "not_applicable",
+        "addressed": "no",
+        "evidence": [],
+        "rationale_only_mention": "",
+        "lean": "none",
+        "suggested_improvement": "no mention of meeting/notetaker bots at all",
+        "reasoning": "The document is scoped to contributions (code, QEPs, issues, comments) and review tooling; it never discusses recording or transcribing meetings or small-group discussions."
+      },
+      {
+        "domain": "content",
+        "supervision_level": "human_in_the_loop",
+        "scope_or_volume_limits": "Covers QEPs/design proposals and gives documentation as a worked example of approved use.",
+        "accountability_holder": "contributor",
+        "proportionality": "not_specified",
+        "addressed": "yes",
+        "evidence": [
+          {
+            "path": "qep-408-ai-tool-policy.md",
+            "quote": "using an LLM to generate documentation, which a contributor manually reviews for correctness, edits, and then posts as a PR, is an approved use of tools under this policy.",
+            "line": 73
+          },
+          {
+            "path": "qep-408-ai-tool-policy.md",
+            "quote": "QEPs or design proposals",
+            "line": 55
+          }
+        ],
+        "rationale_only_mention": "",
+        "lean": "none",
+        "suggested_improvement": "",
+        "reasoning": "Documentation and design proposals are explicitly named as content types covered, with the same human-in-the-loop supervision and contributor accountability applied generally across the policy."
+      },
+      {
+        "domain": "moderation",
+        "supervision_level": "not_specified",
+        "scope_or_volume_limits": "not_specified",
+        "accountability_holder": "not_specified",
+        "proportionality": "not_applicable",
+        "addressed": "no",
+        "evidence": [],
+        "rationale_only_mention": "",
+        "lean": "none",
+        "suggested_improvement": "no rule on AI use for moderation actions",
+        "reasoning": "The document describes human maintainers applying the 'extractive' label, locking conversations, closing PRs, or banning contributors, but never discusses whether AI may be used to perform or assist moderation actions."
+      },
+      {
+        "domain": "review",
+        "supervision_level": "human_in_the_loop",
+        "scope_or_volume_limits": "Automated review tools that publish comments without human oversight; opt-in tools keeping a human in the loop are acceptable.",
+        "accountability_holder": "not_specified",
+        "proportionality": "not_specified",
+        "addressed": "partial",
+        "evidence": [
+          {
+            "path": "qep-408-ai-tool-policy.md",
+            "quote": "automated review tools that publish comments without human review are not allowed. However, an opt-in review tool that keeps a human in the loop is acceptable under this policy.",
+            "line": null
+          }
+        ],
+        "rationale_only_mention": "",
+        "lean": "none",
+        "suggested_improvement": "no accountability holder named for AI-assisted review output",
+        "reasoning": "The policy directly names automated/AI review tools and sets a human-in-the-loop supervision level (banning fully autonomous public comments), but never states who is accountable for the content of AI-assisted reviews."
+      },
+      {
+        "domain": "autonomous",
+        "supervision_level": "banned",
+        "scope_or_volume_limits": "Agents that take action in digital project spaces without human approval, e.g. the GitHub @claude agent.",
+        "accountability_holder": "not_specified",
+        "proportionality": "not_specified",
+        "addressed": "partial",
+        "evidence": [
+          {
+            "path": "qep-408-ai-tool-policy.md",
+            "quote": "An important implication of this policy is that it bans agents that take action in our digital spaces without human approval, such as the GitHub @claude agent.",
+            "line": null
+          }
+        ],
+        "rationale_only_mention": "",
+        "lean": "none",
+        "suggested_improvement": "no accountability holder named for autonomous agent actions",
+        "reasoning": "Autonomous/agentic use is named explicitly and banned, but the policy does not state who would be accountable if such an agent were used or approved a human action on its behalf."
+      },
+      {
+        "domain": "environmental",
+        "supervision_level": "not_specified",
+        "scope_or_volume_limits": "not_specified",
+        "accountability_holder": "not_specified",
+        "proportionality": "not_applicable",
+        "addressed": "no",
+        "evidence": [],
+        "rationale_only_mention": "",
+        "lean": "none",
+        "suggested_improvement": "no rule or mention of energy/water/carbon impact",
+        "reasoning": "The document's cost concerns are entirely about maintainer time and attention ('extractive contributions'), not energy, water, or carbon footprint; environmental impact is not raised even as rationale."
+      },
+      {
+        "domain": "infrastructure",
+        "supervision_level": "not_specified",
+        "scope_or_volume_limits": "not_specified",
+        "accountability_holder": "not_specified",
+        "proportionality": "not_applicable",
+        "addressed": "no",
+        "evidence": [],
+        "rationale_only_mention": "",
+        "lean": "none",
+        "suggested_improvement": "no rule or mention of server load or hardware cost",
+        "reasoning": "The policy's scarcity concern is maintainer review time/energy, not server load, CI strain, or hardware financing; infrastructure strain is not discussed."
+      },
+      {
+        "domain": "training_data",
+        "supervision_level": "not_specified",
+        "scope_or_volume_limits": "not_specified",
+        "accountability_holder": "not_specified",
+        "proportionality": "not_applicable",
+        "addressed": "no",
+        "evidence": [],
+        "rationale_only_mention": "Artificial intelligence systems raise many questions around copyright that have yet to be answered. ... Using AI tools to regenerate copyrighted material does not remove the copyright",
+        "lean": "restrictive",
+        "suggested_improvement": "no rule on data used to train AI tools themselves",
+        "reasoning": "The Copyright section addresses copyrighted material appearing in AI-assisted contributions (an output-side concern) and voices unresolved concern about AI and copyright, but sets no rule about what data may be used to train AI systems or platform user data usage."
+      }
+    ],
+    "unscoped_statements": [],
+    "overall_posture": "The policy is a specific, human-in-the-loop framework for contributions, documentation/QEPs, and review tooling (banning fully autonomous agents and unreviewed automated review comments) with contributor accountability, but it never addresses notetaker bots, moderation, environmental impact, infrastructure strain, or training-data use, and leaves accountability unnamed for review and autonomous-agent scenarios."
+  },
+  "validation_problems": [
+    "code_contributions: quote not found in qep-408-ai-tool-policy.md",
+    "review: quote not found in qep-408-ai-tool-policy.md",
+    "autonomous: quote not found in qep-408-ai-tool-policy.md"
+  ],
+  "use_composition_partial": {
+    "agent_instruction_files": [],
+    "workflow_count": 0,
+    "workflows_with_ai_or_bot_signals": [],
+    "awaiting_implementation": {
+      "specific_tools_in_use": "Awaiting implementation: named-product detection beyond known file signatures",
+      "model_type": "Awaiting implementation: underlying model/family",
+      "ai_tool_owner": "Awaiting implementation: ownership and data control",
+      "environmental_footprint": "Awaiting implementation: model/system card and ESG disclosure",
+      "proportionality": "Awaiting implementation: resource use relative to contributor count (needs platform usage data)"
+    },
+    "note": "Detection only. Absence of signal is not absence of use."
+  },
+  "policy_change": {
+    "status": "Awaiting implementation: Policy Change",
+    "blocker": "Draft classifier not wired in or validated against hand-graded history. Repo.history() and Repo.commit_patch() supply the diffs."
+  },
+  "use_compliance": {
+    "status": "Awaiting implementation: Use Compliance",
+    "blocker": "Derived metric. Requires disclosed-use data (Use Composition) checked against the specificity grid. Composition is only partially detectable, so the comparison is not yet sound."
+  },
+  "misuse": {
+    "status": "Awaiting implementation: Misuse",
+    "blocker": "Not automatable. CHAOSS marks the core signals unknown: text-based AI detectors are unreliable, and license-laundering and wrongful-accusation incidents need maintainer self-report."
+  }
+}

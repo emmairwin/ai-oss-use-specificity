@@ -1,0 +1,173 @@
+{
+  "repo": "jazzband/pip-tools",
+  "commit_sha": "c58d5d945c0f20e9713e10f5fea2491a5c984f39",
+  "metric_model": "CHAOSS AI Alignment - Community Governed Use",
+  "scope": {
+    "mode": "named_files",
+    "files_assessed": [
+      "docs/contributing.md"
+    ],
+    "note": "Scoring confined to the files named on the command line; 'no' means not addressed in those files."
+  },
+  "usage": {
+    "input_tokens": 8889,
+    "output_tokens": 1850,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0,
+    "api_calls": 2,
+    "files_read": [
+      "docs/contributing.md"
+    ],
+    "model": "claude-sonnet-5",
+    "estimated_cost_usd": 0.036278
+  },
+  "consent_policy_specificity": {
+    "domains": [
+      {
+        "domain": "code_contributions",
+        "supervision_level": "not_specified",
+        "scope_or_volume_limits": "not_specified",
+        "accountability_holder": "not_specified",
+        "proportionality": "not_specified",
+        "addressed": "no",
+        "evidence": [],
+        "rationale_only_mention": "",
+        "lean": "none",
+        "suggested_improvement": "no supervision level; no accountability holder named",
+        "reasoning": "docs/contributing.md contains no text of its own; it merely includes CONTRIBUTING.md and changelog.d/README.md via Sphinx directives. No AI-related content appears in this file itself."
+      },
+      {
+        "domain": "notetaker_bots",
+        "supervision_level": "not_specified",
+        "scope_or_volume_limits": "not_specified",
+        "accountability_holder": "not_specified",
+        "proportionality": "not_specified",
+        "addressed": "no",
+        "evidence": [],
+        "rationale_only_mention": "",
+        "lean": "none",
+        "suggested_improvement": "no supervision level; no accountability holder named",
+        "reasoning": "The file has no content addressing meeting recording or notetaker bots; it is only an inclusion stub for other documents."
+      },
+      {
+        "domain": "content",
+        "supervision_level": "not_specified",
+        "scope_or_volume_limits": "not_specified",
+        "accountability_holder": "not_specified",
+        "proportionality": "not_specified",
+        "addressed": "no",
+        "evidence": [],
+        "rationale_only_mention": "",
+        "lean": "none",
+        "suggested_improvement": "no supervision level; no accountability holder named",
+        "reasoning": "No mention of documentation, blog, or design-asset AI use in this file; it contains only Sphinx include directives."
+      },
+      {
+        "domain": "moderation",
+        "supervision_level": "not_specified",
+        "scope_or_volume_limits": "not_specified",
+        "accountability_holder": "not_specified",
+        "proportionality": "not_specified",
+        "addressed": "no",
+        "evidence": [],
+        "rationale_only_mention": "",
+        "lean": "none",
+        "suggested_improvement": "no supervision level; no accountability holder named",
+        "reasoning": "No moderation-related text appears in this file; it is solely an inclusion stub."
+      },
+      {
+        "domain": "review",
+        "supervision_level": "not_specified",
+        "scope_or_volume_limits": "not_specified",
+        "accountability_holder": "not_specified",
+        "proportionality": "not_specified",
+        "addressed": "no",
+        "evidence": [],
+        "rationale_only_mention": "",
+        "lean": "none",
+        "suggested_improvement": "no supervision level; no accountability holder named",
+        "reasoning": "The file does not mention review processes or who/what may review contributions using AI."
+      },
+      {
+        "domain": "autonomous",
+        "supervision_level": "not_specified",
+        "scope_or_volume_limits": "not_specified",
+        "accountability_holder": "not_specified",
+        "proportionality": "not_specified",
+        "addressed": "no",
+        "evidence": [],
+        "rationale_only_mention": "",
+        "lean": "none",
+        "suggested_improvement": "no supervision level; no accountability holder named",
+        "reasoning": "No mention of autonomous or agentic AI use in this file."
+      },
+      {
+        "domain": "environmental",
+        "supervision_level": "not_specified",
+        "scope_or_volume_limits": "not_specified",
+        "accountability_holder": "not_specified",
+        "proportionality": "not_specified",
+        "addressed": "no",
+        "evidence": [],
+        "rationale_only_mention": "",
+        "lean": "none",
+        "suggested_improvement": "no supervision level; no accountability holder named",
+        "reasoning": "No mention of environmental impact, energy or water use in this file."
+      },
+      {
+        "domain": "infrastructure",
+        "supervision_level": "not_specified",
+        "scope_or_volume_limits": "not_specified",
+        "accountability_holder": "not_specified",
+        "proportionality": "not_specified",
+        "addressed": "no",
+        "evidence": [],
+        "rationale_only_mention": "",
+        "lean": "none",
+        "suggested_improvement": "no supervision level; no accountability holder named",
+        "reasoning": "No mention of infrastructure strain, server load, or hardware costs in this file."
+      },
+      {
+        "domain": "training_data",
+        "supervision_level": "not_specified",
+        "scope_or_volume_limits": "not_specified",
+        "accountability_holder": "not_specified",
+        "proportionality": "not_specified",
+        "addressed": "no",
+        "evidence": [],
+        "rationale_only_mention": "",
+        "lean": "none",
+        "suggested_improvement": "no supervision level; no accountability holder named",
+        "reasoning": "No mention of training data or platform user data use in this file."
+      }
+    ],
+    "unscoped_statements": [],
+    "overall_posture": "The single assessed file, docs/contributing.md, contains no substantive text of its own - it is purely a Sphinx include stub pulling in CONTRIBUTING.md and changelog.d/README.md - so it addresses none of the nine AI consent domains; any actual policy content, if it exists, resides in the included files which are out of scope for this assessment."
+  },
+  "validation_problems": [],
+  "use_composition_partial": {
+    "agent_instruction_files": [],
+    "workflow_count": 4,
+    "workflows_with_ai_or_bot_signals": [],
+    "awaiting_implementation": {
+      "specific_tools_in_use": "Awaiting implementation: named-product detection beyond known file signatures",
+      "model_type": "Awaiting implementation: underlying model/family",
+      "ai_tool_owner": "Awaiting implementation: ownership and data control",
+      "environmental_footprint": "Awaiting implementation: model/system card and ESG disclosure",
+      "proportionality": "Awaiting implementation: resource use relative to contributor count (needs platform usage data)"
+    },
+    "note": "Detection only. Absence of signal is not absence of use."
+  },
+  "policy_change": {
+    "status": "Awaiting implementation: Policy Change",
+    "blocker": "Draft classifier not wired in or validated against hand-graded history. Repo.history() and Repo.commit_patch() supply the diffs."
+  },
+  "use_compliance": {
+    "status": "Awaiting implementation: Use Compliance",
+    "blocker": "Derived metric. Requires disclosed-use data (Use Composition) checked against the specificity grid. Composition is only partially detectable, so the comparison is not yet sound."
+  },
+  "misuse": {
+    "status": "Awaiting implementation: Misuse",
+    "blocker": "Not automatable. CHAOSS marks the core signals unknown: text-based AI detectors are unreliable, and license-laundering and wrongful-accusation incidents need maintainer self-report."
+  }
+}

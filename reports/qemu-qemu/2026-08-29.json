@@ -1,0 +1,190 @@
+{
+  "repo": "qemu/qemu",
+  "commit_sha": "d2e570cc0f97b936902a5b1b86b73c0f5998b475",
+  "metric_model": "CHAOSS AI Alignment - Community Governed Use",
+  "scope": {
+    "mode": "named_files",
+    "files_assessed": [
+      "docs/devel/code-provenance.rst"
+    ],
+    "note": "Scoring confined to the files named on the command line; 'no' means not addressed in those files."
+  },
+  "usage": {
+    "input_tokens": 14248,
+    "output_tokens": 4701,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0,
+    "api_calls": 2,
+    "files_read": [
+      "docs/devel/code-provenance.rst"
+    ],
+    "model": "claude-sonnet-5",
+    "estimated_cost_usd": 0.075506
+  },
+  "consent_policy_specificity": {
+    "domains": [
+      {
+        "domain": "code_contributions",
+        "supervision_level": "banned",
+        "scope_or_volume_limits": "Applies to patches/contributions submitted to the QEMU project; does not apply to other AI uses (API research, static analysis, debugging) whose output is not included in the contribution.",
+        "accountability_holder": "contributor (patch author)",
+        "proportionality": "not_specified",
+        "addressed": "yes",
+        "evidence": [
+          {
+            "path": "docs/devel/code-provenance.rst",
+            "quote": "Current QEMU project policy is to DECLINE any contributions which are believed to include or derive from AI generated content.",
+            "line": 293
+          },
+          {
+            "path": "docs/devel/code-provenance.rst",
+            "quote": "the \"Signed-off-by\" label in a patch submission is a statement that the author takes responsibility for the entire contents of the patch, including any parts that were generated or assisted by AI tools",
+            "line": 346
+          }
+        ],
+        "rationale_only_mention": "",
+        "lean": "none",
+        "suggested_improvement": "",
+        "reasoning": "The document explicitly bans AI-generated/assisted content in patch submissions, states this covers well-known LLM tools, and assigns responsibility for the entire patch (including AI-assisted parts) to the signing contributor via the Signed-off-by mechanism. Both supervision level and accountability holder are named, so this is fully addressed."
+      },
+      {
+        "domain": "notetaker_bots",
+        "supervision_level": "not_specified",
+        "scope_or_volume_limits": "not_specified",
+        "accountability_holder": "not_specified",
+        "proportionality": "not_specified",
+        "addressed": "no",
+        "evidence": [],
+        "rationale_only_mention": "",
+        "lean": "none",
+        "suggested_improvement": "no supervision level or accountability holder for meeting/notetaker bots",
+        "reasoning": "The document is entirely about patch/code provenance and contribution certification; it never mentions meetings, recordings, or notetaker bots."
+      },
+      {
+        "domain": "content",
+        "supervision_level": "not_specified",
+        "scope_or_volume_limits": "not_specified",
+        "accountability_holder": "not_specified",
+        "proportionality": "not_specified",
+        "addressed": "no",
+        "evidence": [],
+        "rationale_only_mention": "",
+        "lean": "none",
+        "suggested_improvement": "no rule naming documentation, blogs, or design assets specifically",
+        "reasoning": "The AI policy is framed entirely around 'contributions'/'patches' in the code-provenance sense (git commits, Signed-off-by). It never names documentation, blog posts, or design assets as a distinct category, so this domain is not addressed even though such content could arguably fall under 'contributions' in practice."
+      },
+      {
+        "domain": "moderation",
+        "supervision_level": "not_specified",
+        "scope_or_volume_limits": "not_specified",
+        "accountability_holder": "not_specified",
+        "proportionality": "not_specified",
+        "addressed": "no",
+        "evidence": [],
+        "rationale_only_mention": "",
+        "lean": "none",
+        "suggested_improvement": "no supervision level or accountability holder for AI in moderation",
+        "reasoning": "No text in the document discusses moderation actions (e.g., closing issues, banning users) by AI or otherwise."
+      },
+      {
+        "domain": "review",
+        "supervision_level": "not_specified",
+        "scope_or_volume_limits": "not_specified",
+        "accountability_holder": "not_specified",
+        "proportionality": "not_specified",
+        "addressed": "no",
+        "evidence": [],
+        "rationale_only_mention": "",
+        "lean": "none",
+        "suggested_improvement": "no rule on whether reviewers may use AI to review patches",
+        "reasoning": "The document describes human review tags (Reviewed-by, Acked-by, Tested-by) but never states whether AI tools may be used by reviewers or maintainers to perform review, nor any supervision level for that activity."
+      },
+      {
+        "domain": "autonomous",
+        "supervision_level": "banned",
+        "scope_or_volume_limits": "Limited to agentic tools whose generated code/content is included in a contribution to QEMU.",
+        "accountability_holder": "contributor (patch author, via Signed-off-by)",
+        "proportionality": "not_specified",
+        "addressed": "yes",
+        "evidence": [
+          {
+            "path": "docs/devel/code-provenance.rst",
+            "quote": "Examples of tools impacted by this policy includes GitHub's CoPilot, OpenAI's ChatGPT, Anthropic's Claude, and Meta's Code Llama, and code/content generation agents which are built on top of such tools.",
+            "line": 329
+          }
+        ],
+        "rationale_only_mention": "",
+        "lean": "none",
+        "suggested_improvement": "",
+        "reasoning": "The policy explicitly names 'code/content generation agents which are built on top of such tools' as covered by the same ban applied to LLM tools, and the same Signed-off-by accountability clause applies to their output. This is a narrow but named treatment of agentic/autonomous tool use in the contribution context."
+      },
+      {
+        "domain": "environmental",
+        "supervision_level": "not_specified",
+        "scope_or_volume_limits": "not_specified",
+        "accountability_holder": "not_specified",
+        "proportionality": "not_specified",
+        "addressed": "no",
+        "evidence": [],
+        "rationale_only_mention": "",
+        "lean": "none",
+        "suggested_improvement": "no rule or rationale on energy/water/carbon impact of AI",
+        "reasoning": "The document's stated rationale for banning AI content is entirely about copyright/licensing/DCO compliance risk; no mention of energy, water, or hardware carbon footprint appears anywhere."
+      },
+      {
+        "domain": "infrastructure",
+        "supervision_level": "not_specified",
+        "scope_or_volume_limits": "not_specified",
+        "accountability_holder": "not_specified",
+        "proportionality": "not_specified",
+        "addressed": "no",
+        "evidence": [],
+        "rationale_only_mention": "",
+        "lean": "none",
+        "suggested_improvement": "no rule or rationale on server/infrastructure strain from AI",
+        "reasoning": "No text discusses server load, CI capacity, or hardware financing/costs related to AI tool usage."
+      },
+      {
+        "domain": "training_data",
+        "supervision_level": "not_specified",
+        "scope_or_volume_limits": "not_specified",
+        "accountability_holder": "not_specified",
+        "proportionality": "not_specified",
+        "addressed": "no",
+        "evidence": [],
+        "rationale_only_mention": "Where the training material is known, it is common for it to include large volumes of material under restrictive licensing/copyright terms.",
+        "lean": "restrictive",
+        "suggested_improvement": "no rule governing use of platform/user data for training",
+        "reasoning": "The document discusses the licensing/copyright uncertainty of AI training material only as a justification for banning AI-generated contributions; it sets no rule about training data use itself, e.g. whether QEMU project data may be used to train models."
+      }
+    ],
+    "unscoped_statements": [],
+    "overall_posture": "The document, QEMU's code-provenance policy, imposes a firm, specifically-scoped ban on AI-generated or AI-assisted content (including agentic tools) in patch contributions and pins accountability to the submitting contributor via Signed-off-by, but it is silent on every other domain (notetaker bots, general content, moderation, AI-assisted review, environmental impact, infrastructure strain, and training-data use), with copyright/licensing risk of training data cited only as rationale for the contribution ban rather than as a rule in its own right."
+  },
+  "validation_problems": [],
+  "use_composition_partial": {
+    "agent_instruction_files": [],
+    "workflow_count": 1,
+    "workflows_with_ai_or_bot_signals": [],
+    "awaiting_implementation": {
+      "specific_tools_in_use": "Awaiting implementation: named-product detection beyond known file signatures",
+      "model_type": "Awaiting implementation: underlying model/family",
+      "ai_tool_owner": "Awaiting implementation: ownership and data control",
+      "environmental_footprint": "Awaiting implementation: model/system card and ESG disclosure",
+      "proportionality": "Awaiting implementation: resource use relative to contributor count (needs platform usage data)"
+    },
+    "note": "Detection only. Absence of signal is not absence of use."
+  },
+  "policy_change": {
+    "status": "Awaiting implementation: Policy Change",
+    "blocker": "Draft classifier not wired in or validated against hand-graded history. Repo.history() and Repo.commit_patch() supply the diffs."
+  },
+  "use_compliance": {
+    "status": "Awaiting implementation: Use Compliance",
+    "blocker": "Derived metric. Requires disclosed-use data (Use Composition) checked against the specificity grid. Composition is only partially detectable, so the comparison is not yet sound."
+  },
+  "misuse": {
+    "status": "Awaiting implementation: Misuse",
+    "blocker": "Not automatable. CHAOSS marks the core signals unknown: text-based AI detectors are unreliable, and license-laundering and wrongful-accusation incidents need maintainer self-report."
+  }
+}

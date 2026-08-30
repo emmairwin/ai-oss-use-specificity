@@ -1,0 +1,252 @@
+{
+  "repo": "zulip/zulip",
+  "commit_sha": "49ed929428a8bada600dfb2fc51432135e045396",
+  "metric_model": "CHAOSS AI Alignment - Community Governed Use",
+  "scope": {
+    "mode": "named_files",
+    "files_assessed": [
+      "CONTRIBUTING.md"
+    ],
+    "note": "Scoring confined to the files named on the command line; 'no' means not addressed in those files."
+  },
+  "usage": {
+    "input_tokens": 19492,
+    "output_tokens": 7459,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0,
+    "api_calls": 2,
+    "files_read": [
+      "CONTRIBUTING.md"
+    ],
+    "model": "claude-sonnet-5",
+    "estimated_cost_usd": 0.113574
+  },
+  "consent_policy_specificity": {
+    "domains": [
+      {
+        "domain": "code_contributions",
+        "supervision_level": "human_in_the_loop",
+        "scope_or_volume_limits": "not_specified (applies to all code contributions/PRs/issues/comments using AI tools, no numeric or frequency limit)",
+        "accountability_holder": "contributor",
+        "proportionality": "not_specified",
+        "addressed": "yes",
+        "evidence": [
+          {
+            "path": "CONTRIBUTING.md",
+            "quote": "You can use any tools that help you understand the Zulip codebase and write good code, including AI tools.",
+            "line": 123
+          },
+          {
+            "path": "CONTRIBUTING.md",
+            "quote": "Do not submit an AI-generated PR you haven't personally understood and tested, as this wastes maintainers' time.",
+            "line": null
+          },
+          {
+            "path": "CONTRIBUTING.md",
+            "quote": "When you use an LLM to write a PR description or comment, it remains your responsibility to read through the whole thing",
+            "line": null
+          }
+        ],
+        "rationale_only_mention": "",
+        "lean": "none",
+        "suggested_improvement": "",
+        "reasoning": "The policy has a dedicated 'AI use policy and guidelines' section naming code contributions, PR descriptions and comments. It sets a human-in-the-loop supervision level (must understand and test any AI-generated code/text before submitting) and assigns accountability to the contributor ('it remains your responsibility'). The clause 'PRs that appear to violate this guideline will be closed without review' is enforcement (who polices), not accountability, and was excluded from the accountability_holder field accordingly."
+      },
+      {
+        "domain": "notetaker_bots",
+        "supervision_level": "not_specified",
+        "scope_or_volume_limits": "not_specified",
+        "accountability_holder": "not_specified",
+        "proportionality": "not_specified",
+        "addressed": "no",
+        "evidence": [],
+        "rationale_only_mention": "",
+        "lean": "none",
+        "suggested_improvement": "no supervision level or accountability holder for meeting/notetaker bots",
+        "reasoning": "CONTRIBUTING.md contains no reference to meeting recordings, notetaker bots, or AI processing of discussion content."
+      },
+      {
+        "domain": "content",
+        "supervision_level": "not_specified",
+        "scope_or_volume_limits": "not_specified",
+        "accountability_holder": "not_specified",
+        "proportionality": "not_specified",
+        "addressed": "no",
+        "evidence": [],
+        "rationale_only_mention": "",
+        "lean": "none",
+        "suggested_improvement": "no rule on AI-generated documentation, blogs, or design assets",
+        "reasoning": "The AI guidance in this file is scoped to coding assistance and communication around PRs/community messages; it never mentions documentation, blog posts, or design assets specifically."
+      },
+      {
+        "domain": "moderation",
+        "supervision_level": "not_specified",
+        "scope_or_volume_limits": "not_specified",
+        "accountability_holder": "not_specified",
+        "proportionality": "not_specified",
+        "addressed": "no",
+        "evidence": [],
+        "rationale_only_mention": "",
+        "lean": "none",
+        "suggested_improvement": "no supervision level or accountability holder for AI-assisted moderation",
+        "reasoning": "No mention of moderation actions (e.g., channel bans, content removal) or of AI use in moderation decisions anywhere in the file."
+      },
+      {
+        "domain": "review",
+        "supervision_level": "not_specified",
+        "scope_or_volume_limits": "not_specified",
+        "accountability_holder": "not_specified",
+        "proportionality": "not_specified",
+        "addressed": "no",
+        "evidence": [],
+        "rationale_only_mention": "",
+        "lean": "none",
+        "suggested_improvement": "no statement on whether reviewers may use AI to review PRs",
+        "reasoning": "The document describes a human review process (review-process guide, maintainer feedback) but never states whether maintainers/reviewers may or may not use AI tools when reviewing contributions."
+      },
+      {
+        "domain": "autonomous",
+        "supervision_level": "human_in_the_loop",
+        "scope_or_volume_limits": "not_specified",
+        "accountability_holder": "contributor",
+        "proportionality": "not_specified",
+        "addressed": "partial",
+        "evidence": [
+          {
+            "path": "CONTRIBUTING.md",
+            "quote": "Fiddling or vibe coding until things seem to work, and then asking maintainers to verify code that you don't understand yourself, does not help the project.",
+            "line": null
+          },
+          {
+            "path": "CONTRIBUTING.md",
+            "quote": "Do not submit an AI-generated PR you haven't personally understood and tested, as this wastes maintainers' time.",
+            "line": null
+          }
+        ],
+        "rationale_only_mention": "",
+        "lean": "restrictive",
+        "suggested_improvement": "name autonomous/agentic AI use explicitly; state proportionality threshold",
+        "reasoning": "The policy never names 'autonomous' or 'agentic' AI use, but its ban on submitting AI-generated work the human hasn't understood/tested functionally reaches unsupervised/agentic code generation. This is general language that reaches but does not name the domain, so it is scored partial rather than yes, per the metric's rule for reached-by-general-language cases."
+      },
+      {
+        "domain": "environmental",
+        "supervision_level": "not_specified",
+        "scope_or_volume_limits": "not_specified",
+        "accountability_holder": "not_specified",
+        "proportionality": "not_specified",
+        "addressed": "no",
+        "evidence": [],
+        "rationale_only_mention": "",
+        "lean": "none",
+        "suggested_improvement": "no rule or rationale on environmental impact of AI tools",
+        "reasoning": "No mention of energy, water, hardware, or carbon costs of AI tools anywhere in the file, either as rule or as rationale."
+      },
+      {
+        "domain": "infrastructure",
+        "supervision_level": "not_specified",
+        "scope_or_volume_limits": "not_specified",
+        "accountability_holder": "not_specified",
+        "proportionality": "not_specified",
+        "addressed": "no",
+        "evidence": [],
+        "rationale_only_mention": "",
+        "lean": "none",
+        "suggested_improvement": "no rule or rationale on infrastructure/server strain from AI tools",
+        "reasoning": "The document discusses maintainer time and attention as a scarce resource ('Maintainer time and attention is very limited'), but this concerns human review capacity, not server load or hardware/infrastructure costs, so it does not address this domain even as rationale."
+      },
+      {
+        "domain": "training_data",
+        "supervision_level": "not_specified",
+        "scope_or_volume_limits": "not_specified",
+        "accountability_holder": "not_specified",
+        "proportionality": "not_specified",
+        "addressed": "no",
+        "evidence": [],
+        "rationale_only_mention": "",
+        "lean": "none",
+        "suggested_improvement": "no rule on use of platform/user data for AI training",
+        "reasoning": "CONTRIBUTING.md contains no discussion of Zulip platform data, user messages, or any other data being used to train AI models."
+      }
+    ],
+    "unscoped_statements": [
+      {
+        "path": "CONTRIBUTING.md",
+        "quote": "Do not post AI-generated messages in the Zulip development community -- we want to read your own genuine expression of your thoughts.",
+        "areas_named": [
+          "code_contributions"
+        ],
+        "domains_left_ambiguous": [
+          "content",
+          "moderation"
+        ],
+        "line": null
+      },
+      {
+        "path": "CONTRIBUTING.md",
+        "quote": "don't waste the community's time with AI slop. See our AI use policy and guidelines",
+        "areas_named": [
+          "code_contributions"
+        ],
+        "domains_left_ambiguous": [
+          "content",
+          "moderation",
+          "review"
+        ],
+        "line": null
+      }
+    ],
+    "overall_posture": "Zulip's CONTRIBUTING.md gives detailed, specific guidance on AI use for code contributions and related PR/community communication (human-in-the-loop supervision, contributor accountability), but is entirely silent on notetaker bots, content/documentation, moderation, AI-assisted review, environmental impact, infrastructure strain, and training data use."
+  },
+  "validation_problems": [
+    "code_contributions: quote not found in CONTRIBUTING.md",
+    "code_contributions: quote not found in CONTRIBUTING.md",
+    "autonomous: quote not found in CONTRIBUTING.md",
+    "autonomous: quote not found in CONTRIBUTING.md",
+    "unscoped: quote not found in CONTRIBUTING.md",
+    "unscoped: quote not found in CONTRIBUTING.md"
+  ],
+  "use_composition_partial": {
+    "agent_instruction_files": [],
+    "workflow_count": 8,
+    "workflows_with_ai_or_bot_signals": [
+      {
+        "path": ".github/workflows/api-docs-update-check.yml",
+        "signals": [
+          "bot"
+        ]
+      },
+      {
+        "path": ".github/workflows/production-suite.yml",
+        "signals": [
+          "bot"
+        ]
+      },
+      {
+        "path": ".github/workflows/zulip-cloud-deploy.yaml",
+        "signals": [
+          "bot"
+        ]
+      }
+    ],
+    "awaiting_implementation": {
+      "specific_tools_in_use": "Awaiting implementation: named-product detection beyond known file signatures",
+      "model_type": "Awaiting implementation: underlying model/family",
+      "ai_tool_owner": "Awaiting implementation: ownership and data control",
+      "environmental_footprint": "Awaiting implementation: model/system card and ESG disclosure",
+      "proportionality": "Awaiting implementation: resource use relative to contributor count (needs platform usage data)"
+    },
+    "note": "Detection only. Absence of signal is not absence of use."
+  },
+  "policy_change": {
+    "status": "Awaiting implementation: Policy Change",
+    "blocker": "Draft classifier not wired in or validated against hand-graded history. Repo.history() and Repo.commit_patch() supply the diffs."
+  },
+  "use_compliance": {
+    "status": "Awaiting implementation: Use Compliance",
+    "blocker": "Derived metric. Requires disclosed-use data (Use Composition) checked against the specificity grid. Composition is only partially detectable, so the comparison is not yet sound."
+  },
+  "misuse": {
+    "status": "Awaiting implementation: Misuse",
+    "blocker": "Not automatable. CHAOSS marks the core signals unknown: text-based AI detectors are unreliable, and license-laundering and wrongful-accusation incidents need maintainer self-report."
+  }
+}
