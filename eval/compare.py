@@ -8,7 +8,7 @@ Reads agent reports that already exist and every completed grade file, and
 reports agreement, the direction of disagreement, a per-domain breakdown, and
 the disagreements themselves.
 
-No model calls. No network. Deterministic — the functions below take plain
+No model calls. No network. Deterministic, the functions below take plain
 dicts and return plain dicts so they can be unit-tested directly.
 """
 
@@ -223,7 +223,7 @@ def render_text(results: list[dict], totals: dict, skipped: list[str],
     L = []
     w = L.append
 
-    w("CHAOSS Consent Policy Specificity — agent vs. hand grades")
+    w("CHAOSS Consent Policy Specificity, agent vs. hand grades")
     w(f"generated {datetime.now().isoformat(timespec='seconds')}")
     w("")
 
@@ -238,7 +238,7 @@ def render_text(results: list[dict], totals: dict, skipped: list[str],
             w(f"  {len(DOMAINS) - n_amb}/{len(DOMAINS)} domains agreed")
             for domain, votes in res["taxonomy_ambiguous"].items():
                 detail = ", ".join(f"{g}={v}" for g, v in sorted(votes.items()))
-                w(f"  ! taxonomy_ambiguous: {domain} — {detail}")
+                w(f"  ! taxonomy_ambiguous: {domain}. {detail}")
         w("")
         w("  Domains flagged taxonomy_ambiguous are excluded from the agent")
         w("  comparison below. Two people reading the same policy disagreed, so")
@@ -247,7 +247,7 @@ def render_text(results: list[dict], totals: dict, skipped: list[str],
     elif results:
         w("HUMAN-TO-HUMAN AGREEMENT")
         w("-" * 60)
-        w("  Only one grader per repo — no human baseline available.")
+        w("  Only one grader per repo, no human baseline available.")
         w("  A second grader on at least one repo would tell you how much of")
         w("  any disagreement below is the agent and how much is the taxonomy.")
         w("")
@@ -268,7 +268,7 @@ def render_text(results: list[dict], totals: dict, skipped: list[str],
         w(f"  taxonomy ambiguous  {totals['taxonomy_ambiguous']}   (excluded)")
         w("")
         w("  Generous and harsh are reported separately on purpose. Do not")
-        w("  average them — the skew is the diagnosis, not the rate.")
+        w("  average them, the skew is the diagnosis, not the rate.")
     w("")
 
     w("PER DOMAIN")
@@ -354,7 +354,7 @@ def main() -> int:
         print("no usable agent reports", file=sys.stderr)
         return 1
     if not verdicts:
-        print(f"no completed grade files in {args.grades}/ — "
+        print(f"no completed grade files in {args.grades}/. "
               f"run `grade.py check` to see what's outstanding", file=sys.stderr)
         return 1
 

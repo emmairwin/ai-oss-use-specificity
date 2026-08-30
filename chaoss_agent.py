@@ -7,8 +7,7 @@ metrics model, specifically:
 
 https://github.com/chaoss/wg-ai-alignment/tree/main/metrics/ai-alignment-community-governed-use
 
-Point it at any repository - yours, or one you are thinking about contributing
-to. It is not tied to a project.
+Works against any repository, not just your own.
 
 Usage:
     export ANTHROPIC_API_KEY=sk-...
@@ -39,7 +38,7 @@ except ImportError:
     pass
 
 MODEL = "claude-sonnet-5"
-MAX_TURNS = 30
+MAX_TURNS = 8   # scans finish in 2; this only caps a runaway loop
 GH = "https://api.github.com"
 
 # USD per million tokens. Checked 2026-08-29; verify at
@@ -81,7 +80,8 @@ DOMAINS = [
 # The two domains the metric names without a parenthetical gloss. Used only in
 # the report legend, so a reader knows what was looked for.
 DOMAIN_HINTS = {
-    "moderation": "AI flagging, hiding, tagging, deleting, or triaging",
+    "moderation": "AI flagging, hiding, tagging, deleting or triaging, and "
+                  "the maintainer time AI submissions consume",
     "autonomous": "agents acting without a human in the loop per action",
 }
 
@@ -559,6 +559,29 @@ contributor. Getting this wrong inflates a domain from "partial" to "yes", so \
 when only enforcement is stated, answer "not_specified" and mention the \
 enforcement clause in reasoning instead.
 
+- MAINTAINER BURNOUT IS MODERATION, NOT INFRASTRUCTURE. The metric defines infrastructure strain as "server load, hardware cost/financing": machines and money. Maintainer and reviewer time spent triaging, reading and closing AI submissions is moderation load, and belongs to the moderation domain. "AI assistance causes major overhead for project maintainers" and "low-quality pull requests consume significant amounts of human reviewers' time" are moderation. "Sponsorship helps buffer the cost of LLMs on the project" is infrastructure. This distinction is almost always a rationale rather than a rule: record it in rationale_only_mention on the moderation domain, not on infrastructure.
+
+- TRAINING DATA MEANS THE COMMUNITY'S OWN DATA GOING OUT, NOT MODELS TRAINED \
+ON OTHER PEOPLE'S WORK. The metric defines this domain as "data use for \
+training (platform user data)": whether this project's content, issues, \
+discussions or user data may be used to train models. A policy worrying that \
+LLMs were trained on copyrighted material, or that their output may reproduce \
+it, is raising a copyright and provenance concern about code contributions. \
+That is not this domain. Score training_data on it only if the policy says \
+something about the project's own material being used for training.
+
+- REVIEW MEANS USING AI TO REVIEW A CONTRIBUTION. An agent acting on the \
+repository by itself is autonomous use, even where the action it takes is a \
+review. "Agents are forbidden from interacting with our repository" is \
+autonomous. "LLM reviews must be advisory-only" is review. Where a policy \
+covers both, cite each on its own domain rather than the same sentence twice.
+
+- RATIONALE_ONLY_MENTION IS A REASON GIVEN FOR A RULE. It is not any sentence \
+containing a word from the domain. A list of what maintenance involves that \
+happens to use the word "review" is not a rationale about review. If the \
+sentence is not offered as grounds for some rule in this policy, leave the \
+field empty.
+
 - AN OBLIGATION IS NOT AN ACCOUNTABILITY HOLDER. "Contributions must be rewritten without AI tooling" tells someone what to do: that is a supervision level. "Contributors are responsible for all submitted content" says who bears responsibility: that is the accountability holder. Treating every obligation as an implied holder makes the attribute meaningless, because every rule obliges somebody. When the policy only obliges and never assigns responsibility, answer "not_specified".
 
 - A domain the policy does not address is a real, reportable result. Most repos \
@@ -729,7 +752,7 @@ def locate(body: str, quote: str) -> int | None:
         t = t.lower()
         # Smart punctuation, so a quote typed cleanly still matches the source.
         for a, b in (("’", "'"), ("‘", "'"), ("“", '"'),
-                     ("”", '"'), ("—", "-"), ("–", "-"),
+                     ("”", '"'), ("-", "-"), ("–", "-"),
                      ("…", "...")):
             t = t.replace(a, b)
         if loose:
@@ -866,7 +889,7 @@ def write_markdown(report: dict, path: Path) -> None:
     scope = report.get("scope", {})
     offered = scope.get("files_assessed", [])
     read = (report.get("usage") or {}).get("files_read", [])
-    fmt = lambda paths: ", ".join(f"`{p}`" for p in paths) or "—"
+    fmt = lambda paths: ", ".join(f"`{p}`" for p in paths) or "-"
 
     if scope.get("mode") == "named_files":
         w(f"**Files scanned:** {fmt(offered)}")
@@ -893,9 +916,9 @@ def write_markdown(report: dict, path: Path) -> None:
             return ""
         key = f"fn{len(notes) + 1}"
         if path and line:
-            loc = f" — `{path}:{line}`"
+            loc = f". `{path}:{line}`"
         elif path:
-            loc = f" — `{path}`"
+            loc = f". `{path}`"
         else:
             loc = ""  # rationale quotes often have no evidence row to anchor to
         notes.append((key, f"{prefix}“{quote}”{loc}"))
@@ -1053,7 +1076,7 @@ def write_markdown(report: dict, path: Path) -> None:
         w("")
         for d in gaps:
             w(f"- **{labels[d['domain']].split(' (')[0]}** "
-              f"({d['addressed']}) — {d['suggested_improvement']}")
+              f"({d['addressed']}). {d['suggested_improvement']}")
         w("")
 
     unscoped = grid.get("unscoped_statements", [])

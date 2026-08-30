@@ -49,7 +49,7 @@ there:
 sed -n '<line>p' <path>
 ```
 
-Any miss is disqualifying for the whole run — if one line number is invented,
+Any miss is disqualifying for the whole run, if one line number is invented,
 you can't trust the others, and a reader who clicks through and lands on
 unrelated text will discard the entire report.
 
@@ -58,9 +58,9 @@ unrelated text will discard the entire report.
 This is a prototype, so this is a read-and-judge list, not a gate you have to
 clear before the output counts:
 
-- Case A returns roughly `1 partial, 8 no` — if domains it never names come
+- Case A returns roughly `1 partial, 8 no`, if domains it never names come
   back covered, the attribution rule is too weak
-- Case B returns `9 no` — if it finds policy in the metric definitions, the
+- Case B returns `9 no`, if it finds policy in the metric definitions, the
   category-error rule is too weak
 - Case C finds the domains you found, and doesn't invent a `yes`
 - Cited lines actually contain the quotes
@@ -71,5 +71,5 @@ manufactured from blanket language) and **category error** (scoring documents
 *about* policy as policy). Everything else is tuning.
 
 Scores from a prototype are drafts of the *criteria*, not measurements of the
-*repo* — useful for improving the metric, not yet for telling a maintainer
+*repo*, useful for improving the metric, not yet for telling a maintainer
 where they stand.

@@ -7,7 +7,7 @@ Hand-grading templates for CHAOSS Consent Policy Specificity.
 
 Writes grades/<owner>__<name>.json with every domain set to null.
 
-The `addressed` values are yours. Do not let a model fill them in — they are
+The `addressed` values are yours. Do not let a model fill them in, they are
 the only independent measurement in this system, and if they come from a model
 the comparison is the agent checking its own work.
 """
@@ -61,7 +61,7 @@ def grade_filename(slug: str, grader: str | None = None) -> str:
 
 def head_sha(slug: str) -> str:
     """Current HEAD, so a later policy change doesn't silently invalidate the
-    grade. Empty string if unreachable — the template is still usable."""
+    grade. Empty string if unreachable, the template is still usable."""
     headers = {"Accept": "application/vnd.github+json"}
     if token := os.environ.get("GITHUB_TOKEN"):
         headers["Authorization"] = f"Bearer {token}"
@@ -73,7 +73,7 @@ def head_sha(slug: str) -> str:
         return commits[0]["sha"] if commits else ""
     except Exception as e:
         print(f"warning: could not resolve HEAD for {slug} ({e}); "
-              f"commit_sha left empty — fill it in by hand", file=sys.stderr)
+              f"commit_sha left empty, fill it in by hand", file=sys.stderr)
         return ""
 
 
@@ -100,9 +100,9 @@ def cmd_new(args) -> int:
                                indent=2) + "\n", encoding="utf-8")
 
     print(f"wrote {path}")
-    print(f"  commit_sha: {sha or '(unresolved — fill in by hand)'}")
+    print(f"  commit_sha: {sha or '(unresolved, fill in by hand)'}")
     print(f"  set graded_by and graded_at ({date.today().isoformat()}) as you go")
-    print("  addressed: yes | no | partial — your judgement, not a model's")
+    print("  addressed: yes | no | partial, your judgement, not a model's")
     return 0
 
 
@@ -116,7 +116,7 @@ def find_nulls(grade: dict) -> list[str]:
 
 
 def find_invalid(grade: dict) -> list[str]:
-    """Values that aren't yes/no/partial — a typo silently drops a row from
+    """Values that aren't yes/no/partial, a typo silently drops a row from
     the comparison, so surface it here rather than at compare time."""
     bad = []
     for d, entry in grade.get("domains", {}).items():
@@ -138,7 +138,7 @@ def cmd_check(args) -> int:
         try:
             grade = json.loads(path.read_text(encoding="utf-8"))
         except json.JSONDecodeError as e:
-            print(f"{path.name}: INVALID JSON — {e}")
+            print(f"{path.name}: INVALID JSON. {e}")
             incomplete += 1
             continue
 
