@@ -1,49 +1,49 @@
 # AI policy coverage across 38 projects
 
-**1** code contributions · **2** notetaker and meeting bots · **3** content · **4** moderation · **5** review · **6** autonomous and agentic · **7** environmental · **8** infrastructure · **9** data use for training
+🟥 **1** Code contributions · 🟧 **2** Notetaker and meeting bots · 🟨 **3** Content and documentation · 🟩 **4** Moderation and enforcement · 🟦 **5** Review of contributions · 🟪 **6** Autonomous and agentic use · 🟫 **7** Environmental impact · ⬛ **8** Infrastructure strain · 🔷 **9** Data use for training
 
-🟩 addressed · 🟨 partial · 🟪 raised in the policy's rationale but not governed · ⬜ not mentioned
+🟢 addressed · 🟡 partial · 🟣 raised in the policy's rationale but not governed · ⚪ not mentioned
 
-| Project | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | |
+| Project | 🟥 1 | 🟧 2 | 🟨 3 | 🟩 4 | 🟦 5 | 🟪 6 | 🟫 7 | ⬛ 8 | 🔷 9 | |
 |---|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|---|
-| afnix | 🟨 | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | [view report][p1] |
-| apache | 🟩 | ⬜ | 🟩 | ⬜ | ⬜ | 🟨 | ⬜ | ⬜ | ⬜ | [view report][p2] |
-| astropy/astropy-project | 🟩 | ⬜ | 🟨 | ⬜ | ⬜ | 🟩 | ⬜ | ⬜ | ⬜ | [view report][p3] |
-| castle-game-engine | 🟩 | ⬜ | 🟨 | ⬜ | 🟩 | 🟩 | ⬜ | ⬜ | ⬜ | [view report][p4] |
-| codeberg | 🟨 | ⬜ | ⬜ | 🟨 | ⬜ | 🟨 | 🟪 | 🟨 | 🟩 | [view report][p5] |
-| debian | 🟨 | ⬜ | 🟨 | 🟨 | 🟪 | 🟩 | 🟪 | 🟪 | ⬜ | [view report][p6] |
-| forgejo | 🟩 | ⬜ | 🟩 | ⬜ | 🟨 | 🟩 | ⬜ | ⬜ | ⬜ | [view report][p7] |
-| gcc | 🟩 | ⬜ | ⬜ | ⬜ | 🟨 | 🟨 | ⬜ | ⬜ | ⬜ | [view report][p8] |
-| gdal-site | 🟩 | ⬜ | ⬜ | ⬜ | 🟪 | 🟨 | ⬜ | ⬜ | ⬜ | [view report][p9] |
-| gentoo | 🟨 | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | 🟪 | ⬜ | ⬜ | [view report][p10] |
-| ghostty-org/ghostty | 🟨 | ⬜ | 🟨 | 🟨 | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | [view report][p11] |
-| go-gitea/gitea | 🟩 | ⬜ | ⬜ | 🟨 | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | [view report][p12] |
-| jazzband/pip-tools | 🟩 | ⬜ | ⬜ | 🟨 | ⬜ | 🟨 | ⬜ | ⬜ | ⬜ | [view report][p13] |
-| jellyfin/jellyfin.org | 🟩 | ⬜ | ⬜ | 🟨 | ⬜ | 🟩 | ⬜ | ⬜ | ⬜ | [view report][p14] |
-| kde-gsoc | 🟨 | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | 🟪 | ⬜ | ⬜ | [view report][p15] |
-| keepassxreboot/keepassxc | 🟨 | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | [view report][p16] |
-| linux-foundation | 🟩 | ⬜ | 🟨 | ⬜ | 🟪 | ⬜ | ⬜ | ⬜ | 🟪 | [view report][p17] |
-| llvm/llvm-project | 🟩 | ⬜ | 🟩 | 🟨 | 🟨 | 🟨 | ⬜ | ⬜ | ⬜ | [view report][p18] |
-| mastodon/.github | 🟩 | ⬜ | 🟨 | ⬜ | 🟩 | 🟩 | ⬜ | ⬜ | ⬜ | [view report][p19] |
-| matplotlib/matplotlib | 🟩 | ⬜ | ⬜ | 🟨 | ⬜ | 🟨 | ⬜ | ⬜ | ⬜ | [view report][p20] |
-| nlnet-labs | 🟩 | ⬜ | 🟨 | ⬜ | 🟩 | ⬜ | ⬜ | ⬜ | ⬜ | [view report][p21] |
-| openinfra | 🟩 | ⬜ | 🟨 | ⬜ | ⬜ | 🟨 | ⬜ | ⬜ | ⬜ | [view report][p22] |
-| OSGeo/gdal | 🟩 | ⬜ | ⬜ | 🟨 | 🟪 | 🟩 | ⬜ | 🟪 | ⬜ | [view report][p23] |
-| OSGeo/PROJ | 🟩 | ⬜ | 🟨 | 🟨 | 🟨 | 🟨 | ⬜ | ⬜ | ⬜ | [view report][p24] |
-| oxide | 🟩 | ⬜ | 🟩 | ⬜ | 🟨 | ⬜ | ⬜ | ⬜ | 🟨 | [view report][p25] |
-| pola-rs/polars | 🟨 | ⬜ | 🟨 | ⬜ | 🟨 | 🟨 | ⬜ | ⬜ | ⬜ | [view report][p26] |
-| postmarketos | 🟨 | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | 🟪 | 🟪 | ⬜ | [view report][p27] |
-| python-attrs/attrs | 🟨 | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | [view report][p28] |
-| qemu/qemu | 🟩 | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | [view report][p29] |
-| qgis/QGIS-Enhancement-Proposals | 🟩 | ⬜ | 🟩 | 🟨 | 🟨 | 🟨 | ⬜ | 🟪 | ⬜ | [view report][p30] |
-| rust-lang/rust-forge | 🟩 | ⬜ | 🟩 | ⬜ | 🟩 | ⬜ | 🟪 | ⬜ | ⬜ | [view report][p31] |
-| scikit-learn/scikit-learn | 🟨 | ⬜ | ⬜ | 🟨 | 🟨 | ⬜ | ⬜ | ⬜ | ⬜ | [view report][p32] |
-| servo/book | 🟩 | ⬜ | 🟨 | 🟨 | 🟨 | ⬜ | 🟪 | ⬜ | ⬜ | [view report][p33] |
-| sunpy/sunpy | 🟨 | ⬜ | 🟨 | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | [view report][p34] |
-| teamtype/teamtype | 🟨 | ⬜ | 🟨 | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | [view report][p35] |
-| torvalds/linux | 🟩 | ⬜ | ⬜ | ⬜ | ⬜ | 🟩 | ⬜ | ⬜ | ⬜ | [view report][p36] |
-| yt-dlp/yt-dlp | 🟨 | ⬜ | ⬜ | ⬜ | 🟨 | 🟨 | ⬜ | ⬜ | ⬜ | [view report][p37] |
-| zulip/zulip | 🟩 | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | [view report][p38] |
+| afnix | 🟡 | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | [view report][p1] |
+| apache | 🟢 | ⚪ | 🟢 | ⚪ | ⚪ | 🟡 | ⚪ | ⚪ | ⚪ | [view report][p2] |
+| astropy/astropy-project | 🟢 | ⚪ | 🟡 | ⚪ | ⚪ | 🟢 | ⚪ | ⚪ | ⚪ | [view report][p3] |
+| castle-game-engine | 🟢 | ⚪ | 🟡 | ⚪ | 🟢 | 🟢 | ⚪ | ⚪ | ⚪ | [view report][p4] |
+| codeberg | 🟡 | ⚪ | ⚪ | 🟡 | ⚪ | 🟡 | 🟣 | 🟡 | 🟢 | [view report][p5] |
+| debian | 🟡 | ⚪ | 🟡 | 🟡 | 🟣 | 🟢 | 🟣 | 🟣 | ⚪ | [view report][p6] |
+| forgejo | 🟢 | ⚪ | 🟢 | ⚪ | 🟡 | 🟢 | ⚪ | ⚪ | ⚪ | [view report][p7] |
+| gcc | 🟢 | ⚪ | ⚪ | ⚪ | 🟡 | 🟡 | ⚪ | ⚪ | ⚪ | [view report][p8] |
+| gdal-site | 🟢 | ⚪ | ⚪ | ⚪ | 🟣 | 🟡 | ⚪ | ⚪ | ⚪ | [view report][p9] |
+| gentoo | 🟡 | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | 🟣 | ⚪ | ⚪ | [view report][p10] |
+| ghostty-org/ghostty | 🟡 | ⚪ | 🟡 | 🟡 | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | [view report][p11] |
+| go-gitea/gitea | 🟢 | ⚪ | ⚪ | 🟡 | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | [view report][p12] |
+| jazzband/pip-tools | 🟢 | ⚪ | ⚪ | 🟡 | ⚪ | 🟡 | ⚪ | ⚪ | ⚪ | [view report][p13] |
+| jellyfin/jellyfin.org | 🟢 | ⚪ | ⚪ | 🟡 | ⚪ | 🟢 | ⚪ | ⚪ | ⚪ | [view report][p14] |
+| kde-gsoc | 🟡 | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | 🟣 | ⚪ | ⚪ | [view report][p15] |
+| keepassxreboot/keepassxc | 🟡 | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | [view report][p16] |
+| linux-foundation | 🟢 | ⚪ | 🟡 | ⚪ | 🟣 | ⚪ | ⚪ | ⚪ | 🟣 | [view report][p17] |
+| llvm/llvm-project | 🟢 | ⚪ | 🟢 | 🟡 | 🟡 | 🟡 | ⚪ | ⚪ | ⚪ | [view report][p18] |
+| mastodon/.github | 🟢 | ⚪ | 🟡 | ⚪ | 🟢 | 🟢 | ⚪ | ⚪ | ⚪ | [view report][p19] |
+| matplotlib/matplotlib | 🟢 | ⚪ | ⚪ | 🟡 | ⚪ | 🟡 | ⚪ | ⚪ | ⚪ | [view report][p20] |
+| nlnet-labs | 🟢 | ⚪ | 🟡 | ⚪ | 🟢 | ⚪ | ⚪ | ⚪ | ⚪ | [view report][p21] |
+| openinfra | 🟢 | ⚪ | 🟡 | ⚪ | ⚪ | 🟡 | ⚪ | ⚪ | ⚪ | [view report][p22] |
+| OSGeo/gdal | 🟢 | ⚪ | ⚪ | 🟡 | 🟣 | 🟢 | ⚪ | 🟣 | ⚪ | [view report][p23] |
+| OSGeo/PROJ | 🟢 | ⚪ | 🟡 | 🟡 | 🟡 | 🟡 | ⚪ | ⚪ | ⚪ | [view report][p24] |
+| oxide | 🟢 | ⚪ | 🟢 | ⚪ | 🟡 | ⚪ | ⚪ | ⚪ | 🟡 | [view report][p25] |
+| pola-rs/polars | 🟡 | ⚪ | 🟡 | ⚪ | 🟡 | 🟡 | ⚪ | ⚪ | ⚪ | [view report][p26] |
+| postmarketos | 🟡 | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | 🟣 | 🟣 | ⚪ | [view report][p27] |
+| python-attrs/attrs | 🟡 | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | [view report][p28] |
+| qemu/qemu | 🟢 | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | [view report][p29] |
+| qgis/QGIS-Enhancement-Proposals | 🟢 | ⚪ | 🟢 | 🟡 | 🟡 | 🟡 | ⚪ | 🟣 | ⚪ | [view report][p30] |
+| rust-lang/rust-forge | 🟢 | ⚪ | 🟢 | ⚪ | 🟢 | ⚪ | 🟣 | ⚪ | ⚪ | [view report][p31] |
+| scikit-learn/scikit-learn | 🟡 | ⚪ | ⚪ | 🟡 | 🟡 | ⚪ | ⚪ | ⚪ | ⚪ | [view report][p32] |
+| servo/book | 🟢 | ⚪ | 🟡 | 🟡 | 🟡 | ⚪ | 🟣 | ⚪ | ⚪ | [view report][p33] |
+| sunpy/sunpy | 🟡 | ⚪ | 🟡 | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | [view report][p34] |
+| teamtype/teamtype | 🟡 | ⚪ | 🟡 | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | [view report][p35] |
+| torvalds/linux | 🟢 | ⚪ | ⚪ | ⚪ | ⚪ | 🟢 | ⚪ | ⚪ | ⚪ | [view report][p36] |
+| yt-dlp/yt-dlp | 🟡 | ⚪ | ⚪ | ⚪ | 🟡 | 🟡 | ⚪ | ⚪ | ⚪ | [view report][p37] |
+| zulip/zulip | 🟢 | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | [view report][p38] |
 
 [p1]: afnix/2026-08-30.md
 [p2]: apache/2026-08-30.md
