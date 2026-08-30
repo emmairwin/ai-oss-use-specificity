@@ -1,5 +1,7 @@
 # AI policy coverage across 38 projects
 
+The taxonomy below maps to the CHAOSS AI specificity [metric found here](https://github.com/chaoss/wg-ai-alignment/blob/main/metrics/ai-alignment-community-governed-use/ai-use-consent-policy-specificity.md#taxonomy-of-domains). 
+
 🟥 **1** Code contributions · 🟧 **2** Notetaker and meeting bots · 🟨 **3** Content and documentation · 🟩 **4** Moderation and enforcement · 🟦 **5** Review of contributions · 🟪 **6** Autonomous and agentic use · 🟫 **7** Environmental impact · ⬛ **8** Infrastructure strain · ⬜ **9** Data use for training
 
 `X` addressed · `~` partial · `R` raised in the policy's rationale but not governed · blank not mentioned
@@ -84,15 +86,17 @@
 [p37]: yt-dlp-yt-dlp/2026-08-30.md
 [p38]: zulip-zulip/2026-08-30.md
 
-## Coverage
+## Included in Policy
+Bar chart of metric taxonomy captured in policy documents.
 
 ![Coverage by domain](coverage.svg)
 
-## Raised as a reason, not governed
+##  Included in Rationale
+Bart chart of metric taxonomy captured in accompanying blog posts, or preamble to policy.
+
+Sometimes the *reason* for a policy will include one of our metric taxonomies (like enviornment) but not be specifically mentioned in the politcy itself Tgus seens worth capturing.
 
 ![Raised in policy rationale only](rationale.svg)
-
-Domains a policy raises when explaining why some other rule exists, without setting a rule about them.
 
 **Review of contributions**
 
