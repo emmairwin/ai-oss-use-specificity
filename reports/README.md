@@ -2,48 +2,48 @@
 
 **1** code contributions · **2** notetaker and meeting bots · **3** content · **4** moderation · **5** review · **6** autonomous and agentic · **7** environmental · **8** infrastructure · **9** data use for training
 
-`X` addressed · `~` partial · `R` raised in the policy's rationale but not governed · blank not mentioned
+🟩 addressed · 🟨 partial · 🟪 raised in the policy's rationale but not governed · ⬜ not mentioned
 
 | Project | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | |
 |---|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|---|
-| afnix | ~ |  |  |  |  |  |  |  |  | [view report][p1] |
-| apache | X |  | X |  |  | ~ |  |  |  | [view report][p2] |
-| astropy/astropy-project | X |  | ~ |  |  | X |  |  |  | [view report][p3] |
-| castle-game-engine | X |  | ~ |  | X | X |  |  |  | [view report][p4] |
-| codeberg | ~ |  |  | ~ |  | ~ | R | ~ | X | [view report][p5] |
-| debian | ~ |  | ~ | ~ | R | X | R | R |  | [view report][p6] |
-| forgejo | X |  | X |  | ~ | X |  |  |  | [view report][p7] |
-| gcc | X |  |  |  | ~ | ~ |  |  |  | [view report][p8] |
-| gdal-site | X |  |  |  | R | ~ |  |  |  | [view report][p9] |
-| gentoo | ~ |  |  |  |  |  | R |  |  | [view report][p10] |
-| ghostty-org/ghostty | ~ |  | ~ | ~ |  |  |  |  |  | [view report][p11] |
-| go-gitea/gitea | X |  |  | ~ |  |  |  |  |  | [view report][p12] |
-| jazzband/pip-tools | X |  |  | ~ |  | ~ |  |  |  | [view report][p13] |
-| jellyfin/jellyfin.org | X |  |  | ~ |  | X |  |  |  | [view report][p14] |
-| kde-gsoc | ~ |  |  |  |  |  | R |  |  | [view report][p15] |
-| keepassxreboot/keepassxc | ~ |  |  |  |  |  |  |  |  | [view report][p16] |
-| linux-foundation | X |  | ~ |  | R |  |  |  | R | [view report][p17] |
-| llvm/llvm-project | X |  | X | ~ | ~ | ~ |  |  |  | [view report][p18] |
-| mastodon/.github | X |  | ~ |  | X | X |  |  |  | [view report][p19] |
-| matplotlib/matplotlib | X |  |  | ~ |  | ~ |  |  |  | [view report][p20] |
-| nlnet-labs | X |  | ~ |  | X |  |  |  |  | [view report][p21] |
-| openinfra | X |  | ~ |  |  | ~ |  |  |  | [view report][p22] |
-| OSGeo/gdal | X |  |  | ~ | R | X |  | R |  | [view report][p23] |
-| OSGeo/PROJ | X |  | ~ | ~ | ~ | ~ |  |  |  | [view report][p24] |
-| oxide | X |  | X |  | ~ |  |  |  | ~ | [view report][p25] |
-| pola-rs/polars | ~ |  | ~ |  | ~ | ~ |  |  |  | [view report][p26] |
-| postmarketos | ~ |  |  |  |  |  | R | R |  | [view report][p27] |
-| python-attrs/attrs | ~ |  |  |  |  |  |  |  |  | [view report][p28] |
-| qemu/qemu | X |  |  |  |  |  |  |  |  | [view report][p29] |
-| qgis/QGIS-Enhancement-Proposals | X |  | X | ~ | ~ | ~ |  | R |  | [view report][p30] |
-| rust-lang/rust-forge | X |  | X |  | X |  | R |  |  | [view report][p31] |
-| scikit-learn/scikit-learn | ~ |  |  | ~ | ~ |  |  |  |  | [view report][p32] |
-| servo/book | X |  | ~ | ~ | ~ |  | R |  |  | [view report][p33] |
-| sunpy/sunpy | ~ |  | ~ |  |  |  |  |  |  | [view report][p34] |
-| teamtype/teamtype | ~ |  | ~ |  |  |  |  |  |  | [view report][p35] |
-| torvalds/linux | X |  |  |  |  | X |  |  |  | [view report][p36] |
-| yt-dlp/yt-dlp | ~ |  |  |  | ~ | ~ |  |  |  | [view report][p37] |
-| zulip/zulip | X |  |  |  |  |  |  |  |  | [view report][p38] |
+| afnix | 🟨 | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | [view report][p1] |
+| apache | 🟩 | ⬜ | 🟩 | ⬜ | ⬜ | 🟨 | ⬜ | ⬜ | ⬜ | [view report][p2] |
+| astropy/astropy-project | 🟩 | ⬜ | 🟨 | ⬜ | ⬜ | 🟩 | ⬜ | ⬜ | ⬜ | [view report][p3] |
+| castle-game-engine | 🟩 | ⬜ | 🟨 | ⬜ | 🟩 | 🟩 | ⬜ | ⬜ | ⬜ | [view report][p4] |
+| codeberg | 🟨 | ⬜ | ⬜ | 🟨 | ⬜ | 🟨 | 🟪 | 🟨 | 🟩 | [view report][p5] |
+| debian | 🟨 | ⬜ | 🟨 | 🟨 | 🟪 | 🟩 | 🟪 | 🟪 | ⬜ | [view report][p6] |
+| forgejo | 🟩 | ⬜ | 🟩 | ⬜ | 🟨 | 🟩 | ⬜ | ⬜ | ⬜ | [view report][p7] |
+| gcc | 🟩 | ⬜ | ⬜ | ⬜ | 🟨 | 🟨 | ⬜ | ⬜ | ⬜ | [view report][p8] |
+| gdal-site | 🟩 | ⬜ | ⬜ | ⬜ | 🟪 | 🟨 | ⬜ | ⬜ | ⬜ | [view report][p9] |
+| gentoo | 🟨 | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | 🟪 | ⬜ | ⬜ | [view report][p10] |
+| ghostty-org/ghostty | 🟨 | ⬜ | 🟨 | 🟨 | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | [view report][p11] |
+| go-gitea/gitea | 🟩 | ⬜ | ⬜ | 🟨 | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | [view report][p12] |
+| jazzband/pip-tools | 🟩 | ⬜ | ⬜ | 🟨 | ⬜ | 🟨 | ⬜ | ⬜ | ⬜ | [view report][p13] |
+| jellyfin/jellyfin.org | 🟩 | ⬜ | ⬜ | 🟨 | ⬜ | 🟩 | ⬜ | ⬜ | ⬜ | [view report][p14] |
+| kde-gsoc | 🟨 | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | 🟪 | ⬜ | ⬜ | [view report][p15] |
+| keepassxreboot/keepassxc | 🟨 | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | [view report][p16] |
+| linux-foundation | 🟩 | ⬜ | 🟨 | ⬜ | 🟪 | ⬜ | ⬜ | ⬜ | 🟪 | [view report][p17] |
+| llvm/llvm-project | 🟩 | ⬜ | 🟩 | 🟨 | 🟨 | 🟨 | ⬜ | ⬜ | ⬜ | [view report][p18] |
+| mastodon/.github | 🟩 | ⬜ | 🟨 | ⬜ | 🟩 | 🟩 | ⬜ | ⬜ | ⬜ | [view report][p19] |
+| matplotlib/matplotlib | 🟩 | ⬜ | ⬜ | 🟨 | ⬜ | 🟨 | ⬜ | ⬜ | ⬜ | [view report][p20] |
+| nlnet-labs | 🟩 | ⬜ | 🟨 | ⬜ | 🟩 | ⬜ | ⬜ | ⬜ | ⬜ | [view report][p21] |
+| openinfra | 🟩 | ⬜ | 🟨 | ⬜ | ⬜ | 🟨 | ⬜ | ⬜ | ⬜ | [view report][p22] |
+| OSGeo/gdal | 🟩 | ⬜ | ⬜ | 🟨 | 🟪 | 🟩 | ⬜ | 🟪 | ⬜ | [view report][p23] |
+| OSGeo/PROJ | 🟩 | ⬜ | 🟨 | 🟨 | 🟨 | 🟨 | ⬜ | ⬜ | ⬜ | [view report][p24] |
+| oxide | 🟩 | ⬜ | 🟩 | ⬜ | 🟨 | ⬜ | ⬜ | ⬜ | 🟨 | [view report][p25] |
+| pola-rs/polars | 🟨 | ⬜ | 🟨 | ⬜ | 🟨 | 🟨 | ⬜ | ⬜ | ⬜ | [view report][p26] |
+| postmarketos | 🟨 | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | 🟪 | 🟪 | ⬜ | [view report][p27] |
+| python-attrs/attrs | 🟨 | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | [view report][p28] |
+| qemu/qemu | 🟩 | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | [view report][p29] |
+| qgis/QGIS-Enhancement-Proposals | 🟩 | ⬜ | 🟩 | 🟨 | 🟨 | 🟨 | ⬜ | 🟪 | ⬜ | [view report][p30] |
+| rust-lang/rust-forge | 🟩 | ⬜ | 🟩 | ⬜ | 🟩 | ⬜ | 🟪 | ⬜ | ⬜ | [view report][p31] |
+| scikit-learn/scikit-learn | 🟨 | ⬜ | ⬜ | 🟨 | 🟨 | ⬜ | ⬜ | ⬜ | ⬜ | [view report][p32] |
+| servo/book | 🟩 | ⬜ | 🟨 | 🟨 | 🟨 | ⬜ | 🟪 | ⬜ | ⬜ | [view report][p33] |
+| sunpy/sunpy | 🟨 | ⬜ | 🟨 | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | [view report][p34] |
+| teamtype/teamtype | 🟨 | ⬜ | 🟨 | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | [view report][p35] |
+| torvalds/linux | 🟩 | ⬜ | ⬜ | ⬜ | ⬜ | 🟩 | ⬜ | ⬜ | ⬜ | [view report][p36] |
+| yt-dlp/yt-dlp | 🟨 | ⬜ | ⬜ | ⬜ | 🟨 | 🟨 | ⬜ | ⬜ | ⬜ | [view report][p37] |
+| zulip/zulip | 🟩 | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | [view report][p38] |
 
 [p1]: afnix/2026-08-30.md
 [p2]: apache/2026-08-30.md
