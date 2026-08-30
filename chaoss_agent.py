@@ -151,6 +151,15 @@ class Repo:
         self._cache[path] = text
         return text
 
+    def exists(self, path: str) -> bool:
+        """Direct existence check, so a path never has to be looked up in a
+        full tree listing."""
+        try:
+            self._get(f"/repos/{self.slug}/contents/{path}")
+            return True
+        except requests.HTTPError:
+            return False
+
     def search(self, query: str) -> list[str]:
         try:
             data = self._get("/search/code", q=f"{query} repo:{self.slug}")
@@ -711,7 +720,10 @@ def validate(grid: dict, repo: Repo, tree: list[str]) -> list[str]:
 
     def resolve(items, label):
         for ev in items:
-            if ev["path"] not in treeset:
+            # An empty tree means --files mode, where nothing was enumerated,
+            # so fall back to a direct check rather than rejecting the path.
+            if ev["path"] not in treeset and (treeset
+                                              or not repo.exists(ev["path"])):
                 ev["line"] = None
                 problems.append(f"{label}: path not in repo - {ev['path']}")
                 continue
@@ -1162,6 +1174,14 @@ def write_index(out_dir: Path) -> Path:
             "problems": len(d.get("validation_problems") or []),
             "scope": (d.get("scope") or {}).get("mode", ""),
             "per_domain": {x["domain"]: domain_state(x) for x in domains},
+            "detail": {x["domain"]: {
+                "state": domain_state(x),
+                "supervision": x["supervision_level"],
+                "where": (f'{x["evidence"][0]["path"]}:{x["evidence"][0]["line"]}'
+                          if x["evidence"] and x["evidence"][0].get("line")
+                          else (x["evidence"][0]["path"] if x["evidence"] else "")),
+                "rationale": x.get("rationale_only_mention", ""),
+            } for x in domains},
             "rationale": sum(1 for x in domains
                              if domain_state(x) == "policy_rationale"),
         })
@@ -1220,13 +1240,33 @@ def write_index(out_dir: Path) -> Path:
           "may not exist yet; change `IMPROVE_BASE` in `chaoss_agent.py` once "
           "there is somewhere for corrections to go.*"]
 
+    dom_label = {k: v.split(" (")[0] for k, v in DOMAINS}
+
     if chart:
         n = len(latest)
         L += ["", "## What the policies govern", "",
               "![Governed by policy](coverage.svg)", "",
               f"Each project counted once, using its most recent scan "
               f"({n} project{'s' if n != 1 else ''}). The trailing figure "
-              "counts addressed plus partial.", ""]
+              "counts addressed plus partial.", "",
+              "<details>",
+              "<summary>Which projects make up each bar</summary>", ""]
+        for key, _ in DOMAINS:
+            named = sorted(
+                (r["repo"], r["detail"].get(key, {}), r["md"])
+                for r in latest.values()
+                if r["detail"].get(key, {}).get("state") in ("yes", "partial"))
+            if not named:
+                L += [f"**{dom_label[key]}**: none", ""]
+                continue
+            L += [f"**{dom_label[key]}** ({len(named)})", ""]
+            for repo_name, det, md in named:
+                sup = det.get("supervision", "")
+                sup = "" if sup in ("not_specified", "") else f" `{sup}`"
+                where = f" `{det['where']}`" if det.get("where") else ""
+                L.append(f"- [{repo_name}]({md}) {det['state']}{sup}{where}")
+            L.append("")
+        L += ["</details>", ""]
     if rationale_chart:
         L += ["## What they only give as reasons", "",
               "![Raised in policy rationale only](rationale.svg)", "",
@@ -1234,9 +1274,31 @@ def write_index(out_dir: Path) -> Path:
               "exists, without setting a rule about them. Energy and water use "
               "cited as grounds for banning AI in code is the common shape. "
               "The concern is stated; nothing governs it.", "",
-              "These rows count as `no` in the chart above. They are separated "
-              "here because a project that has written the concern down is not "
-              "in the same position as one that has never raised it.", ""]
+              "These rows count as not-in-policy in the chart above. They are "
+              "separated here because a project that has written the concern "
+              "down is not in the same position as one that has never raised "
+              "it.", "",
+              "### Every mention counted in that chart", ""]
+        found = False
+        for key, _ in DOMAINS:
+            named = sorted(
+                (r["repo"], r["detail"].get(key, {}), r["md"])
+                for r in latest.values()
+                if r["detail"].get(key, {}).get("state") == "policy_rationale")
+            if not named:
+                continue
+            found = True
+            L += [f"**{dom_label[key]}** ({len(named)})", ""]
+            for repo_name, det, md in named:
+                q = " ".join(det.get("rationale", "").split())
+                if len(q) > 240:
+                    q = q[:237].rsplit(" ", 1)[0] + "..."
+                where = f" `{det['where']}`" if det.get("where") else ""
+                L.append(f"- [{repo_name}]({md}){where}")
+                L.append(f"  > {q}")
+            L.append("")
+        if not found:
+            L += ["No rationale-only mentions in the scans so far.", ""]
     path = out_dir / "README.md"
     path.write_text("\n".join(L) + "\n", encoding="utf-8")
     return path
@@ -1266,7 +1328,11 @@ def main():
 
     try:
         repo = Repo(args.repo)
-        tree = repo.tree()
+        # With --files the tree is never needed: paths are checked directly and
+        # the agent only ever sees the named files. Skipping it avoids one large
+        # call per scan, and avoids GitHub truncating the tree on big repos such
+        # as llvm-project, which made valid paths look missing.
+        tree = [] if args.files else repo.tree()
     except requests.HTTPError as e:
         code = e.response.status_code
         if code == 404:
@@ -1282,13 +1348,13 @@ def main():
         raise
 
     if args.files:
-        missing = [f for f in args.files if f not in set(tree)]
+        missing = [f for f in args.files if not repo.exists(f)]
         if missing:
             sys.exit(f"not in {args.repo} on branch {repo.default_branch}: "
                      + ", ".join(missing))
         shortlist = list(args.files)
-        print(f"{len(tree)} files in repo; assessing {len(shortlist)} named "
-              f"file(s) only", file=sys.stderr)
+        print(f"assessing {len(shortlist)} named file(s); repo not enumerated",
+              file=sys.stderr)
     else:
         shortlist = candidate_policy_files(tree)
         print(f"{len(tree)} files, {len(shortlist)} policy candidates",
@@ -1332,6 +1398,7 @@ def main():
         "validation_problems": problems,
     }
     if not args.skip_composition:
+        # Needs the file tree, which --files deliberately skips.
         report["use_composition_partial"] = scan_composition(repo, tree)
     report["policy_change"] = {
         "status": "Awaiting implementation: Policy Change",
