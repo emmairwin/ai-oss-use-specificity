@@ -1,12 +1,13 @@
 # Scan index
 
-24 scans against the CHAOSS [Consent Policy Specificity](https://github.com/chaoss/wg-ai-alignment/blob/main/metrics/ai-alignment-community-governed-use/ai-use-consent-policy-specificity.md) metric. Each row links to the full report, which carries the evidence quotes and line numbers behind every cell.
+25 scans against the CHAOSS [Consent Policy Specificity](https://github.com/chaoss/wg-ai-alignment/blob/main/metrics/ai-alignment-community-governed-use/ai-use-consent-policy-specificity.md) metric. Each row links to the full report, which carries the evidence quotes and line numbers behind every cell.
 
 Out of nine domains: `✓` addressed, `~` partial, `R` raised in the policy's rationale but not governed, `·` not mentioned.
 
 | Project | Scanned | ✓ | ~ | R | · | Summary | | |
 |---|---|:-:|:-:|:-:|:-:|---|---|---|
 | `zulip/zulip` ᶠ | 2026-08-29 ⚠ | 1 | 1 | – | 7 | Zulip's CONTRIBUTING.md gives detailed, specific guidance on AI use for code contributions and related PR/community communication… | [report](zulip-zulip/2026-08-29.md) | [improve](https://github.com/emmairwin/ai-oss-use-specificity/issues/new?title=Report%20correction%3A%20zulip%2Fzulip&body=Report%3A%20zulip-zulip/2026-08-29.md%0ADomain%3A%0AReported%20as%3A%0AShould%20be%3A%0AQuote%20from%20the%20policy%3A%0A) |
+| `yt-dlp/yt-dlp` ᶠ | 2026-08-29 | 0 | 3 | – | 6 | The policy is a blanket, near-total ban on AI/LLM use for the specific channels it names (issues, PRs, patches, review comments, translation, and… | [report](yt-dlp-yt-dlp/2026-08-29.md) | [improve](https://github.com/emmairwin/ai-oss-use-specificity/issues/new?title=Report%20correction%3A%20yt-dlp%2Fyt-dlp&body=Report%3A%20yt-dlp-yt-dlp/2026-08-29.md%0ADomain%3A%0AReported%20as%3A%0AShould%20be%3A%0AQuote%20from%20the%20policy%3A%0A) |
 | `torvalds/linux` ᶠ | 2026-08-29 | 2 | 1 | – | 6 | The policy is fairly specific about AI-assisted code contributions and autonomous bug-finding/fixing (mandating human review, human sign-off/DCO,… | [report](torvalds-linux/2026-08-29.md) | [improve](https://github.com/emmairwin/ai-oss-use-specificity/issues/new?title=Report%20correction%3A%20torvalds%2Flinux&body=Report%3A%20torvalds-linux/2026-08-29.md%0ADomain%3A%0AReported%20as%3A%0AShould%20be%3A%0AQuote%20from%20the%20policy%3A%0A) |
 | `teamtype/teamtype` ᶠ | 2026-08-29 | 0 | 1 | – | 8 | The project imposes an outright, blanket ban on LLM-generated content across code contributions and all GitHub written communication (PRs, issues,… | [report](teamtype-teamtype/2026-08-29.md) | [improve](https://github.com/emmairwin/ai-oss-use-specificity/issues/new?title=Report%20correction%3A%20teamtype%2Fteamtype&body=Report%3A%20teamtype-teamtype/2026-08-29.md%0ADomain%3A%0AReported%20as%3A%0AShould%20be%3A%0AQuote%20from%20the%20policy%3A%0A) |
 | `sunpy/sunpy` ᶠ | 2026-08-29 | 2 | 0 | – | 7 | The README gives one narrowly-scoped rule requiring human understanding and accountability for generative-AI-assisted code and documentation… | [report](sunpy-sunpy/2026-08-29.md) | [improve](https://github.com/emmairwin/ai-oss-use-specificity/issues/new?title=Report%20correction%3A%20sunpy%2Fsunpy&body=Report%3A%20sunpy-sunpy/2026-08-29.md%0ADomain%3A%0AReported%20as%3A%0AShould%20be%3A%0AQuote%20from%20the%20policy%3A%0A) |
@@ -41,12 +42,12 @@ Out of nine domains: `✓` addressed, `~` partial, `R` raised in the policy's ra
 
 ![Governed by policy](coverage.svg)
 
-Each project counted once, using its most recent scan (24 projects). The trailing figure counts addressed plus partial.
+Each project counted once, using its most recent scan (25 projects). The trailing figure counts addressed plus partial.
 
 <details>
 <summary>Which projects make up each bar</summary>
 
-**Code contributions** (21)
+**Code contributions** (22)
 
 - [OSGeo/PROJ](osgeo-proj/2026-08-29.md) yes `human_in_the_loop` `docs/source/community/ai_tool_policy.rst:11`
 - [OSGeo/gdal](osgeo-gdal/2026-08-29.md) yes `disclosure_required` `doc/source/community/ai_tool_policy.rst:41`
@@ -68,6 +69,7 @@ Each project counted once, using its most recent scan (24 projects). The trailin
 - [sunpy/sunpy](sunpy-sunpy/2026-08-29.md) yes `human_in_the_loop` `README.rst:95`
 - [teamtype/teamtype](teamtype-teamtype/2026-08-29.md) partial `banned` `CONTRIBUTING.md:38`
 - [torvalds/linux](torvalds-linux/2026-08-29.md) yes `human_in_the_loop` `Documentation/process/coding-assistants.rst:34`
+- [yt-dlp/yt-dlp](yt-dlp-yt-dlp/2026-08-29.md) partial `banned` `.NO_AI/README.md:7`
 - [zulip/zulip](zulip-zulip/2026-08-29.md) yes `human_in_the_loop` `CONTRIBUTING.md:123`
 
 **Notetaker / meeting bots**: none
@@ -86,7 +88,7 @@ Each project counted once, using its most recent scan (24 projects). The trailin
 
 **Moderation actions**: none
 
-**Review** (9)
+**Review** (10)
 
 - [OSGeo/PROJ](osgeo-proj/2026-08-29.md) partial `human_in_the_loop` `docs/source/community/ai_tool_policy.rst`
 - [ghostty-org/ghostty](ghostty-org-ghostty/2026-08-29.md) partial `AI_POLICY.md:41`
@@ -97,8 +99,9 @@ Each project counted once, using its most recent scan (24 projects). The trailin
 - [scikit-learn/scikit-learn](scikit-learn-scikit-learn/2026-08-29.md) yes `human_in_the_loop` `CODE_OF_CONDUCT.md:19`
 - [servo/book](servo-book/2026-08-29.md) partial `limited_unsupervised` `src/contributing/getting-started.md:76`
 - [torvalds/linux](torvalds-linux/2026-08-29.md) partial `human_in_the_loop` `Documentation/process/coding-assistants.rst:93`
+- [yt-dlp/yt-dlp](yt-dlp-yt-dlp/2026-08-29.md) partial `banned` `.NO_AI/README.md:11`
 
-**Autonomous / agentic use** (15)
+**Autonomous / agentic use** (16)
 
 - [OSGeo/PROJ](osgeo-proj/2026-08-29.md) partial `banned` `docs/source/community/ai_tool_policy.rst`
 - [OSGeo/gdal](osgeo-gdal/2026-08-29.md) partial `banned` `doc/source/community/ai_tool_policy.rst:56`
@@ -114,6 +117,7 @@ Each project counted once, using its most recent scan (24 projects). The trailin
 - [qgis/QGIS-Enhancement-Proposals](qgis-qgis-enhancement-proposals/2026-08-29.md) partial `banned` `qep-408-ai-tool-policy.md`
 - [rust-lang/rust-forge](rust-lang-rust-forge/2026-08-29.md) partial `banned` `src/policies/llm-usage.md:87`
 - [torvalds/linux](torvalds-linux/2026-08-29.md) yes `human_in_the_loop` `Documentation/process/coding-assistants.rst:93`
+- [yt-dlp/yt-dlp](yt-dlp-yt-dlp/2026-08-29.md) partial `banned` `.NO_AI/README.md:17`
 - [zulip/zulip](zulip-zulip/2026-08-29.md) partial `human_in_the_loop` `CONTRIBUTING.md`
 
 **Environmental Impact**: none
