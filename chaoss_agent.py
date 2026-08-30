@@ -786,7 +786,7 @@ def write_markdown(report: dict, path: Path) -> None:
     L = []
     w = L.append
 
-    w(f"# AI policy coverage — {report['repo']}")
+    w(f"# AI policy coverage: {report['repo']}")
     w("")
     w("**Metric:** [Consent Policy Specificity](https://github.com/chaoss/"
       "wg-ai-alignment/blob/main/metrics/ai-alignment-community-governed-use/"
@@ -803,7 +803,7 @@ def write_markdown(report: dict, path: Path) -> None:
         w(f"**Files scanned:** {fmt(offered)}")
         unread = [p for p in offered if p not in read]
         if read and unread:
-            w(f"**Not opened:** {fmt(unread)} — a `no` resting on an unread "
+            w(f"**Not opened:** {fmt(unread)}. A `no` resting on an unread "
               f"file is weak evidence.")
     else:
         w(f"**Files offered to the scan:** {fmt(offered)}")
@@ -811,7 +811,7 @@ def write_markdown(report: dict, path: Path) -> None:
     w("")
     if scope.get("mode") == "named_files":
         w("> Scope was limited to the files above, so **not addressed** here "
-          "means *not addressed in those files* — not that the project says "
+          "means *not addressed in those files*, not that the project says "
           "nothing repository-wide.")
         w("")
 
@@ -878,23 +878,24 @@ def write_markdown(report: dict, path: Path) -> None:
             f"{labels[d['domain']].split(' (')[0]} (*{d['lean']}*)"
             for d in leaning))
         w("")
-        w("These domains have no rule, but the policy shows a direction — a "
+        w("These domains have no rule, but the policy shows a direction: a "
           "stated concern, objection, or openness. Quoted under *Evidence*. "
           "Worth knowing if you are deciding whether to contribute: it is "
           "where a project is likely to go next.")
         w("")
 
     for state, header in (("yes", "Addressed"), ("partial", "Partial"),
-                          ("no", "Not addressed")):
+                          ("policy_rationale", "In rationale only"),
+                          ("no", "Not mentioned")):
         names = [labels[d["domain"]].split(" (")[0]
-                 for d in rows if d["addressed"] == state]
-        w(f"**{header} ({len(names)}):** {', '.join(names) if names else '— none —'}")
+                 for d in rows if domain_state(d) == state]
+        w(f"**{header} ({len(names)}):** {', '.join(names) if names else 'none'}")
     w("")
     w(f"**Overall posture:** {grid['overall_posture']}")
     w("")
 
     w("<details>")
-    w("<summary><strong>Legend — what each column and domain means</strong></summary>")
+    w("<summary><strong>Legend: what each column and domain means</strong></summary>")
     w("")
     w("**Addressed** rolls up the four attributes for that domain:")
     w("")
@@ -904,16 +905,16 @@ def write_markdown(report: dict, path: Path) -> None:
       "accountability, proportionality |")
     w("| `partial` | the domain is named but only one attribute is stated, or "
       "it is covered only by general wording that never names it |")
-    w("| `no` | checked; the policy does not address this domain |")
+    w("| `no` | checked; the policy does not mention this domain |")
     w("")
-    w("**Lean** — a direction without a rule. A project that cites energy and "
+    w("**Lean**: a direction without a rule. A project that cites energy and "
       "water use as a reason to ban AI in code has not set an environmental "
       "*rule*, but it is plainly not neutral either. `restrictive` means it "
       "voices concern or caution; `permissive` means it signals openness or "
       "declines to restrict; `–` means no indication either way. A lean never "
-      "changes **Addressed** — it records disposition, not policy.")
+      "changes **Addressed**. It records disposition, not policy.")
     w("")
-    w("**Attributes** — the four consent-type attributes from the metric. "
+    w("**Attributes**: the four consent-type attributes from the metric. "
       "`✓` means stated, `–` means not stated. `–` is a finding, not a gap in "
       "the scan.")
     w("")
@@ -926,7 +927,7 @@ def write_markdown(report: dict, path: Path) -> None:
     w("| Proportionality | resource use relative to contributor count or "
       "community size |")
     w("")
-    w("**Domains** — where AI shows up. A policy addressing one says nothing "
+    w("**Domains**: where AI shows up. A policy addressing one says nothing "
       "about the others; that is what this metric measures.")
     w("")
     w("| Domain | Looking for |")
@@ -937,7 +938,7 @@ def write_markdown(report: dict, path: Path) -> None:
     w("")
     w("A statement counts for a domain only if it names that activity. A "
       "blanket line such as “AI-assisted contributions must be disclosed” is "
-      "evidence about code contributions and nothing else — those appear "
+      "evidence about code contributions and nothing else. Those appear "
       "under *Blanket statements* below.")
     w("")
     w("</details>")
@@ -948,7 +949,7 @@ def write_markdown(report: dict, path: Path) -> None:
     documented = [d for d in rows
                   if d["evidence"] or d.get("rationale_only_mention")]
     for d in documented:
-        w(f"### {labels[d['domain']].split(' (')[0]} — {d['addressed']}")
+        w(f"### {labels[d['domain']].split(' (')[0]}: {domain_state(d).replace('_',' ')}")
         for ev in d["evidence"]:
             loc = f"{ev['path']}:{ev['line']}" if ev.get("line") else ev["path"]
             w(f"> {ev['quote']}")
@@ -956,7 +957,7 @@ def write_markdown(report: dict, path: Path) -> None:
             w(f"`{loc}`")
             w("")
         if d.get("rationale_only_mention"):
-            w(f"*Rationale only — a reason given for another rule, not a rule "
+            w(f"*Policy rationale. Given as a reason given for another rule, not a rule "
               f"about this domain:* “{d['rationale_only_mention']}”")
             w("")
 
@@ -978,7 +979,7 @@ def write_markdown(report: dict, path: Path) -> None:
         w("## Suggested improvements")
         w("")
         w("What the policy would need to state to close each gap. These describe "
-          "*missing specificity*, not a recommended position — how permissive or "
+          "*missing specificity*, not a recommended position. How permissive or "
           "restrictive to be is the community's decision.")
         w("")
         for d in gaps:
@@ -998,7 +999,7 @@ def write_markdown(report: dict, path: Path) -> None:
             loc = f"{u['path']}:{u['line']}" if u.get("line") else u["path"]
             w(f"> {u['quote']}")
             w("")
-            w(f"`{loc}` — names: "
+            w(f"`{loc}` names: "
               f"{', '.join(labels[a].split(' (')[0] for a in u['areas_named']) or 'nothing specific'}"
               f"; leaves ambiguous: "
               f"{', '.join(labels[a].split(' (')[0] for a in u['domains_left_ambiguous']) or 'nothing'}")
@@ -1023,7 +1024,7 @@ def write_markdown(report: dict, path: Path) -> None:
             bits.append(f"{u['cache_read_input_tokens']:,} cached")
         cost = u.get("estimated_cost_usd")
         money = f", ~${cost:.4f}" if cost is not None else ""
-        w(f"*Generated with `{u.get('model', MODEL)}` — "
+        w(f"*Generated with `{u.get('model', MODEL)}`. "
           f"{' / '.join(bits)} tokens over {u['api_calls']} API "
           f"call{'s' if u['api_calls'] != 1 else ''}{money}.*")
         w("")
@@ -1040,33 +1041,41 @@ def write_markdown(report: dict, path: Path) -> None:
 IMPROVE_BASE = "https://github.com/emmairwin/ai-oss-use-specificity/issues/new"
 
 
-def write_chart(out_dir: Path, tallies: dict, n_projects: int) -> Path | None:
-    """Horizontal stacked bar, one row per domain, segmented yes/partial/no.
+FILL = {"yes": "#2da44e", "partial": "#d4a72c",
+        "policy_rationale": "#8250df", "no": "#d0d7de"}
 
-    Hand-written SVG so the tool stays dependency-free, with an explicit
-    background so it reads on GitHub's light and dark themes alike."""
-    if not n_projects:
-        return None
 
+def domain_state(d: dict) -> str:
+    """yes | partial | policy_rationale | no.
+
+    policy_rationale: the domain appears only in the policy's stated reasons
+    for some other rule - energy use given as grounds for banning AI in code,
+    say. It is not governed, but it is not absent either, and collapsing it
+    into "no" loses a signal six of the first thirteen scans turned up."""
+    state = d["addressed"]
+    if state == "no" and d.get("rationale_only_mention"):
+        return "policy_rationale"
+    return state
+
+
+def _bar_svg(title: str, subtitle: str, states: list[tuple[str, str]],
+             tallies: dict, n: int, path: Path) -> Path:
     ROW, BAR, PAD, LABEL_W, BAR_W = 34, 20, 24, 210, 470
     W = LABEL_W + BAR_W + 90
     H = PAD * 2 + 54 + ROW * len(DOMAINS)
-    FILL = {"yes": "#2da44e", "partial": "#d4a72c", "no": "#d0d7de"}
 
     s = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" '
          f'viewBox="0 0 {W} {H}" font-family="-apple-system,BlinkMacSystemFont,'
          f'Segoe UI,Helvetica,Arial,sans-serif">',
          f'<rect width="{W}" height="{H}" fill="#ffffff"/>',
          f'<text x="{PAD}" y="{PAD + 12}" font-size="14" font-weight="600" '
-         f'fill="#1f2328">AI policy coverage by domain</text>',
+         f'fill="#1f2328">{title}</text>',
          f'<text x="{PAD}" y="{PAD + 30}" font-size="11" fill="#656d76">'
-         f'{n_projects} projects &#183; CHAOSS Consent Policy Specificity</text>']
+         f'{subtitle}</text>']
 
-    lx = PAD + LABEL_W + BAR_W - 250
-    for i, (state, text) in enumerate((("yes", "addressed"),
-                                       ("partial", "partial"),
-                                       ("no", "not addressed"))):
-        x = lx + i * 90
+    lx = PAD + LABEL_W + BAR_W - 110 * len(states)
+    for i, (state, text) in enumerate(states):
+        x = lx + i * 110
         s.append(f'<rect x="{x}" y="{PAD + 2}" width="10" height="10" rx="2" '
                  f'fill="{FILL[state]}"/>')
         s.append(f'<text x="{x + 15}" y="{PAD + 11}" font-size="11" '
@@ -1075,33 +1084,55 @@ def write_chart(out_dir: Path, tallies: dict, n_projects: int) -> Path | None:
     y0 = PAD + 54
     for i, (key, label) in enumerate(DOMAINS):
         y = y0 + i * ROW
-        name = label.split(" (")[0]
         s.append(f'<text x="{PAD + LABEL_W - 10}" y="{y + BAR - 6}" '
-                 f'font-size="12" fill="#1f2328" text-anchor="end">{name}</text>')
+                 f'font-size="12" fill="#1f2328" text-anchor="end">'
+                 f'{label.split(" (")[0]}</text>')
         x = PAD + LABEL_W
         counts = tallies.get(key, {})
-        for state in ("yes", "partial", "no"):
-            n = counts.get(state, 0)
-            if not n:
+        for state, _ in states:
+            c = counts.get(state, 0)
+            if not c:
                 continue
-            w = BAR_W * n / n_projects
+            w = BAR_W * c / n
             s.append(f'<rect x="{x:.1f}" y="{y}" width="{w:.1f}" '
                      f'height="{BAR}" fill="{FILL[state]}"/>')
             if w > 18:  # only label a segment wide enough to hold the number
-                tc = "#ffffff" if state != "no" else "#57606a"
+                tc = "#57606a" if state == "no" else "#ffffff"
                 s.append(f'<text x="{x + w / 2:.1f}" y="{y + BAR - 6}" '
                          f'font-size="11" fill="{tc}" text-anchor="middle">'
-                         f'{n}</text>')
+                         f'{c}</text>')
             x += w
-        addressed = counts.get("yes", 0) + counts.get("partial", 0)
+        hit = sum(counts.get(st, 0) for st, _ in states if st != "no")
         s.append(f'<text x="{PAD + LABEL_W + BAR_W + 10}" y="{y + BAR - 6}" '
-                 f'font-size="11" fill="#656d76">'
-                 f'{addressed}/{n_projects}</text>')
+                 f'font-size="11" fill="#656d76">{hit}/{n}</text>')
 
     s.append("</svg>")
-    path = out_dir / "coverage.svg"
     path.write_text("\n".join(s) + "\n", encoding="utf-8")
     return path
+
+
+def write_charts(out_dir: Path, tallies: dict, n: int) -> tuple:
+    """Two charts: what the policy governs, and what it only reasons about."""
+    if not n:
+        return None, None
+    sub = f"{n} projects &#183; CHAOSS Consent Policy Specificity"
+
+    policy = _bar_svg(
+        "Governed by policy", sub,
+        [("yes", "addressed"), ("partial", "partial"), ("no", "not in policy")],
+        # rationale-only rows are not governed, so they sit in "no" here
+        {k: {"yes": v["yes"], "partial": v["partial"],
+             "no": v["no"] + v["policy_rationale"]} for k, v in tallies.items()},
+        n, out_dir / "coverage.svg")
+
+    rationale = _bar_svg(
+        "Raised in policy rationale only", sub,
+        [("policy_rationale", "policy rationale"), ("no", "not raised")],
+        {k: {"policy_rationale": v["policy_rationale"],
+             "no": n - v["policy_rationale"]} for k, v in tallies.items()},
+        n, out_dir / "rationale.svg")
+
+    return policy, rationale
 
 
 def write_index(out_dir: Path) -> Path:
@@ -1130,21 +1161,24 @@ def write_index(out_dir: Path) -> Path:
             "posture": grid.get("overall_posture", ""),
             "problems": len(d.get("validation_problems") or []),
             "scope": (d.get("scope") or {}).get("mode", ""),
-            "per_domain": {x["domain"]: x["addressed"] for x in domains},
+            "per_domain": {x["domain"]: domain_state(x) for x in domains},
+            "rationale": sum(1 for x in domains
+                             if domain_state(x) == "policy_rationale"),
         })
     rows.sort(key=lambda r: (r["date"], r["repo"]), reverse=True)
 
-    # Chart counts each project once, using its most recent scan - otherwise a
-    # rescanned project would be double-counted and skew every bar.
-    latest, tallies = {}, {k: {"yes": 0, "partial": 0, "no": 0}
-                           for k, _ in DOMAINS}
+    # Charts count each project once, using its most recent scan. Otherwise a
+    # rescanned project is counted twice and skews every bar.
+    latest = {}
+    tallies = {k: {"yes": 0, "partial": 0, "policy_rationale": 0, "no": 0}
+               for k, _ in DOMAINS}
     for r in rows:
         latest.setdefault(r["repo"], r)
     for r in latest.values():
         for dom, state in r["per_domain"].items():
             if dom in tallies and state in tallies[dom]:
                 tallies[dom][state] += 1
-    chart = write_chart(out_dir, tallies, len(latest))
+    chart, rationale_chart = write_charts(out_dir, tallies, len(latest))
 
     L = ["# Scan index", "",
          f"{len(rows)} scan{'s' if len(rows) != 1 else ''} against the CHAOSS "
@@ -1153,10 +1187,9 @@ def write_index(out_dir: Path) -> Path:
          "ai-use-consent-policy-specificity.md) metric. Each row links to the "
          "full report, which carries the evidence quotes and line numbers behind "
          "every cell.", "",
-         "`✓` addressed · `~` partial · `·` not addressed, out of nine domains. "
-         "**Leans** counts domains with no rule where the policy still shows a "
-         "direction.", "",
-         "| Project | Scanned | ✓ | ~ | · | Leans | Summary | | |",
+         "Out of nine domains: `✓` addressed, `~` partial, `R` raised in the "
+         "policy's rationale but not governed, `·` not mentioned.", "",
+         "| Project | Scanned | ✓ | ~ | R | · | Summary | | |",
          "|---|---|:-:|:-:|:-:|:-:|---|---|---|"]
     for r in rows:
         posture = r["posture"]
@@ -1168,29 +1201,42 @@ def write_index(out_dir: Path) -> Path:
                    f"{r['repo'].replace('/', '%2F')}"
                    f"&body=Report%3A%20{r['md']}%0ADomain%3A%0AReported%20as%3A"
                    f"%0AShould%20be%3A%0AQuote%20from%20the%20policy%3A%0A")
+        rationale = sum(1 for st in r["per_domain"].values()
+                        if st == "policy_rationale")
+        not_mentioned = sum(1 for st in r["per_domain"].values() if st == "no")
         L.append(f"| `{r['repo']}`{narrow} | {r['date']}{flag} | "
                  f"{r['counts']['yes']} | {r['counts']['partial']} | "
-                 f"{r['counts']['no']} | {r['leans'] or '–'} | {posture} | "
+                 f"{rationale or '–'} | {not_mentioned} | {posture} | "
                  f"[report]({r['md']}) | [improve]({improve}) |")
     L += ["",
-          "ᶠ scope was limited to named files, so `·` means *not addressed in "
-          "those files* rather than repository-wide.",
+          "ᶠ scope was limited to named files, so `·` means not addressed in "
+          "those files rather than repository-wide.",
           "",
           "⚠ the scan cited a quote that could not be found in the file it "
           "named. Read that report's *Validation problems* section before "
           "trusting its grid.",
           "",
-          "*The improve links are a stub — they point at an issue tracker that "
-          "may not exist yet. Change `IMPROVE_BASE` in `chaoss_agent.py` once "
+          "*The improve links are a stub. They point at an issue tracker that "
+          "may not exist yet; change `IMPROVE_BASE` in `chaoss_agent.py` once "
           "there is somewhere for corrections to go.*"]
 
     if chart:
-        L += ["", "## Coverage across all projects", "",
-              "![AI policy coverage by domain](coverage.svg)", "",
+        n = len(latest)
+        L += ["", "## What the policies govern", "",
+              "![Governed by policy](coverage.svg)", "",
               f"Each project counted once, using its most recent scan "
-              f"({len(latest)} project{'s' if len(latest) != 1 else ''}). The "
-              "trailing figure is how many address the domain at all — "
-              "addressed plus partial.", ""]
+              f"({n} project{'s' if n != 1 else ''}). The trailing figure "
+              "counts addressed plus partial.", ""]
+    if rationale_chart:
+        L += ["## What they only give as reasons", "",
+              "![Raised in policy rationale only](rationale.svg)", "",
+              "Domains a policy raises when explaining why some other rule "
+              "exists, without setting a rule about them. Energy and water use "
+              "cited as grounds for banning AI in code is the common shape. "
+              "The concern is stated; nothing governs it.", "",
+              "These rows count as `no` in the chart above. They are separated "
+              "here because a project that has written the concern down is not "
+              "in the same position as one that has never raised it.", ""]
     path = out_dir / "README.md"
     path.write_text("\n".join(L) + "\n", encoding="utf-8")
     return path
