@@ -1,6 +1,24 @@
+# Only the reports are published for now. Everything else is held back until
+# the evaluation has been checked against human grading.
+
+# tooling
+chaoss_agent.py
+scan_all.py
+scan_urls.py
+requirements.txt
+.env
+.env.example
+eval/
+.claude/
+STATUS.md
+
+# working files
 __pycache__/
 *.pyc
-.env
+*.bak
+*.log
+
+# machine-readable output and transcripts stay local: the reports carry the
+# same findings in a form a person can read
+reports/**/*.json
 reports/**/*.transcript.jsonl
-eval/comparisons/
-scan_all.log

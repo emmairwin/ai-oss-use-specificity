@@ -1,11 +1,12 @@
 # Scan index
 
-25 scans against the CHAOSS [Consent Policy Specificity](https://github.com/chaoss/wg-ai-alignment/blob/main/metrics/ai-alignment-community-governed-use/ai-use-consent-policy-specificity.md) metric. Each row links to the full report, which carries the evidence quotes and line numbers behind every cell.
+26 scans against the CHAOSS [Consent Policy Specificity](https://github.com/chaoss/wg-ai-alignment/blob/main/metrics/ai-alignment-community-governed-use/ai-use-consent-policy-specificity.md) metric. Each row links to the full report, which carries the evidence quotes and line numbers behind every cell.
 
 Out of nine domains: `✓` addressed, `~` partial, `R` raised in the policy's rationale but not governed, `·` not mentioned.
 
 | Project | Scanned | ✓ | ~ | R | · | Summary | | |
 |---|---|:-:|:-:|:-:|:-:|---|---|---|
+| `https://www.debian.org/vote/2026/vote_002` | 2026-08-30 | 3 | 0 | 4 | 2 | This is a Debian General Resolution ballot comprising eight competing proposals ranging from an outright ban on AI-assisted direct contributions… | [report](https-www-debian-org-vote-2026-vote-002/2026-08-30.md) | [improve](https://github.com/emmairwin/ai-oss-use-specificity/issues/new?title=Report%20correction%3A%20https:%2F%2Fwww.debian.org%2Fvote%2F2026%2Fvote_002&body=Report%3A%20https-www-debian-org-vote-2026-vote-002/2026-08-30.md%0ADomain%3A%0AReported%20as%3A%0AShould%20be%3A%0AQuote%20from%20the%20policy%3A%0A) |
 | `zulip/zulip` ᶠ | 2026-08-29 ⚠ | 1 | 0 | 1 | 7 | Zulip's CONTRIBUTING.md gives a detailed, human-in-the-loop policy specifically for AI-assisted coding and PR/issue/chat communication… | [report](zulip-zulip/2026-08-29.md) | [improve](https://github.com/emmairwin/ai-oss-use-specificity/issues/new?title=Report%20correction%3A%20zulip%2Fzulip&body=Report%3A%20zulip-zulip/2026-08-29.md%0ADomain%3A%0AReported%20as%3A%0AShould%20be%3A%0AQuote%20from%20the%20policy%3A%0A) |
 | `yt-dlp/yt-dlp` ᶠ | 2026-08-29 | 0 | 3 | – | 6 | The policy is a blanket, strongly restrictive ban on AI/LLM use for contributor-facing text (issues, PRs, comments, code review comments,… | [report](yt-dlp-yt-dlp/2026-08-29.md) | [improve](https://github.com/emmairwin/ai-oss-use-specificity/issues/new?title=Report%20correction%3A%20yt-dlp%2Fyt-dlp&body=Report%3A%20yt-dlp-yt-dlp/2026-08-29.md%0ADomain%3A%0AReported%20as%3A%0AShould%20be%3A%0AQuote%20from%20the%20policy%3A%0A) |
 | `torvalds/linux` ᶠ | 2026-08-29 | 2 | 0 | 1 | 6 | The document is a detailed, code-contribution-specific policy: it requires disclosure (Assisted-by tag), mandates human review and human DCO… | [report](torvalds-linux/2026-08-29.md) | [improve](https://github.com/emmairwin/ai-oss-use-specificity/issues/new?title=Report%20correction%3A%20torvalds%2Flinux&body=Report%3A%20torvalds-linux/2026-08-29.md%0ADomain%3A%0AReported%20as%3A%0AShould%20be%3A%0AQuote%20from%20the%20policy%3A%0A) |
@@ -42,18 +43,19 @@ Out of nine domains: `✓` addressed, `~` partial, `R` raised in the policy's ra
 
 ![Governed by policy](coverage.svg)
 
-Each project counted once, using its most recent scan (25 projects). The trailing figure counts addressed plus partial.
+Each project counted once, using its most recent scan (26 projects). The trailing figure counts addressed plus partial.
 
 <details>
 <summary>Which projects make up each bar</summary>
 
-**Code contributions** (22)
+**Code contributions** (23)
 
 - [OSGeo/PROJ](osgeo-proj/2026-08-29.md) yes `human_in_the_loop` `docs/source/community/ai_tool_policy.rst:29`
 - [OSGeo/gdal](osgeo-gdal/2026-08-29.md) yes `human_in_the_loop` `doc/source/community/ai_tool_policy.rst:44`
 - [astropy/astropy-project](astropy-astropy-project/2026-08-29.md) yes `disclosure_required` `policies/ai-policy.md:7`
 - [ghostty-org/ghostty](ghostty-org-ghostty/2026-08-29.md) partial `human_in_the_loop` `AI_POLICY.md:5`
 - [go-gitea/gitea](go-gitea-gitea/2026-08-29.md) yes `human_in_the_loop` `CONTRIBUTING.md:57`
+- [https://www.debian.org/vote/2026/vote_002](https-www-debian-org-vote-2026-vote-002/2026-08-30.md) yes `disclosure_required` `https://www.debian.org/vote/2026/vote_002:398`
 - [jellyfin/jellyfin.org](jellyfin-jellyfin-org/2026-08-29.md) yes `human_in_the_loop` `docs/general/contributing/llm-policies.md:26`
 - [keepassxreboot/keepassxc](keepassxreboot-keepassxc/2026-08-29.md) partial `disclosure_required` `.github/CONTRIBUTING.md:80`
 - [llvm/llvm-project](llvm-llvm-project/2026-08-29.md) yes `human_in_the_loop` `llvm/docs/AIToolPolicy.md:6`
@@ -74,11 +76,12 @@ Each project counted once, using its most recent scan (25 projects). The trailin
 
 **Notetaker / meeting bots**: none
 
-**Content** (10)
+**Content** (11)
 
 - [OSGeo/PROJ](osgeo-proj/2026-08-29.md) yes `human_in_the_loop` `docs/source/community/ai_tool_policy.rst:79`
 - [astropy/astropy-project](astropy-astropy-project/2026-08-29.md) partial `policies/ai-policy.md:15`
 - [ghostty-org/ghostty](ghostty-org-ghostty/2026-08-29.md) partial `banned` `AI_POLICY.md:21`
+- [https://www.debian.org/vote/2026/vote_002](https-www-debian-org-vote-2026-vote-002/2026-08-30.md) yes `human_in_the_loop` `https://www.debian.org/vote/2026/vote_002:751`
 - [llvm/llvm-project](llvm-llvm-project/2026-08-29.md) partial `human_in_the_loop` `llvm/docs/AIToolPolicy.md:52`
 - [mastodon/.github](mastodon-github/2026-08-29.md) partial `human_in_the_loop` `AI_POLICY.md:15`
 - [pola-rs/polars](pola-rs-polars/2026-08-29.md) partial `banned` `AI_POLICY.md:29`
@@ -100,11 +103,12 @@ Each project counted once, using its most recent scan (25 projects). The trailin
 - [servo/book](servo-book/2026-08-29.md) partial `limited_unsupervised` `src/contributing/getting-started.md:76`
 - [yt-dlp/yt-dlp](yt-dlp-yt-dlp/2026-08-29.md) partial `banned` `.NO_AI/README.md:11`
 
-**Autonomous / agentic use** (10)
+**Autonomous / agentic use** (11)
 
 - [OSGeo/PROJ](osgeo-proj/2026-08-29.md) partial `banned` `docs/source/community/ai_tool_policy.rst:74`
 - [OSGeo/gdal](osgeo-gdal/2026-08-29.md) yes `banned` `doc/source/community/ai_tool_policy.rst:56`
 - [astropy/astropy-project](astropy-astropy-project/2026-08-29.md) partial `banned` `policies/ai-policy.md:14`
+- [https://www.debian.org/vote/2026/vote_002](https-www-debian-org-vote-2026-vote-002/2026-08-30.md) yes `human_in_the_loop` `https://www.debian.org/vote/2026/vote_002:551`
 - [llvm/llvm-project](llvm-llvm-project/2026-08-29.md) partial `banned` `llvm/docs/AIToolPolicy.md`
 - [mastodon/.github](mastodon-github/2026-08-29.md) partial `banned` `AI_POLICY.md:22`
 - [matplotlib/matplotlib](matplotlib-matplotlib/2026-08-29.md) yes `banned` `doc/devel/contribute.rst:214`
@@ -131,7 +135,7 @@ These rows count as not-in-policy in the chart above. They are separated here be
 
 ### Every mention counted in that chart
 
-**Moderation actions** (13)
+**Moderation actions** (14)
 
 - [OSGeo/PROJ](osgeo-proj/2026-08-29.md)
   > it takes a lot of maintainer time and energy to review those contributions
@@ -141,6 +145,8 @@ These rows count as not-in-policy in the chart above. They are separated here be
   > It is rude and disrespectful to approach this boundary with low-effort, unqualified work, since it puts the burden of validation on the maintainer.
 - [go-gitea/gitea](go-gitea-gitea/2026-08-29.md)
   > We welcome new contributors, but cannot sustain the effort of supporting contributors who primarily defer to AI rather than engaging substantively with the review process.
+- [https://www.debian.org/vote/2026/vote_002](https-www-debian-org-vote-2026-vote-002/2026-08-30.md)
+  > New contributors submitting LLM output for review places an unnecessary strain on the reviewer, which can lead to burnout.
 - [llvm/llvm-project](llvm-llvm-project/2026-08-29.md)
   > it takes a lot of maintainer time and energy to review those contributions
 - [mastodon/.github](mastodon-github/2026-08-29.md)
@@ -160,20 +166,26 @@ These rows count as not-in-policy in the chart above. They are separated here be
 - [zulip/zulip](zulip-zulip/2026-08-29.md)
   > Maintainer time and attention is very limited, so it's important that changes you ask us to review represent your best work.
 
-**Environmental Impact** (2)
+**Environmental Impact** (3)
 
+- [https://www.debian.org/vote/2026/vote_002](https-www-debian-org-vote-2026-vote-002/2026-08-30.md)
+  > LLM usage accelerates the destruction of our ecosystem (planet earth) and that is a deal-breaker ... LLM training consumes a staggering amount of resources
 - [rust-lang/rust-forge](rust-lang-rust-forge/2026-08-29.md)
   > many others feel that its negative impact on society and the climate are severe enough that no use is acceptable
 - [servo/book](servo-book/2026-08-29.md)
   > AI tools require an unreasonable amount of energy and water to build and operate, their models are built with heavily exploited workers in unacceptable working conditions
 
-**Infrastructure strain** (1)
+**Infrastructure strain** (2)
 
 - [OSGeo/gdal](osgeo-gdal/2026-08-29.md)
   > The GDAL sponsorship_program is one way your organization can help buffer the cost and disruption of LLMs in keystone projects such as GDAL.
+- [https://www.debian.org/vote/2026/vote_002](https-www-debian-org-vote-2026-vote-002/2026-08-30.md)
+  > This has had a major negative impact on Debian's public web resources, effectively a large scale and perpetual Denial of Service attack on sites that many users rely on. As a consequence parts of our infrastructure were not reachable at...
 
-**Data use for training** (2)
+**Data use for training** (3)
 
+- [https://www.debian.org/vote/2026/vote_002](https-www-debian-org-vote-2026-vote-002/2026-08-30.md)
+  > LLM companies directly hurt the free software community as whole by scraping the whole web for training data without any regard for license, copyright, or even established conventions such as robots.txt ... This has had a major negative...
 - [mastodon/.github](mastodon-github/2026-08-29.md)
   > If AI was used, the resulting code does not violate the terms of service of the AI provider and does not include "regurgitated" code from libraries with incompatible licences
 - [servo/book](servo-book/2026-08-29.md)
