@@ -10,8 +10,8 @@
     "note": "Scoring confined to the files named on the command line; 'no' means not addressed in those files."
   },
   "usage": {
-    "input_tokens": 9431,
-    "output_tokens": 6963,
+    "input_tokens": 11561,
+    "output_tokens": 6582,
     "cache_read_input_tokens": 0,
     "cache_creation_input_tokens": 0,
     "api_calls": 2,
@@ -19,15 +19,16 @@
       "policies/ai-policy.md"
     ],
     "model": "claude-sonnet-5",
-    "estimated_cost_usd": 0.088492
+    "estimated_cost_usd": 0.088942
   },
   "consent_policy_specificity": {
     "domains": [
       {
         "domain": "code_contributions",
         "supervision_level": "disclosure_required",
-        "scope_or_volume_limits": "Disclosure triggered when AI is used 'for substantive portions of the contribution'; otherwise no explicit volume limit.",
-        "accountability_holder": "Contributors ('Contributors are responsible for all submitted content...')",
+        "scope_or_volume_limits": "Applies to 'all contributions'; disclosure triggered when AI used for 'substantive portions' of the contribution (no numeric/volume threshold given)",
+        "accountability_holder": "contributor",
+        "accountability_wording": "Contributors are responsible for all submitted content, regardless of whether generative AI tools were used.",
         "proportionality": "not_specified",
         "addressed": "yes",
         "evidence": [
@@ -43,80 +44,85 @@
           },
           {
             "path": "policies/ai-policy.md",
-            "quote": "Contributors are expected to actively engage with reviewer feedback themselves.",
-            "line": 11
+            "quote": "Contributors must be able to explain all changes during review.",
+            "line": 8
           }
         ],
         "rationale_only_mention": "",
         "lean": "none",
         "suggested_improvement": "",
-        "reasoning": "The policy explicitly names code contributions (PRs), states a disclosure requirement tied to substantive AI use, requires contributors to be able to explain and engage with changes (human-in-the-loop elements), and names contributors as accountable for submitted content. Both supervision level and accountability holder are stated, so this domain is fully addressed."
+        "reasoning": "Policy explicitly names contributions, requires disclosure for substantive AI use, requires contributors be able to explain changes (human-in-the-loop element), and assigns accountability to the contributor by name. Both supervision and accountability holder are stated."
       },
       {
         "domain": "notetaker_bots",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
+        "accountability_wording": "",
         "proportionality": "not_applicable",
         "addressed": "no",
         "evidence": [],
         "rationale_only_mention": "",
         "lean": "none",
         "suggested_improvement": "no mention of meeting/notetaker bots at all",
-        "reasoning": "The policy text contains no reference to meeting recording, transcription, or notetaker bots of any kind."
+        "reasoning": "The document is entirely about generative AI use in contributions and never mentions meetings, recordings, or notetaker bots."
       },
       {
         "domain": "content",
         "supervision_level": "not_specified",
-        "scope_or_volume_limits": "Documentation and comments are mentioned only as examples for style consistency, not as a scoped rule.",
+        "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
+        "accountability_wording": "",
         "proportionality": "not_specified",
         "addressed": "partial",
         "evidence": [
           {
             "path": "policies/ai-policy.md",
-            "quote": "this particularly means conveying information (comments, documentation, etc) in a style the Astropy community uses, and that is appropriate and to the point.",
+            "quote": "In the context of Generative AI, this particularly means conveying information (comments, documentation, etc) in a style the Astropy community uses, and that is appropriate and to the point.",
             "line": 15
           }
         ],
         "rationale_only_mention": "",
         "lean": "none",
-        "suggested_improvement": "no supervision level or accountability holder for documentation/content",
-        "reasoning": "Documentation and comments are named explicitly, but only in the context of matching community writing style - no supervision level, accountability holder, or disclosure rule specific to content/documentation/blogs/design assets is stated. This is a named-but-incomplete case."
+        "suggested_improvement": "no explicit supervision level or accountability holder stated for documentation/content specifically",
+        "reasoning": "Documentation is named as an example under the general 'consistency with conventions' rule, but no distinct supervision level or accountability statement is given for content/documentation as its own category, and blogs/design assets are never mentioned. This is reached mainly through the general contribution rules rather than a dedicated content rule."
       },
       {
         "domain": "moderation",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
+        "accountability_wording": "",
         "proportionality": "not_applicable",
         "addressed": "no",
         "evidence": [],
         "rationale_only_mention": "",
         "lean": "none",
-        "suggested_improvement": "no mention of AI use in moderation actions",
-        "reasoning": "The policy does not discuss moderation actions (e.g., using AI to flag, warn, or ban community members) at all."
+        "suggested_improvement": "no rule on AI-assisted moderation actions or who is accountable",
+        "reasoning": "The policy does not discuss AI use in moderation decisions (e.g., closing/banning contributors); the only related clause ('we will close the PR' for agent-driven submissions) is an enforcement mechanism attached to the autonomous-use rule, not a moderation-domain rule."
       },
       {
         "domain": "review",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
+        "accountability_wording": "",
         "proportionality": "not_applicable",
         "addressed": "no",
         "evidence": [],
         "rationale_only_mention": "",
         "lean": "none",
-        "suggested_improvement": "no rule on whether reviewers may use AI to review",
-        "reasoning": "The policy discusses contributor obligations during review (explaining changes, engaging with feedback) but never addresses whether maintainers/reviewers themselves may use AI tools to conduct review. That is a distinct, unaddressed question."
+        "suggested_improvement": "no rule on whether/how AI may be used to review contributions",
+        "reasoning": "The policy discusses reviewers only in the context of expecting to interact with a human contributor; it never addresses reviewers or maintainers themselves using AI tools to conduct reviews."
       },
       {
         "domain": "autonomous",
         "supervision_level": "banned",
-        "scope_or_volume_limits": "Applies to autonomous workflows/agents submitting or acting as contributors; a human controlling the account must be available to interact with reviewers.",
-        "accountability_holder": "The human controlling the account",
-        "proportionality": "not_specified",
-        "addressed": "yes",
+        "scope_or_volume_limits": "Applies to autonomous workflows/agents acting on the repository (e.g., opening/interacting with PRs)",
+        "accountability_holder": "not_specified",
+        "accountability_wording": "",
+        "proportionality": "not_applicable",
+        "addressed": "partial",
         "evidence": [
           {
             "path": "policies/ai-policy.md",
@@ -126,78 +132,54 @@
         ],
         "rationale_only_mention": "",
         "lean": "none",
-        "suggested_improvement": "",
-        "reasoning": "The policy explicitly names autonomous agentic workflows, states they are not accepted as contributors in their own right (effectively banning unsupervised agentic submission), and names the human controlling the account as the accountable party reviewers must interact with. Note the 'we will close the PR' clause is enforcement, but the requirement to interact with 'the human controlling the account' independently states who is answerable for the output, satisfying the accountability element."
+        "suggested_improvement": "no accountability holder named; 'will close the PR' is enforcement, not authorship responsibility",
+        "reasoning": "The policy clearly bans unsupervised agentic interaction with the repository (supervision level = banned), naming the area explicitly. However it states only who enforces the ban (reviewers closing PRs), not who is accountable for autonomous-generated output, so accountability_holder is not_specified and the domain is only partially addressed per the metric's yes-bar."
       },
       {
         "domain": "environmental",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
+        "accountability_wording": "",
         "proportionality": "not_applicable",
         "addressed": "no",
         "evidence": [],
         "rationale_only_mention": "",
         "lean": "none",
-        "suggested_improvement": "no mention of energy, water, or hardware/carbon footprint",
-        "reasoning": "The policy contains no discussion, rule, or rationale referencing environmental impact of AI tools."
+        "suggested_improvement": "no mention of energy, water, or carbon impact of AI tools",
+        "reasoning": "The policy never raises environmental cost as a concern or rule; it focuses solely on contributor accountability, disclosure, engagement, and style."
       },
       {
         "domain": "infrastructure",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
+        "accountability_wording": "",
         "proportionality": "not_applicable",
         "addressed": "no",
         "evidence": [],
         "rationale_only_mention": "",
         "lean": "none",
-        "suggested_improvement": "no mention of infrastructure or server-load strain from AI",
-        "reasoning": "No text addresses infrastructure cost, server load, or hardware financing concerns related to AI use."
+        "suggested_improvement": "no mention of server load or hardware/financial cost from AI use",
+        "reasoning": "No statement in the document addresses infrastructure strain, hardware cost, or financing related to AI tool use."
       },
       {
         "domain": "training_data",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
+        "accountability_wording": "",
         "proportionality": "not_applicable",
         "addressed": "no",
         "evidence": [],
         "rationale_only_mention": "",
         "lean": "none",
-        "suggested_improvement": "no mention of training data provenance or platform user data",
-        "reasoning": "The policy addresses licensing compliance of submitted code but never discusses the provenance or consent status of data used to train generative AI models, nor use of platform/community data for training."
+        "suggested_improvement": "no statement on whether project content/user data may train models",
+        "reasoning": "The policy addresses licensing responsibility for submitted code but never discusses whether Astropy's own project data (issues, discussions, contributions) may be used to train AI models."
       }
     ],
-    "unscoped_statements": [
-      {
-        "path": "policies/ai-policy.md",
-        "quote": "The following apply to all contributions.",
-        "areas_named": [
-          "code_contributions"
-        ],
-        "domains_left_ambiguous": [
-          "content",
-          "moderation",
-          "review",
-          "notetaker_bots",
-          "autonomous"
-        ],
-        "line": 4
-      },
-      {
-        "path": "policies/ai-policy.md",
-        "quote": "Contributors are responsible for all submitted content, regardless of whether generative AI tools were used.",
-        "areas_named": [
-          "code_contributions"
-        ],
-        "domains_left_ambiguous": [
-          "content"
-        ],
-        "line": 7
-      }
-    ],
-    "overall_posture": "The policy is fairly specific about code contributions (disclosure for substantive AI use, mandatory human explanation/engagement, contributor accountability) and explicitly bans treating autonomous agents as contributors, but it is silent on notetaker bots, moderation, reviewer-side AI use, environmental impact, infrastructure strain, and training-data provenance, and only glancingly touches documentation/content as a style example without setting supervision or accountability for it."
+    "unscoped_statements": [],
+    "overall_posture": "Astropy's AI policy is narrowly and specifically written for code/PR contributions (permitting AI-assisted contributions under disclosure, human-explainability, and contributor-accountability rules, and banning fully autonomous agent interaction), but it is silent on notetaker bots, dedicated content/documentation rules, moderation, AI-assisted review, environmental impact, infrastructure strain, and use of the project's own data for training."
   },
   "validation_problems": [],
   "use_composition_partial": {

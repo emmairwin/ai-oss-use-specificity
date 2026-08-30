@@ -10,8 +10,8 @@
     "note": "Scoring confined to the files named on the command line; 'no' means not addressed in those files."
   },
   "usage": {
-    "input_tokens": 8901,
-    "output_tokens": 1709,
+    "input_tokens": 11031,
+    "output_tokens": 2122,
     "cache_read_input_tokens": 0,
     "cache_creation_input_tokens": 0,
     "api_calls": 2,
@@ -19,7 +19,7 @@
       "docs/en/docs/contributing.md"
     ],
     "model": "claude-sonnet-5",
-    "estimated_cost_usd": 0.034892
+    "estimated_cost_usd": 0.043282
   },
   "consent_policy_specificity": {
     "domains": [
@@ -28,160 +28,136 @@
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
+        "accountability_wording": "",
         "proportionality": "not_specified",
         "addressed": "no",
         "evidence": [],
         "rationale_only_mention": "",
         "lean": "none",
-        "suggested_improvement": "no supervision level; no accountability holder named",
-        "reasoning": "The file only points contributors to an external link for contribution guidelines and contains no mention of AI at all."
+        "suggested_improvement": "no AI-related supervision level, scope, or accountability holder stated",
+        "reasoning": "The file contributing.md contains only a brief pointer to an external contributing guide and makes no mention of AI, AI-assisted contributions, or any related supervision requirement."
       },
       {
         "domain": "notetaker_bots",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
+        "accountability_wording": "",
         "proportionality": "not_specified",
         "addressed": "no",
         "evidence": [],
         "rationale_only_mention": "",
         "lean": "none",
-        "suggested_improvement": "no mention of meeting/notetaker bots at all",
-        "reasoning": "No content in this file relates to meetings, recordings, or notetaker bots."
+        "suggested_improvement": "no mention of meeting/notetaker bot policy at all",
+        "reasoning": "No mention of meetings, recording, or notetaker bots appears anywhere in this short document."
       },
       {
         "domain": "content",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
+        "accountability_wording": "",
         "proportionality": "not_specified",
         "addressed": "no",
         "evidence": [],
         "rationale_only_mention": "",
         "lean": "none",
-        "suggested_improvement": "no supervision level or accountability holder for content/docs",
-        "reasoning": "The file does not discuss documentation, blogs, or design asset creation with AI."
+        "suggested_improvement": "no rule on AI-generated documentation or content",
+        "reasoning": "The document does not discuss documentation, blogs, or design assets in relation to AI use."
       },
       {
         "domain": "moderation",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
+        "accountability_wording": "",
         "proportionality": "not_specified",
         "addressed": "no",
         "evidence": [],
         "rationale_only_mention": "",
         "lean": "none",
-        "suggested_improvement": "no supervision level or accountability holder for moderation",
-        "reasoning": "No moderation-related content is present in this file."
+        "suggested_improvement": "no rule on AI use in moderation actions",
+        "reasoning": "No mention of moderation, closing, or triage actions, AI-assisted or otherwise."
       },
       {
         "domain": "review",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
+        "accountability_wording": "",
         "proportionality": "not_specified",
         "addressed": "no",
         "evidence": [],
         "rationale_only_mention": "",
         "lean": "none",
-        "suggested_improvement": "no rule on AI use in review; no accountability holder",
-        "reasoning": "The file makes no statement about who or what may review contributions, nor any mention of AI-assisted review."
+        "suggested_improvement": "no rule on AI-assisted review of contributions",
+        "reasoning": "The document does not discuss review processes at all, let alone AI-assisted review."
       },
       {
         "domain": "autonomous",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
+        "accountability_wording": "",
         "proportionality": "not_specified",
         "addressed": "no",
         "evidence": [],
         "rationale_only_mention": "",
         "lean": "none",
-        "suggested_improvement": "no supervision level or accountability holder for agentic use",
-        "reasoning": "No mention of autonomous or agentic AI activity in this file."
+        "suggested_improvement": "no rule on autonomous/agentic contributions to the repo",
+        "reasoning": "No mention of agents, bots, or autonomous tooling interacting with the repository."
       },
       {
         "domain": "environmental",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
+        "accountability_wording": "",
         "proportionality": "not_specified",
         "addressed": "no",
         "evidence": [],
         "rationale_only_mention": "",
         "lean": "none",
         "suggested_improvement": "no statement on environmental impact of AI use",
-        "reasoning": "The file contains no discussion of energy, water, or carbon footprint concerns."
+        "reasoning": "No mention of energy, water, or carbon footprint concerns anywhere in the file."
       },
       {
         "domain": "infrastructure",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
+        "accountability_wording": "",
         "proportionality": "not_specified",
         "addressed": "no",
         "evidence": [],
         "rationale_only_mention": "",
         "lean": "none",
-        "suggested_improvement": "no statement on infrastructure strain from AI use",
-        "reasoning": "The file contains no discussion of server load or hardware cost concerns related to AI."
+        "suggested_improvement": "no statement on server load or hardware cost from AI",
+        "reasoning": "No mention of infrastructure strain, server load, or hardware financing concerns."
       },
       {
         "domain": "training_data",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
+        "accountability_wording": "",
         "proportionality": "not_specified",
         "addressed": "no",
         "evidence": [],
         "rationale_only_mention": "",
         "lean": "none",
-        "suggested_improvement": "no statement on training data use or platform user data",
-        "reasoning": "The file contains no discussion of data use for AI training."
+        "suggested_improvement": "no statement on use of project data for AI training",
+        "reasoning": "No mention of the project's own content, issues, or user data being used to train models."
       }
     ],
     "unscoped_statements": [],
-    "overall_posture": "The reviewed file (docs/en/docs/contributing.md) is a brief pointer to an external contribution guide and contains no mention of AI at all, so none of the nine domains are addressed within it."
+    "overall_posture": "The assessed file (docs/en/docs/contributing.md) is a minimal stub that points contributors to an external guide and contains no mention of AI, AI-assisted contributions, or any of the nine domains; no AI consent policy exists in this document."
   },
   "validation_problems": [],
   "use_composition_partial": {
     "agent_instruction_files": [],
-    "workflow_count": 20,
-    "workflows_with_ai_or_bot_signals": [
-      {
-        "path": ".github/workflows/bump-pre-commit-hooks.yml",
-        "signals": [
-          "bot"
-        ]
-      },
-      {
-        "path": ".github/workflows/guard-dependencies.yml",
-        "signals": [
-          "bot",
-          "dependabot"
-        ]
-      },
-      {
-        "path": ".github/workflows/pre-commit.yml",
-        "signals": [
-          "bot",
-          "dependabot"
-        ]
-      },
-      {
-        "path": ".github/workflows/prepare-release.yml",
-        "signals": [
-          "bot"
-        ]
-      },
-      {
-        "path": ".github/workflows/translate.yml",
-        "signals": [
-          "llm"
-        ]
-      }
-    ],
+    "workflow_count": 0,
+    "workflows_with_ai_or_bot_signals": [],
     "awaiting_implementation": {
       "specific_tools_in_use": "Awaiting implementation: named-product detection beyond known file signatures",
       "model_type": "Awaiting implementation: underlying model/family",

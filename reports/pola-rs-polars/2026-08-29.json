@@ -10,8 +10,8 @@
     "note": "Scoring confined to the files named on the command line; 'no' means not addressed in those files."
   },
   "usage": {
-    "input_tokens": 9721,
-    "output_tokens": 5234,
+    "input_tokens": 11841,
+    "output_tokens": 6203,
     "cache_read_input_tokens": 0,
     "cache_creation_input_tokens": 0,
     "api_calls": 2,
@@ -19,21 +19,22 @@
       "AI_POLICY.md"
     ],
     "model": "claude-sonnet-5",
-    "estimated_cost_usd": 0.071782
+    "estimated_cost_usd": 0.085712
   },
   "consent_policy_specificity": {
     "domains": [
       {
         "domain": "code_contributions",
         "supervision_level": "human_in_the_loop",
-        "scope_or_volume_limits": "Only for accepted issues; disallowed for issues marked 'good first issue'; drive-by PRs without an accepted issue are closed.",
-        "accountability_holder": "The contributor submitting the PR/issue (repeated 'you must' disclosure and verification obligations placed on the submitter).",
+        "scope_or_volume_limits": "AI-generated code only permitted for accepted issues; forbidden for issues labeled 'good first issue'; drive-by PRs without an accepted issue will be closed",
+        "accountability_holder": "not_specified",
+        "accountability_wording": "",
         "proportionality": "not_specified",
-        "addressed": "yes",
+        "addressed": "partial",
         "evidence": [
           {
             "path": "AI_POLICY.md",
-            "quote": "All AI usage in any form must be disclosed. You must state the tool(s) you used",
+            "quote": "All AI usage in any form must be disclosed.",
             "line": 9
           },
           {
@@ -43,33 +44,45 @@
           },
           {
             "path": "AI_POLICY.md",
+            "quote": "AI may not be used for issues marked as \"good first issue\".",
+            "line": 17
+          },
+          {
+            "path": "AI_POLICY.md",
             "quote": "AI-generated code must have been fully verified with human use.",
             "line": 20
+          },
+          {
+            "path": "AI_POLICY.md",
+            "quote": "Issues and discussions can use AI assistance but must have a full human-in-the-loop.",
+            "line": 24
           }
         ],
         "rationale_only_mention": "",
         "lean": "none",
-        "suggested_improvement": "",
-        "reasoning": "The policy names PRs, issues and comments explicitly, sets disclosure and human-verification supervision, scope limits (accepted issues only, no good-first-issue), and repeatedly places obligations on 'you' (the submitting contributor), which functions as an accountability assignment for the output."
+        "suggested_improvement": "no accountability holder named for AI-assisted contributions",
+        "reasoning": "Policy states clear supervision (human-in-the-loop, disclosure, verification) and scope limits (accepted issues only, no good-first-issue) for PRs/issues/comments, but never states who is answerable for the resulting content - only that maintainers may close non-compliant PRs, which is enforcement, not accountability."
       },
       {
         "domain": "notetaker_bots",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
-        "proportionality": "not_applicable",
+        "accountability_wording": "",
+        "proportionality": "not_specified",
         "addressed": "no",
         "evidence": [],
         "rationale_only_mention": "",
         "lean": "none",
         "suggested_improvement": "no mention of meeting/notetaker bots at all",
-        "reasoning": "The policy text never discusses recorded meetings, notetaker bots, or closed/small-group discussion capture."
+        "reasoning": "The document never discusses recorded meetings, transcription, or notetaker bots in any form."
       },
       {
         "domain": "content",
         "supervision_level": "banned",
-        "scope_or_volume_limits": "Applies to non-code media/text: art, images, videos, audio, and text other than code.",
+        "scope_or_volume_limits": "applies to non-code media/text: art, images, videos, audio, etc.",
         "accountability_holder": "not_specified",
+        "accountability_wording": "",
         "proportionality": "not_specified",
         "addressed": "partial",
         "evidence": [
@@ -81,48 +94,45 @@
         ],
         "rationale_only_mention": "",
         "lean": "none",
-        "suggested_improvement": "no accountability holder named for content ban",
-        "reasoning": "This clause names content-like categories (art, images, video, audio, non-code text) and bans AI generation of them outright, but it does not say who is answerable for a violation or for verifying compliance, so accountability is missing."
+        "suggested_improvement": "no accountability holder named for banned-content rule",
+        "reasoning": "A clear ban is stated for non-code AI-generated content (documentation prose, art, media), but no one is named as accountable for compliance or violation - only the prohibition itself, enforced implicitly by maintainers."
       },
       {
         "domain": "moderation",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
-        "proportionality": "not_applicable",
+        "accountability_wording": "",
+        "proportionality": "not_specified",
+        "addressed": "no",
+        "evidence": [],
+        "rationale_only_mention": "we have experienced an increasing number of low-quality pull requests that consume significant amounts of human reviewers' time",
+        "lean": "restrictive",
+        "suggested_improvement": "no rule on AI use in moderation actions; no supervision level",
+        "reasoning": "The policy cites reviewer time burden as a rationale for its rules (moderation load, per the metric's own carve-out), but it never states a rule about whether or how AI may be used to perform moderation actions (e.g. auto-closing, labeling). The closing of non-compliant PRs is a maintainer enforcement action, not an AI moderation capability being addressed."
+      },
+      {
+        "domain": "review",
+        "supervision_level": "not_specified",
+        "scope_or_volume_limits": "not_specified",
+        "accountability_holder": "not_specified",
+        "accountability_wording": "",
+        "proportionality": "not_specified",
         "addressed": "no",
         "evidence": [],
         "rationale_only_mention": "",
         "lean": "none",
-        "suggested_improvement": "no mention of AI use in moderation actions",
-        "reasoning": "The policy does not discuss AI being used to moderate, ban, warn, or otherwise police community members; it only discusses closing non-compliant PRs, which is an enforcement mechanism applied to AI content, not AI performing moderation."
-      },
-      {
-        "domain": "review",
-        "supervision_level": "banned",
-        "scope_or_volume_limits": "Applies to posting code reviews on the repository.",
-        "accountability_holder": "not_specified",
-        "proportionality": "not_specified",
-        "addressed": "partial",
-        "evidence": [
-          {
-            "path": "AI_POLICY.md",
-            "quote": "Agents are strictly forbidden from interacting with our repository. This includes but is not limited to posting issues, making pull requests, posting comments, posting code reviews",
-            "line": 5
-          }
-        ],
-        "rationale_only_mention": "",
-        "lean": "none",
-        "suggested_improvement": "no accountability holder named for who must review",
-        "reasoning": "The policy explicitly bans AI/agents from posting code reviews, but it never designates who (which role, e.g. maintainer or contributor) is accountable for reviews being human-performed beyond the generic requirement that interactions be done by 'a human'."
+        "suggested_improvement": "no rule on humans using AI tools to review contributions",
+        "reasoning": "The only mention of 'code reviews' is in the context of agents being forbidden from posting them autonomously, which is scored under autonomous use per the metric's own instruction. No statement addresses a human reviewer's own use of AI tooling to assist in reviewing a contribution."
       },
       {
         "domain": "autonomous",
         "supervision_level": "banned",
-        "scope_or_volume_limits": "Any interaction with the repository (issues, PRs, comments, reactions, reviews, etc.) by an autonomous agent.",
-        "accountability_holder": "The human who would otherwise let an agent act ('Any interaction on our repository must be done by a human.')",
+        "scope_or_volume_limits": "covers posting issues, making pull requests, posting comments, posting code reviews, adding reactions, and any other repository interaction",
+        "accountability_holder": "not_specified",
+        "accountability_wording": "",
         "proportionality": "not_specified",
-        "addressed": "yes",
+        "addressed": "partial",
         "evidence": [
           {
             "path": "AI_POLICY.md",
@@ -137,69 +147,59 @@
         ],
         "rationale_only_mention": "",
         "lean": "none",
-        "suggested_improvement": "",
-        "reasoning": "Autonomous/agentic action is explicitly named and banned outright, with the requirement that a human perform any interaction instead, which assigns accountability to a human actor even though no specific named role is given."
+        "suggested_improvement": "no accountability holder named for the autonomous-agent ban",
+        "reasoning": "A comprehensive ban on autonomous agent interaction is stated with broad scope, but no party is named as accountable for enforcement failures or for supervising compliance - the rule only obliges that humans do the interacting."
       },
       {
         "domain": "environmental",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
-        "proportionality": "not_applicable",
+        "accountability_wording": "",
+        "proportionality": "not_specified",
         "addressed": "no",
         "evidence": [],
         "rationale_only_mention": "",
         "lean": "none",
         "suggested_improvement": "no mention of energy, water, or carbon impact",
-        "reasoning": "The policy's rationale section discusses reviewer time and 'slop' PRs but never references energy, water, or hardware/carbon footprint concerns, so there is neither a rule nor a lean on environmental impact."
+        "reasoning": "The rationale section discusses reviewer time and low-quality PRs, not energy or water use; environmental impact is never raised anywhere in the document."
       },
       {
         "domain": "infrastructure",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
-        "proportionality": "not_applicable",
+        "accountability_wording": "",
+        "proportionality": "not_specified",
         "addressed": "no",
         "evidence": [],
-        "rationale_only_mention": "We have experienced an increasing number of low-quality pull requests that consume significant amounts of human reviewers' time... which can have a net-negative effect on the maintenance of Polars.",
-        "lean": "restrictive",
-        "suggested_improvement": "no rule on server load or hardware cost strain",
-        "reasoning": "The rationale cites strain on maintainers' time and project maintenance as the reason for restricting AI-generated code, which is a human-resource concern rather than server/hardware infrastructure, but it does voice a restrictive concern adjacent to burden on the project; no actual rule about infrastructure (servers, hardware financing) is set."
+        "rationale_only_mention": "",
+        "lean": "none",
+        "suggested_improvement": "no mention of server load or hardware cost",
+        "reasoning": "No statement in the policy discusses server load, hardware financing, or infrastructure costs related to AI use."
       },
       {
         "domain": "training_data",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
-        "proportionality": "not_applicable",
+        "accountability_wording": "",
+        "proportionality": "not_specified",
         "addressed": "no",
         "evidence": [],
         "rationale_only_mention": "",
         "lean": "none",
-        "suggested_improvement": "no mention of training data use or platform user data",
-        "reasoning": "The policy never discusses how AI models are trained, whether contributor or user data may be used for training, or any related consent question."
+        "suggested_improvement": "no mention of project data being used to train models",
+        "reasoning": "The document does not discuss whether Polars' own issues, discussions, code, or user data may be used to train AI models; its concerns are about AI output quality and disclosure, not about the project's data feeding models."
       }
     ],
-    "unscoped_statements": [
-      {
-        "path": "AI_POLICY.md",
-        "quote": "Issues and discussions can use AI assistance but must have a full human-in-the-loop.",
-        "areas_named": [
-          "code_contributions"
-        ],
-        "domains_left_ambiguous": [
-          "content",
-          "moderation"
-        ],
-        "line": 24
-      }
-    ],
-    "overall_posture": "Polars' AI policy is highly specific and restrictive about code contributions (issues/PRs/comments) and about autonomous agent interaction and AI-driven review, requiring disclosure and human-in-the-loop verification and banning agents from directly acting on the repo; it partially bans AI-generated non-code content but never names an accountability holder there or for review, and it is entirely silent on notetaker bots, moderation, environmental impact, infrastructure strain, and training data."
+    "unscoped_statements": [],
+    "overall_posture": "Polars' AI policy is detailed and restrictive for code contributions and non-code content (banning autonomous agents, non-code AI media, and requiring disclosure plus human-in-the-loop verification for AI-assisted code/issues), but it never names an accountability holder for any domain and is entirely silent on notetaker bots, review-tool use by humans, moderation actions, environmental impact, infrastructure strain, and training data use."
   },
   "validation_problems": [],
   "use_composition_partial": {
     "agent_instruction_files": [],
-    "workflow_count": 20,
+    "workflow_count": 0,
     "workflows_with_ai_or_bot_signals": [],
     "awaiting_implementation": {
       "specific_tools_in_use": "Awaiting implementation: named-product detection beyond known file signatures",

@@ -10,8 +10,8 @@
     "note": "Scoring confined to the files named on the command line; 'no' means not addressed in those files."
   },
   "usage": {
-    "input_tokens": 10367,
-    "output_tokens": 6572,
+    "input_tokens": 12487,
+    "output_tokens": 7749,
     "cache_read_input_tokens": 0,
     "cache_creation_input_tokens": 0,
     "api_calls": 2,
@@ -19,22 +19,33 @@
       "doc/source/community/ai_tool_policy.rst"
     ],
     "model": "claude-sonnet-5",
-    "estimated_cost_usd": 0.086454
+    "estimated_cost_usd": 0.102464
   },
   "consent_policy_specificity": {
     "domains": [
       {
         "domain": "code_contributions",
-        "supervision_level": "disclosure_required",
-        "scope_or_volume_limits": "LLMs may only be used as improved auto-completion or for repeated/mechanical refactoring tasks; vibe-coded contributions are banned; high-verbosity LLM content may be ignored, closed, unmerged, or removed.",
-        "accountability_holder": "The contributing human author (\"ultimately responsible for every line of code, comment, or mailing list interaction they initiate\")",
+        "supervision_level": "human_in_the_loop",
+        "scope_or_volume_limits": "Limited to 'improved auto-completion' or mechanical/repeated tasks; vibe-coded contributions banned; any LLM usage must be disclosed via ticket label, comment, or commit message.",
+        "accountability_holder": "contributor",
+        "accountability_wording": "The contributing human author is ultimately responsible for every line of code, comment, or mailing list interaction they initiate",
         "proportionality": "not_specified",
         "addressed": "yes",
         "evidence": [
           {
             "path": "doc/source/community/ai_tool_policy.rst",
-            "quote": "Contributors can make **limited use** of LLMs for contributions in GDAL, subject to details mentioned below",
-            "line": 41
+            "quote": "Human contributors must be the primary author(s) of GDAL contributions",
+            "line": 44
+          },
+          {
+            "path": "doc/source/community/ai_tool_policy.rst",
+            "quote": "Submission of vibe-coded contributions is *banned*.",
+            "line": null
+          },
+          {
+            "path": "doc/source/community/ai_tool_policy.rst",
+            "quote": "LLMs may only be used as an improved auto-completion mechanism, or for repeated tasks (mechanical refactoring)",
+            "line": 52
           },
           {
             "path": "doc/source/community/ai_tool_policy.rst",
@@ -45,77 +56,77 @@
             "path": "doc/source/community/ai_tool_policy.rst",
             "quote": "The contributing human author is ultimately responsible for every line of code, comment, or mailing list interaction they initiate",
             "line": 62
-          },
-          {
-            "path": "doc/source/community/ai_tool_policy.rst",
-            "quote": "Submission of vibe-coded contributions is *banned*.",
-            "line": null
           }
         ],
         "rationale_only_mention": "",
         "lean": "none",
         "suggested_improvement": "",
-        "reasoning": "The policy names code, ticket comments, and commit messages explicitly, states disclosure requirements, bans certain sub-categories (vibe-coding, agentic submission), and names the human author as accountable for content. Both supervision and accountability are stated, so this is fully addressed."
+        "reasoning": "Explicitly names code, ticket comments, and commit messages as the scope; states a mix of human-in-the-loop and disclosure requirements, bans vibe-coding, and assigns accountability to the contributing human author. Meets 'yes' threshold."
       },
       {
         "domain": "notetaker_bots",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
-        "proportionality": "not_applicable",
+        "accountability_wording": "",
+        "proportionality": "not_specified",
         "addressed": "no",
         "evidence": [],
         "rationale_only_mention": "",
         "lean": "none",
-        "suggested_improvement": "no mention of meeting/notetaker bots at all",
-        "reasoning": "The document never discusses recorded meetings, call transcription, or notetaker/meeting bots in any form."
+        "suggested_improvement": "no supervision level; no accountability holder; no scope stated",
+        "reasoning": "The policy makes no mention of meeting recording, transcription, or notetaker bots of any kind."
       },
       {
         "domain": "content",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
-        "proportionality": "not_applicable",
+        "accountability_wording": "",
+        "proportionality": "not_specified",
         "addressed": "no",
         "evidence": [],
-        "rationale_only_mention": "It is also design, review, coordinated refactoring, deprecation scheduling, coordinated communication, distribution, and historical outlook.",
-        "lean": "restrictive",
-        "suggested_improvement": "no rule for documentation/design assets; only code/tickets/commits named",
-        "reasoning": "The rationale lists 'design' among the non-code value GDAL provides that LLMs do not effectively replace, implying caution, but no rule, supervision level, or accountability holder is stated for documentation, blogs, or design assets specifically. Only code, ticket comments and commit messages are governed by the operative Policy section."
+        "rationale_only_mention": "",
+        "lean": "none",
+        "suggested_improvement": "no supervision level for docs/blogs/design assets; no accountability holder",
+        "reasoning": "The policy scopes itself to code, ticket comments, commit messages, and mailing list interaction. It does not name documentation, blog posts, or design assets, so content is not addressed even though 'contributions' is used generically elsewhere."
       },
       {
         "domain": "moderation",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
-        "proportionality": "not_applicable",
+        "accountability_wording": "",
+        "proportionality": "not_specified",
         "addressed": "no",
         "evidence": [],
-        "rationale_only_mention": "",
-        "lean": "none",
-        "suggested_improvement": "no statement on AI use in moderation actions",
-        "reasoning": "The Violations section describes maintainers locking conversations, closing PRs/issues, or banning accounts for policy non-compliance, but this concerns human enforcement of the LLM policy, not whether AI tools may be used to perform moderation. No supervision level or accountability holder is given for AI-assisted moderation."
+        "rationale_only_mention": "Indiscriminate usage of LLMs in open source projects *consume* maintenance, and the GDAL LLM tool policy attempts to conserve that resource.",
+        "lean": "restrictive",
+        "suggested_improvement": "no rule on AI-assisted moderation; no supervision level or accountability holder",
+        "reasoning": "The 'maintainer time as constrained resource' language is rationale for the overall contribution restrictions, not a rule about whether maintainers may use AI to take moderation actions. The clause about locking/closing/banning non-compliant contributors is enforcement of the AI policy itself, not a statement about AI-assisted moderation, so it does not supply an accountability holder for this domain."
       },
       {
         "domain": "review",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
-        "proportionality": "not_applicable",
+        "accountability_wording": "",
+        "proportionality": "not_specified",
         "addressed": "no",
         "evidence": [],
-        "rationale_only_mention": "It is also design, review, coordinated refactoring, deprecation scheduling, coordinated communication, distribution, and historical outlook.",
-        "lean": "restrictive",
-        "suggested_improvement": "no rule on whether/how AI may be used to review contributions",
-        "reasoning": "Review is named in the Rationale as one of the human-provided values that LLM code-writing does not replace, signalling a restrictive attitude toward substituting AI for review, but no rule, supervision level, or accountability holder is stated for who or what may review using AI."
+        "rationale_only_mention": "",
+        "lean": "none",
+        "suggested_improvement": "no rule on AI-assisted review; no supervision level or accountability holder",
+        "reasoning": "The document discusses review as a scarce maintainer resource but never states whether maintainers or reviewers may themselves use AI tools to review contributions."
       },
       {
         "domain": "autonomous",
         "supervision_level": "banned",
-        "scope_or_volume_limits": "Human-coordinated or uncoordinated use of agents (e.g. OpenClaw) for submission of contributions to the GDAL repository.",
+        "scope_or_volume_limits": "Banned specifically for submission of contributions to the GDAL repository, whether human-coordinated or fully autonomous (e.g. OpenClaw-style agents).",
         "accountability_holder": "not_specified",
-        "proportionality": "not_specified",
-        "addressed": "partial",
+        "accountability_wording": "",
+        "proportionality": "not_applicable",
+        "addressed": "yes",
         "evidence": [
           {
             "path": "doc/source/community/ai_tool_policy.rst",
@@ -125,140 +136,75 @@
         ],
         "rationale_only_mention": "",
         "lean": "none",
-        "suggested_improvement": "no accountability holder named for agentic-submission ban",
-        "reasoning": "Agentic/autonomous submission is explicitly named and banned, but the policy does not name who is accountable when this rule is breached beyond the general enforcement clause (maintainers may close/ban) - enforcement is not authorship accountability, so this is only partially addressed."
+        "suggested_improvement": "",
+        "reasoning": "Names agentic/autonomous submission specifically and sets a clear supervision level (banned). No accountability holder is assigned for this banned activity, but the domain is otherwise substantively addressed with a named scope."
       },
       {
         "domain": "environmental",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
-        "proportionality": "not_applicable",
+        "accountability_wording": "",
+        "proportionality": "not_specified",
         "addressed": "no",
         "evidence": [],
         "rationale_only_mention": "",
         "lean": "none",
-        "suggested_improvement": "no mention of energy, water, or carbon costs of AI use",
-        "reasoning": "The document never raises energy, water use, hardware footprint, or carbon impact as a concern or rule; its stated rationale is about copyright/legal status and maintenance burden, not environmental impact."
+        "suggested_improvement": "no mention of energy/water/carbon impact; no rule stated",
+        "reasoning": "The rationale section discusses maintenance burden and copyright uncertainty as reasons for the policy, but never raises energy, water, or carbon footprint concerns."
       },
       {
         "domain": "infrastructure",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
-        "proportionality": "not_applicable",
+        "accountability_wording": "",
+        "proportionality": "not_specified",
         "addressed": "no",
         "evidence": [],
         "rationale_only_mention": "The GDAL sponsorship_program is one way your organization can help buffer the cost and disruption of LLMs in keystone projects such as GDAL.",
-        "lean": "restrictive",
-        "suggested_improvement": "no rule on server/hardware strain from AI use; only a funding appeal",
-        "reasoning": "The Mitigation section frames LLM-driven activity as a cost/disruption to be financially buffered via the sponsorship program, indicating concern about strain, but this is a fundraising rationale, not a rule about infrastructure supervision, scope, or accountability."
+        "lean": "none",
+        "suggested_improvement": "no rule on server load or hardware financing; no supervision level stated",
+        "reasoning": "The Mitigation section frames sponsorship as a way to offset the financial 'cost and disruption' LLMs bring to the project, but this is offered as a funding suggestion, not a rule with a supervision level or accountability holder for infrastructure strain."
       },
       {
         "domain": "training_data",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
-        "proportionality": "not_applicable",
+        "accountability_wording": "",
+        "proportionality": "not_specified",
         "addressed": "no",
         "evidence": [],
-        "rationale_only_mention": "legal systems across the world (including US and EU) have not definitely determined whether LLM outputs are derived works of training data or if LLM-written code can even be copyrighted by a human.",
-        "lean": "restrictive",
-        "suggested_improvement": "no rule on use of GDAL data/content for AI training",
-        "reasoning": "The Rationale cites unresolved legal questions about LLM training data and copyright as a justification for restricting LLM contribution practices, but sets no rule, supervision level, or accountability holder governing the use of GDAL's own data or content for AI training."
+        "rationale_only_mention": "",
+        "lean": "none",
+        "suggested_improvement": "no statement on GDAL's own content/data being used to train models",
+        "reasoning": "The rationale mentions uncertainty over whether LLM output is a derived work of its training data (a copyright/provenance concern about code contributions), but this is not a statement about GDAL's own issues, discussions, or user data being used to train external models, so the training_data domain as defined is not addressed."
       }
     ],
     "unscoped_statements": [
       {
         "path": "doc/source/community/ai_tool_policy.rst",
-        "quote": "The typical high verbosity of LLM code and text is actively discouraged. More code is more code to maintain.",
-        "areas_named": [
-          "code_contributions"
-        ],
+        "quote": "Contributors can make **limited use** of LLMs for contributions in GDAL, subject to details mentioned below",
+        "areas_named": [],
         "domains_left_ambiguous": [
-          "content"
+          "code_contributions",
+          "content",
+          "review",
+          "moderation"
         ],
-        "line": 66
+        "line": 41
       }
     ],
-    "overall_posture": "GDAL's policy is highly specific about code/ticket/commit-message contributions - requiring disclosure, banning vibe-coding and agentic submission, and naming the human author as accountable - but it is silent on notetaker bots, content/documentation, moderation, AI-assisted review, environmental impact, infrastructure strain, and training-data use, several of which appear only as unaddressed rationale or passing mentions."
+    "overall_posture": "GDAL's policy is detailed and restrictive specifically for code/ticket/commit contributions (human-in-the-loop, disclosure required, vibe-coding and agentic submission banned, contributor held accountable) and separately bans autonomous agentic submission, but it is silent on notetaker bots, documentation/content, AI-assisted review, AI-assisted moderation, environmental impact, infrastructure strain, and use of the project's own data for training - maintenance burden and LLM cost are cited only as rationale, not governed by any stated rule."
   },
   "validation_problems": [
     "code_contributions: quote not found in doc/source/community/ai_tool_policy.rst"
   ],
   "use_composition_partial": {
-    "agent_instruction_files": [
-      "AGENTS.md"
-    ],
-    "workflow_count": 68,
-    "workflows_with_ai_or_bot_signals": [
-      {
-        "path": ".github/workflows/android_cmake.yml",
-        "signals": [
-          "dependabot"
-        ]
-      },
-      {
-        "path": ".github/workflows/auto_tag_stable.yml",
-        "signals": [
-          "bot"
-        ]
-      },
-      {
-        "path": ".github/workflows/backport.yml",
-        "signals": [
-          "bot"
-        ]
-      },
-      {
-        "path": ".github/workflows/clang_static_analyzer.yml",
-        "signals": [
-          "dependabot"
-        ]
-      },
-      {
-        "path": ".github/workflows/cmake_builds.yml",
-        "signals": [
-          "dependabot"
-        ]
-      },
-      {
-        "path": ".github/workflows/code_checks.yml",
-        "signals": [
-          "dependabot"
-        ]
-      },
-      {
-        "path": ".github/workflows/codeql.yml",
-        "signals": [
-          "dependabot"
-        ]
-      },
-      {
-        "path": ".github/workflows/conda.yml",
-        "signals": [
-          "dependabot"
-        ]
-      },
-      {
-        "path": ".github/workflows/delete_untagged_containers.yml",
-        "signals": [
-          "dependabot"
-        ]
-      },
-      {
-        "path": ".github/workflows/doc_checks.yml",
-        "signals": [
-          "dependabot"
-        ]
-      },
-      {
-        "path": ".github/workflows/freebsd.yml.disabled",
-        "signals": [
-          "dependabot"
-        ]
-      }
-    ],
+    "agent_instruction_files": [],
+    "workflow_count": 0,
+    "workflows_with_ai_or_bot_signals": [],
     "awaiting_implementation": {
       "specific_tools_in_use": "Awaiting implementation: named-product detection beyond known file signatures",
       "model_type": "Awaiting implementation: underlying model/family",

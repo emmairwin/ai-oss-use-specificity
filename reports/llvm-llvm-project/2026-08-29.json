@@ -10,8 +10,8 @@
     "note": "Scoring confined to the files named on the command line; 'no' means not addressed in those files."
   },
   "usage": {
-    "input_tokens": 12252,
-    "output_tokens": 8169,
+    "input_tokens": 14382,
+    "output_tokens": 10178,
     "cache_read_input_tokens": 0,
     "cache_creation_input_tokens": 0,
     "api_calls": 2,
@@ -19,22 +19,23 @@
       "llvm/docs/AIToolPolicy.md"
     ],
     "model": "claude-sonnet-5",
-    "estimated_cost_usd": 0.106194
+    "estimated_cost_usd": 0.130544
   },
   "consent_policy_specificity": {
     "domains": [
       {
         "domain": "code_contributions",
         "supervision_level": "human_in_the_loop",
-        "scope_or_volume_limits": "Applies to code (usually PRs), RFCs/design proposals, issues/security vulnerabilities, and comments/feedback on PRs; AI banned entirely for 'good first issue' labeled issues.",
+        "scope_or_volume_limits": "Applies to code (usually PRs), RFCs/design proposals, issues/security vulnerabilities, and PR comments/feedback; AI tools banned specifically for fixing issues labelled 'good first issue'.",
         "accountability_holder": "contributor",
+        "accountability_wording": "The contributor is always the author and is fully accountable for their contributions.",
         "proportionality": "not_specified",
         "addressed": "yes",
         "evidence": [
           {
             "path": "llvm/docs/AIToolPolicy.md",
-            "quote": "contributors can use whatever tools they would like to craft their contributions, but there must be a human in the loop.",
-            "line": 5
+            "quote": "there must be a **human in the loop**",
+            "line": 6
           },
           {
             "path": "llvm/docs/AIToolPolicy.md",
@@ -43,142 +44,162 @@
           },
           {
             "path": "llvm/docs/AIToolPolicy.md",
-            "quote": "AI tools must not be used to fix GitHub issues labelled good first issue",
+            "quote": "Contributors are expected to **be transparent and label contributions that contain substantial amounts of tool-generated content**.",
+            "line": 21
+          },
+          {
+            "path": "llvm/docs/AIToolPolicy.md",
+            "quote": "AI tools must not be used to fix GitHub issues labelled [`good first issue`]",
             "line": 56
           }
         ],
         "rationale_only_mention": "",
         "lean": "none",
         "suggested_improvement": "",
-        "reasoning": "The policy explicitly names code, RFCs, issues, and PR comments as its scope, requires human-in-the-loop review before requesting maintainer review, and states the contributor is always author and fully accountable. Both supervision level and accountability holder are named for this domain."
+        "reasoning": "The policy explicitly names the kinds of contributions covered (code/PRs, RFCs, issues, comments), requires a human in the loop plus disclosure (Assisted-by trailer), bans AI entirely on 'good first issue' items, and states the contributor is the author and fully accountable. Both supervision level and accountability holder are stated, so this is fully addressed."
       },
       {
         "domain": "notetaker_bots",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
+        "accountability_wording": "",
         "proportionality": "not_applicable",
         "addressed": "no",
         "evidence": [],
         "rationale_only_mention": "",
         "lean": "none",
-        "suggested_improvement": "no mention of meeting/notetaker bots or recorded discussion",
-        "reasoning": "The document never mentions meeting recording, transcription, or bots attending calls/discussions in any form."
+        "suggested_improvement": "no supervision level, scope, or accountability holder for meeting/notetaker bots",
+        "reasoning": "The document never mentions meetings, recordings, or notetaker bots in any form."
       },
       {
         "domain": "content",
         "supervision_level": "human_in_the_loop",
-        "scope_or_volume_limits": "Example given is generated documentation; no stated volume/scope limit beyond the general contribution scope list.",
-        "accountability_holder": "not_specified",
+        "scope_or_volume_limits": "Only reached via one worked example about generated documentation posted as a PR; no coverage of blogs, wikis, or design assets outside the PR/contribution pipeline.",
+        "accountability_holder": "contributor",
+        "accountability_wording": "The contributor is always the author and is fully accountable for their contributions.",
         "proportionality": "not_specified",
         "addressed": "partial",
         "evidence": [
           {
             "path": "llvm/docs/AIToolPolicy.md",
-            "quote": "using an LLM to generate documentation, which a contributor manually reviews for correctness, edits, and then posts as a PR, is an approved use of tools under this policy.",
+            "quote": "using an LLM to generate documentation, which a contributor manually reviews for correctness, edits, and then posts as a PR, is an approved use of tools under this policy",
             "line": 52
           }
         ],
         "rationale_only_mention": "",
         "lean": "none",
-        "suggested_improvement": "no explicit accountability holder named for AI-generated documentation/content",
-        "reasoning": "Documentation generation is named as an example of an approved, human-reviewed use, giving a supervision level (human review before posting), but no domain-specific accountability statement is made for content/documentation; the only accountability language ('contributor is always the author and fully accountable') is stated generally for 'contributions' rather than tied specifically to documentation or other content types like blogs or design assets, which are never mentioned."
+        "suggested_improvement": "no dedicated rule for blogs/design assets outside PR-based docs example",
+        "reasoning": "Documentation is named only as an illustrative example nested inside the general contribution/PR framework (same human-in-the-loop rule and contributor-accountability statement used for code_contributions), not as its own addressed area; other content types (blog posts, design assets) are never mentioned, so coverage is partial."
       },
       {
         "domain": "moderation",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
+        "accountability_wording": "",
         "proportionality": "not_applicable",
         "addressed": "no",
         "evidence": [],
-        "rationale_only_mention": "",
-        "lean": "none",
-        "suggested_improvement": "no statement on AI use in moderation actions",
-        "reasoning": "The document discusses escalating extractive contributions to a 'moderation or admin team' to lock conversations, but this is about human enforcement of the AI policy, not about whether AI tools may be used to perform moderation actions themselves. No rule addresses AI-assisted moderation."
+        "rationale_only_mention": "it takes a lot of maintainer time and energy to review those contributions",
+        "lean": "restrictive",
+        "suggested_improvement": "no supervision level or accountability holder for AI use in moderation actions",
+        "reasoning": "The 'Extractive Contributions' and 'Handling Violations' sections describe maintainer/reviewer time burden and human maintainers escalating to moderation teams, but this is about human moderation of AI-assisted submissions, not about AI being used to take moderation actions. The maintainer-time burden is cited as a rationale for the human-in-the-loop rule, not a rule about moderation itself, and per the metric this is classified as moderation-load rationale rather than infrastructure."
       },
       {
         "domain": "review",
         "supervision_level": "human_in_the_loop",
-        "scope_or_volume_limits": "Applies to automated review tools that post comments on contributions; fully automated tools banned, opt-in human-supervised tools allowed.",
+        "scope_or_volume_limits": "Automated review tools that publish comments without human review are banned; opt-in review tools that keep a human in the loop are acceptable.",
         "accountability_holder": "not_specified",
+        "accountability_wording": "",
         "proportionality": "not_specified",
         "addressed": "partial",
         "evidence": [
           {
             "path": "llvm/docs/AIToolPolicy.md",
-            "quote": "automated review tools that publish comments without human review are not allowed. However, an opt-in review tool that keeps a human in the loop is acceptable under this policy.",
+            "quote": "automated review tools that publish comments without human review are not allowed",
             "line": 49
+          },
+          {
+            "path": "llvm/docs/AIToolPolicy.md",
+            "quote": "an opt-in review tool that **keeps a human in the loop** is acceptable under this policy",
+            "line": 50
           }
         ],
         "rationale_only_mention": "",
         "lean": "none",
-        "suggested_improvement": "no accountability holder named for AI-assisted review activity",
-        "reasoning": "The policy directly names automated review tools, banning fully autonomous comment-posting and permitting human-supervised opt-in tools, but never states who is accountable when a reviewer (human or maintainer) uses such a tool -- accountability language elsewhere is tied to 'contributors' authoring contributions, not to reviewers."
+        "suggested_improvement": "no accountability holder named for AI-assisted review",
+        "reasoning": "The policy directly addresses AI review tools, banning fully automated commenting and permitting human-in-the-loop opt-in tools, giving a clear supervision level. However, no one is named as accountable for AI-assisted review output (the contributor-accountability statement applies to contributions, not to reviewers), so this is only partially addressed."
       },
       {
         "domain": "autonomous",
         "supervision_level": "banned",
-        "scope_or_volume_limits": "Agents that take action in the project's digital spaces (e.g. GitHub) without human approval, such as the @claude agent.",
+        "scope_or_volume_limits": "Agents that take action in project digital spaces without human approval (e.g. the GitHub @claude agent) are banned.",
         "accountability_holder": "not_specified",
+        "accountability_wording": "",
         "proportionality": "not_specified",
         "addressed": "partial",
         "evidence": [
           {
             "path": "llvm/docs/AIToolPolicy.md",
-            "quote": "it bans agents that take action in our digital spaces without human approval, such as the GitHub @claude agent",
-            "line": 47
+            "quote": "this policy... bans agents that take action in our digital spaces without human approval, such as the GitHub [`@claude` agent]",
+            "line": null
           }
         ],
         "rationale_only_mention": "",
         "lean": "none",
-        "suggested_improvement": "no accountability holder stated for banned autonomous agent use",
-        "reasoning": "Autonomous/agentic action without human approval is explicitly named and banned, but the clause states no accountability holder; the general 'contributor is accountable' language is stated for contributions broadly rather than specifically tied to this banned autonomous-agent scenario, so this is reached only through general wording rather than a domain-specific accountability statement."
+        "suggested_improvement": "no accountability holder named for banned autonomous agent use",
+        "reasoning": "A clear supervision level (banned) is stated for autonomous/agentic tools acting without human approval, but the policy never names who would be accountable were such use to occur, so accountability is not_specified and the domain is only partially addressed."
       },
       {
         "domain": "environmental",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
+        "accountability_wording": "",
         "proportionality": "not_applicable",
         "addressed": "no",
         "evidence": [],
         "rationale_only_mention": "",
         "lean": "none",
-        "suggested_improvement": "no mention of energy, water, or carbon-footprint impact",
-        "reasoning": "The document's references to 'time and energy' concern maintainer review effort, not literal environmental/energy-use impact. No statement, rule, or even rationale addresses environmental cost of AI tool use."
+        "suggested_improvement": "no mention of energy, water, or carbon impact of AI tool use",
+        "reasoning": "The document contains no reference to energy, water, hardware carbon footprint, or environmental impact of AI tools at all."
       },
       {
         "domain": "infrastructure",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
+        "accountability_wording": "",
         "proportionality": "not_applicable",
         "addressed": "no",
         "evidence": [],
         "rationale_only_mention": "",
         "lean": "none",
-        "suggested_improvement": "no mention of server load or hardware/infrastructure cost",
-        "reasoning": "The policy discusses maintainer review time as a scarce resource ('extractive contributions') but this concerns human labor, not server load, hardware costs, or financing of infrastructure. No statement addresses infrastructure strain."
+        "suggested_improvement": "no mention of server load or hardware/financing cost from AI tool use",
+        "reasoning": "References to 'maintainer time and energy' concern human reviewer burden (moderation load), not server load or hardware financing; no infrastructure-specific statement appears anywhere in the document."
       },
       {
         "domain": "training_data",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
+        "accountability_wording": "",
         "proportionality": "not_applicable",
         "addressed": "no",
         "evidence": [],
         "rationale_only_mention": "",
         "lean": "none",
-        "suggested_improvement": "no statement on use of project or user data for AI training",
-        "reasoning": "The Copyright section discusses contributors' responsibility not to include copyrighted material regenerated by AI tools in their own contributions, but this concerns output content, not the use of LLVM project or platform user data to train AI models. No rule addresses training data use."
+        "suggested_improvement": "no statement on LLVM's own content/data being used to train models",
+        "reasoning": "The Copyright section discusses concern that AI tools may regenerate copyrighted material they were trained on (a provenance concern about incoming contributions), but says nothing about whether LLVM's own code, issues, or discussions may be used as training data for AI models."
       }
     ],
     "unscoped_statements": [],
-    "overall_posture": "LLVM's policy is highly specific and restrictive about code-adjacent contributions (code, RFCs, issues, PR comments), mandating human-in-the-loop review, contributor accountability, disclosure of substantial tool use, and outright bans on unsupervised agents and fully automated review/commenting -- but it never names notetaker bots, moderation, environmental impact, infrastructure strain, or training data, and leaves accountability unspecified for review, autonomous-agent, and content/documentation scenarios despite naming them."
+    "overall_posture": "LLVM's policy is highly specific about code/text contributions (PRs, RFCs, issues, comments), requiring human-in-the-loop review, disclosure of substantial tool use, and banning both AI use on 'good first issue' items and unsupervised agentic action or fully-automated review commenting, with the contributor named as accountable author; but it leaves notetaker bots, environmental impact, infrastructure strain, and the project's own training-data use entirely unaddressed, and only partially covers content (via a single documentation example), review and autonomous use (missing accountability holders), and moderation (only reachable through maintainer-time rationale, not a stated AI rule)."
   },
-  "validation_problems": [],
+  "validation_problems": [
+    "autonomous: quote not found in llvm/docs/AIToolPolicy.md"
+  ],
   "use_composition_partial": {
     "agent_instruction_files": [],
     "workflow_count": 0,

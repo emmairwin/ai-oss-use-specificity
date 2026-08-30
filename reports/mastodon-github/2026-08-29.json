@@ -10,8 +10,8 @@
     "note": "Scoring confined to the files named on the command line; 'no' means not addressed in those files."
   },
   "usage": {
-    "input_tokens": 10986,
-    "output_tokens": 6332,
+    "input_tokens": 13106,
+    "output_tokens": 7314,
     "cache_read_input_tokens": 0,
     "cache_creation_input_tokens": 0,
     "api_calls": 2,
@@ -19,15 +19,16 @@
       "AI_POLICY.md"
     ],
     "model": "claude-sonnet-5",
-    "estimated_cost_usd": 0.085292
+    "estimated_cost_usd": 0.099352
   },
   "consent_policy_specificity": {
     "domains": [
       {
         "domain": "code_contributions",
         "supervision_level": "human_in_the_loop",
-        "scope_or_volume_limits": "Applies to Pull Requests, Issues, and comments that include AI-generated code, documentation, or comments; disclosure required if AI generated 'a significant portion' (beyond simple autocomplete).",
-        "accountability_holder": "The human contributor (\"The human contributor is the sole party responsible for the contribution.\")",
+        "scope_or_volume_limits": "Applies to Pull Requests, Issues, and comments on issues/PRs; disclosure required when AI generated 'a significant portion' of the contribution (beyond simple autocomplete)",
+        "accountability_holder": "contributor",
+        "accountability_wording": "The human contributor is the sole party responsible for the contribution.",
         "proportionality": "not_specified",
         "addressed": "yes",
         "evidence": [
@@ -43,146 +44,153 @@
           },
           {
             "path": "AI_POLICY.md",
-            "quote": "we require you to disclose it in the Pull Request description",
+            "quote": "If AI was used to generate a significant portion of your contribution (i.e. beyond simple autocomplete), we require you to disclose it in the Pull Request description.",
             "line": 26
+          },
+          {
+            "path": "AI_POLICY.md",
+            "quote": "Do not post comments on issues or PRs that are AI-generated.",
+            "line": 22
           }
         ],
         "rationale_only_mention": "",
         "lean": "none",
         "suggested_improvement": "",
-        "reasoning": "The policy names PRs, issues, and comments explicitly, requires the human contributor to understand and explain the code (human-in-the-loop), requires disclosure via an 'Assisted-by' trailer for significant AI use, and states the contributor is the sole responsible party. Both supervision level and accountability holder are stated, so this is fully addressed."
+        "reasoning": "The policy directly and repeatedly names PRs, issues, and comments, sets explicit supervision requirements (human must understand and explain the code, disclose AI use in commit trailer), and assigns the contributor as sole responsible party. This is the core, most fully specified domain in the document."
       },
       {
         "domain": "notetaker_bots",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
-        "proportionality": "not_applicable",
+        "accountability_wording": "",
+        "proportionality": "not_specified",
         "addressed": "no",
         "evidence": [],
         "rationale_only_mention": "",
         "lean": "none",
-        "suggested_improvement": "no supervision level; no scope or accountability holder named",
-        "reasoning": "The policy contains no mention of meeting recording, transcription, or notetaker bots of any kind."
+        "suggested_improvement": "no supervision level; no scope limit; no accountability holder named",
+        "reasoning": "The policy contains no reference to meeting recording, notetaker bots, or capture of discussion/small-group content of any kind."
       },
       {
         "domain": "content",
-        "supervision_level": "not_specified",
-        "scope_or_volume_limits": "not_specified",
-        "accountability_holder": "not_specified",
-        "proportionality": "not_applicable",
-        "addressed": "no",
-        "evidence": [],
+        "supervision_level": "human_in_the_loop",
+        "scope_or_volume_limits": "documentation submitted as part of a Pull Request only; blogs and design assets outside the PR/code process are not mentioned",
+        "accountability_holder": "contributor",
+        "accountability_wording": "The human contributor is the sole party responsible for the contribution.",
+        "proportionality": "not_specified",
+        "addressed": "partial",
+        "evidence": [
+          {
+            "path": "AI_POLICY.md",
+            "quote": "If you submit a Pull Request that includes AI-generated code, documentation, or comments:",
+            "line": 15
+          }
+        ],
         "rationale_only_mention": "",
         "lean": "none",
-        "suggested_improvement": "no rule for blogs/design assets outside PR scope",
-        "reasoning": "The only mention of 'documentation' is within the code-contribution context ('a Pull Request that includes AI-generated code, documentation, or comments'), which is scoped to code_contributions, not to general content like blog posts or design assets. No separate content policy is stated."
+        "suggested_improvement": "no scope for blogs/design assets outside PR documentation",
+        "reasoning": "Documentation is named, but only in the narrow context of a Pull Request submission alongside code; the general 'content' domain (blog posts, design assets, standalone docs work) is never named or governed separately."
       },
       {
         "domain": "moderation",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
-        "proportionality": "not_applicable",
+        "accountability_wording": "",
+        "proportionality": "not_specified",
         "addressed": "no",
         "evidence": [],
-        "rationale_only_mention": "",
+        "rationale_only_mention": "We seek to use our time and resources effectively.",
         "lean": "none",
-        "suggested_improvement": "no supervision level; no accountability holder for moderation AI use",
-        "reasoning": "The policy makes no reference to moderation actions or the use of AI in moderating community spaces, issues, or the platform."
+        "suggested_improvement": "no supervision level; no accountability holder named for moderation use of AI",
+        "reasoning": "The policy discusses maintainer time/overhead as a rationale for restricting low-effort AI contributions, but never addresses AI use in moderation actions themselves (e.g. AI-assisted banning, content takedowns, or user sanctions)."
       },
       {
         "domain": "review",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
-        "proportionality": "not_applicable",
+        "accountability_wording": "",
+        "proportionality": "not_specified",
         "addressed": "no",
         "evidence": [],
         "rationale_only_mention": "",
-        "lean": "restrictive",
-        "suggested_improvement": "no explicit rule on maintainers'/reviewers' own use of AI",
-        "reasoning": "The document discusses the contributor's conduct during the review process ('Copy-and-pasting to and from an AI chatbot during the process of code review is not acceptable') and implies human-only review ('Humans will take time to review the code'), but it never states a rule about whether maintainers/reviewers themselves may use AI tools to conduct review. Because this only restricts the contributor's behavior around the review process rather than naming who may review using AI, it is not addressed; the restrictive tone toward AI in the review process is recorded as a lean."
+        "lean": "none",
+        "suggested_improvement": "no statement on maintainers/reviewers using AI to review contributions",
+        "reasoning": "The one clause referencing 'code review' bars the contributor from copy-pasting to/from a chatbot while answering reviewer questions - this concerns contributor conduct during review, not whether a reviewer or AI tool may perform the review itself. No statement addresses AI used by a human or agent to review a contribution."
       },
       {
         "domain": "autonomous",
         "supervision_level": "banned",
-        "scope_or_volume_limits": "Covers autonomous submission of Pull Requests and posting of comments on issues/PRs.",
-        "accountability_holder": "The human contributor (per the same Accountability section: \"The human contributor is the sole party responsible for the contribution.\")",
+        "scope_or_volume_limits": "Applies specifically to submitting Pull Requests",
+        "accountability_holder": "not_specified",
+        "accountability_wording": "",
         "proportionality": "not_specified",
-        "addressed": "yes",
+        "addressed": "partial",
         "evidence": [
           {
             "path": "AI_POLICY.md",
             "quote": "Autonomous AI agents may not submit Pull Requests to Mastodon repositories.",
             "line": 22
-          },
-          {
-            "path": "AI_POLICY.md",
-            "quote": "Do not post comments on issues or PRs that are AI-generated. Discussions on the Mastodon repositories are for humans only.",
-            "line": 22
           }
         ],
         "rationale_only_mention": "",
         "lean": "none",
-        "suggested_improvement": "",
-        "reasoning": "The policy explicitly bans autonomous AI agents from submitting PRs and bans AI-generated comments on issues/PRs, stating discussions are 'for humans only.' This is a clear supervision level (banned). Accountability is drawn from the same section's general statement that the human contributor is the sole responsible party for any contribution, which the autonomous-agent ban immediately follows."
+        "suggested_improvement": "no accountability holder stated for autonomous/agentic use",
+        "reasoning": "The ban on autonomous agents submitting PRs is explicit and clearly named, but the policy assigns no accountability holder specifically for this domain (the general contributor-accountability clause is framed around human submissions, not agent-initiated ones)."
       },
       {
         "domain": "environmental",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
-        "proportionality": "not_applicable",
+        "accountability_wording": "",
+        "proportionality": "not_specified",
         "addressed": "no",
         "evidence": [],
         "rationale_only_mention": "",
         "lean": "none",
-        "suggested_improvement": "no mention of energy/water/carbon impact",
-        "reasoning": "The policy's stated rationale is about maintainer overhead, code quality, and authentic human connection; it never raises energy, water, or carbon footprint concerns, so there is no lean or rule to record."
+        "suggested_improvement": "no supervision level; no rule on environmental impact stated",
+        "reasoning": "No text in the policy discusses energy use, water use, carbon footprint, or hardware footprint of AI tools."
       },
       {
         "domain": "infrastructure",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
-        "proportionality": "not_applicable",
+        "accountability_wording": "",
+        "proportionality": "not_specified",
         "addressed": "no",
         "evidence": [],
-        "rationale_only_mention": "These latter forms of AI assistance cause major overhead for project maintainers. There are a small number of people on the Mastodon core team, and we seek to use our time and resources effectively.",
-        "lean": "restrictive",
-        "suggested_improvement": "no rule on server load or hardware/financing strain",
-        "reasoning": "The policy cites maintainer time/effort overhead as a reason to discourage AI contributions, but this is about human reviewer bandwidth, not server load or hardware cost/financing (infrastructure as defined). No rule on infrastructure strain is set; the concern is recorded as a rationale-only mention with a restrictive lean toward AI generally."
+        "rationale_only_mention": "",
+        "lean": "none",
+        "suggested_improvement": "no supervision level; no rule on server load or hardware cost",
+        "reasoning": "The policy mentions maintainer time and resource constraints as rationale for restricting low-effort AI PRs, but this concerns human moderation/review load, not server load or hardware financing. No infrastructure-specific statement exists."
       },
       {
         "domain": "training_data",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
-        "proportionality": "not_applicable",
+        "accountability_wording": "",
+        "proportionality": "not_specified",
         "addressed": "no",
         "evidence": [],
-        "rationale_only_mention": "",
-        "lean": "none",
-        "suggested_improvement": "no rule on use of platform/user data for AI training",
-        "reasoning": "The Copyright & Legal section addresses provenance and licensing of AI-generated code output (e.g., not violating AI provider ToS or including regurgitated code), but this concerns the legality of code the contributor submits, not the use of Mastodon platform/user data to train AI models. No mention of training data use is made."
+        "rationale_only_mention": "If AI was used, the resulting code does not violate the terms of service of the AI provider and does not include \"regurgitated\" code from libraries with incompatible licences",
+        "lean": "restrictive",
+        "suggested_improvement": "no statement on the project's own data being used to train models",
+        "reasoning": "The copyright/legal section is concerned with AI models potentially having been trained on third-party code that ends up regurgitated into a contribution - a provenance/copyright concern about incoming code, not about whether Mastodon's own user data, issues, or discussions may be used to train AI models. The latter is never addressed."
       }
     ],
     "unscoped_statements": [],
-    "overall_posture": "The policy is highly specific about code contributions - requiring human accountability, disclosure, and banning autonomous PR/comment submission - but is entirely silent on notetaker bots, general content, moderation, reviewer-side AI use, environmental impact, infrastructure strain, and training data use, and only reaches those areas of general concern (maintainer overhead) as rationale rather than rule."
+    "overall_posture": "The policy is highly specific and restrictive about code_contributions (PRs, issues, comments) - requiring human understanding, disclosure, and sole contributor accountability - and explicitly bans autonomous agent PR submissions, but it never names or governs notetaker bots, moderation, AI-assisted review, environmental impact, infrastructure strain, or the project's own data being used for training; content (documentation) is touched only incidentally within the PR context."
   },
   "validation_problems": [],
   "use_composition_partial": {
     "agent_instruction_files": [],
-    "workflow_count": 1,
-    "workflows_with_ai_or_bot_signals": [
-      {
-        "path": ".github/workflows/update_readme.yml",
-        "signals": [
-          "bot"
-        ]
-      }
-    ],
+    "workflow_count": 0,
+    "workflows_with_ai_or_bot_signals": [],
     "awaiting_implementation": {
       "specific_tools_in_use": "Awaiting implementation: named-product detection beyond known file signatures",
       "model_type": "Awaiting implementation: underlying model/family",

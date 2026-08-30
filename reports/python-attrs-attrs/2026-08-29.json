@@ -10,8 +10,8 @@
     "note": "Scoring confined to the files named on the command line; 'no' means not addressed in those files."
   },
   "usage": {
-    "input_tokens": 13065,
-    "output_tokens": 5944,
+    "input_tokens": 15185,
+    "output_tokens": 4872,
     "cache_read_input_tokens": 0,
     "cache_creation_input_tokens": 0,
     "api_calls": 2,
@@ -19,7 +19,7 @@
       ".github/CONTRIBUTING.md"
     ],
     "model": "claude-sonnet-5",
-    "estimated_cost_usd": 0.08557
+    "estimated_cost_usd": 0.07909
   },
   "consent_policy_specificity": {
     "domains": [
@@ -28,134 +28,143 @@
         "supervision_level": "human_in_the_loop",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
+        "accountability_wording": "",
         "proportionality": "not_specified",
         "addressed": "partial",
         "evidence": [
           {
             "path": ".github/CONTRIBUTING.md",
-            "quote": "If you use LLM / \"AI\" tools for your contributions, please read and follow our _Generative AI / LLM Policy_",
-            "line": 7
+            "quote": "Only contribute code that you fully understand. See also our [AI policy][llm].",
+            "line": 23
           },
           {
             "path": ".github/CONTRIBUTING.md",
-            "quote": "Only contribute code that you fully understand.",
-            "line": 23
+            "quote": "If you use LLM / \"AI\" tools for your contributions, please read and follow our [_Generative AI / LLM Policy_][llm].",
+            "line": 7
           }
         ],
         "rationale_only_mention": "",
         "lean": "none",
-        "suggested_improvement": "state accountability holder for AI-assisted code",
-        "reasoning": "CONTRIBUTING.md names code contributions and requires contributors to fully understand any code they submit, implying human oversight of AI output, and points to a separate AI policy document (out of scope here) for the detailed rule. It does not itself state who is accountable for AI-assisted code beyond the general 'you must understand it' framing, so accountability is not explicitly named within this file."
+        "suggested_improvement": "no accountability holder named for AI-assisted code",
+        "reasoning": "CONTRIBUTING.md names code contributions and AI tool use, and states a requirement (contributor must fully understand the code, implying human oversight/human_in_the_loop) but the substance of any concrete supervision rule is deferred to an external 'AI policy' document not in scope. Within this file itself, no accountability holder (e.g. 'contributor is responsible') is stated, only an obligation ('only contribute code you fully understand'), so accountability stays not_specified. Scored partial: area is named, supervision partially implied, but accountability and scope are left open within this file."
       },
       {
         "domain": "notetaker_bots",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
+        "accountability_wording": "",
         "proportionality": "not_specified",
         "addressed": "no",
         "evidence": [],
         "rationale_only_mention": "",
         "lean": "none",
-        "suggested_improvement": "no mention of meeting/notetaker bot use at all",
-        "reasoning": "The file contains no reference to meetings, recordings, or notetaker/meeting bots."
+        "suggested_improvement": "no mention of meeting/notetaker bots at all",
+        "reasoning": "The file contains no reference to meetings, recordings, or notetaker/meeting bots of any kind."
       },
       {
         "domain": "content",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
+        "accountability_wording": "",
         "proportionality": "not_specified",
         "addressed": "no",
         "evidence": [],
         "rationale_only_mention": "",
         "lean": "none",
-        "suggested_improvement": "no supervision level or accountability for AI-generated docs/content",
-        "reasoning": "The Documentation section covers style rules (semantic newlines, docstring format, changelog conventions) but never mentions AI/LLM use for writing documentation, blogs, or other content assets."
+        "suggested_improvement": "no rule for AI use in docs/content authoring",
+        "reasoning": "There is a detailed Documentation section (style, docstrings, semantic newlines) but nothing in it addresses AI-generated or AI-assisted documentation, blog posts, or design assets."
       },
       {
         "domain": "moderation",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
+        "accountability_wording": "",
         "proportionality": "not_specified",
         "addressed": "no",
         "evidence": [],
         "rationale_only_mention": "",
         "lean": "none",
-        "suggested_improvement": "no mention of AI use in moderation actions",
-        "reasoning": "No text in this file discusses moderation actions (e.g., handling conduct issues, banning users) in relation to AI."
+        "suggested_improvement": "no rule on AI use in moderation actions",
+        "reasoning": "No text discusses moderation decisions (e.g. banning, closing issues, enforcement) being made or assisted by AI."
       },
       {
         "domain": "review",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
+        "accountability_wording": "",
         "proportionality": "not_specified",
         "addressed": "no",
         "evidence": [],
         "rationale_only_mention": "",
         "lean": "none",
-        "suggested_improvement": "no statement on AI use in reviewing PRs",
-        "reasoning": "The Governance section states 'everyone is welcome to review/merge pull requests of others but nobody is allowed to merge their own code,' but this is a human-governance rule about who may review, not a statement about AI performing or assisting review."
+        "suggested_improvement": "no rule on AI-assisted review of contributions",
+        "reasoning": "The Governance section states 'everyone is welcome to review/merge pull requests of others but nobody is allowed to merge their own code', but this concerns human review rights/self-merge restrictions, not AI use in reviewing. No mention of AI tools being used to review PRs."
       },
       {
         "domain": "autonomous",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
+        "accountability_wording": "",
         "proportionality": "not_specified",
         "addressed": "no",
         "evidence": [],
         "rationale_only_mention": "",
         "lean": "none",
-        "suggested_improvement": "no mention of autonomous/agentic AI activity",
-        "reasoning": "No language in the file discusses agentic or autonomous AI systems opening PRs, issues, or otherwise acting without direct human initiation."
+        "suggested_improvement": "no rule on autonomous/agentic contributions",
+        "reasoning": "No mention of autonomous agents or bots acting on the repository without human oversight."
       },
       {
         "domain": "environmental",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
+        "accountability_wording": "",
         "proportionality": "not_specified",
         "addressed": "no",
         "evidence": [],
-        "rationale_only_mention": "Don't waste energy / tokens on something that we do not want.",
-        "lean": "restrictive",
-        "suggested_improvement": "no rule on energy/resource use of AI tooling",
-        "reasoning": "The phrase 'energy / tokens' appears only as a colloquial reason to talk to maintainers before large contributions, cautioning against wasted effort/compute; it sets no rule, threshold, or accountability for environmental impact of AI use."
+        "rationale_only_mention": "",
+        "lean": "none",
+        "suggested_improvement": "no statement on energy/water/carbon footprint",
+        "reasoning": "The phrase 'Don't waste energy / tokens on something that we do not want' is about avoiding wasted human/contributor effort on unwanted large PRs before discussion, not a statement about the environmental (energy/water/carbon) footprint of AI tooling. No rule or rationale about environmental impact is present."
       },
       {
         "domain": "infrastructure",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
+        "accountability_wording": "",
         "proportionality": "not_specified",
         "addressed": "no",
         "evidence": [],
         "rationale_only_mention": "",
         "lean": "none",
-        "suggested_improvement": "no mention of infrastructure strain from AI activity",
-        "reasoning": "CI and test-suite requirements are discussed, but nothing ties AI use to server load, hardware cost, or infrastructure capacity concerns."
+        "suggested_improvement": "no statement on server load or hardware cost",
+        "reasoning": "No text discusses server load, CI infrastructure cost, or hardware financing in relation to AI use. The CI/tox discussion is unrelated to AI."
       },
       {
         "domain": "training_data",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
+        "accountability_wording": "",
         "proportionality": "not_specified",
         "addressed": "no",
         "evidence": [],
         "rationale_only_mention": "",
         "lean": "none",
-        "suggested_improvement": "no statement on use of project/user data for AI training",
-        "reasoning": "The file contains no discussion of whether contributor data, code, or discussions may be used to train AI models."
+        "suggested_improvement": "no statement on project data being used to train models",
+        "reasoning": "No mention of the project's issues, discussions, code, or user data being used (or protected from being used) to train AI models."
       }
     ],
     "unscoped_statements": [
       {
         "path": ".github/CONTRIBUTING.md",
-        "quote": "If you use LLM / \"AI\" tools for your contributions, please read and follow our _Generative AI / LLM Policy_",
+        "quote": "If you use LLM / \"AI\" tools for your contributions, please read and follow our [_Generative AI / LLM Policy_][llm].",
         "areas_named": [
           "code_contributions"
         ],
@@ -168,12 +177,12 @@
         "line": 7
       }
     ],
-    "overall_posture": "CONTRIBUTING.md addresses AI use only in passing for code contributions - requiring contributors to fully understand any code they submit and deferring detailed rules to an external, out-of-scope AI policy document - while leaving notetaker bots, content, moderation, review, autonomous use, environmental impact, infrastructure strain, and training-data use completely unaddressed within this file."
+    "overall_posture": "CONTRIBUTING.md itself sets almost no AI-specific rules; it briefly touches code contributions (requiring contributors to fully understand any code they submit and pointing to an external, out-of-scope AI/LLM policy for the substance), while notetaker bots, content, moderation, review, autonomous use, environmental impact, infrastructure strain, and training data are entirely unaddressed within this file."
   },
   "validation_problems": [],
   "use_composition_partial": {
     "agent_instruction_files": [],
-    "workflow_count": 6,
+    "workflow_count": 0,
     "workflows_with_ai_or_bot_signals": [],
     "awaiting_implementation": {
       "specific_tools_in_use": "Awaiting implementation: named-product detection beyond known file signatures",

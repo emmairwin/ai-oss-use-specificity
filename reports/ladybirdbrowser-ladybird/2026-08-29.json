@@ -1,6 +1,6 @@
 {
   "repo": "LadybirdBrowser/ladybird",
-  "commit_sha": "280e346d4af6c858f210505ef40f8bee996d2924",
+  "commit_sha": "cb42d9b82f137a0443c3be30e0cf23d73714629e",
   "metric_model": "CHAOSS AI Alignment - Community Governed Use",
   "scope": {
     "mode": "named_files",
@@ -10,8 +10,8 @@
     "note": "Scoring confined to the files named on the command line; 'no' means not addressed in those files."
   },
   "usage": {
-    "input_tokens": 9877,
-    "output_tokens": 1726,
+    "input_tokens": 11997,
+    "output_tokens": 1904,
     "cache_read_input_tokens": 0,
     "cache_creation_input_tokens": 0,
     "api_calls": 2,
@@ -19,7 +19,7 @@
       "CONTRIBUTING.md"
     ],
     "model": "claude-sonnet-5",
-    "estimated_cost_usd": 0.037014
+    "estimated_cost_usd": 0.043034
   },
   "consent_policy_specificity": {
     "domains": [
@@ -28,141 +28,136 @@
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
+        "accountability_wording": "",
         "proportionality": "not_specified",
         "addressed": "no",
         "evidence": [],
         "rationale_only_mention": "",
         "lean": "none",
-        "suggested_improvement": "no AI supervision level, scope limit, or accountability holder stated",
-        "reasoning": "CONTRIBUTING.md never mentions AI at all. It states the project does not accept outside PRs, but says nothing about AI-assisted contributions."
+        "suggested_improvement": "no mention of AI; no supervision level or accountability holder stated",
+        "reasoning": "CONTRIBUTING.md does not mention AI tools or AI-assisted contributions anywhere. It states the project does not accept pull requests from non-maintainers at all, but this is unrelated to AI policy specifically."
       },
       {
         "domain": "notetaker_bots",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
+        "accountability_wording": "",
         "proportionality": "not_specified",
         "addressed": "no",
         "evidence": [],
         "rationale_only_mention": "",
         "lean": "none",
-        "suggested_improvement": "no mention of meeting/notetaker bots or recording policy",
-        "reasoning": "No reference to meetings, recording, or notetaker bots exists in the document."
+        "suggested_improvement": "no mention of meeting bots or recorded discussion",
+        "reasoning": "The document does not discuss meetings, recordings, or notetaker bots at all."
       },
       {
         "domain": "content",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
+        "accountability_wording": "",
         "proportionality": "not_specified",
         "addressed": "no",
         "evidence": [],
         "rationale_only_mention": "",
         "lean": "none",
-        "suggested_improvement": "no AI rule for documentation or content contributions",
-        "reasoning": "The document discusses issue reporting and a 'human language policy' for text but does not mention AI-generated content, documentation, or design assets."
+        "suggested_improvement": "no rule on AI use for docs/blogs/design assets",
+        "reasoning": "There is a 'Human language policy' section governing tone and style of user-facing strings and commit messages, but it never mentions AI-generated content or tools."
       },
       {
         "domain": "moderation",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
+        "accountability_wording": "",
         "proportionality": "not_specified",
         "addressed": "no",
         "evidence": [],
         "rationale_only_mention": "",
         "lean": "none",
-        "suggested_improvement": "no statement on AI use in moderation actions",
-        "reasoning": "The document describes human-enforced bad-faith/brigading bans but does not mention AI being used for moderation, nor restrict/permit it."
+        "suggested_improvement": "no rule on AI use in moderation actions",
+        "reasoning": "The 'bad-faith contributions and brigading' section describes enforcement (banning brigaders, rejecting bad-faith issues) but says nothing about AI being used in moderation decisions."
       },
       {
         "domain": "review",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
+        "accountability_wording": "",
         "proportionality": "not_specified",
         "addressed": "no",
         "evidence": [],
         "rationale_only_mention": "",
         "lean": "none",
-        "suggested_improvement": "no statement on AI-assisted review",
-        "reasoning": "No mention of who or what may review contributions using AI; reviews are implied to be by maintainers only, but AI is never referenced."
+        "suggested_improvement": "no rule on AI-assisted review",
+        "reasoning": "No mention of AI being used to review contributions; the document only says maintainers introduce all changes themselves."
       },
       {
         "domain": "autonomous",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
+        "accountability_wording": "",
         "proportionality": "not_specified",
         "addressed": "no",
         "evidence": [],
         "rationale_only_mention": "",
         "lean": "none",
-        "suggested_improvement": "no statement on autonomous/agentic AI use",
-        "reasoning": "No mention of agentic or autonomous AI systems operating on the project."
+        "suggested_improvement": "no rule on autonomous/agentic AI activity",
+        "reasoning": "No mention of agents or autonomous AI acting on the repository."
       },
       {
         "domain": "environmental",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
+        "accountability_wording": "",
         "proportionality": "not_specified",
         "addressed": "no",
         "evidence": [],
         "rationale_only_mention": "",
         "lean": "none",
         "suggested_improvement": "no statement on environmental impact of AI use",
-        "reasoning": "The document contains no discussion of energy, water, or hardware/carbon footprint concerns tied to AI."
+        "reasoning": "No text addresses energy, water, or carbon costs of AI tooling."
       },
       {
         "domain": "infrastructure",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
+        "accountability_wording": "",
         "proportionality": "not_specified",
         "addressed": "no",
         "evidence": [],
         "rationale_only_mention": "",
         "lean": "none",
-        "suggested_improvement": "no statement on infrastructure strain from AI tooling",
-        "reasoning": "No mention of server load, CI cost, or hardware financing concerns related to AI."
+        "suggested_improvement": "no statement on server load or hardware cost from AI use",
+        "reasoning": "No text addresses infrastructure strain from AI tooling."
       },
       {
         "domain": "training_data",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
+        "accountability_wording": "",
         "proportionality": "not_specified",
         "addressed": "no",
         "evidence": [],
         "rationale_only_mention": "",
         "lean": "none",
-        "suggested_improvement": "no statement on use of project/user data for AI training",
-        "reasoning": "No mention of training data usage, user data, or model training practices."
+        "suggested_improvement": "no statement on project data being used to train models",
+        "reasoning": "No text addresses whether the project's own content, issues, or discussions may be used to train AI models."
       }
     ],
     "unscoped_statements": [],
-    "overall_posture": "CONTRIBUTING.md contains no AI-specific policy language whatsoever; it addresses contributor conduct, issue reporting, language style, and neutrality, but never mentions AI, so all nine domains are unaddressed within this document."
+    "overall_posture": "CONTRIBUTING.md contains no AI-specific policy language whatsoever; it is a general contribution/governance document (no external PRs accepted, issue policy, language style, neutrality, anti-brigading) with zero mention of AI tools, assistants, or agents across any of the nine domains."
   },
   "validation_problems": [],
   "use_composition_partial": {
     "agent_instruction_files": [],
-    "workflow_count": 16,
-    "workflows_with_ai_or_bot_signals": [
-      {
-        "path": ".github/workflows/libjs-test262.yml",
-        "signals": [
-          "bot"
-        ]
-      },
-      {
-        "path": ".github/workflows/lint-commits.yml",
-        "signals": [
-          "bot",
-          "dependabot"
-        ]
-      }
-    ],
+    "workflow_count": 0,
+    "workflows_with_ai_or_bot_signals": [],
     "awaiting_implementation": {
       "specific_tools_in_use": "Awaiting implementation: named-product detection beyond known file signatures",
       "model_type": "Awaiting implementation: underlying model/family",

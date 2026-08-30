@@ -10,8 +10,8 @@
     "note": "Scoring confined to the files named on the command line; 'no' means not addressed in those files."
   },
   "usage": {
-    "input_tokens": 12442,
-    "output_tokens": 4058,
+    "input_tokens": 14562,
+    "output_tokens": 3612,
     "cache_read_input_tokens": 0,
     "cache_creation_input_tokens": 0,
     "api_calls": 2,
@@ -19,158 +19,169 @@
       ".github/CONTRIBUTING.md"
     ],
     "model": "claude-sonnet-5",
-    "estimated_cost_usd": 0.065464
+    "estimated_cost_usd": 0.065244
   },
   "consent_policy_specificity": {
     "domains": [
       {
         "domain": "code_contributions",
         "supervision_level": "disclosure_required",
-        "scope_or_volume_limits": "Applies when AI wrote 'the vast majority' of the submission",
-        "accountability_holder": "The contributor submitting the pull request (must document their own AI use)",
+        "scope_or_volume_limits": "Applies when AI generated 'the vast majority' of a submission (e.g., agent-based or vibe coding).",
+        "accountability_holder": "not_specified",
+        "accountability_wording": "",
         "proportionality": "not_specified",
-        "addressed": "yes",
+        "addressed": "partial",
         "evidence": [
           {
             "path": ".github/CONTRIBUTING.md",
-            "quote": "If you use Generative AI to write the vast majority of your submission (e.g., agent-based or vibe coding) then you must document your use of AI in your pull request.",
+            "quote": "If you use Generative AI to write the vast majority of your submission (e.g., agent-based or vibe coding) then you **must document your use of AI** in your pull request.",
+            "line": 80
+          },
+          {
+            "path": ".github/CONTRIBUTING.md",
+            "quote": "Please include the service you used and/or model that generated the code.",
             "line": 80
           }
         ],
         "rationale_only_mention": "",
         "lean": "none",
-        "suggested_improvement": "",
-        "reasoning": "The 'Using AI' section names code contributions explicitly, requires disclosure of AI use in the PR (supervision level), and implicitly assigns the disclosure duty to the submitting contributor. The subsequent line about 'rigorous review process' is enforcement/QA, not an accountability statement, but the disclosure obligation itself is enough to name the contributor as answerable for declaring AI involvement."
+        "suggested_improvement": "no accountability holder named for AI-assisted code",
+        "reasoning": "The policy names code contributions and states a disclosure requirement (supervision level) when AI wrote the majority of a submission, but never states who is answerable for the resulting code beyond the general 'all code submissions go through review' statement, which is enforcement/process, not accountability."
       },
       {
         "domain": "notetaker_bots",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
-        "proportionality": "not_applicable",
+        "accountability_wording": "",
+        "proportionality": "not_specified",
         "addressed": "no",
         "evidence": [],
         "rationale_only_mention": "",
         "lean": "none",
         "suggested_improvement": "no mention of meeting/notetaker bots at all",
-        "reasoning": "CONTRIBUTING.md discusses code, feature requests, bug reports, translations and coding style but never mentions recorded meetings, calls, or notetaker/transcription bots."
+        "reasoning": "The document never discusses recorded meetings, notetaker bots, or discussion-capture tools."
       },
       {
         "domain": "content",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
-        "proportionality": "not_applicable",
+        "accountability_wording": "",
+        "proportionality": "not_specified",
         "addressed": "no",
         "evidence": [],
         "rationale_only_mention": "",
         "lean": "none",
-        "suggested_improvement": "no AI rule for docs/artwork; no supervision or holder named",
-        "reasoning": "The Open Source Contribution Policy notes that contributions can include 'documentation and artistic works as appropriate to the project,' but the AI-specific 'Using AI' section only discusses code submissions and does not extend disclosure or supervision requirements to documentation, blog posts, or design assets."
+        "suggested_improvement": "no rule on AI use for docs/design assets/blogs",
+        "reasoning": "The 'Using AI' section is scoped explicitly to code submissions ('write the vast majority of your submission ... generated the code'); it does not mention documentation, blog posts, or design assets, and no other section addresses non-code content."
       },
       {
         "domain": "moderation",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
-        "proportionality": "not_applicable",
+        "accountability_wording": "",
+        "proportionality": "not_specified",
         "addressed": "no",
         "evidence": [],
         "rationale_only_mention": "",
         "lean": "none",
-        "suggested_improvement": "no statement on AI use in moderation actions",
-        "reasoning": "The document references the Code of Conduct only in the context of limiting community access for violations; it never discusses AI tools being used to moderate issues, comments, or community behavior."
+        "suggested_improvement": "no rule on AI-assisted moderation actions",
+        "reasoning": "No text discusses AI being used to triage, label, close, or otherwise moderate issues/PRs."
       },
       {
         "domain": "review",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
-        "proportionality": "not_applicable",
+        "accountability_wording": "",
+        "proportionality": "not_specified",
         "addressed": "no",
         "evidence": [],
         "rationale_only_mention": "",
         "lean": "none",
-        "suggested_improvement": "no rule on whether reviewers may use AI tools",
-        "reasoning": "The statement 'All code submissions go through a rigorous review process regardless of the development workflow used' confirms a human review step exists but says nothing about whether maintainers/reviewers themselves may use AI tools to conduct that review, so it does not name or set a rule for AI-assisted review."
+        "suggested_improvement": "no statement on AI use during code/PR review",
+        "reasoning": "'All code submissions go through a rigorous review process regardless of the development workflow used' describes an existing human review process and does not state whether AI may be used to conduct that review, so it does not name AI-assisted review as a rule."
       },
       {
         "domain": "autonomous",
-        "supervision_level": "disclosure_required",
-        "scope_or_volume_limits": "Applies specifically to 'agent-based or vibe coding' generating the vast majority of a submission",
-        "accountability_holder": "The contributor submitting the pull request",
+        "supervision_level": "not_specified",
+        "scope_or_volume_limits": "not_specified",
+        "accountability_holder": "not_specified",
+        "accountability_wording": "",
         "proportionality": "not_specified",
-        "addressed": "yes",
-        "evidence": [
-          {
-            "path": ".github/CONTRIBUTING.md",
-            "quote": "If you use Generative AI to write the vast majority of your submission (e.g., agent-based or vibe coding) then you must document your use of AI in your pull request.",
-            "line": 80
-          }
-        ],
+        "addressed": "no",
+        "evidence": [],
         "rationale_only_mention": "",
         "lean": "none",
-        "suggested_improvement": "",
-        "reasoning": "Agent-based ('agentic') coding is explicitly named as an example requiring disclosure, giving a supervision level (disclosure) and accountability holder (the contributor) for autonomous/agentic code generation specifically."
+        "suggested_improvement": "no separate rule for agentic/autonomous repo interaction",
+        "reasoning": "'Agent-based or vibe coding' is cited only as an example of a submission method subject to the code_contributions disclosure rule; it does not set an independent supervision level for an agent acting autonomously on the repository (opening PRs, commenting, merging, etc.)."
       },
       {
         "domain": "environmental",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
-        "proportionality": "not_applicable",
+        "accountability_wording": "",
+        "proportionality": "not_specified",
         "addressed": "no",
         "evidence": [],
         "rationale_only_mention": "",
         "lean": "none",
-        "suggested_improvement": "no mention of energy/water/hardware footprint of AI",
-        "reasoning": "The document contains no discussion, positive or negative, of the environmental costs of AI tools; the 'Using AI' section is framed purely around disclosure and code quality, not resource concerns."
+        "suggested_improvement": "no mention of energy/water/carbon impact",
+        "reasoning": "No text in the file references environmental cost of AI tooling."
       },
       {
         "domain": "infrastructure",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
-        "proportionality": "not_applicable",
+        "accountability_wording": "",
+        "proportionality": "not_specified",
         "addressed": "no",
         "evidence": [],
         "rationale_only_mention": "",
         "lean": "none",
-        "suggested_improvement": "no mention of server/CI load or hardware cost from AI use",
-        "reasoning": "No text addresses strain on project infrastructure (CI runners, hosting, maintainer bandwidth costs) from AI-generated volume of contributions."
+        "suggested_improvement": "no mention of server load or hardware cost from AI",
+        "reasoning": "No text references infrastructure strain, server load, or hardware financing related to AI."
       },
       {
         "domain": "training_data",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
-        "proportionality": "not_applicable",
+        "accountability_wording": "",
+        "proportionality": "not_specified",
         "addressed": "no",
         "evidence": [],
         "rationale_only_mention": "",
         "lean": "none",
-        "suggested_improvement": "no statement on use of project/user data for AI training",
-        "reasoning": "CONTRIBUTING.md never discusses whether project data, code, or user data may be used to train AI models; the licensing language in the Open Source Contribution Policy concerns code reuse/licensing generally, not AI training data."
+        "suggested_improvement": "no rule on use of project data to train models",
+        "reasoning": "The file never discusses whether the project's own content, issues, or discussions may be used to train AI models."
       }
     ],
-    "unscoped_statements": [],
-    "overall_posture": "CONTRIBUTING.md addresses AI use narrowly and only for code submissions: it requires contributors to disclose when Generative AI (including agent-based/\"vibe\" coding) produced the vast majority of a PR's content, and states that all code still undergoes human review, but it is silent on notetaker bots, non-code content, moderation, AI-assisted review, environmental/infrastructure impact, and training data."
+    "unscoped_statements": [
+      {
+        "path": ".github/CONTRIBUTING.md",
+        "quote": "If you use Generative AI to write the vast majority of your submission (e.g., agent-based or vibe coding) then you must document your use of AI in your pull request.",
+        "areas_named": [
+          "code_contributions"
+        ],
+        "domains_left_ambiguous": [
+          "autonomous",
+          "review"
+        ],
+        "line": 80
+      }
+    ],
+    "overall_posture": "The file addresses only one domain with any specificity: code contributions, where a disclosure requirement applies to majority-AI-generated submissions, but even there no accountability holder is named; all other eight domains (notetaker bots, content, moderation, review, autonomous, environmental, infrastructure, training data) are entirely unaddressed in this document."
   },
   "validation_problems": [],
   "use_composition_partial": {
-    "agent_instruction_files": [
-      ".github/copilot-instructions.md"
-    ],
-    "workflow_count": 2,
-    "workflows_with_ai_or_bot_signals": [
-      {
-        "path": ".github/workflows/copilot-setup-steps.yml",
-        "signals": [
-          "agent",
-          "copilot"
-        ]
-      }
-    ],
+    "agent_instruction_files": [],
+    "workflow_count": 0,
+    "workflows_with_ai_or_bot_signals": [],
     "awaiting_implementation": {
       "specific_tools_in_use": "Awaiting implementation: named-product detection beyond known file signatures",
       "model_type": "Awaiting implementation: underlying model/family",

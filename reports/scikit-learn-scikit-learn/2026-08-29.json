@@ -10,8 +10,8 @@
     "note": "Scoring confined to the files named on the command line; 'no' means not addressed in those files."
   },
   "usage": {
-    "input_tokens": 9370,
-    "output_tokens": 5876,
+    "input_tokens": 11500,
+    "output_tokens": 6542,
     "cache_read_input_tokens": 0,
     "cache_creation_input_tokens": 0,
     "api_calls": 2,
@@ -19,23 +19,19 @@
       "CODE_OF_CONDUCT.md"
     ],
     "model": "claude-sonnet-5",
-    "estimated_cost_usd": 0.0775
+    "estimated_cost_usd": 0.08842
   },
   "consent_policy_specificity": {
     "domains": [
       {
         "domain": "code_contributions",
         "supervision_level": "human_in_the_loop",
-        "scope_or_volume_limits": "not_specified (references 'multiple low quality pull requests' without a numeric threshold)",
-        "accountability_holder": "the user/contributor submitting the PR, issue, or comment ('where the user does not show a good understanding of what they are posting')",
+        "scope_or_volume_limits": "Applies to 'multiple low quality pull requests' and AI generated comments, reviews, issues, or pull requests posted without a good understanding of the content",
+        "accountability_holder": "contributor",
+        "accountability_wording": "users submitting multiple low quality pull requests, or AI generated comments, reviews, issues, or pull requests... might be banned from the organisation",
         "proportionality": "not_specified",
         "addressed": "yes",
         "evidence": [
-          {
-            "path": "CODE_OF_CONDUCT.md",
-            "quote": "users submitting multiple low quality pull requests, or AI generated comments, reviews, issues, or pull requests, where the user does not show a good understanding of what they are posting, might be banned",
-            "line": 19
-          },
           {
             "path": "CODE_OF_CONDUCT.md",
             "quote": "Opening AI generated pull requests w/o understanding them;",
@@ -43,64 +39,6 @@
           },
           {
             "path": "CODE_OF_CONDUCT.md",
-            "quote": "Leaving AI generated comments on issues and pull requests.",
-            "line": 30
-          }
-        ],
-        "rationale_only_mention": "",
-        "lean": "none",
-        "suggested_improvement": "",
-        "reasoning": "The policy explicitly names AI-generated pull requests, comments, and issues, requires the submitting user to demonstrate understanding of what they post (an implicit human-in-the-loop expectation), and holds that user answerable, with organizational ban as the consequence of non-compliance."
-      },
-      {
-        "domain": "notetaker_bots",
-        "supervision_level": "not_specified",
-        "scope_or_volume_limits": "not_specified",
-        "accountability_holder": "not_specified",
-        "proportionality": "not_applicable",
-        "addressed": "no",
-        "evidence": [],
-        "rationale_only_mention": "",
-        "lean": "none",
-        "suggested_improvement": "no mention of meeting/notetaker bots at all",
-        "reasoning": "The Code of Conduct contains no reference to recording, transcription, or meeting/notetaker bots of any kind."
-      },
-      {
-        "domain": "content",
-        "supervision_level": "not_specified",
-        "scope_or_volume_limits": "not_specified",
-        "accountability_holder": "not_specified",
-        "proportionality": "not_applicable",
-        "addressed": "no",
-        "evidence": [],
-        "rationale_only_mention": "",
-        "lean": "none",
-        "suggested_improvement": "no rule on AI use for docs, blogs, or design assets",
-        "reasoning": "The document's AI language is scoped to comments, reviews, issues, and pull requests; documentation, blog posts, and design assets are not named anywhere in the file."
-      },
-      {
-        "domain": "moderation",
-        "supervision_level": "not_specified",
-        "scope_or_volume_limits": "not_specified",
-        "accountability_holder": "not_specified",
-        "proportionality": "not_applicable",
-        "addressed": "no",
-        "evidence": [],
-        "rationale_only_mention": "",
-        "lean": "none",
-        "suggested_improvement": "no statement on AI-assisted moderation; only names ban as consequence, not who moderates or how",
-        "reasoning": "The clause 'might be banned from the organisation' describes an enforcement consequence for policy violation, not a rule about whether or how AI may be used to perform moderation actions. It names no supervision level or accountability holder for AI in moderation itself."
-      },
-      {
-        "domain": "review",
-        "supervision_level": "human_in_the_loop",
-        "scope_or_volume_limits": "not_specified",
-        "accountability_holder": "the user/contributor leaving the AI-generated review ('where the user does not show a good understanding of what they are posting')",
-        "proportionality": "not_specified",
-        "addressed": "yes",
-        "evidence": [
-          {
-            "path": "CODE_OF_CONDUCT.md",
             "quote": "users submitting multiple low quality pull requests, or AI generated comments, reviews, issues, or pull requests, where the user does not show a good understanding of what they are posting, might be banned",
             "line": 19
           }
@@ -108,96 +46,135 @@
         "rationale_only_mention": "",
         "lean": "none",
         "suggested_improvement": "",
-        "reasoning": "'Reviews' is explicitly listed among the AI-generated content types covered, requiring the reviewer to understand what they post and holding them accountable, with ban as the sanction for non-compliance."
+        "reasoning": "The CoC directly names AI-generated pull requests and comments/issues as regulated content: they are permitted only if the submitter shows understanding, otherwise the submitter risks being banned from the organisation. This states both a supervision expectation (human understanding of AI output) and ties the ban consequence to the contributor who posted it, so accountability is assigned to the contributor."
+      },
+      {
+        "domain": "notetaker_bots",
+        "supervision_level": "not_specified",
+        "scope_or_volume_limits": "not_specified",
+        "accountability_holder": "not_specified",
+        "accountability_wording": "",
+        "proportionality": "not_specified",
+        "addressed": "no",
+        "evidence": [],
+        "rationale_only_mention": "",
+        "lean": "none",
+        "suggested_improvement": "no supervision level; no scope limit; no accountability holder named",
+        "reasoning": "The Code of Conduct never discusses meeting recording, transcription, or notetaker/meeting bots in any form."
+      },
+      {
+        "domain": "content",
+        "supervision_level": "not_specified",
+        "scope_or_volume_limits": "not_specified",
+        "accountability_holder": "not_specified",
+        "accountability_wording": "",
+        "proportionality": "not_specified",
+        "addressed": "no",
+        "evidence": [],
+        "rationale_only_mention": "",
+        "lean": "none",
+        "suggested_improvement": "no supervision level; no accountability holder for docs/blog/design AI use",
+        "reasoning": "The document mentions 'improving the documentation' only as a general example of valuable non-code contribution, with no reference to AI use in documentation, blogs, or design assets."
+      },
+      {
+        "domain": "moderation",
+        "supervision_level": "not_specified",
+        "scope_or_volume_limits": "not_specified",
+        "accountability_holder": "not_specified",
+        "accountability_wording": "",
+        "proportionality": "not_specified",
+        "addressed": "no",
+        "evidence": [],
+        "rationale_only_mention": "Due to the burden put on maintainers, users submitting multiple low quality pull requests, or AI generated comments, reviews, issues, or pull requests...",
+        "lean": "restrictive",
+        "suggested_improvement": "no rule on AI used to take moderation actions; no accountability holder",
+        "reasoning": "The policy cites maintainer burden as the reason for banning low-quality/AI-generated submissions, which is a rationale about moderation workload, not a rule about AI being used to perform moderation actions itself. No supervision level or accountability holder for AI-driven moderation is stated."
+      },
+      {
+        "domain": "review",
+        "supervision_level": "human_in_the_loop",
+        "scope_or_volume_limits": "Applies to AI generated reviews left by users without a good understanding of what they are posting",
+        "accountability_holder": "contributor",
+        "accountability_wording": "users submitting ... AI generated comments, reviews, issues, or pull requests ... might be banned from the organisation",
+        "proportionality": "not_specified",
+        "addressed": "yes",
+        "evidence": [
+          {
+            "path": "CODE_OF_CONDUCT.md",
+            "quote": "or AI generated comments, reviews, issues, or pull requests, where the user does not show a good understanding of what they are posting, might be banned",
+            "line": 20
+          }
+        ],
+        "rationale_only_mention": "",
+        "lean": "none",
+        "suggested_improvement": "",
+        "reasoning": "AI-generated reviews are explicitly named alongside comments, issues, and pull requests as content that must be understood by the person posting it, with the same ban consequence and contributor-level accountability as the code_contributions clause."
       },
       {
         "domain": "autonomous",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
-        "proportionality": "not_applicable",
+        "accountability_wording": "",
+        "proportionality": "not_specified",
         "addressed": "no",
         "evidence": [],
         "rationale_only_mention": "",
         "lean": "none",
-        "suggested_improvement": "no rule distinguishing autonomous/agentic AI activity from human-directed use",
-        "reasoning": "The file addresses AI-generated submissions made by a user but never discusses autonomous or agentic AI systems acting without direct human submission."
+        "suggested_improvement": "no supervision level; no accountability holder for agentic/autonomous use",
+        "reasoning": "There is no mention of agents or autonomous AI systems acting on the repository independent of a human submitter."
       },
       {
         "domain": "environmental",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
-        "proportionality": "not_applicable",
+        "accountability_wording": "",
+        "proportionality": "not_specified",
         "addressed": "no",
         "evidence": [],
         "rationale_only_mention": "",
         "lean": "none",
-        "suggested_improvement": "no mention of energy, water, or carbon footprint",
-        "reasoning": "The stated rationale for the policy is maintainer burden from low-quality submissions, not energy, water, or carbon costs; environmental impact is not mentioned anywhere in the file."
+        "suggested_improvement": "no supervision level; no rule on energy/water/carbon impact",
+        "reasoning": "The Code of Conduct does not discuss energy, water, or carbon footprint of AI tools; the only external reference is a linked blog post title, which is not itself policy text asserting an environmental rationale within this document."
       },
       {
         "domain": "infrastructure",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
-        "proportionality": "not_applicable",
+        "accountability_wording": "",
+        "proportionality": "not_specified",
         "addressed": "no",
         "evidence": [],
-        "rationale_only_mention": "Due to the burden put on maintainers, users submitting multiple low quality pull requests, or AI generated comments, reviews, issues, or pull requests ... might be banned",
-        "lean": "restrictive",
-        "suggested_improvement": "no rule on server/hardware strain; only maintainer-burden rationale given",
-        "reasoning": "The policy cites 'burden put on maintainers' as the reason for banning low-quality/AI-generated submissions, but this is human workload, not stated infrastructure/hardware strain, and no supervision level or accountability holder is set for infrastructure impact specifically. The rationale nonetheless signals a restrictive stance toward volume-driving AI use."
+        "rationale_only_mention": "",
+        "lean": "none",
+        "suggested_improvement": "no supervision level; no rule on server load or hardware cost",
+        "reasoning": "No statement addresses server load, hardware cost, or financing burden from AI tooling; the document's stated burden concerns are about maintainer review time (moderation), not infrastructure."
       },
       {
         "domain": "training_data",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
-        "proportionality": "not_applicable",
+        "accountability_wording": "",
+        "proportionality": "not_specified",
         "addressed": "no",
         "evidence": [],
         "rationale_only_mention": "",
         "lean": "none",
-        "suggested_improvement": "no statement on use of project/user data for AI training",
-        "reasoning": "The Code of Conduct makes no reference to training data, model training, or use of platform/user data for that purpose."
+        "suggested_improvement": "no rule on project data being used to train models",
+        "reasoning": "The Code of Conduct never addresses whether scikit-learn's own issues, discussions, or user data may be used to train AI models; its AI content concerns copyright/quality of AI-generated submissions, not outbound use of project data."
       }
     ],
     "unscoped_statements": [],
-    "overall_posture": "The scikit-learn Code of Conduct narrowly and specifically addresses AI-generated pull requests, issues, comments, and reviews, conditioning acceptance on the submitter demonstrating genuine understanding and threatening organizational ban for low-quality or ill-understood AI submissions, but it is entirely silent on notetaker bots, documentation/content, AI-assisted moderation, autonomous/agentic use, environmental impact, infrastructure strain, and training data."
+    "overall_posture": "The Code of Conduct addresses AI narrowly and only through a single 'Low Quality and AI Generated Contributions Policy' clause: it conditions AI-generated pull requests, issues, comments, and reviews on the submitter demonstrating genuine understanding, threatening organisation-wide bans for violators, but is silent on notetaker bots, content/documentation, AI-driven moderation, autonomous agents, environmental impact, infrastructure strain, and use of project data for training."
   },
   "validation_problems": [],
   "use_composition_partial": {
-    "agent_instruction_files": [
-      "AGENTS.md"
-    ],
-    "workflow_count": 22,
-    "workflows_with_ai_or_bot_signals": [
-      {
-        "path": ".github/workflows/bot-lint-comment.yml",
-        "signals": [
-          "bot"
-        ]
-      },
-      {
-        "path": ".github/workflows/check-changelog.yml",
-        "signals": [
-          "bot"
-        ]
-      },
-      {
-        "path": ".github/workflows/lint.yml",
-        "signals": [
-          "bot"
-        ]
-      },
-      {
-        "path": ".github/workflows/update-lock-files.yml",
-        "signals": [
-          "bot"
-        ]
-      }
-    ],
+    "agent_instruction_files": [],
+    "workflow_count": 0,
+    "workflows_with_ai_or_bot_signals": [],
     "awaiting_implementation": {
       "specific_tools_in_use": "Awaiting implementation: named-product detection beyond known file signatures",
       "model_type": "Awaiting implementation: underlying model/family",

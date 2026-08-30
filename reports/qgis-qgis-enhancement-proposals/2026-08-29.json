@@ -10,8 +10,8 @@
     "note": "Scoring confined to the files named on the command line; 'no' means not addressed in those files."
   },
   "usage": {
-    "input_tokens": 11242,
-    "output_tokens": 4442,
+    "input_tokens": 13372,
+    "output_tokens": 7799,
     "cache_read_input_tokens": 0,
     "cache_creation_input_tokens": 0,
     "api_calls": 2,
@@ -19,27 +19,33 @@
       "qep-408-ai-tool-policy.md"
     ],
     "model": "claude-sonnet-5",
-    "estimated_cost_usd": 0.066904
+    "estimated_cost_usd": 0.104734
   },
   "consent_policy_specificity": {
     "domains": [
       {
         "domain": "code_contributions",
         "supervision_level": "human_in_the_loop",
-        "scope_or_volume_limits": "Applies to code (usually PRs), QEPs/design proposals, issues/security vulnerabilities, and comments/feedback on PRs.",
+        "scope_or_volume_limits": "not_specified",
         "accountability_holder": "contributor",
+        "accountability_wording": "The contributor is always the author and is fully accountable for their contributions.",
         "proportionality": "not_specified",
         "addressed": "yes",
         "evidence": [
           {
             "path": "qep-408-ai-tool-policy.md",
-            "quote": "there must be a human in the loop. Contributors must read and review all Large Language Model (LLM)-generated code or text before they ask other project members to review it.",
+            "quote": "there must be a **human in the loop**. Contributors must read and review all Large Language Model (LLM)-generated code or text before they ask other project members to review it.",
             "line": 27
           },
           {
             "path": "qep-408-ai-tool-policy.md",
             "quote": "The contributor is always the author and is fully accountable for their contributions.",
             "line": 29
+          },
+          {
+            "path": "qep-408-ai-tool-policy.md",
+            "quote": "Contributors are expected to **be transparent and label contributions that contain substantial amounts of tool-generated content**.",
+            "line": 42
           },
           {
             "path": "qep-408-ai-tool-policy.md",
@@ -50,26 +56,28 @@
         "rationale_only_mention": "",
         "lean": "none",
         "suggested_improvement": "",
-        "reasoning": "The policy names code, PRs, issues and comments explicitly, sets a human-in-the-loop supervision level, requires disclosure/labelling, and states the contributor is always accountable as author."
+        "reasoning": "The policy explicitly names code, PRs, issues, security reports and PR comments as covered contribution types, requires a human-in-the-loop review before requesting maintainer review, requires disclosure/labelling of substantial tool-generated content, and states the contributor is always the author and fully accountable. Both supervision level and accountability holder are stated."
       },
       {
         "domain": "notetaker_bots",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
-        "proportionality": "not_applicable",
+        "accountability_wording": "",
+        "proportionality": "not_specified",
         "addressed": "no",
         "evidence": [],
         "rationale_only_mention": "",
         "lean": "none",
-        "suggested_improvement": "no mention of meeting/notetaker bots at all",
-        "reasoning": "The document is scoped to contributions (code, QEPs, issues, comments) and review tooling; it never discusses recording or transcribing meetings or small-group discussions."
+        "suggested_improvement": "no supervision level, scope, or accountability for meeting/notetaker bots",
+        "reasoning": "The document never mentions recorded meetings, calls, or notetaker/transcription bots in any form."
       },
       {
         "domain": "content",
         "supervision_level": "human_in_the_loop",
-        "scope_or_volume_limits": "Covers QEPs/design proposals and gives documentation as a worked example of approved use.",
+        "scope_or_volume_limits": "not_specified",
         "accountability_holder": "contributor",
+        "accountability_wording": "The contributor is always the author and is fully accountable for their contributions.",
         "proportionality": "not_specified",
         "addressed": "yes",
         "evidence": [
@@ -87,101 +95,107 @@
         "rationale_only_mention": "",
         "lean": "none",
         "suggested_improvement": "",
-        "reasoning": "Documentation and design proposals are explicitly named as content types covered, with the same human-in-the-loop supervision and contributor accountability applied generally across the policy."
+        "reasoning": "Documentation and design proposals (QEPs) are explicitly named as content types covered by the same human-in-the-loop, disclosure and contributor-accountability rules stated for the policy generally, with a worked example of an approved documentation workflow."
       },
       {
         "domain": "moderation",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
-        "proportionality": "not_applicable",
+        "accountability_wording": "",
+        "proportionality": "not_specified",
         "addressed": "no",
         "evidence": [],
-        "rationale_only_mention": "",
-        "lean": "none",
-        "suggested_improvement": "no rule on AI use for moderation actions",
-        "reasoning": "The document describes human maintainers applying the 'extractive' label, locking conversations, closing PRs, or banning contributors, but never discusses whether AI may be used to perform or assist moderation actions."
+        "rationale_only_mention": "it takes a lot of maintainer time and energy to review those contributions! Sending the unreviewed output of an LLM to open source project maintainers *extracts* work from them",
+        "lean": "restrictive",
+        "suggested_improvement": "no supervision level or accountability for AI-assisted moderation actions",
+        "reasoning": "The document describes maintainers manually locking/closing/banning for policy violations, but this is human enforcement of the AI-use policy, not a rule about AI being used to moderate. Maintainer time/burden is cited only as rationale for the human-in-the-loop contribution rule."
       },
       {
         "domain": "review",
         "supervision_level": "human_in_the_loop",
-        "scope_or_volume_limits": "Automated review tools that publish comments without human oversight; opt-in tools keeping a human in the loop are acceptable.",
+        "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
+        "accountability_wording": "",
         "proportionality": "not_specified",
         "addressed": "partial",
         "evidence": [
           {
             "path": "qep-408-ai-tool-policy.md",
-            "quote": "automated review tools that publish comments without human review are not allowed. However, an opt-in review tool that keeps a human in the loop is acceptable under this policy.",
+            "quote": "automated review tools that publish comments without human review are not allowed. However, an opt-in review tool that **keeps a human in the loop** is acceptable under this policy.",
             "line": 70
           }
         ],
         "rationale_only_mention": "",
         "lean": "none",
-        "suggested_improvement": "no accountability holder named for AI-assisted review output",
-        "reasoning": "The policy directly names automated/AI review tools and sets a human-in-the-loop supervision level (banning fully autonomous public comments), but never states who is accountable for the content of AI-assisted reviews."
+        "suggested_improvement": "no accountability holder named for AI-assisted review tools",
+        "reasoning": "The policy names automated/AI review tools directly and sets a supervision level (human-in-the-loop required, fully automated commenting banned), but does not state who is accountable for output produced by an AI review tool."
       },
       {
         "domain": "autonomous",
         "supervision_level": "banned",
-        "scope_or_volume_limits": "Agents that take action in digital project spaces without human approval, e.g. the GitHub @claude agent.",
+        "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
+        "accountability_wording": "",
         "proportionality": "not_specified",
         "addressed": "partial",
         "evidence": [
           {
             "path": "qep-408-ai-tool-policy.md",
-            "quote": "An important implication of this policy is that it bans agents that take action in our digital spaces without human approval, such as the GitHub @claude agent.",
+            "quote": "An important implication of this policy is that it bans agents that take action in our digital spaces without human approval, such as the GitHub `@claude` agent.",
             "line": 68
           }
         ],
         "rationale_only_mention": "",
         "lean": "none",
-        "suggested_improvement": "no accountability holder named for autonomous agent actions",
-        "reasoning": "Autonomous/agentic use is named explicitly and banned, but the policy does not state who would be accountable if such an agent were used or approved a human action on its behalf."
+        "suggested_improvement": "no accountability holder named for autonomous agent use",
+        "reasoning": "Agentic/autonomous action in digital spaces without human approval is explicitly banned, but no accountability holder is stated for who answers if such an agent is used or triggered."
       },
       {
         "domain": "environmental",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
-        "proportionality": "not_applicable",
+        "accountability_wording": "",
+        "proportionality": "not_specified",
         "addressed": "no",
         "evidence": [],
         "rationale_only_mention": "",
         "lean": "none",
-        "suggested_improvement": "no rule or mention of energy/water/carbon impact",
-        "reasoning": "The document's cost concerns are entirely about maintainer time and attention ('extractive contributions'), not energy, water, or carbon footprint; environmental impact is not raised even as rationale."
+        "suggested_improvement": "no supervision level, scope, or accountability for environmental impact",
+        "reasoning": "No mention of energy use, water use, hardware footprint, or carbon impact appears anywhere in the document."
       },
       {
         "domain": "infrastructure",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
-        "proportionality": "not_applicable",
+        "accountability_wording": "",
+        "proportionality": "not_specified",
         "addressed": "no",
         "evidence": [],
         "rationale_only_mention": "",
         "lean": "none",
-        "suggested_improvement": "no rule or mention of server load or hardware cost",
-        "reasoning": "The policy's scarcity concern is maintainer review time/energy, not server load, CI strain, or hardware financing; infrastructure strain is not discussed."
+        "suggested_improvement": "no mention of infrastructure strain, server load, or hardware cost",
+        "reasoning": "The maintainer-time concerns raised are about human review labor (moderation), not server load or hardware cost/financing; no infrastructure-specific statement is present."
       },
       {
         "domain": "training_data",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
-        "proportionality": "not_applicable",
+        "accountability_wording": "",
+        "proportionality": "not_specified",
         "addressed": "no",
         "evidence": [],
-        "rationale_only_mention": "Artificial intelligence systems raise many questions around copyright that have yet to be answered. ... Using AI tools to regenerate copyrighted material does not remove the copyright",
-        "lean": "restrictive",
-        "suggested_improvement": "no rule on data used to train AI tools themselves",
-        "reasoning": "The Copyright section addresses copyrighted material appearing in AI-assisted contributions (an output-side concern) and voices unresolved concern about AI and copyright, but sets no rule about what data may be used to train AI systems or platform user data usage."
+        "rationale_only_mention": "",
+        "lean": "none",
+        "suggested_improvement": "no rule on the project's own content being used for AI training",
+        "reasoning": "The Copyright section addresses concern about LLMs reproducing copyrighted material in generated contributions (a provenance/code_contributions issue), not about whether QGIS's own project data, issues, or discussions may be used to train models."
       }
     ],
     "unscoped_statements": [],
-    "overall_posture": "The policy is a specific, human-in-the-loop framework for contributions, documentation/QEPs, and review tooling (banning fully autonomous agents and unreviewed automated review comments) with contributor accountability, but it never addresses notetaker bots, moderation, environmental impact, infrastructure strain, or training-data use, and leaves accountability unnamed for review and autonomous-agent scenarios."
+    "overall_posture": "The policy is highly specific about code/text contributions (including QEPs and documentation) and automated review/agent tools -- requiring human-in-the-loop, disclosure, and contributor accountability, and banning unsupervised agentic action and fully automated review comments -- but is entirely silent on notetaker bots, environmental impact, infrastructure strain, and the project's own data being used for AI training, and does not name an accountability holder for AI-assisted review or autonomous-agent incidents."
   },
   "validation_problems": [],
   "use_composition_partial": {

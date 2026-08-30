@@ -1,60 +1,546 @@
 ﻿25 target(s)
-skipping 10 already scanned today (--rescan to force)
 
 ======================================================================
-[1/15] keepassxreboot/keepassxc :: .github/CONTRIBUTING.md
+[1/25] zulip/zulip :: CONTRIBUTING.md
 ======================================================================
-python.exe : 1512 files in repo; assessing 1 named file(s) only
+python.exe : assessing 1 named file(s); repo not enumerated
 At line:3 char:1
 + & "$env:LOCALAPPDATA\Programs\Python\Python312\python.exe" scan_all.p ...
 + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    + CategoryInfo          : NotSpecified: (1512 files in r...ed file(s) only:String) [], RemoteException
+    + CategoryInfo          : NotSpecified: (assessing 1 nam... not enumerated:String) [], RemoteException
     + FullyQualifiedErrorId : NativeCommandError
  
-  turn 1: 4,376 in / 70 out  (total 4,376 / 70)
-  turn 2: 8,066 in / 3,988 out  (total 12,442 / 4,058)
+  turn 1: 5,426 in / 67 out  (total 5,426 / 67)
+  turn 2: 16,196 in / 5,735 out  (total 21,622 / 5,802)
 
 2 validation problem(s):
-  - code_contributions: quote not found in .github/CONTRIBUTING.md
-  - autonomous: quote not found in .github/CONTRIBUTING.md
+  - unscoped: quote not found in CONTRIBUTING.md
+  - unscoped: quote not found in CONTRIBUTING.md
 
 area                     addressed  where
-code_contributions       yes        .github/CONTRIBUTING.md:?
+code_contributions       yes        CONTRIBUTING.md:131
+                                    CONTRIBUTING.md:167
+                                    CONTRIBUTING.md:123
 notetaker_bots           no         -
 content                  no         -
 moderation               no         -
 review                   no         -
-autonomous               yes        .github/CONTRIBUTING.md:?
+autonomous               no         -
 environmental            no         -
 infrastructure           no         -
 training_data            no         -
 
-addressed:       Code contributions, Autonomous / agentic use
+addressed:       Code contributions
 partial:         - none -
-not addressed:   Notetaker / meeting bots, Content, Moderation actions, Review, Environmental Impact, Infrastructure strain, Data use for training
+not addressed:   Notetaker / meeting bots, Content, Moderation actions, Review, Autonomous / agentic use, Environmental Impact, Infrastructure strain, Data use for training
 
-posture: CONTRIBUTING.md addresses AI use narrowly and only for code submissions: it requires contributors to disclose when Generative AI (including agent-based/"vibe" coding) produced the vast majority of a PR's content, and states that all code still undergoes human review, but it is silent on notetaker bots, non-code content, moderation, AI-assisted review, environmental/infrastructure impact, and training data.
+leans (direction stated, no rule):
+  moderation               restrictive
+
+posture: Zulip's CONTRIBUTING.md gives a detailed, human-in-the-loop policy specifically for AI-assisted coding and PR/issue/chat communication (contributor bears responsibility, must understand and test AI output, no AI-only PR descriptions or chat messages), but is entirely silent on notetaker bots, documentation/content, moderation actions, AI-assisted review, autonomous agents, environmental impact, infrastructure strain, and use of the project's own data for training.
+
+raised as rationale only (moderation), not a rule:
+  "Maintainer time and attention is very limited, so it's important that changes you ask us to review represent your best work."
+
+unscoped statement: CONTRIBUTING.md:?
+  "Do not post AI-generated messages in the Zulip development community -- we want to read your own genuine expression of your thoughts."
+  leaves unnamed: Content (documentation, blogs, design assets), Moderation actions
+
+unscoped statement: CONTRIBUTING.md:?
+  "Successful contributors put in the reasoning and writing effort required to communicate clearly and succinctly, and don't waste the community's time with AI slop."
+  leaves unnamed: Content (documentation, blogs, design assets), Moderation actions
+
+scope: only the files named on the command line, so 'not addressed' means not addressed in those files
+
+suggested improvements:
+  notetaker_bots (no)
+    no mention of meeting/notetaker bots; no supervision or accountability stated
+  content (no)
+    no rule on AI use for docs/blogs/design assets; no supervision or holder named
+  moderation (no)
+    no rule on AI in moderation actions; no supervision or holder named
+  review (no)
+    no statement on AI-assisted review by maintainers/reviewers
+  autonomous (no)
+    no statement on autonomous/agentic AI acting on the repo
+  environmental (no)
+    no mention of energy/water/carbon impact of AI use
+  infrastructure (no)
+    no mention of server load or hardware cost from AI use
+  training_data (no)
+    no statement on project data/content being used to train models
+
+tokens: 21,622 in / 5,802 out over 2 API call(s) on claude-sonnet-5
+cost:   ~$0.1013 (upper bound; see PRICING in this file)
+
+report:     reports\zulip-zulip\2026-08-29.md
+data:       reports\zulip-zulip\2026-08-29.json
+transcript: reports\zulip-zulip\2026-08-29.transcript.jsonl
+index:      reports\README.md
+
+======================================================================
+[2/25] LadybirdBrowser/ladybird :: CONTRIBUTING.md
+======================================================================
+assessing 1 named file(s); repo not enumerated
+  turn 1: 5,433 in / 57 out  (total 5,433 / 57)
+  turn 2: 6,564 in / 1,847 out  (total 11,997 / 1,904)
+
+area                     addressed  where
+code_contributions       no         -
+notetaker_bots           no         -
+content                  no         -
+moderation               no         -
+review                   no         -
+autonomous               no         -
+environmental            no         -
+infrastructure           no         -
+training_data            no         -
+
+addressed:       - none -
+partial:         - none -
+not addressed:   Code contributions, Notetaker / meeting bots, Content, Moderation actions, Review, Autonomous / agentic use, Environmental Impact, Infrastructure strain, Data use for training
+
+posture: CONTRIBUTING.md contains no AI-specific policy language whatsoever; it is a general contribution/governance document (no external PRs accepted, issue policy, language style, neutrality, anti-brigading) with zero mention of AI tools, assistants, or agents across any of the nine domains.
+
+scope: only the files named on the command line, so 'not addressed' means not addressed in those files
+
+suggested improvements:
+  code_contributions (no)
+    no mention of AI; no supervision level or accountability holder stated
+  notetaker_bots (no)
+    no mention of meeting bots or recorded discussion
+  content (no)
+    no rule on AI use for docs/blogs/design assets
+  moderation (no)
+    no rule on AI use in moderation actions
+  review (no)
+    no rule on AI-assisted review
+  autonomous (no)
+    no rule on autonomous/agentic AI activity
+  environmental (no)
+    no statement on environmental impact of AI use
+  infrastructure (no)
+    no statement on server load or hardware cost from AI use
+  training_data (no)
+    no statement on project data being used to train models
+
+tokens: 11,997 in / 1,904 out over 2 API call(s) on claude-sonnet-5
+cost:   ~$0.0430 (upper bound; see PRICING in this file)
+
+report:     reports\ladybirdbrowser-ladybird\2026-08-29.md
+data:       reports\ladybirdbrowser-ladybird\2026-08-29.json
+transcript: reports\ladybirdbrowser-ladybird\2026-08-29.transcript.jsonl
+index:      reports\README.md
+
+======================================================================
+[3/25] mastodon/.github :: AI_POLICY.md
+======================================================================
+assessing 1 named file(s); repo not enumerated
+  turn 1: 5,424 in / 55 out  (total 5,424 / 55)
+  turn 2: 7,682 in / 7,259 out  (total 13,106 / 7,314)
+
+area                     addressed  where
+code_contributions       yes        AI_POLICY.md:13
+                                    AI_POLICY.md:17
+                                    AI_POLICY.md:26
+                                    AI_POLICY.md:22
+notetaker_bots           no         -
+content                  partial    AI_POLICY.md:15
+moderation               no         -
+review                   no         -
+autonomous               partial    AI_POLICY.md:22
+environmental            no         -
+infrastructure           no         -
+training_data            no         -
+
+addressed:       Code contributions
+partial:         Content, Autonomous / agentic use
+not addressed:   Notetaker / meeting bots, Moderation actions, Review, Environmental Impact, Infrastructure strain, Data use for training
+
+leans (direction stated, no rule):
+  training_data            restrictive
+
+posture: The policy is highly specific and restrictive about code_contributions (PRs, issues, comments) - requiring human understanding, disclosure, and sole contributor accountability - and explicitly bans autonomous agent PR submissions, but it never names or governs notetaker bots, moderation, AI-assisted review, environmental impact, infrastructure strain, or the project's own data being used for training; content (documentation) is touched only incidentally within the PR context.
+
+raised as rationale only (moderation), not a rule:
+  "We seek to use our time and resources effectively."
+
+raised as rationale only (training_data), not a rule:
+  "If AI was used, the resulting code does not violate the terms of service of the AI provider and does not include "regurgitated" code from libraries with incompatible licences"
+
+scope: only the files named on the command line, so 'not addressed' means not addressed in those files
+
+suggested improvements:
+  notetaker_bots (no)
+    no supervision level; no scope limit; no accountability holder named
+  content (partial)
+    no scope for blogs/design assets outside PR documentation
+  moderation (no)
+    no supervision level; no accountability holder named for moderation use of AI
+  review (no)
+    no statement on maintainers/reviewers using AI to review contributions
+  autonomous (partial)
+    no accountability holder stated for autonomous/agentic use
+  environmental (no)
+    no supervision level; no rule on environmental impact stated
+  infrastructure (no)
+    no supervision level; no rule on server load or hardware cost
+  training_data (no)
+    no statement on the project's own data being used to train models
+
+tokens: 13,106 in / 7,314 out over 2 API call(s) on claude-sonnet-5
+cost:   ~$0.0994 (upper bound; see PRICING in this file)
+
+report:     reports\mastodon-github\2026-08-29.md
+data:       reports\mastodon-github\2026-08-29.json
+transcript: reports\mastodon-github\2026-08-29.transcript.jsonl
+index:      reports\README.md
+
+======================================================================
+[4/25] ghostty-org/ghostty :: AI_POLICY.md
+======================================================================
+assessing 1 named file(s); repo not enumerated
+  turn 1: 5,428 in / 65 out  (total 5,428 / 65)
+  turn 2: 6,477 in / 11,013 out  (total 11,905 / 11,078)
+
+area                     addressed  where
+code_contributions       partial    AI_POLICY.md:5
+                                    AI_POLICY.md:9
+                                    AI_POLICY.md:14
+                                    AI_POLICY.md:33
+notetaker_bots           no         -
+content                  partial    AI_POLICY.md:21
+moderation               no         AI_POLICY.md:25
+review                   partial    AI_POLICY.md:41
+autonomous               no         -
+environmental            no         -
+infrastructure           no         -
+training_data            no         -
+
+addressed:       - none -
+partial:         Code contributions, Content, Review
+not addressed:   Notetaker / meeting bots, Moderation actions, Autonomous / agentic use, Environmental Impact, Infrastructure strain, Data use for training
+
+leans (direction stated, no rule):
+  moderation               restrictive
+
+posture: Ghostty sets specific, strict rules for code/text contributions (mandatory disclosure and a fully-understanding human-in-the-loop) and flatly bans AI-generated media, but never names an accountability holder in any domain, treats review only descriptively, and is entirely silent on notetaker bots, autonomous/agentic use, environmental impact, infrastructure strain, and use of the project's own data for training.
+
+raised as rationale only (moderation), not a rule:
+  "It is rude and disrespectful to approach this boundary with low-effort, unqualified work, since it puts the burden of validation on the maintainer."
+
+unscoped statement: AI_POLICY.md:5
+  "All AI usage in any form must be disclosed."
+  leaves unnamed: Content (documentation, blogs, design assets), Notetaker / meeting bots (recorded discussion, closed or small-group content), Moderation actions, Review (who or what may review using AI), Autonomous / agentic use, Environmental Impact (energy use, water use, hardware/carbon footprint), Infrastructure strain (server load, hardware cost/financing), Data use for training (platform user data)
+
+scope: only the files named on the command line, so 'not addressed' means not addressed in those files
+
+suggested improvements:
+  code_contributions (partial)
+    no accountability holder named; only obligations on the contributor
+  notetaker_bots (no)
+    no mention of meeting recording, bots, or consent for closed/small-group discussion
+  content (partial)
+    no accountability holder named for AI-generated content/media decisions
+  moderation (no)
+    no rule on whether/how AI may be used in moderation actions themselves
+  review (partial)
+    no supervision level or accountability holder for machine-assisted review
+  autonomous (no)
+    no rule on autonomous or agentic AI acting on the repository
+  environmental (no)
+    no statement on energy/water/carbon impact of AI tool use
+  infrastructure (no)
+    no statement on server load or hardware/financing cost from AI use
+  training_data (no)
+    no statement on Ghostty's own content/data being used to train models
+
+tokens: 11,905 in / 11,078 out over 2 API call(s) on claude-sonnet-5
+cost:   ~$0.1346 (upper bound; see PRICING in this file)
+
+report:     reports\ghostty-org-ghostty\2026-08-29.md
+data:       reports\ghostty-org-ghostty\2026-08-29.json
+transcript: reports\ghostty-org-ghostty\2026-08-29.transcript.jsonl
+index:      reports\README.md
+
+======================================================================
+[5/25] sunpy/sunpy :: README.rst
+======================================================================
+assessing 1 named file(s); repo not enumerated
+  turn 1: 5,421 in / 60 out  (total 5,421 / 60)
+  turn 2: 8,293 in / 3,042 out  (total 13,714 / 3,102)
+
+area                     addressed  where
+code_contributions       partial    README.rst:95
+notetaker_bots           no         -
+content                  partial    README.rst:95
+moderation               no         -
+review                   no         -
+autonomous               no         -
+environmental            no         -
+infrastructure           no         -
+training_data            no         -
+
+addressed:       - none -
+partial:         Code contributions, Content
+not addressed:   Notetaker / meeting bots, Moderation actions, Review, Autonomous / agentic use, Environmental Impact, Infrastructure strain, Data use for training
+
+posture: The README contains a single brief generative-AI clause requiring contributors to fully understand and be able to explain AI-assisted code or documentation changes, but it stops there: no accountability holder is named, and none of the other seven domains (notetaker bots, moderation, review, autonomous use, environmental impact, infrastructure strain, or training data) are mentioned at all.
+
+scope: only the files named on the command line, so 'not addressed' means not addressed in those files
+
+suggested improvements:
+  code_contributions (partial)
+    no explicit accountability holder; no scope/volume limit stated
+  notetaker_bots (no)
+    no mention of meeting/notetaker bot use at all
+  content (partial)
+    no explicit accountability holder; no scope/volume limit stated
+  moderation (no)
+    no mention of AI use in moderation actions
+  review (no)
+    no statement on AI use in reviewing contributions
+  autonomous (no)
+    no statement on autonomous/agentic AI acting on the repo
+  environmental (no)
+    no rule or rationale on energy/water/carbon impact of AI
+  infrastructure (no)
+    no rule or rationale on server load/hardware cost from AI
+  training_data (no)
+    no statement on project data being used to train models
+
+tokens: 13,714 in / 3,102 out over 2 API call(s) on claude-sonnet-5
+cost:   ~$0.0584 (upper bound; see PRICING in this file)
+
+report:     reports\sunpy-sunpy\2026-08-29.md
+data:       reports\sunpy-sunpy\2026-08-29.json
+transcript: reports\sunpy-sunpy\2026-08-29.transcript.jsonl
+index:      reports\README.md
+
+======================================================================
+[6/25] scikit-learn/scikit-learn :: CODE_OF_CONDUCT.md
+======================================================================
+assessing 1 named file(s); repo not enumerated
+  turn 1: 5,436 in / 71 out  (total 5,436 / 71)
+  turn 2: 6,064 in / 6,471 out  (total 11,500 / 6,542)
+
+area                     addressed  where
+code_contributions       yes        CODE_OF_CONDUCT.md:29
+                                    CODE_OF_CONDUCT.md:19
+notetaker_bots           no         -
+content                  no         -
+moderation               no         -
+review                   yes        CODE_OF_CONDUCT.md:20
+autonomous               no         -
+environmental            no         -
+infrastructure           no         -
+training_data            no         -
+
+addressed:       Code contributions, Review
+partial:         - none -
+not addressed:   Notetaker / meeting bots, Content, Moderation actions, Autonomous / agentic use, Environmental Impact, Infrastructure strain, Data use for training
+
+leans (direction stated, no rule):
+  moderation               restrictive
+
+posture: The Code of Conduct addresses AI narrowly and only through a single 'Low Quality and AI Generated Contributions Policy' clause: it conditions AI-generated pull requests, issues, comments, and reviews on the submitter demonstrating genuine understanding, threatening organisation-wide bans for violators, but is silent on notetaker bots, content/documentation, AI-driven moderation, autonomous agents, environmental impact, infrastructure strain, and use of project data for training.
+
+raised as rationale only (moderation), not a rule:
+  "Due to the burden put on maintainers, users submitting multiple low quality pull requests, or AI generated comments, reviews, issues, or pull requests..."
+
+scope: only the files named on the command line, so 'not addressed' means not addressed in those files
+
+suggested improvements:
+  notetaker_bots (no)
+    no supervision level; no scope limit; no accountability holder named
+  content (no)
+    no supervision level; no accountability holder for docs/blog/design AI use
+  moderation (no)
+    no rule on AI used to take moderation actions; no accountability holder
+  autonomous (no)
+    no supervision level; no accountability holder for agentic/autonomous use
+  environmental (no)
+    no supervision level; no rule on energy/water/carbon impact
+  infrastructure (no)
+    no supervision level; no rule on server load or hardware cost
+  training_data (no)
+    no rule on project data being used to train models
+
+tokens: 11,500 in / 6,542 out over 2 API call(s) on claude-sonnet-5
+cost:   ~$0.0884 (upper bound; see PRICING in this file)
+
+report:     reports\scikit-learn-scikit-learn\2026-08-29.md
+data:       reports\scikit-learn-scikit-learn\2026-08-29.json
+transcript: reports\scikit-learn-scikit-learn\2026-08-29.transcript.jsonl
+index:      reports\README.md
+
+======================================================================
+[7/25] astropy/astropy-project :: policies/ai-policy.md
+======================================================================
+assessing 1 named file(s); repo not enumerated
+  turn 1: 5,427 in / 66 out  (total 5,427 / 66)
+  turn 2: 6,134 in / 6,516 out  (total 11,561 / 6,582)
+
+area                     addressed  where
+code_contributions       yes        policies/ai-policy.md:7
+                                    policies/ai-policy.md:10
+                                    policies/ai-policy.md:8
+notetaker_bots           no         -
+content                  partial    policies/ai-policy.md:15
+moderation               no         -
+review                   no         -
+autonomous               partial    policies/ai-policy.md:14
+environmental            no         -
+infrastructure           no         -
+training_data            no         -
+
+addressed:       Code contributions
+partial:         Content, Autonomous / agentic use
+not addressed:   Notetaker / meeting bots, Moderation actions, Review, Environmental Impact, Infrastructure strain, Data use for training
+
+posture: Astropy's AI policy is narrowly and specifically written for code/PR contributions (permitting AI-assisted contributions under disclosure, human-explainability, and contributor-accountability rules, and banning fully autonomous agent interaction), but it is silent on notetaker bots, dedicated content/documentation rules, moderation, AI-assisted review, environmental impact, infrastructure strain, and use of the project's own data for training.
 
 scope: only the files named on the command line, so 'not addressed' means not addressed in those files
 
 suggested improvements:
   notetaker_bots (no)
     no mention of meeting/notetaker bots at all
-  content (no)
-    no AI rule for docs/artwork; no supervision or holder named
+  content (partial)
+    no explicit supervision level or accountability holder stated for documentation/content specifically
   moderation (no)
-    no statement on AI use in moderation actions
+    no rule on AI-assisted moderation actions or who is accountable
   review (no)
-    no rule on whether reviewers may use AI tools
+    no rule on whether/how AI may be used to review contributions
+  autonomous (partial)
+    no accountability holder named; 'will close the PR' is enforcement, not authorship responsibility
   environmental (no)
-    no mention of energy/water/hardware footprint of AI
+    no mention of energy, water, or carbon impact of AI tools
   infrastructure (no)
-    no mention of server/CI load or hardware cost from AI use
+    no mention of server load or hardware/financial cost from AI use
   training_data (no)
-    no statement on use of project/user data for AI training
+    no statement on whether project content/user data may train models
 
-tokens: 12,442 in / 4,058 out over 2 API call(s) on claude-sonnet-5
-cost:   ~$0.0655 (upper bound; see PRICING in this file)
+tokens: 11,561 in / 6,582 out over 2 API call(s) on claude-sonnet-5
+cost:   ~$0.0889 (upper bound; see PRICING in this file)
+
+report:     reports\astropy-astropy-project\2026-08-29.md
+data:       reports\astropy-astropy-project\2026-08-29.json
+transcript: reports\astropy-astropy-project\2026-08-29.transcript.jsonl
+index:      reports\README.md
+
+======================================================================
+[8/25] OSGeo/PROJ :: docs/source/community/ai_tool_policy.rst
+======================================================================
+assessing 1 named file(s); repo not enumerated
+  turn 1: 5,436 in / 64 out  (total 5,436 / 64)
+  turn 2: 8,151 in / 9,097 out  (total 13,587 / 9,161)
+
+area                     addressed  where
+code_contributions       yes        docs/source/community/ai_tool_policy.rst:29
+                                    docs/source/community/ai_tool_policy.rst:14
+                                    docs/source/community/ai_tool_policy.rst:55
+                                    docs/source/community/ai_tool_policy.rst:44
+notetaker_bots           no         -
+content                  yes        docs/source/community/ai_tool_policy.rst:79
+moderation               no         -
+review                   partial    docs/source/community/ai_tool_policy.rst:76
+                                    docs/source/community/ai_tool_policy.rst:77
+autonomous               partial    docs/source/community/ai_tool_policy.rst:74
+environmental            no         -
+infrastructure           no         -
+training_data            no         -
+
+addressed:       Code contributions, Content
+partial:         Review, Autonomous / agentic use
+not addressed:   Notetaker / meeting bots, Moderation actions, Environmental Impact, Infrastructure strain, Data use for training
+
+leans (direction stated, no rule):
+  moderation               restrictive
+
+posture: PROJ's AI policy is detailed and specific for code-adjacent contributions (code, RFCs, issues, PR comments) and, via one explicit example, documentation content — requiring a human in the loop, disclosure of substantial AI-generated material, and holding the contributor accountable as author — and it explicitly bans unsupervised autonomous agents and automated review tools that post without human review; but it names no accountability holder for AI-assisted review or autonomous-agent incidents, and it is silent on notetaker bots, environmental impact, infrastructure strain, and the project's own data being used for AI training.
+
+raised as rationale only (moderation), not a rule:
+  "it takes a lot of maintainer time and energy to review those contributions"
+
+scope: only the files named on the command line, so 'not addressed' means not addressed in those files
+
+suggested improvements:
+  notetaker_bots (no)
+    no mention of meeting/notetaker bots; no supervision level or accountability holder
+  moderation (no)
+    no supervision level or accountability holder for AI-assisted moderation actions
+  review (partial)
+    no accountability holder named for AI-assisted review
+  autonomous (partial)
+    no accountability holder named for autonomous agent use
+  environmental (no)
+    no mention of energy, water, or carbon impact; no rule stated
+  infrastructure (no)
+    no mention of server load or hardware/financing cost
+  training_data (no)
+    no statement on PROJ's own content/data being used to train models
+
+tokens: 13,587 in / 9,161 out over 2 API call(s) on claude-sonnet-5
+cost:   ~$0.1188 (upper bound; see PRICING in this file)
+
+report:     reports\osgeo-proj\2026-08-29.md
+data:       reports\osgeo-proj\2026-08-29.json
+transcript: reports\osgeo-proj\2026-08-29.transcript.jsonl
+index:      reports\README.md
+
+======================================================================
+[9/25] keepassxreboot/keepassxc :: .github/CONTRIBUTING.md
+======================================================================
+assessing 1 named file(s); repo not enumerated
+  turn 1: 5,436 in / 70 out  (total 5,436 / 70)
+  turn 2: 9,126 in / 3,542 out  (total 14,562 / 3,612)
+
+area                     addressed  where
+code_contributions       partial    .github/CONTRIBUTING.md:80
+                                    .github/CONTRIBUTING.md:80
+notetaker_bots           no         -
+content                  no         -
+moderation               no         -
+review                   no         -
+autonomous               no         -
+environmental            no         -
+infrastructure           no         -
+training_data            no         -
+
+addressed:       - none -
+partial:         Code contributions
+not addressed:   Notetaker / meeting bots, Content, Moderation actions, Review, Autonomous / agentic use, Environmental Impact, Infrastructure strain, Data use for training
+
+posture: The file addresses only one domain with any specificity: code contributions, where a disclosure requirement applies to majority-AI-generated submissions, but even there no accountability holder is named; all other eight domains (notetaker bots, content, moderation, review, autonomous, environmental, infrastructure, training data) are entirely unaddressed in this document.
+
+unscoped statement: .github/CONTRIBUTING.md:80
+  "If you use Generative AI to write the vast majority of your submission (e.g., agent-based or vibe coding) then you must document your use of AI in your pull request."
+  leaves unnamed: Autonomous / agentic use, Review (who or what may review using AI)
+
+scope: only the files named on the command line, so 'not addressed' means not addressed in those files
+
+suggested improvements:
+  code_contributions (partial)
+    no accountability holder named for AI-assisted code
+  notetaker_bots (no)
+    no mention of meeting/notetaker bots at all
+  content (no)
+    no rule on AI use for docs/design assets/blogs
+  moderation (no)
+    no rule on AI-assisted moderation actions
+  review (no)
+    no statement on AI use during code/PR review
+  autonomous (no)
+    no separate rule for agentic/autonomous repo interaction
+  environmental (no)
+    no mention of energy/water/carbon impact
+  infrastructure (no)
+    no mention of server load or hardware cost from AI
+  training_data (no)
+    no rule on use of project data to train models
+
+tokens: 14,562 in / 3,612 out over 2 API call(s) on claude-sonnet-5
+cost:   ~$0.0652 (upper bound; see PRICING in this file)
 
 report:     reports\keepassxreboot-keepassxc\2026-08-29.md
 data:       reports\keepassxreboot-keepassxc\2026-08-29.json
@@ -62,15 +548,78 @@ transcript: reports\keepassxreboot-keepassxc\2026-08-29.transcript.jsonl
 index:      reports\README.md
 
 ======================================================================
-[2/15] teamtype/teamtype :: CONTRIBUTING.md
+[10/25] go-gitea/gitea :: CONTRIBUTING.md
 ======================================================================
-154 files in repo; assessing 1 named file(s) only
-  turn 1: 4,368 in / 57 out  (total 4,368 / 57)
-  turn 2: 5,337 in / 4,187 out  (total 9,705 / 4,244)
+assessing 1 named file(s); repo not enumerated
+  turn 1: 5,428 in / 67 out  (total 5,428 / 67)
+  turn 2: 11,057 in / 5,622 out  (total 16,485 / 5,689)
+
+area                     addressed  where
+code_contributions       yes        CONTRIBUTING.md:57
+                                    CONTRIBUTING.md:60
+                                    CONTRIBUTING.md:62
+notetaker_bots           no         -
+content                  no         -
+moderation               no         -
+review                   no         -
+autonomous               no         -
+environmental            no         -
+infrastructure           no         -
+training_data            no         -
+
+addressed:       Code contributions
+partial:         - none -
+not addressed:   Notetaker / meeting bots, Content, Moderation actions, Review, Autonomous / agentic use, Environmental Impact, Infrastructure strain, Data use for training
+
+leans (direction stated, no rule):
+  moderation               restrictive
+
+posture: Gitea's CONTRIBUTING.md addresses AI use specifically and only for code contributions (PRs/issues) — requiring disclosure, human review before submission, and holding contributors accountable — while leaving notetaker bots, non-code content, moderation, review, autonomous use, environmental impact, infrastructure strain, and training data on project data entirely unaddressed.
+
+raised as rationale only (moderation), not a rule:
+  "We welcome new contributors, but cannot sustain the effort of supporting contributors who primarily defer to AI rather than engaging substantively with the review process."
+
+unscoped statement: CONTRIBUTING.md:60
+  "Disclose AI-assisted content clearly."
+  leaves unnamed: Content (documentation, blogs, design assets)
+
+scope: only the files named on the command line, so 'not addressed' means not addressed in those files
+
+suggested improvements:
+  notetaker_bots (no)
+    no mention of meeting/notetaker bots; no supervision level or holder
+  content (no)
+    no rule for AI use in documentation/blogs/design assets
+  moderation (no)
+    no supervision level or accountability holder for moderation actions
+  review (no)
+    no rule on AI use by reviewers evaluating contributions
+  autonomous (no)
+    no rule on autonomous/agentic interaction with the repository
+  environmental (no)
+    no statement on energy/water/carbon impact of AI use
+  infrastructure (no)
+    no statement on server load or hardware cost from AI
+  training_data (no)
+    no statement on project data being used to train models
+
+tokens: 16,485 in / 5,689 out over 2 API call(s) on claude-sonnet-5
+cost:   ~$0.0899 (upper bound; see PRICING in this file)
+
+report:     reports\go-gitea-gitea\2026-08-29.md
+data:       reports\go-gitea-gitea\2026-08-29.json
+transcript: reports\go-gitea-gitea\2026-08-29.transcript.jsonl
+index:      reports\README.md
+
+======================================================================
+[11/25] teamtype/teamtype :: CONTRIBUTING.md
+======================================================================
+assessing 1 named file(s); repo not enumerated
+  turn 1: 5,428 in / 67 out  (total 5,428 / 67)
+  turn 2: 6,407 in / 3,943 out  (total 11,835 / 4,010)
 
 area                     addressed  where
 code_contributions       partial    CONTRIBUTING.md:38
-                                    CONTRIBUTING.md:39
                                     CONTRIBUTING.md:40
 notetaker_bots           no         -
 content                  no         -
@@ -85,36 +634,36 @@ addressed:       - none -
 partial:         Code contributions
 not addressed:   Notetaker / meeting bots, Content, Moderation actions, Review, Autonomous / agentic use, Environmental Impact, Infrastructure strain, Data use for training
 
-posture: The project imposes an outright, blanket ban on LLM-generated content across code contributions and all GitHub written communication (PRs, issues, discussions), with enforcement (closing non-compliant items) but no named accountability holder for authorship; every other domain (notetaker bots, standalone content like docs/blogs, moderation, review, autonomous use, environmental impact, infrastructure strain, and training data) is entirely unaddressed in this document.
+posture: The project bans all LLM-generated content in contributions and GitHub communication (PRs, issues, discussions), enforced by closing non-compliant items, but never assigns accountability for compliance and is entirely silent on notetaker bots, standalone content categories like docs/blogs/design assets, moderation, review, autonomous agent use, environmental impact, infrastructure strain, and training-data reuse.
 
 unscoped statement: CONTRIBUTING.md:38
-  "We do not accept any contributions that contain content generated by LLMs."
-  leaves unnamed: Content (documentation, blogs, design assets), Moderation actions, Review (who or what may review using AI), Autonomous / agentic use, Notetaker / meeting bots (recorded discussion, closed or small-group content)
+  "We do not accept any contributions that contain content generated by LLMs. This also includes all written communication on GitHub."
+  leaves unnamed: Content (documentation, blogs, design assets), Moderation actions, Review (who or what may review using AI)
 
 scope: only the files named on the command line, so 'not addressed' means not addressed in those files
 
 suggested improvements:
   code_contributions (partial)
-    no accountability holder named; enforcement stated, not authorship
+    no accountability holder named; only enforcement (closing) stated
   notetaker_bots (no)
-    no supervision level; no scope or accountability holder named
+    no mention of meeting/notetaker bots at all
   content (no)
-    no rule naming docs/blogs/design assets specifically
+    no rule naming documentation, blogs, or design assets specifically
   moderation (no)
-    no supervision level; no accountability holder for AI-assisted moderation
+    no rule on AI use in moderation actions
   review (no)
-    no statement on AI use in review; no accountability holder
+    no rule on AI-assisted review of contributions
   autonomous (no)
-    no supervision level for autonomous/agentic AI use
+    no rule on autonomous/agentic interaction with repository
   environmental (no)
-    no mention of environmental impact as rationale or rule
+    no mention of energy, water, or carbon impact
   infrastructure (no)
-    no mention of infrastructure strain as rationale or rule
+    no mention of server load or hardware cost
   training_data (no)
-    no mention of training-data use or provenance
+    no rule on project's own data being used for AI training
 
-tokens: 9,705 in / 4,244 out over 2 API call(s) on claude-sonnet-5
-cost:   ~$0.0619 (upper bound; see PRICING in this file)
+tokens: 11,835 in / 4,010 out over 2 API call(s) on claude-sonnet-5
+cost:   ~$0.0638 (upper bound; see PRICING in this file)
 
 report:     reports\teamtype-teamtype\2026-08-29.md
 data:       reports\teamtype-teamtype\2026-08-29.json
@@ -122,136 +671,87 @@ transcript: reports\teamtype-teamtype\2026-08-29.transcript.jsonl
 index:      reports\README.md
 
 ======================================================================
-[3/15] yt-dlp/yt-dlp :: .NO_AI/README.md
+[12/25] yt-dlp/yt-dlp :: .NO_AI/README.md
 ======================================================================
-1239 files in repo; assessing 1 named file(s) only
-  turn 1: 4,371 in / 56 out  (total 4,371 / 56)
-Traceback (most recent call last):
-  File "C:\Users\emmai\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx2\_transports\default.py", line 
-98, in map_httpcore_exceptions
-    yield
-  File "C:\Users\emmai\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx2\_transports\default.py", line 
-245, in handle_request
-    resp = self._pool.handle_request(req)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\emmai\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore2\_sync\connection_pool.py", 
-line 242, in handle_request
-    raise exc from None
-  File "C:\Users\emmai\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore2\_sync\connection_pool.py", 
-line 224, in handle_request
-    response = connection.handle_request(pool_request.request)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\emmai\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore2\_sync\connection.py", line 
-94, in handle_request
-    raise exc
-  File "C:\Users\emmai\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore2\_sync\connection.py", line 
-74, in handle_request
-    stream = self._connect(request)
-             ^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\emmai\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore2\_sync\connection.py", line 
-117, in _connect
-    stream = self._network_backend.connect_tcp(**kwargs)
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\emmai\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore2\_backends\sync.py", line 
-203, in connect_tcp
-    with map_exceptions(exc_map):
-         ^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\emmai\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 158, in __exit__
-    self.gen.throw(value)
-  File "C:\Users\emmai\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore2\_exceptions.py", line 17, 
-in map_exceptions
-    raise to_exc(exc) from exc
-httpcore2.ConnectError: [Errno 11001] getaddrinfo failed
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "C:\Users\emmai\AppData\Local\Programs\Python\Python312\Lib\site-packages\anthropic\_base_client.py", line 
-1269, in _attempt_request
-    response = self._client.send(
-               ^^^^^^^^^^^^^^^^^^
-  File "C:\Users\emmai\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx2\_client.py", line 980, in send
-    response = self._send_handling_auth(
-               ^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\emmai\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx2\_client.py", line 1008, in 
-_send_handling_auth
-    response = self._send_handling_redirects(
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\emmai\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx2\_client.py", line 1043, in 
-_send_handling_redirects
-    response = self._send_single_request(request)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\emmai\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx2\_client.py", line 1076, in 
-_send_single_request
-    response = transport.handle_request(request)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\emmai\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx2\_transports\default.py", line 
-244, in handle_request
-    with map_httpcore_exceptions():
-         ^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\emmai\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 158, in __exit__
-    self.gen.throw(value)
-  File "C:\Users\emmai\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx2\_transports\default.py", line 
-115, in map_httpcore_exceptions
-    raise mapped_exc(message) from exc
-httpx2.ConnectError: [Errno 11001] getaddrinfo failed
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "C:\Users\emmai\GitHub\ai-oss-use-specificity\chaoss_agent.py", line 1351, in <module>
-    main()
-  File "C:\Users\emmai\GitHub\ai-oss-use-specificity\chaoss_agent.py", line 1265, in main
-    grid, usage = run(repo, shortlist, transcript,
-                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\emmai\GitHub\ai-oss-use-specificity\chaoss_agent.py", line 627, in run
-    resp = client.messages.create(
-           ^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\emmai\AppData\Local\Programs\Python\Python312\Lib\site-packages\anthropic\_utils\_utils.py", line 
-294, in wrapper
-    return func(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^
-  File 
-"C:\Users\emmai\AppData\Local\Programs\Python\Python312\Lib\site-packages\anthropic\resources\messages\messages.py", 
-line 968, in create
-    return self._post(
-           ^^^^^^^^^^^
-  File "C:\Users\emmai\AppData\Local\Programs\Python\Python312\Lib\site-packages\anthropic\_base_client.py", line 
-1490, in post
-    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
-                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\emmai\AppData\Local\Programs\Python\Python312\Lib\site-packages\anthropic\_base_client.py", line 
-1116, in request
-    response, prepared = self._attempt_request(
-                         ^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\emmai\AppData\Local\Programs\Python\Python312\Lib\site-packages\anthropic\_base_client.py", line 
-1283, in _attempt_request
-    raise APIConnectionError(request=request) from err
-anthropic.APIConnectionError: Connection error.
-  FAILED (1) - continuing
-
-======================================================================
-[4/15] qgis/QGIS-Enhancement-Proposals :: qep-408-ai-tool-policy.md
-======================================================================
-81 files in repo; assessing 1 named file(s) only
-  turn 1: 4,382 in / 61 out  (total 4,382 / 61)
-  turn 2: 6,860 in / 4,381 out  (total 11,242 / 4,442)
-
-3 validation problem(s):
-  - code_contributions: quote not found in qep-408-ai-tool-policy.md
-  - review: quote not found in qep-408-ai-tool-policy.md
-  - autonomous: quote not found in qep-408-ai-tool-policy.md
+assessing 1 named file(s); repo not enumerated
+  turn 1: 5,431 in / 56 out  (total 5,431 / 56)
+  turn 2: 5,738 in / 5,087 out  (total 11,169 / 5,143)
 
 area                     addressed  where
-code_contributions       yes        qep-408-ai-tool-policy.md:?
+code_contributions       partial    .NO_AI/README.md:7
+                                    .NO_AI/README.md:9
+                                    .NO_AI/README.md:11
+                                    .NO_AI/README.md:15
+notetaker_bots           no         -
+content                  no         -
+moderation               no         -
+review                   partial    .NO_AI/README.md:11
+autonomous               partial    .NO_AI/README.md:17
+environmental            no         -
+infrastructure           no         -
+training_data            no         -
+
+addressed:       - none -
+partial:         Code contributions, Review, Autonomous / agentic use
+not addressed:   Notetaker / meeting bots, Content, Moderation actions, Environmental Impact, Infrastructure strain, Data use for training
+
+leans (direction stated, no rule):
+  code_contributions       restrictive
+
+posture: The policy is a blanket, strongly restrictive ban on AI/LLM use for contributor-facing text (issues, PRs, comments, code review comments, translation) and explicitly instructs AI agents to refuse interacting with the repository, but it never names an accountability holder for any domain, and it is silent on notetaker bots, general content/documentation, human moderation actions, environmental impact, infrastructure strain, and training-data use of project data.
+
+unscoped statement: .NO_AI/README.md:13
+  "No AI / no LLMs for translation. Communication in English is preferred, but you're welcome to write in your native language and rely on others to translate your text with their own tools."
+  leaves unnamed: Content (documentation, blogs, design assets)
+
+scope: only the files named on the command line, so 'not addressed' means not addressed in those files
+
+suggested improvements:
+  code_contributions (partial)
+    no accountability holder named for banned AI use
+  notetaker_bots (no)
+    no supervision level, scope, or accountability holder stated
+  content (no)
+    no supervision level, scope, or accountability holder for docs/content
+  moderation (no)
+    no rule on AI used to take moderation actions
+  review (partial)
+    no accountability holder named for AI-assisted review
+  autonomous (partial)
+    no accountability holder named for agent operators
+  environmental (no)
+    no supervision level, scope, or accountability holder stated
+  infrastructure (no)
+    no supervision level, scope, or accountability holder stated
+  training_data (no)
+    no rule on project data being used to train models
+
+tokens: 11,169 in / 5,143 out over 2 API call(s) on claude-sonnet-5
+cost:   ~$0.0738 (upper bound; see PRICING in this file)
+
+report:     reports\yt-dlp-yt-dlp\2026-08-29.md
+data:       reports\yt-dlp-yt-dlp\2026-08-29.json
+transcript: reports\yt-dlp-yt-dlp\2026-08-29.transcript.jsonl
+index:      reports\README.md
+
+======================================================================
+[13/25] qgis/QGIS-Enhancement-Proposals :: qep-408-ai-tool-policy.md
+======================================================================
+assessing 1 named file(s); repo not enumerated
+  turn 1: 5,442 in / 71 out  (total 5,442 / 71)
+  turn 2: 7,930 in / 7,728 out  (total 13,372 / 7,799)
+
+area                     addressed  where
+code_contributions       yes        qep-408-ai-tool-policy.md:27
                                     qep-408-ai-tool-policy.md:29
+                                    qep-408-ai-tool-policy.md:42
                                     qep-408-ai-tool-policy.md:54
 notetaker_bots           no         -
 content                  yes        qep-408-ai-tool-policy.md:73
                                     qep-408-ai-tool-policy.md:55
 moderation               no         -
-review                   partial    qep-408-ai-tool-policy.md:?
-autonomous               partial    qep-408-ai-tool-policy.md:?
+review                   partial    qep-408-ai-tool-policy.md:70
+autonomous               partial    qep-408-ai-tool-policy.md:68
 environmental            no         -
 infrastructure           no         -
 training_data            no         -
@@ -261,33 +761,33 @@ partial:         Review, Autonomous / agentic use
 not addressed:   Notetaker / meeting bots, Moderation actions, Environmental Impact, Infrastructure strain, Data use for training
 
 leans (direction stated, no rule):
-  training_data            restrictive
+  moderation               restrictive
 
-posture: The policy is a specific, human-in-the-loop framework for contributions, documentation/QEPs, and review tooling (banning fully autonomous agents and unreviewed automated review comments) with contributor accountability, but it never addresses notetaker bots, moderation, environmental impact, infrastructure strain, or training-data use, and leaves accountability unnamed for review and autonomous-agent scenarios.
+posture: The policy is highly specific about code/text contributions (including QEPs and documentation) and automated review/agent tools -- requiring human-in-the-loop, disclosure, and contributor accountability, and banning unsupervised agentic action and fully automated review comments -- but is entirely silent on notetaker bots, environmental impact, infrastructure strain, and the project's own data being used for AI training, and does not name an accountability holder for AI-assisted review or autonomous-agent incidents.
 
-raised as rationale only (training_data), not a rule:
-  "Artificial intelligence systems raise many questions around copyright that have yet to be answered. ... Using AI tools to regenerate copyrighted material does not remove the copyright"
+raised as rationale only (moderation), not a rule:
+  "it takes a lot of maintainer time and energy to review those contributions! Sending the unreviewed output of an LLM to open source project maintainers *extracts* work from them"
 
 scope: only the files named on the command line, so 'not addressed' means not addressed in those files
 
 suggested improvements:
   notetaker_bots (no)
-    no mention of meeting/notetaker bots at all
+    no supervision level, scope, or accountability for meeting/notetaker bots
   moderation (no)
-    no rule on AI use for moderation actions
+    no supervision level or accountability for AI-assisted moderation actions
   review (partial)
-    no accountability holder named for AI-assisted review output
+    no accountability holder named for AI-assisted review tools
   autonomous (partial)
-    no accountability holder named for autonomous agent actions
+    no accountability holder named for autonomous agent use
   environmental (no)
-    no rule or mention of energy/water/carbon impact
+    no supervision level, scope, or accountability for environmental impact
   infrastructure (no)
-    no rule or mention of server load or hardware cost
+    no mention of infrastructure strain, server load, or hardware cost
   training_data (no)
-    no rule on data used to train AI tools themselves
+    no rule on the project's own content being used for AI training
 
-tokens: 11,242 in / 4,442 out over 2 API call(s) on claude-sonnet-5
-cost:   ~$0.0669 (upper bound; see PRICING in this file)
+tokens: 13,372 in / 7,799 out over 2 API call(s) on claude-sonnet-5
+cost:   ~$0.1047 (upper bound; see PRICING in this file)
 
 report:     reports\qgis-qgis-enhancement-proposals\2026-08-29.md
 data:       reports\qgis-qgis-enhancement-proposals\2026-08-29.json
@@ -295,145 +795,93 @@ transcript: reports\qgis-qgis-enhancement-proposals\2026-08-29.transcript.jsonl
 index:      reports\README.md
 
 ======================================================================
-[5/15] torvalds/linux :: Documentation/process/coding-assistants.rst
+[14/25] servo/book :: src/contributing/getting-started.md
 ======================================================================
-warning: file tree truncated by GitHub
-67498 files in repo; assessing 1 named file(s) only
-  turn 1: 4,371 in / 62 out  (total 4,371 / 62)
-  turn 2: 5,845 in / 4,902 out  (total 10,216 / 4,964)
+assessing 1 named file(s); repo not enumerated
+  turn 1: 5,424 in / 58 out  (total 5,424 / 58)
+  turn 2: 7,555 in / 6,566 out  (total 12,979 / 6,624)
 
 area                     addressed  where
-code_contributions       yes        Documentation/process/coding-assistants.rst:34
-                                    Documentation/process/coding-assistants.rst:35
+code_contributions       partial    src/contributing/getting-started.md:31
+                                    src/contributing/getting-started.md:31
+                                    src/contributing/getting-started.md:65
+                                    src/contributing/getting-started.md:81
+                                    src/contributing/getting-started.md:58
 notetaker_bots           no         -
-content                  no         Documentation/process/coding-assistants.rst:18
+content                  partial    src/contributing/getting-started.md:31
 moderation               no         -
-review                   partial    Documentation/process/coding-assistants.rst:93
-autonomous               yes        Documentation/process/coding-assistants.rst:93
-                                    Documentation/process/coding-assistants.rst:41
+review                   partial    src/contributing/getting-started.md:76
+autonomous               no         -
 environmental            no         -
 infrastructure           no         -
 training_data            no         -
 
-addressed:       Code contributions, Autonomous / agentic use
-partial:         Review
-not addressed:   Notetaker / meeting bots, Content, Moderation actions, Environmental Impact, Infrastructure strain, Data use for training
+addressed:       - none -
+partial:         Code contributions, Content, Review
+not addressed:   Notetaker / meeting bots, Moderation actions, Autonomous / agentic use, Environmental Impact, Infrastructure strain, Data use for training
 
-posture: The policy is fairly specific about AI-assisted code contributions and autonomous bug-finding/fixing (mandating human review, human sign-off/DCO, an Assisted-by attribution tag, and forbidding the AI from autonomously submitting anything), but it is silent on notetaker bots, general content generation, moderation, broader review practices, environmental impact, infrastructure strain, and training data use.
+leans (direction stated, no rule):
+  moderation               restrictive
+  environmental            restrictive
 
-unscoped statement: Documentation/process/coding-assistants.rst:11
-  "AI tools helping with Linux kernel development should follow the standard kernel development process"
-  leaves unnamed: Review (who or what may review using AI), Content (documentation, blogs, design assets), Moderation actions
+posture: The file sets a clear, well-reasoned ban on AI-generated code, PR text, issues and comments (with a narrow verify-before-filing carve-out for bug-hunting and a discouraged-but-permitted allowance for AI-assisted review), naming documentation explicitly within that ban; but it never assigns accountability for AI-assisted output (only enforcement by maintainers), and it is silent on notetaker bots, moderation actions, autonomous/agentic use, infrastructure strain, and the project's own data being used for training - the energy/water and copyright concerns it raises are rationale for the code ban, not rules governing those domains.
+
+raised as rationale only (moderation), not a rule:
+  "This is a drain on the (already limited) time and energy of our reviewers."
+
+raised as rationale only (environmental), not a rule:
+  "AI tools require an unreasonable amount of energy and water to build and operate, their models are built with heavily exploited workers in unacceptable working conditions"
+
+raised as rationale only (training_data), not a rule:
+  "Publicly available models are trained on copyrighted content, both accidentally and intentionally, and their output often includes that content verbatim."
 
 scope: only the files named on the command line, so 'not addressed' means not addressed in those files
 
 suggested improvements:
+  code_contributions (partial)
+    no accountability holder named (only enforcement by maintainers)
   notetaker_bots (no)
-    no supervision level or accountability holder for meeting/notetaker bots
-  content (no)
-    no supervision level or accountability holder stated here for docs/blogs/assets
+    no mention of meeting/notetaker bots at all
+  content (partial)
+    no accountability holder named; blogs/design assets unaddressed
   moderation (no)
-    no mention of AI use in moderation actions
+    no rule on AI use in moderation actions themselves
   review (partial)
-    no accountability holder named; no general rule on AI reviewing others' contributions
+    no accountability holder named; no disclosure requirement stated
+  autonomous (no)
+    no rule on autonomous/agentic action within the repository
   environmental (no)
-    no mention of energy, water, or carbon footprint concerns
+    no rule specifically governing environmental impact
   infrastructure (no)
-    no mention of infrastructure or server-load strain from AI use
+    no mention of server load or hardware/financing strain
   training_data (no)
-    no mention of data used to train AI tools/models
+    no statement on Servo's own data being used to train models
 
-tokens: 10,216 in / 4,964 out over 2 API call(s) on claude-sonnet-5
-cost:   ~$0.0701 (upper bound; see PRICING in this file)
+tokens: 12,979 in / 6,624 out over 2 API call(s) on claude-sonnet-5
+cost:   ~$0.0922 (upper bound; see PRICING in this file)
 
-report:     reports\torvalds-linux\2026-08-29.md
-data:       reports\torvalds-linux\2026-08-29.json
-transcript: reports\torvalds-linux\2026-08-29.transcript.jsonl
+report:     reports\servo-book\2026-08-29.md
+data:       reports\servo-book\2026-08-29.json
+transcript: reports\servo-book\2026-08-29.transcript.jsonl
 index:      reports\README.md
 
 ======================================================================
-[6/15] matplotlib/matplotlib :: doc/devel/contribute.rst
+[15/25] torvalds/linux :: Documentation/process/coding-assistants.rst
 ======================================================================
-4582 files in repo; assessing 1 named file(s) only
-  turn 1: 4,371 in / 58 out  (total 4,371 / 58)
-  turn 2: 10,534 in / 6,941 out  (total 14,905 / 6,999)
+assessing 1 named file(s); repo not enumerated
+  turn 1: 5,431 in / 72 out  (total 5,431 / 72)
+  turn 2: 6,915 in / 4,852 out  (total 12,346 / 4,924)
 
 area                     addressed  where
-code_contributions       yes        doc/devel/contribute.rst:192
-                                    doc/devel/contribute.rst:217
-                                    doc/devel/contribute.rst:289
+code_contributions       yes        Documentation/process/coding-assistants.rst:35
+                                    Documentation/process/coding-assistants.rst:41
+                                    Documentation/process/coding-assistants.rst:48
+                                    Documentation/process/coding-assistants.rst:34
 notetaker_bots           no         -
 content                  no         -
 moderation               no         -
 review                   no         -
-autonomous               partial    doc/devel/contribute.rst:214
-environmental            no         -
-infrastructure           no         -
-training_data            no         -
-
-addressed:       Code contributions
-partial:         Autonomous / agentic use
-not addressed:   Notetaker / meeting bots, Content, Moderation actions, Review, Environmental Impact, Infrastructure strain, Data use for training
-
-posture: Matplotlib's contributing guide specifically addresses generative AI only for code/issue/PR-style contributions -- requiring human responsibility and understanding, banning autonomous bots/agents from directly interacting with the project, and threatening closure/bans for AI-generated low-value or 'good first issue' PRs -- while leaving notetaker bots, documentation/content, moderation, review, environmental impact, infrastructure strain, and training-data use entirely unaddressed.
-
-unscoped statement: doc/devel/contribute.rst:191
-  "Generative AI tools are evolving rapidly and can be helpful. As with any tool, the resulting contribution is the responsibility of the human contributor."
-  leaves unnamed: Content (documentation, blogs, design assets), Moderation actions, Review (who or what may review using AI), Notetaker / meeting bots (recorded discussion, closed or small-group content)
-
-scope: only the files named on the command line, so 'not addressed' means not addressed in those files
-
-suggested improvements:
-  notetaker_bots (no)
-    no mention of AI notetaker/meeting-recording bots at all
-  content (no)
-    no supervision level or accountability holder for AI use in docs/content
-  moderation (no)
-    no statement on AI use in moderation actions
-  review (no)
-    no supervision level or accountability holder for AI-assisted review
-  autonomous (partial)
-    no accountability holder named for banned autonomous AI use
-  environmental (no)
-    no mention of environmental impact of AI tooling
-  infrastructure (no)
-    no mention of server load or hardware cost from AI
-  training_data (no)
-    no statement on use of project/user data for AI training
-
-tokens: 14,905 in / 6,999 out over 2 API call(s) on claude-sonnet-5
-cost:   ~$0.0998 (upper bound; see PRICING in this file)
-
-report:     reports\matplotlib-matplotlib\2026-08-29.md
-data:       reports\matplotlib-matplotlib\2026-08-29.json
-transcript: reports\matplotlib-matplotlib\2026-08-29.transcript.jsonl
-index:      reports\README.md
-
-======================================================================
-[7/15] jellyfin/jellyfin.org :: docs/general/contributing/llm-policies.md
-======================================================================
-451 files in repo; assessing 1 named file(s) only
-  turn 1: 4,377 in / 62 out  (total 4,377 / 62)
-  turn 2: 6,934 in / 7,313 out  (total 11,311 / 7,375)
-
-4 validation problem(s):
-  - code_contributions: quote not found in docs/general/contributing/llm-policies.md
-  - code_contributions: quote not found in docs/general/contributing/llm-policies.md
-  - code_contributions: quote not found in docs/general/contributing/llm-policies.md
-  - unscoped: quote not found in docs/general/contributing/llm-policies.md
-
-area                     addressed  where
-code_contributions       yes        docs/general/contributing/llm-policies.md:?
-                                    docs/general/contributing/llm-policies.md:26
-                                    docs/general/contributing/llm-policies.md:?
-                                    docs/general/contributing/llm-policies.md:?
-                                    docs/general/contributing/llm-policies.md:38
-notetaker_bots           no         -
-content                  no         -
-moderation               no         -
-review                   no         -
-autonomous               yes        docs/general/contributing/llm-policies.md:40
-                                    docs/general/contributing/llm-policies.md:26
+autonomous               yes        Documentation/process/coding-assistants.rst:93
 environmental            no         -
 infrastructure           no         -
 training_data            no         -
@@ -442,36 +890,167 @@ addressed:       Code contributions, Autonomous / agentic use
 partial:         - none -
 not addressed:   Notetaker / meeting bots, Content, Moderation actions, Review, Environmental Impact, Infrastructure strain, Data use for training
 
-posture: Jellyfin's LLM policy is highly specific about code contributions and agentic/"vibe" coding to official projects (human-in-the-loop review, contributor accountability, explicit ban on unsupervised commit dumping) and about direct community communications (LLM verbatim output banned except disclosed translations), but it is entirely silent on notetaker bots, project content/documentation, AI-assisted moderation or review tooling, environmental impact, infrastructure strain, and training-data use.
+leans (direction stated, no rule):
+  moderation               restrictive
 
-unscoped statement: docs/general/contributing/llm-policies.md:?
-  "LLM output is **expressly prohibited** for any direct communication, including the following: issues or comments, feature requests or comments, pull request bodies or comments, forum/chat/etc. posts or comments"
-  leaves unnamed: Content (documentation, blogs, design assets), Moderation actions
+posture: The document is a detailed, code-contribution-specific policy: it requires disclosure (Assisted-by tag), mandates human review and human DCO certification, assigns responsibility to the human submitter, and explicitly bans the AI assistant from autonomously submitting/sending anything. Every other domain (notetaker bots, content, moderation, review-by-AI, environmental impact, infrastructure strain, and training data use) is entirely unaddressed in this file.
 
-unscoped statement: docs/general/contributing/llm-policies.md:46
-  "Any primarily-LLM-developed projects should be **clearly marked as such**. It is up to users to decide if this is acceptable to them or not."
-  leaves unnamed: Code contributions (PRs, issues, comments), Content (documentation, blogs, design assets)
+raised as rationale only (moderation), not a rule:
+  "maintainers currently waste too much time analyzing unverified reports and untested fixes"
+
+unscoped statement: Documentation/process/coding-assistants.rst:11
+  "AI tools helping with Linux kernel development should follow the standard kernel development process"
+  leaves unnamed: Content (documentation, blogs, design assets), Review (who or what may review using AI), Moderation actions, Autonomous / agentic use
 
 scope: only the files named on the command line, so 'not addressed' means not addressed in those files
 
 suggested improvements:
   notetaker_bots (no)
-    no mention of meeting/notetaker bots; no supervision level or holder named
+    no supervision level; no accountability holder named
   content (no)
-    no rule for docs/blogs/design assets; no supervision level or holder named
+    no supervision level; no accountability holder; no scope for docs/content
   moderation (no)
-    no statement on AI use in moderation actions themselves
+    no supervision level or accountability holder for moderation actions
   review (no)
-    no statement on whether reviewers may use AI tools
+    no rule on AI performing or assisting review
   environmental (no)
-    no mention of energy/water/hardware footprint as rationale or rule
+    no mention of energy, water, or carbon impact
   infrastructure (no)
-    no mention of server/infrastructure strain as rationale or rule
+    no mention of server load or hardware cost
   training_data (no)
-    no mention of platform user data used for AI training
+    no statement on project data being used to train models
 
-tokens: 11,311 in / 7,375 out over 2 API call(s) on claude-sonnet-5
-cost:   ~$0.0964 (upper bound; see PRICING in this file)
+tokens: 12,346 in / 4,924 out over 2 API call(s) on claude-sonnet-5
+cost:   ~$0.0739 (upper bound; see PRICING in this file)
+
+report:     reports\torvalds-linux\2026-08-29.md
+data:       reports\torvalds-linux\2026-08-29.json
+transcript: reports\torvalds-linux\2026-08-29.transcript.jsonl
+index:      reports\README.md
+
+======================================================================
+[16/25] matplotlib/matplotlib :: doc/devel/contribute.rst
+======================================================================
+assessing 1 named file(s); repo not enumerated
+  turn 1: 5,431 in / 58 out  (total 5,431 / 58)
+  turn 2: 11,594 in / 10,348 out  (total 17,025 / 10,406)
+
+area                     addressed  where
+code_contributions       yes        doc/devel/contribute.rst:191
+                                    doc/devel/contribute.rst:217
+                                    doc/devel/contribute.rst:207
+notetaker_bots           no         -
+content                  no         -
+moderation               no         doc/devel/contribute.rst:223
+review                   no         -
+autonomous               yes        doc/devel/contribute.rst:214
+                                    doc/devel/contribute.rst:191
+environmental            no         -
+infrastructure           no         -
+training_data            no         -
+
+addressed:       Code contributions, Autonomous / agentic use
+partial:         - none -
+not addressed:   Notetaker / meeting bots, Content, Moderation actions, Review, Environmental Impact, Infrastructure strain, Data use for training
+
+leans (direction stated, no rule):
+  moderation               restrictive
+
+posture: The policy speaks specifically and restrictively about AI in code contributions and autonomous/agentic interaction (both tied to human contributor accountability and a ban on bots/agents acting directly on the repo), but is entirely silent on notetaker bots, documentation/content, AI-assisted review, moderation's own use of AI, environmental impact, infrastructure strain, and training data use of project content.
+
+raised as rationale only (moderation), not a rule:
+  "To ensure project health and preserve limited core developer capacity, we will flag and reject low-value contributions that we believe are AI generated. We may ban and/or report users to GitHub if they harm the project or its community through irresponsible use of AI."
+
+unscoped statement: doc/devel/contribute.rst:191
+  "As with any tool, the resulting contribution is the responsibility of the human contributor."
+  leaves unnamed: Content (documentation, blogs, design assets), Moderation actions, Notetaker / meeting bots (recorded discussion, closed or small-group content), Review (who or what may review using AI)
+
+unscoped statement: doc/devel/contribute.rst:223
+  "we will flag and reject low-value contributions that we believe are AI generated"
+  leaves unnamed: Moderation actions, Content (documentation, blogs, design assets)
+
+scope: only the files named on the command line, so 'not addressed' means not addressed in those files
+
+suggested improvements:
+  notetaker_bots (no)
+    no supervision level stated for meeting recording/notetaker bots; no accountability holder named
+  content (no)
+    no supervision level for AI use in documentation/blog/design contributions; no accountability holder named
+  moderation (no)
+    no stated rule on AI's role in moderation itself; no accountability holder named
+  review (no)
+    no supervision level for AI-assisted review; no accountability holder named
+  environmental (no)
+    no mention of environmental impact as rule or rationale
+  infrastructure (no)
+    no mention of server load or hardware/financing cost
+  training_data (no)
+    no statement on use of project data/content for model training
+
+tokens: 17,025 in / 10,406 out over 2 API call(s) on claude-sonnet-5
+cost:   ~$0.1381 (upper bound; see PRICING in this file)
+
+report:     reports\matplotlib-matplotlib\2026-08-29.md
+data:       reports\matplotlib-matplotlib\2026-08-29.json
+transcript: reports\matplotlib-matplotlib\2026-08-29.transcript.jsonl
+index:      reports\README.md
+
+======================================================================
+[17/25] jellyfin/jellyfin.org :: docs/general/contributing/llm-policies.md
+======================================================================
+assessing 1 named file(s); repo not enumerated
+  turn 1: 5,437 in / 62 out  (total 5,437 / 62)
+  turn 2: 7,994 in / 8,807 out  (total 13,431 / 8,869)
+
+area                     addressed  where
+code_contributions       yes        docs/general/contributing/llm-policies.md:26
+                                    docs/general/contributing/llm-policies.md:37
+                                    docs/general/contributing/llm-policies.md:40
+                                    docs/general/contributing/llm-policies.md:38
+notetaker_bots           no         -
+content                  no         -
+moderation               no         -
+review                   no         -
+autonomous               no         docs/general/contributing/llm-policies.md:40
+environmental            no         -
+infrastructure           no         -
+training_data            no         -
+
+addressed:       Code contributions
+partial:         - none -
+not addressed:   Notetaker / meeting bots, Content, Moderation actions, Review, Autonomous / agentic use, Environmental Impact, Infrastructure strain, Data use for training
+
+leans (direction stated, no rule):
+  autonomous               restrictive
+
+posture: Jellyfin's policy is highly specific and restrictive about AI use in code contributions and direct textual communication (issues/PRs/comments/forum posts), requiring human understanding, review, and disclosure/attribution in specific cases, but it is entirely silent on notetaker bots, the project's own content/documentation production, AI-assisted moderation, AI-assisted review, autonomous agentic action, environmental impact, infrastructure strain, and use of the project's own data for training.
+
+unscoped statement: docs/general/contributing/llm-policies.md:12
+  "These rules apply to all of our official projects and community spaces."
+  leaves unnamed: Notetaker / meeting bots (recorded discussion, closed or small-group content), Content (documentation, blogs, design assets), Moderation actions, Review (who or what may review using AI), Autonomous / agentic use, Environmental Impact (energy use, water use, hardware/carbon footprint), Infrastructure strain (server load, hardware cost/financing), Data use for training (platform user data)
+
+scope: only the files named on the command line, so 'not addressed' means not addressed in those files
+
+suggested improvements:
+  notetaker_bots (no)
+    no mention of meeting/notetaker bots or recorded discussion at all
+  content (no)
+    no rule on AI use for the project's own docs, blogs, or design assets
+  moderation (no)
+    no rule on AI use in taking moderation actions
+  review (no)
+    no statement on whether AI may be used to review contributions
+  autonomous (no)
+    no rule on agents acting on the repository independently
+  environmental (no)
+    no mention of energy, water, or carbon footprint concerns
+  infrastructure (no)
+    no mention of server load or hardware/financing strain
+  training_data (no)
+    no statement on use of project's own data/content for model training
+
+tokens: 13,431 in / 8,869 out over 2 API call(s) on claude-sonnet-5
+cost:   ~$0.1156 (upper bound; see PRICING in this file)
 
 report:     reports\jellyfin-jellyfin-org\2026-08-29.md
 data:       reports\jellyfin-jellyfin-org\2026-08-29.json
@@ -479,66 +1058,64 @@ transcript: reports\jellyfin-jellyfin-org\2026-08-29.transcript.jsonl
 index:      reports\README.md
 
 ======================================================================
-[8/15] pola-rs/polars :: AI_POLICY.md
+[18/25] pola-rs/polars :: AI_POLICY.md
 ======================================================================
-3350 files in repo; assessing 1 named file(s) only
-  turn 1: 4,365 in / 55 out  (total 4,365 / 55)
-  turn 2: 5,356 in / 5,179 out  (total 9,721 / 5,234)
-
-2 validation problem(s):
-  - code_contributions: quote not found in AI_POLICY.md
-  - review: quote not found in AI_POLICY.md
+assessing 1 named file(s); repo not enumerated
+  turn 1: 5,425 in / 55 out  (total 5,425 / 55)
+  turn 2: 6,416 in / 6,148 out  (total 11,841 / 6,203)
 
 area                     addressed  where
-code_contributions       yes        AI_POLICY.md:?
+code_contributions       partial    AI_POLICY.md:9
                                     AI_POLICY.md:12
+                                    AI_POLICY.md:17
                                     AI_POLICY.md:20
+                                    AI_POLICY.md:24
 notetaker_bots           no         -
 content                  partial    AI_POLICY.md:29
 moderation               no         -
-review                   partial    AI_POLICY.md:?
-autonomous               yes        AI_POLICY.md:5
+review                   no         -
+autonomous               partial    AI_POLICY.md:5
                                     AI_POLICY.md:7
 environmental            no         -
 infrastructure           no         -
 training_data            no         -
 
-addressed:       Code contributions, Autonomous / agentic use
-partial:         Content, Review
-not addressed:   Notetaker / meeting bots, Moderation actions, Environmental Impact, Infrastructure strain, Data use for training
+addressed:       - none -
+partial:         Code contributions, Content, Autonomous / agentic use
+not addressed:   Notetaker / meeting bots, Moderation actions, Review, Environmental Impact, Infrastructure strain, Data use for training
 
 leans (direction stated, no rule):
-  infrastructure           restrictive
+  moderation               restrictive
 
-posture: Polars' AI policy is highly specific and restrictive about code contributions (issues/PRs/comments) and about autonomous agent interaction and AI-driven review, requiring disclosure and human-in-the-loop verification and banning agents from directly acting on the repo; it partially bans AI-generated non-code content but never names an accountability holder there or for review, and it is entirely silent on notetaker bots, moderation, environmental impact, infrastructure strain, and training data.
+posture: Polars' AI policy is detailed and restrictive for code contributions and non-code content (banning autonomous agents, non-code AI media, and requiring disclosure plus human-in-the-loop verification for AI-assisted code/issues), but it never names an accountability holder for any domain and is entirely silent on notetaker bots, review-tool use by humans, moderation actions, environmental impact, infrastructure strain, and training data use.
 
-raised as rationale only (infrastructure), not a rule:
-  "We have experienced an increasing number of low-quality pull requests that consume significant amounts of human reviewers' time... which can have a net-negative effect on the maintenance of Polars."
-
-unscoped statement: AI_POLICY.md:24
-  "Issues and discussions can use AI assistance but must have a full human-in-the-loop."
-  leaves unnamed: Content (documentation, blogs, design assets), Moderation actions
+raised as rationale only (moderation), not a rule:
+  "we have experienced an increasing number of low-quality pull requests that consume significant amounts of human reviewers' time"
 
 scope: only the files named on the command line, so 'not addressed' means not addressed in those files
 
 suggested improvements:
+  code_contributions (partial)
+    no accountability holder named for AI-assisted contributions
   notetaker_bots (no)
     no mention of meeting/notetaker bots at all
   content (partial)
-    no accountability holder named for content ban
+    no accountability holder named for banned-content rule
   moderation (no)
-    no mention of AI use in moderation actions
-  review (partial)
-    no accountability holder named for who must review
+    no rule on AI use in moderation actions; no supervision level
+  review (no)
+    no rule on humans using AI tools to review contributions
+  autonomous (partial)
+    no accountability holder named for the autonomous-agent ban
   environmental (no)
     no mention of energy, water, or carbon impact
   infrastructure (no)
-    no rule on server load or hardware cost strain
+    no mention of server load or hardware cost
   training_data (no)
-    no mention of training data use or platform user data
+    no mention of project data being used to train models
 
-tokens: 9,721 in / 5,234 out over 2 API call(s) on claude-sonnet-5
-cost:   ~$0.0718 (upper bound; see PRICING in this file)
+tokens: 11,841 in / 6,203 out over 2 API call(s) on claude-sonnet-5
+cost:   ~$0.0857 (upper bound; see PRICING in this file)
 
 report:     reports\pola-rs-polars\2026-08-29.md
 data:       reports\pola-rs-polars\2026-08-29.json
@@ -546,87 +1123,29 @@ transcript: reports\pola-rs-polars\2026-08-29.transcript.jsonl
 index:      reports\README.md
 
 ======================================================================
-[9/15] rust-lang/rust-forge :: src/policies/llm-usage.md
+[19/25] rust-lang/rust-forge :: src/policies/llm-usage.md
 ======================================================================
-167 files in repo; assessing 1 named file(s) only
-  turn 1: 4,371 in / 58 out  (total 4,371 / 58)
-  turn 2: 11,659 in / 9,230 out  (total 16,030 / 9,288)
-
-1 validation problem(s):
-  - content: quote not found in src/policies/llm-usage.md
-
-area                     addressed  where
-code_contributions       yes        src/policies/llm-usage.md:102
-                                    src/policies/llm-usage.md:288
-                                    src/policies/llm-usage.md:196
-                                    src/policies/llm-usage.md:74
-notetaker_bots           no         -
-content                  partial    src/policies/llm-usage.md:81
-                                    src/policies/llm-usage.md:82
-                                    src/policies/llm-usage.md:?
-moderation               no         -
-review                   yes        src/policies/llm-usage.md:91
-                                    src/policies/llm-usage.md:130
-                                    src/policies/llm-usage.md:126
-autonomous               partial    src/policies/llm-usage.md:87
-                                    src/policies/llm-usage.md:89
-environmental            no         -
-infrastructure           no         -
-training_data            no         -
-
-addressed:       Code contributions, Review
-partial:         Content, Autonomous / agentic use
-not addressed:   Notetaker / meeting bots, Moderation actions, Environmental Impact, Infrastructure strain, Data use for training
-
-leans (direction stated, no rule):
-  autonomous               restrictive
-  environmental            restrictive
-
-posture: The policy is a detailed, conservative, disclosure-and-review-gated framework specifically for code contributions and PR/comment review on rust-lang/rust (banning LLM-originated public comments, docs, and diagnostics; requiring disclosure for trivial or experimental LLM-created code; restricting review bots to advisory, disclosed, blockable status), but it is silent on notetaker bots, moderation actions performed with AI, environmental/infrastructure costs (mentioned only as rationale), training-data use, and gives only narrow, indirect treatment of autonomous/agentic operation.
-
-raised as rationale only (environmental), not a rule:
-  "many others feel that its negative impact on society and the climate are severe enough that no use is acceptable."
-
-unscoped statement: src/policies/llm-usage.md:20
-  "It's fine to use LLMs to answer questions, analyze, distill, refine, check, suggest, review. But not to **create**."
-  leaves unnamed: Content (documentation, blogs, design assets), Moderation actions, Autonomous / agentic use
-
-unscoped statement: src/policies/llm-usage.md:54
-  "Making a decision that affects others based on LLM output requires disclosure ⚠️"
-  leaves unnamed: Code contributions (PRs, issues, comments), Content (documentation, blogs, design assets), Moderation actions, Review (who or what may review using AI), Autonomous / agentic use
-
-scope: only the files named on the command line, so 'not addressed' means not addressed in those files
-
-suggested improvements:
-  notetaker_bots (no)
-    no supervision level, scope, or accountability holder for meeting/notetaker bots
-  content (partial)
-    name accountability holder for docs; address blogs/design assets separately
-  moderation (no)
-    no rule on AI use in performing moderation actions
-  autonomous (partial)
-    define agentic/autonomous use beyond process-documentation example; name accountability holder
-  environmental (no)
-    no rule on energy/water/hardware footprint of LLM use
-  infrastructure (no)
-    no mention of infrastructure/server-load impact of LLM tooling
-  training_data (no)
-    no statement on use of project/user data for AI training
-
-tokens: 16,030 in / 9,288 out over 2 API call(s) on claude-sonnet-5
-cost:   ~$0.1249 (upper bound; see PRICING in this file)
-
-report:     reports\rust-lang-rust-forge\2026-08-29.md
-data:       reports\rust-lang-rust-forge\2026-08-29.json
-transcript: reports\rust-lang-rust-forge\2026-08-29.transcript.jsonl
-index:      reports\README.md
+assessing 1 named file(s); repo not enumerated
+  turn 1: 5,431 in / 68 out  (total 5,431 / 68)
+  turn 2: 12,729 in / 12,000 out  (total 18,160 / 12,068)
+Traceback (most recent call last):
+  File "C:\Users\emmai\GitHub\ai-oss-use-specificity\chaoss_agent.py", line 1544, in <module>
+    main()
+  File "C:\Users\emmai\GitHub\ai-oss-use-specificity\chaoss_agent.py", line 1459, in main
+    problems = validate(grid, repo, tree)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\emmai\GitHub\ai-oss-use-specificity\chaoss_agent.py", line 796, in validate
+    seen = {d["domain"] for d in grid["domains"]}
+                                 ~~~~^^^^^^^^^^^
+KeyError: 'domains'
+  FAILED (1) - continuing
 
 ======================================================================
-[10/15] fastapi/fastapi :: docs/en/docs/contributing.md
+[20/25] fastapi/fastapi :: docs/en/docs/contributing.md
 ======================================================================
-3139 files in repo; assessing 1 named file(s) only
-  turn 1: 4,370 in / 59 out  (total 4,370 / 59)
-  turn 2: 4,531 in / 1,650 out  (total 8,901 / 1,709)
+assessing 1 named file(s); repo not enumerated
+  turn 1: 5,430 in / 69 out  (total 5,430 / 69)
+  turn 2: 5,601 in / 2,053 out  (total 11,031 / 2,122)
 
 area                     addressed  where
 code_contributions       no         -
@@ -643,32 +1162,32 @@ addressed:       - none -
 partial:         - none -
 not addressed:   Code contributions, Notetaker / meeting bots, Content, Moderation actions, Review, Autonomous / agentic use, Environmental Impact, Infrastructure strain, Data use for training
 
-posture: The reviewed file (docs/en/docs/contributing.md) is a brief pointer to an external contribution guide and contains no mention of AI at all, so none of the nine domains are addressed within it.
+posture: The assessed file (docs/en/docs/contributing.md) is a minimal stub that points contributors to an external guide and contains no mention of AI, AI-assisted contributions, or any of the nine domains; no AI consent policy exists in this document.
 
 scope: only the files named on the command line, so 'not addressed' means not addressed in those files
 
 suggested improvements:
   code_contributions (no)
-    no supervision level; no accountability holder named
+    no AI-related supervision level, scope, or accountability holder stated
   notetaker_bots (no)
-    no mention of meeting/notetaker bots at all
+    no mention of meeting/notetaker bot policy at all
   content (no)
-    no supervision level or accountability holder for content/docs
+    no rule on AI-generated documentation or content
   moderation (no)
-    no supervision level or accountability holder for moderation
+    no rule on AI use in moderation actions
   review (no)
-    no rule on AI use in review; no accountability holder
+    no rule on AI-assisted review of contributions
   autonomous (no)
-    no supervision level or accountability holder for agentic use
+    no rule on autonomous/agentic contributions to the repo
   environmental (no)
     no statement on environmental impact of AI use
   infrastructure (no)
-    no statement on infrastructure strain from AI use
+    no statement on server load or hardware cost from AI
   training_data (no)
-    no statement on training data use or platform user data
+    no statement on use of project data for AI training
 
-tokens: 8,901 in / 1,709 out over 2 API call(s) on claude-sonnet-5
-cost:   ~$0.0349 (upper bound; see PRICING in this file)
+tokens: 11,031 in / 2,122 out over 2 API call(s) on claude-sonnet-5
+cost:   ~$0.0433 (upper bound; see PRICING in this file)
 
 report:     reports\fastapi-fastapi\2026-08-29.md
 data:       reports\fastapi-fastapi\2026-08-29.json
@@ -676,11 +1195,11 @@ transcript: reports\fastapi-fastapi\2026-08-29.transcript.jsonl
 index:      reports\README.md
 
 ======================================================================
-[11/15] qemu/qemu :: docs/devel/code-provenance.rst
+[21/25] qemu/qemu :: docs/devel/code-provenance.rst
 ======================================================================
-11300 files in repo; assessing 1 named file(s) only
-  turn 1: 4,369 in / 70 out  (total 4,369 / 70)
-  turn 2: 9,879 in / 4,631 out  (total 14,248 / 4,701)
+assessing 1 named file(s); repo not enumerated
+  turn 1: 5,429 in / 60 out  (total 5,429 / 60)
+  turn 2: 10,929 in / 4,190 out  (total 16,358 / 4,250)
 
 area                     addressed  where
 code_contributions       yes        docs/devel/code-provenance.rst:293
@@ -689,7 +1208,77 @@ notetaker_bots           no         -
 content                  no         -
 moderation               no         -
 review                   no         -
-autonomous               yes        docs/devel/code-provenance.rst:329
+autonomous               no         -
+environmental            no         -
+infrastructure           no         -
+training_data            no         -
+
+addressed:       Code contributions
+partial:         - none -
+not addressed:   Notetaker / meeting bots, Content, Moderation actions, Review, Autonomous / agentic use, Environmental Impact, Infrastructure strain, Data use for training
+
+leans (direction stated, no rule):
+  autonomous               restrictive
+
+posture: QEMU's policy is narrowly and clearly specified for one domain only: it bans AI-generated/AI-derived content in code patch submissions and assigns responsibility for such content to the submitting author via Signed-off-by, while explicitly carving out non-included AI uses (research, static analysis, debugging). It is entirely silent on notetaker bots, general content/documentation, moderation, AI-assisted review, autonomous agentic action, environmental impact, infrastructure strain, and the project's own data being used for AI training.
+
+unscoped statement: docs/devel/code-provenance.rst:293
+  "Current QEMU project policy is to DECLINE any contributions which are believed to include or derive from AI generated content."
+  leaves unnamed: Content (documentation, blogs, design assets), Notetaker / meeting bots (recorded discussion, closed or small-group content), Moderation actions, Review (who or what may review using AI)
+
+unscoped statement: docs/devel/code-provenance.rst:325
+  "The QEMU project thus requires that contributors refrain from using AI content generators on patches intended to be submitted to the project, and will decline any contribution if use of AI is either known or suspected."
+  leaves unnamed: Content (documentation, blogs, design assets)
+
+scope: only the files named on the command line, so 'not addressed' means not addressed in those files
+
+suggested improvements:
+  notetaker_bots (no)
+    no mention of meeting/notetaker bots at all
+  content (no)
+    no rule naming documentation, blogs, or design assets specifically
+  moderation (no)
+    no statement on AI use in moderation actions
+  review (no)
+    no rule on AI-assisted review of patches
+  autonomous (no)
+    no rule on autonomous/agentic use acting on the repository
+  environmental (no)
+    no mention of energy, water, or carbon footprint
+  infrastructure (no)
+    no mention of server load or hardware cost
+  training_data (no)
+    no statement on QEMU's own data being used to train models
+
+tokens: 16,358 in / 4,250 out over 2 API call(s) on claude-sonnet-5
+cost:   ~$0.0752 (upper bound; see PRICING in this file)
+
+report:     reports\qemu-qemu\2026-08-29.md
+data:       reports\qemu-qemu\2026-08-29.json
+transcript: reports\qemu-qemu\2026-08-29.transcript.jsonl
+index:      reports\README.md
+
+======================================================================
+[22/25] OSGeo/gdal :: doc/source/community/ai_tool_policy.rst
+======================================================================
+assessing 1 named file(s); repo not enumerated
+  turn 1: 5,435 in / 64 out  (total 5,435 / 64)
+  turn 2: 7,052 in / 7,685 out  (total 12,487 / 7,749)
+
+1 validation problem(s):
+  - code_contributions: quote not found in doc/source/community/ai_tool_policy.rst
+
+area                     addressed  where
+code_contributions       yes        doc/source/community/ai_tool_policy.rst:44
+                                    doc/source/community/ai_tool_policy.rst:?
+                                    doc/source/community/ai_tool_policy.rst:52
+                                    doc/source/community/ai_tool_policy.rst:59
+                                    doc/source/community/ai_tool_policy.rst:62
+notetaker_bots           no         -
+content                  no         -
+moderation               no         -
+review                   no         -
+autonomous               yes        doc/source/community/ai_tool_policy.rst:56
 environmental            no         -
 infrastructure           no         -
 training_data            no         -
@@ -699,114 +1288,40 @@ partial:         - none -
 not addressed:   Notetaker / meeting bots, Content, Moderation actions, Review, Environmental Impact, Infrastructure strain, Data use for training
 
 leans (direction stated, no rule):
-  training_data            restrictive
+  moderation               restrictive
 
-posture: The document, QEMU's code-provenance policy, imposes a firm, specifically-scoped ban on AI-generated or AI-assisted content (including agentic tools) in patch contributions and pins accountability to the submitting contributor via Signed-off-by, but it is silent on every other domain (notetaker bots, general content, moderation, AI-assisted review, environmental impact, infrastructure strain, and training-data use), with copyright/licensing risk of training data cited only as rationale for the contribution ban rather than as a rule in its own right.
+posture: GDAL's policy is detailed and restrictive specifically for code/ticket/commit contributions (human-in-the-loop, disclosure required, vibe-coding and agentic submission banned, contributor held accountable) and separately bans autonomous agentic submission, but it is silent on notetaker bots, documentation/content, AI-assisted review, AI-assisted moderation, environmental impact, infrastructure strain, and use of the project's own data for training - maintenance burden and LLM cost are cited only as rationale, not governed by any stated rule.
 
-raised as rationale only (training_data), not a rule:
-  "Where the training material is known, it is common for it to include large volumes of material under restrictive licensing/copyright terms."
-
-scope: only the files named on the command line, so 'not addressed' means not addressed in those files
-
-suggested improvements:
-  notetaker_bots (no)
-    no supervision level or accountability holder for meeting/notetaker bots
-  content (no)
-    no rule naming documentation, blogs, or design assets specifically
-  moderation (no)
-    no supervision level or accountability holder for AI in moderation
-  review (no)
-    no rule on whether reviewers may use AI to review patches
-  environmental (no)
-    no rule or rationale on energy/water/carbon impact of AI
-  infrastructure (no)
-    no rule or rationale on server/infrastructure strain from AI
-  training_data (no)
-    no rule governing use of platform/user data for training
-
-tokens: 14,248 in / 4,701 out over 2 API call(s) on claude-sonnet-5
-cost:   ~$0.0755 (upper bound; see PRICING in this file)
-
-report:     reports\qemu-qemu\2026-08-29.md
-data:       reports\qemu-qemu\2026-08-29.json
-transcript: reports\qemu-qemu\2026-08-29.transcript.jsonl
-index:      reports\README.md
-
-======================================================================
-[12/15] OSGeo/gdal :: doc/source/community/ai_tool_policy.rst
-======================================================================
-12285 files in repo; assessing 1 named file(s) only
-  turn 1: 4,375 in / 64 out  (total 4,375 / 64)
-  turn 2: 5,992 in / 6,508 out  (total 10,367 / 6,572)
-
-2 validation problem(s):
-  - code_contributions: quote not found in doc/source/community/ai_tool_policy.rst
-  - code_contributions: quote not found in doc/source/community/ai_tool_policy.rst
-
-area                     addressed  where
-code_contributions       yes        doc/source/community/ai_tool_policy.rst:41
-                                    doc/source/community/ai_tool_policy.rst:?
-                                    doc/source/community/ai_tool_policy.rst:62
-                                    doc/source/community/ai_tool_policy.rst:?
-notetaker_bots           no         -
-content                  no         -
-moderation               no         -
-review                   no         -
-autonomous               partial    doc/source/community/ai_tool_policy.rst:56
-environmental            no         -
-infrastructure           no         -
-training_data            no         -
-
-addressed:       Code contributions
-partial:         Autonomous / agentic use
-not addressed:   Notetaker / meeting bots, Content, Moderation actions, Review, Environmental Impact, Infrastructure strain, Data use for training
-
-leans (direction stated, no rule):
-  content                  restrictive
-  review                   restrictive
-  infrastructure           restrictive
-  training_data            restrictive
-
-posture: GDAL's policy is highly specific about code/ticket/commit-message contributions - requiring disclosure, banning vibe-coding and agentic submission, and naming the human author as accountable - but it is silent on notetaker bots, content/documentation, moderation, AI-assisted review, environmental impact, infrastructure strain, and training-data use, several of which appear only as unaddressed rationale or passing mentions.
-
-raised as rationale only (content), not a rule:
-  "It is also design, review, coordinated refactoring, deprecation scheduling, coordinated communication, distribution, and historical outlook."
-
-raised as rationale only (review), not a rule:
-  "It is also design, review, coordinated refactoring, deprecation scheduling, coordinated communication, distribution, and historical outlook."
+raised as rationale only (moderation), not a rule:
+  "Indiscriminate usage of LLMs in open source projects *consume* maintenance, and the GDAL LLM tool policy attempts to conserve that resource."
 
 raised as rationale only (infrastructure), not a rule:
   "The GDAL sponsorship_program is one way your organization can help buffer the cost and disruption of LLMs in keystone projects such as GDAL."
 
-raised as rationale only (training_data), not a rule:
-  "legal systems across the world (including US and EU) have not definitely determined whether LLM outputs are derived works of training data or if LLM-written code can even be copyrighted by a human."
-
-unscoped statement: doc/source/community/ai_tool_policy.rst:66
-  "The typical high verbosity of LLM code and text is actively discouraged. More code is more code to maintain."
-  leaves unnamed: Content (documentation, blogs, design assets)
+unscoped statement: doc/source/community/ai_tool_policy.rst:41
+  "Contributors can make **limited use** of LLMs for contributions in GDAL, subject to details mentioned below"
+  leaves unnamed: Code contributions (PRs, issues, comments), Content (documentation, blogs, design assets), Review (who or what may review using AI), Moderation actions
 
 scope: only the files named on the command line, so 'not addressed' means not addressed in those files
 
 suggested improvements:
   notetaker_bots (no)
-    no mention of meeting/notetaker bots at all
+    no supervision level; no accountability holder; no scope stated
   content (no)
-    no rule for documentation/design assets; only code/tickets/commits named
+    no supervision level for docs/blogs/design assets; no accountability holder
   moderation (no)
-    no statement on AI use in moderation actions
+    no rule on AI-assisted moderation; no supervision level or accountability holder
   review (no)
-    no rule on whether/how AI may be used to review contributions
-  autonomous (partial)
-    no accountability holder named for agentic-submission ban
+    no rule on AI-assisted review; no supervision level or accountability holder
   environmental (no)
-    no mention of energy, water, or carbon costs of AI use
+    no mention of energy/water/carbon impact; no rule stated
   infrastructure (no)
-    no rule on server/hardware strain from AI use; only a funding appeal
+    no rule on server load or hardware financing; no supervision level stated
   training_data (no)
-    no rule on use of GDAL data/content for AI training
+    no statement on GDAL's own content/data being used to train models
 
-tokens: 10,367 in / 6,572 out over 2 API call(s) on claude-sonnet-5
-cost:   ~$0.0865 (upper bound; see PRICING in this file)
+tokens: 12,487 in / 7,749 out over 2 API call(s) on claude-sonnet-5
+cost:   ~$0.1025 (upper bound; see PRICING in this file)
 
 report:     reports\osgeo-gdal\2026-08-29.md
 data:       reports\osgeo-gdal\2026-08-29.json
@@ -814,11 +1329,11 @@ transcript: reports\osgeo-gdal\2026-08-29.transcript.jsonl
 index:      reports\README.md
 
 ======================================================================
-[13/15] jazzband/pip-tools :: docs/contributing.md
+[23/25] jazzband/pip-tools :: docs/contributing.md
 ======================================================================
-149 files in repo; assessing 1 named file(s) only
-  turn 1: 4,366 in / 54 out  (total 4,366 / 54)
-  turn 2: 4,523 in / 1,796 out  (total 8,889 / 1,850)
+assessing 1 named file(s); repo not enumerated
+  turn 1: 5,426 in / 64 out  (total 5,426 / 64)
+  turn 2: 5,593 in / 1,771 out  (total 11,019 / 1,835)
 
 area                     addressed  where
 code_contributions       no         -
@@ -835,7 +1350,7 @@ addressed:       - none -
 partial:         - none -
 not addressed:   Code contributions, Notetaker / meeting bots, Content, Moderation actions, Review, Autonomous / agentic use, Environmental Impact, Infrastructure strain, Data use for training
 
-posture: The single assessed file, docs/contributing.md, contains no substantive text of its own - it is purely a Sphinx include stub pulling in CONTRIBUTING.md and changelog.d/README.md - so it addresses none of the nine AI consent domains; any actual policy content, if it exists, resides in the included files which are out of scope for this assessment.
+posture: The examined file (docs/contributing.md) contains no substantive text of its own - only Sphinx include directives pulling content from CONTRIBUTING.md and changelog.d/README.md - and therefore makes no statement whatsoever about AI use in any of the nine domains within the scope of this assessment.
 
 scope: only the files named on the command line, so 'not addressed' means not addressed in those files
 
@@ -843,24 +1358,24 @@ suggested improvements:
   code_contributions (no)
     no supervision level; no accountability holder named
   notetaker_bots (no)
-    no supervision level; no accountability holder named
+    no mention of meeting/notetaker bot policy at all
   content (no)
-    no supervision level; no accountability holder named
+    no mention of AI use in documentation or content
   moderation (no)
-    no supervision level; no accountability holder named
+    no mention of AI-assisted moderation actions
   review (no)
-    no supervision level; no accountability holder named
+    no mention of AI-assisted review
   autonomous (no)
-    no supervision level; no accountability holder named
+    no mention of autonomous or agentic AI use
   environmental (no)
-    no supervision level; no accountability holder named
+    no mention of environmental impact of AI use
   infrastructure (no)
-    no supervision level; no accountability holder named
+    no mention of infrastructure strain from AI tooling
   training_data (no)
-    no supervision level; no accountability holder named
+    no mention of project data being used for AI training
 
-tokens: 8,889 in / 1,850 out over 2 API call(s) on claude-sonnet-5
-cost:   ~$0.0363 (upper bound; see PRICING in this file)
+tokens: 11,019 in / 1,835 out over 2 API call(s) on claude-sonnet-5
+cost:   ~$0.0404 (upper bound; see PRICING in this file)
 
 report:     reports\jazzband-pip-tools\2026-08-29.md
 data:       reports\jazzband-pip-tools\2026-08-29.json
@@ -868,26 +1383,80 @@ transcript: reports\jazzband-pip-tools\2026-08-29.transcript.jsonl
 index:      reports\README.md
 
 ======================================================================
-[14/15] llvm/llvm-project :: llvm/docs/AIToolPolicy.md
+[24/25] llvm/llvm-project :: llvm/docs/AIToolPolicy.md
 ======================================================================
-warning: file tree truncated by GitHub
-not in llvm/llvm-project on branch main: llvm/docs/AIToolPolicy.md
-  FAILED (1) - continuing
+assessing 1 named file(s); repo not enumerated
+  turn 1: 5,434 in / 73 out  (total 5,434 / 73)
+  turn 2: 8,948 in / 10,105 out  (total 14,382 / 10,178)
 
-======================================================================
-[15/15] python-attrs/attrs :: .github/CONTRIBUTING.md
-======================================================================
-140 files in repo; assessing 1 named file(s) only
-  turn 1: 4,371 in / 60 out  (total 4,371 / 60)
-  turn 2: 8,694 in / 5,884 out  (total 13,065 / 5,944)
-
-2 validation problem(s):
-  - code_contributions: quote not found in .github/CONTRIBUTING.md
-  - unscoped: quote not found in .github/CONTRIBUTING.md
+1 validation problem(s):
+  - autonomous: quote not found in llvm/docs/AIToolPolicy.md
 
 area                     addressed  where
-code_contributions       partial    .github/CONTRIBUTING.md:?
-                                    .github/CONTRIBUTING.md:23
+code_contributions       yes        llvm/docs/AIToolPolicy.md:6
+                                    llvm/docs/AIToolPolicy.md:8
+                                    llvm/docs/AIToolPolicy.md:21
+                                    llvm/docs/AIToolPolicy.md:56
+notetaker_bots           no         -
+content                  partial    llvm/docs/AIToolPolicy.md:52
+moderation               no         -
+review                   partial    llvm/docs/AIToolPolicy.md:49
+                                    llvm/docs/AIToolPolicy.md:50
+autonomous               partial    llvm/docs/AIToolPolicy.md:?
+environmental            no         -
+infrastructure           no         -
+training_data            no         -
+
+addressed:       Code contributions
+partial:         Content, Review, Autonomous / agentic use
+not addressed:   Notetaker / meeting bots, Moderation actions, Environmental Impact, Infrastructure strain, Data use for training
+
+leans (direction stated, no rule):
+  moderation               restrictive
+
+posture: LLVM's policy is highly specific about code/text contributions (PRs, RFCs, issues, comments), requiring human-in-the-loop review, disclosure of substantial tool use, and banning both AI use on 'good first issue' items and unsupervised agentic action or fully-automated review commenting, with the contributor named as accountable author; but it leaves notetaker bots, environmental impact, infrastructure strain, and the project's own training-data use entirely unaddressed, and only partially covers content (via a single documentation example), review and autonomous use (missing accountability holders), and moderation (only reachable through maintainer-time rationale, not a stated AI rule).
+
+raised as rationale only (moderation), not a rule:
+  "it takes a lot of maintainer time and energy to review those contributions"
+
+scope: only the files named on the command line, so 'not addressed' means not addressed in those files
+
+suggested improvements:
+  notetaker_bots (no)
+    no supervision level, scope, or accountability holder for meeting/notetaker bots
+  content (partial)
+    no dedicated rule for blogs/design assets outside PR-based docs example
+  moderation (no)
+    no supervision level or accountability holder for AI use in moderation actions
+  review (partial)
+    no accountability holder named for AI-assisted review
+  autonomous (partial)
+    no accountability holder named for banned autonomous agent use
+  environmental (no)
+    no mention of energy, water, or carbon impact of AI tool use
+  infrastructure (no)
+    no mention of server load or hardware/financing cost from AI tool use
+  training_data (no)
+    no statement on LLVM's own content/data being used to train models
+
+tokens: 14,382 in / 10,178 out over 2 API call(s) on claude-sonnet-5
+cost:   ~$0.1305 (upper bound; see PRICING in this file)
+
+report:     reports\llvm-llvm-project\2026-08-29.md
+data:       reports\llvm-llvm-project\2026-08-29.json
+transcript: reports\llvm-llvm-project\2026-08-29.transcript.jsonl
+index:      reports\README.md
+
+======================================================================
+[25/25] python-attrs/attrs :: .github/CONTRIBUTING.md
+======================================================================
+assessing 1 named file(s); repo not enumerated
+  turn 1: 5,431 in / 60 out  (total 5,431 / 60)
+  turn 2: 9,754 in / 4,812 out  (total 15,185 / 4,872)
+
+area                     addressed  where
+code_contributions       partial    .github/CONTRIBUTING.md:23
+                                    .github/CONTRIBUTING.md:7
 notetaker_bots           no         -
 content                  no         -
 moderation               no         -
@@ -901,42 +1470,36 @@ addressed:       - none -
 partial:         Code contributions
 not addressed:   Notetaker / meeting bots, Content, Moderation actions, Review, Autonomous / agentic use, Environmental Impact, Infrastructure strain, Data use for training
 
-leans (direction stated, no rule):
-  environmental            restrictive
+posture: CONTRIBUTING.md itself sets almost no AI-specific rules; it briefly touches code contributions (requiring contributors to fully understand any code they submit and pointing to an external, out-of-scope AI/LLM policy for the substance), while notetaker bots, content, moderation, review, autonomous use, environmental impact, infrastructure strain, and training data are entirely unaddressed within this file.
 
-posture: CONTRIBUTING.md addresses AI use only in passing for code contributions - requiring contributors to fully understand any code they submit and deferring detailed rules to an external, out-of-scope AI policy document - while leaving notetaker bots, content, moderation, review, autonomous use, environmental impact, infrastructure strain, and training-data use completely unaddressed within this file.
-
-raised as rationale only (environmental), not a rule:
-  "Don't waste energy / tokens on something that we do not want."
-
-unscoped statement: .github/CONTRIBUTING.md:?
-  "If you use LLM / "AI" tools for your contributions, please read and follow our _Generative AI / LLM Policy_"
+unscoped statement: .github/CONTRIBUTING.md:7
+  "If you use LLM / "AI" tools for your contributions, please read and follow our [_Generative AI / LLM Policy_][llm]."
   leaves unnamed: Content (documentation, blogs, design assets), Review (who or what may review using AI), Moderation actions, Autonomous / agentic use
 
 scope: only the files named on the command line, so 'not addressed' means not addressed in those files
 
 suggested improvements:
   code_contributions (partial)
-    state accountability holder for AI-assisted code
+    no accountability holder named for AI-assisted code
   notetaker_bots (no)
-    no mention of meeting/notetaker bot use at all
+    no mention of meeting/notetaker bots at all
   content (no)
-    no supervision level or accountability for AI-generated docs/content
+    no rule for AI use in docs/content authoring
   moderation (no)
-    no mention of AI use in moderation actions
+    no rule on AI use in moderation actions
   review (no)
-    no statement on AI use in reviewing PRs
+    no rule on AI-assisted review of contributions
   autonomous (no)
-    no mention of autonomous/agentic AI activity
+    no rule on autonomous/agentic contributions
   environmental (no)
-    no rule on energy/resource use of AI tooling
+    no statement on energy/water/carbon footprint
   infrastructure (no)
-    no mention of infrastructure strain from AI activity
+    no statement on server load or hardware cost
   training_data (no)
-    no statement on use of project/user data for AI training
+    no statement on project data being used to train models
 
-tokens: 13,065 in / 5,944 out over 2 API call(s) on claude-sonnet-5
-cost:   ~$0.0856 (upper bound; see PRICING in this file)
+tokens: 15,185 in / 4,872 out over 2 API call(s) on claude-sonnet-5
+cost:   ~$0.0791 (upper bound; see PRICING in this file)
 
 report:     reports\python-attrs-attrs\2026-08-29.md
 data:       reports\python-attrs-attrs\2026-08-29.json
@@ -944,5 +1507,5 @@ transcript: reports\python-attrs-attrs\2026-08-29.transcript.jsonl
 index:      reports\README.md
 
 ======================================================================
-done: 13/15 in 95.6 min
-failed: yt-dlp/yt-dlp, llvm/llvm-project
+done: 24/25 in 27.9 min
+failed: rust-lang/rust-forge

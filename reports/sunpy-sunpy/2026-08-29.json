@@ -10,8 +10,8 @@
     "note": "Scoring confined to the files named on the command line; 'no' means not addressed in those files."
   },
   "usage": {
-    "input_tokens": 11584,
-    "output_tokens": 3791,
+    "input_tokens": 13714,
+    "output_tokens": 3102,
     "cache_read_input_tokens": 0,
     "cache_creation_input_tokens": 0,
     "api_calls": 2,
@@ -19,7 +19,7 @@
       "README.rst"
     ],
     "model": "claude-sonnet-5",
-    "estimated_cost_usd": 0.061078
+    "estimated_cost_usd": 0.058448
   },
   "consent_policy_specificity": {
     "domains": [
@@ -27,9 +27,10 @@
         "domain": "code_contributions",
         "supervision_level": "human_in_the_loop",
         "scope_or_volume_limits": "not_specified",
-        "accountability_holder": "the contributor using the AI tool (\"you\" must fully understand and explain the changes)",
+        "accountability_holder": "not_specified",
+        "accountability_wording": "",
         "proportionality": "not_specified",
-        "addressed": "yes",
+        "addressed": "partial",
         "evidence": [
           {
             "path": "README.rst",
@@ -39,29 +40,31 @@
         ],
         "rationale_only_mention": "",
         "lean": "none",
-        "suggested_improvement": "",
-        "reasoning": "The README explicitly names 'developing code ... changes' and requires the contributor to fully understand and be able to explain any AI-assisted change before submitting it, which functions as a human-in-the-loop supervision requirement with the contributor as the accountable party. No scope/volume limit or proportionality threshold is given."
+        "suggested_improvement": "no explicit accountability holder; no scope/volume limit stated",
+        "reasoning": "The README names code contributions and requires the contributor to fully understand and be able to explain AI-assisted changes, which functions as a human-in-the-loop supervision requirement. However this is phrased as an obligation on 'you' rather than a statement of who bears responsibility for the submitted output, so accountability_holder is not explicitly assigned, making this only partial coverage."
       },
       {
         "domain": "notetaker_bots",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
-        "proportionality": "not_applicable",
+        "accountability_wording": "",
+        "proportionality": "not_specified",
         "addressed": "no",
         "evidence": [],
         "rationale_only_mention": "",
         "lean": "none",
-        "suggested_improvement": "no supervision level; no accountability holder; no scope named",
-        "reasoning": "README contains no mention of meeting recording, transcription, or notetaker bots of any kind."
+        "suggested_improvement": "no mention of meeting/notetaker bot use at all",
+        "reasoning": "The README contains no reference to meetings, recordings, or notetaker bots."
       },
       {
         "domain": "content",
         "supervision_level": "human_in_the_loop",
         "scope_or_volume_limits": "not_specified",
-        "accountability_holder": "the contributor using the AI tool (\"you\" must fully understand and explain the changes)",
+        "accountability_holder": "not_specified",
+        "accountability_wording": "",
         "proportionality": "not_specified",
-        "addressed": "yes",
+        "addressed": "partial",
         "evidence": [
           {
             "path": "README.rst",
@@ -71,103 +74,102 @@
         ],
         "rationale_only_mention": "",
         "lean": "none",
-        "suggested_improvement": "",
-        "reasoning": "The same generative-AI clause explicitly names 'documentation changes' (a content domain) and applies the same understand-and-explain requirement, naming the contributor as accountable. No scope/volume limit or proportionality threshold stated, but the domain and both required attributes are present."
+        "suggested_improvement": "no explicit accountability holder; no scope/volume limit stated",
+        "reasoning": "Documentation changes are explicitly named alongside code, with the same human-in-the-loop understanding requirement, but again no accountability holder is stated, only an obligation on the person using the tool."
       },
       {
         "domain": "moderation",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
-        "proportionality": "not_applicable",
+        "accountability_wording": "",
+        "proportionality": "not_specified",
         "addressed": "no",
         "evidence": [],
         "rationale_only_mention": "",
         "lean": "none",
-        "suggested_improvement": "no supervision level; no accountability holder named",
-        "reasoning": "README does not mention AI use in moderation actions; it only points to a Code of Conduct link with no AI-specific content."
+        "suggested_improvement": "no mention of AI use in moderation actions",
+        "reasoning": "No text in the README addresses moderation actions or AI's role in them."
       },
       {
         "domain": "review",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
-        "proportionality": "not_applicable",
+        "accountability_wording": "",
+        "proportionality": "not_specified",
         "addressed": "no",
         "evidence": [],
         "rationale_only_mention": "",
         "lean": "none",
-        "suggested_improvement": "no supervision level; no accountability holder for AI-assisted review",
-        "reasoning": "The generative AI clause addresses the person producing code/documentation, not who or what may review it using AI. Review is not named."
+        "suggested_improvement": "no statement on AI use in reviewing contributions",
+        "reasoning": "The README's AI section addresses producing code/documentation via AI, not reviewing contributions with AI; no mention of who or what may review using AI."
       },
       {
         "domain": "autonomous",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
-        "proportionality": "not_applicable",
+        "accountability_wording": "",
+        "proportionality": "not_specified",
         "addressed": "no",
         "evidence": [],
         "rationale_only_mention": "",
         "lean": "none",
-        "suggested_improvement": "no supervision level or accountability holder for agentic/autonomous use",
-        "reasoning": "README does not mention autonomous or agentic AI operation distinct from a human using a tool as an aid."
+        "suggested_improvement": "no statement on autonomous/agentic AI acting on the repo",
+        "reasoning": "No mention of agents or autonomous AI action in the repository is present in this file."
       },
       {
         "domain": "environmental",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
-        "proportionality": "not_applicable",
+        "accountability_wording": "",
+        "proportionality": "not_specified",
         "addressed": "no",
         "evidence": [],
         "rationale_only_mention": "",
         "lean": "none",
-        "suggested_improvement": "no rule or rationale on energy/water/carbon impact",
-        "reasoning": "No mention of environmental impact, energy, water use, or carbon footprint anywhere in the README."
+        "suggested_improvement": "no rule or rationale on energy/water/carbon impact of AI",
+        "reasoning": "The README does not raise environmental concerns about AI tooling anywhere."
       },
       {
         "domain": "infrastructure",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
-        "proportionality": "not_applicable",
+        "accountability_wording": "",
+        "proportionality": "not_specified",
         "addressed": "no",
         "evidence": [],
         "rationale_only_mention": "",
         "lean": "none",
-        "suggested_improvement": "no rule or rationale on infrastructure/server load",
-        "reasoning": "No mention of infrastructure strain, server load, or hardware cost in relation to AI use."
+        "suggested_improvement": "no rule or rationale on server load/hardware cost from AI",
+        "reasoning": "No text addresses infrastructure strain from AI use."
       },
       {
         "domain": "training_data",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
-        "proportionality": "not_applicable",
+        "accountability_wording": "",
+        "proportionality": "not_specified",
         "addressed": "no",
         "evidence": [],
         "rationale_only_mention": "",
         "lean": "none",
-        "suggested_improvement": "no rule or rationale on training-data use/consent",
-        "reasoning": "The README does not discuss data used to train AI models or consent around platform user data for training purposes."
+        "suggested_improvement": "no statement on project data being used to train models",
+        "reasoning": "The README says nothing about the project's own content, issues, or user data being used to train AI models."
       }
     ],
     "unscoped_statements": [],
-    "overall_posture": "The README gives one narrowly-scoped rule requiring human understanding and accountability for generative-AI-assisted code and documentation contributions, and is silent on every other domain (notetaker bots, moderation, review, autonomous use, environmental impact, infrastructure strain, and training data)."
+    "overall_posture": "The README contains a single brief generative-AI clause requiring contributors to fully understand and be able to explain AI-assisted code or documentation changes, but it stops there: no accountability holder is named, and none of the other seven domains (notetaker bots, moderation, review, autonomous use, environmental impact, infrastructure strain, or training data) are mentioned at all."
   },
   "validation_problems": [],
   "use_composition_partial": {
     "agent_instruction_files": [],
-    "workflow_count": 9,
-    "workflows_with_ai_or_bot_signals": [
-      {
-        "path": ".github/workflows/stale_bot.yml",
-        "signals": [
-          "bot"
-        ]
-      }
-    ],
+    "workflow_count": 0,
+    "workflows_with_ai_or_bot_signals": [],
     "awaiting_implementation": {
       "specific_tools_in_use": "Awaiting implementation: named-product detection beyond known file signatures",
       "model_type": "Awaiting implementation: underlying model/family",

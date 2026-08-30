@@ -10,8 +10,8 @@
     "note": "Scoring confined to the files named on the command line; 'no' means not addressed in those files."
   },
   "usage": {
-    "input_tokens": 16030,
-    "output_tokens": 9288,
+    "input_tokens": 18150,
+    "output_tokens": 9682,
     "cache_read_input_tokens": 0,
     "cache_creation_input_tokens": 0,
     "api_calls": 2,
@@ -19,18 +19,24 @@
       "src/policies/llm-usage.md"
     ],
     "model": "claude-sonnet-5",
-    "estimated_cost_usd": 0.12494
+    "estimated_cost_usd": 0.13312
   },
   "consent_policy_specificity": {
     "domains": [
       {
         "domain": "code_contributions",
         "supervision_level": "disclosure_required",
-        "scope_or_volume_limits": "Circuit breaker: if >50% of PRs merged in a rolling 6-week window are LLM-created, new LLM-created PR merges are disallowed until back below 50%, with a 10-day minimum cooldown. Policy scope limited to rust-lang/rust and teams that ratified it (compiler, libs, types, rustdoc, bootstrap and subteams).",
+        "scope_or_volume_limits": "Circuit breaker: if more than half of PRs merged in a 6-week window are LLM-created, new LLM-created PRs are disallowed until back below 50%, with a 10-day minimum cooldown.",
         "accountability_holder": "contributor",
-        "proportionality": "50% of merged PRs in a 6-week window triggers a circuit-breaker cooldown",
+        "accountability_wording": "Your contributions are your responsibility; you cannot place any blame on an LLM.",
+        "proportionality": "not_specified",
         "addressed": "yes",
         "evidence": [
+          {
+            "path": "src/policies/llm-usage.md",
+            "quote": "Comments that are originally created by an LLM posted from a personal user account.",
+            "line": 74
+          },
           {
             "path": "src/policies/llm-usage.md",
             "quote": "All uses under \"\u26a0\ufe0f Allowed with caveats\" **must** disclose that an LLM was used.",
@@ -43,40 +49,37 @@
           },
           {
             "path": "src/policies/llm-usage.md",
-            "quote": "If more than half of PRs merged in a 6-week window are LLM-created, we disallow merging new LLM-created PRs until we go back below 50%, with a minimum cooldown of 10 days.",
+            "quote": "If more than half of PRs merged in a 6-week window are LLM-created, we disallow merging new LLM-created PRs until we go back below 50%",
             "line": 196
-          },
-          {
-            "path": "src/policies/llm-usage.md",
-            "quote": "Comments that are originally created by an LLM posted from a personal user account.",
-            "line": 74
           }
         ],
         "rationale_only_mention": "",
         "lean": "none",
         "suggested_improvement": "",
-        "reasoning": "The policy extensively addresses code contributions with tiered rules: banned (LLM-originated comments/docs/diagnostics, requiring LLM to contribute), allowed-with-disclosure (trivial changes, experimental LLM-created code under strict pre-arranged-reviewer conditions), and a volume-based circuit breaker. Accountability is explicitly placed on the contributor ('your contributions are your responsibility'). Multiple supervision levels coexist (banned/disclosure_required/human_in_the_loop for the experiment track); disclosure_required is the most pervasive baseline requirement across allowed-with-caveats and experimental uses."
+        "reasoning": "The policy is highly specific about code contributions: it bans LLM-originated comments/issue text/PR descriptions, requires disclosure for trivial changes and machine-translation, sets a detailed pre-arranged/non-critical/well-tested/well-reviewed experiment framework with a 50% circuit-breaker volume cap, and explicitly assigns responsibility for contributions to the contributor. Supervision varies by sub-case (banned, disclosure_required, human_in_the_loop for the experiment) but disclosure is the consistent gating condition across all allowed uses."
       },
       {
         "domain": "notetaker_bots",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
-        "proportionality": "not_applicable",
+        "accountability_wording": "",
+        "proportionality": "not_specified",
         "addressed": "no",
         "evidence": [],
         "rationale_only_mention": "",
         "lean": "none",
-        "suggested_improvement": "no supervision level, scope, or accountability holder for meeting/notetaker bots",
-        "reasoning": "The document is scoped to LLM use around rust-lang/rust code, comments, documentation, and reviews. It never mentions meeting recording, transcription, or notetaker bots of any kind."
+        "suggested_improvement": "no mention of meeting recording/notetaker bots at all",
+        "reasoning": "The document discusses 'voice/video content originally created or scripted by an LLM' as banned, but this refers to LLM-scripted spoken content posted by a user, not to notetaker/meeting-transcription bots recording discussions. No mention of recorded meetings, transcripts, or closed/small-group content is present."
       },
       {
         "domain": "content",
         "supervision_level": "banned",
-        "scope_or_volume_limits": "Applies to documentation including non-trivial source comments, doc-comments, safety comments, and compiler diagnostics; excludes 'trivial' changes and, per the Scope appendix, excludes language documentation and the style guide (out of policy scope).",
-        "accountability_holder": "not_specified",
+        "scope_or_volume_limits": "Applies to non-trivial source comments, doc-comments, safety comments, multi-paragraph comments, and compiler diagnostics; excludes 'trivial' changes and out-of-scope material like the style guide and lang documentation.",
+        "accountability_holder": "contributor",
+        "accountability_wording": "Your contributions are your responsibility; you cannot place any blame on an LLM.",
         "proportionality": "not_specified",
-        "addressed": "partial",
+        "addressed": "yes",
         "evidence": [
           {
             "path": "src/policies/llm-usage.md",
@@ -90,119 +93,114 @@
           },
           {
             "path": "src/policies/llm-usage.md",
-            "quote": "Language documentation... The style guide... do not fall under the policy",
-            "line": null
+            "quote": "Your contributions are your responsibility; you cannot place any blame on an LLM.",
+            "line": 288
           }
         ],
         "rationale_only_mention": "",
         "lean": "none",
-        "suggested_improvement": "name accountability holder for docs; address blogs/design assets separately",
-        "reasoning": "The policy bans LLM-originated documentation (doc-comments, safety comments, diagnostics) with a disclosure exception for 'trivial' changes, giving a clear supervision level for this sub-slice of 'content'. However it never names an accountability holder specific to documentation authorship (the general contributor-responsibility clause is stated in the context of contributions/comments, not tied explicitly to docs), and it says nothing about blogs, design assets, or other non-code content. Because only part of the content domain (source-adjacent documentation) is reached, and even that lacks a stated accountability holder, this is partial rather than yes."
+        "suggested_improvement": "",
+        "reasoning": "Documentation (a content type per the domain definition) is explicitly banned from being LLM-originated, with a carve-out for trivial changes and disclosure requirements matching the code contributions rules. The general responsibility clause applies to all contributions including docs, giving an accountability holder. Blogs and design assets are not separately named, but documentation is addressed with a clear rule and holder."
       },
       {
         "domain": "moderation",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
-        "proportionality": "not_applicable",
+        "accountability_wording": "",
+        "proportionality": "not_specified",
         "addressed": "no",
         "evidence": [],
         "rationale_only_mention": "",
         "lean": "none",
-        "suggested_improvement": "no rule on AI use in performing moderation actions",
-        "reasoning": "The document is itself titled a 'moderation policy,' but that means it is a policy about moderating LLM use, not a policy about whether moderators themselves may use AI to take moderation actions (e.g. bans, warnings). No text addresses AI use in exercising moderation authority; enforcement discretion is left to human moderators generally ('the mod team is free to exercise their own judgement and discretion') without reference to AI tools being used for that judgement."
+        "suggested_improvement": "no rule on AI use in moderation actions themselves; no supervision level or holder",
+        "reasoning": "The document is titled a 'moderation policy' and describes penalties, reporting, and moderator discretion for violations of the LLM-usage rules, but this is a policy governing how contributors use LLMs, not a rule about whether/how moderators themselves may use AI to take moderation actions (e.g., auto-flagging, auto-banning). No such provision appears."
       },
       {
         "domain": "review",
         "supervision_level": "human_in_the_loop",
-        "scope_or_volume_limits": "Applies to 'review bot' LLM accounts on PRs for rust-lang/rust; bots must have a separate, clearly-marked, blockable GitHub account and require one-time maintainer approval before posting.",
-        "accountability_holder": "reviewers (must personally endorse any LLM comment and take responsibility for their own analysis before it can block a PR)",
+        "scope_or_volume_limits": "Review bots require one-time maintainer approval; must use a separate, clearly-marked, blockable GitHub account; LLM comments must be non-blocking and require explicit reviewer endorsement.",
+        "accountability_holder": "reviewer",
+        "accountability_wording": "They are responsible for their own analysis of the LLM's comment and cannot treat it as a CI failure.",
         "proportionality": "not_specified",
         "addressed": "yes",
         "evidence": [
           {
             "path": "src/policies/llm-usage.md",
-            "quote": "LLM reviews, if enabled, **must** be advisory-only.",
-            "line": 91
+            "quote": "Treating an LLM review as a sufficient condition to merge or reject a change. LLM reviews, if enabled, **must** be advisory-only.",
+            "line": 90
           },
           {
             "path": "src/policies/llm-usage.md",
-            "quote": "In other words, reviewers must explicitly endorse an LLM comment before blocking a PR. They are responsible for their own analysis of the LLM's comment and cannot treat it as a CI failure.",
+            "quote": "Review bots that post without being approved by a maintainer will be banned.",
+            "line": 124
+          },
+          {
+            "path": "src/policies/llm-usage.md",
+            "quote": "reviewers must explicitly endorse an LLM comment before blocking a PR. They are responsible for their own analysis of the LLM's comment and cannot treat it as a CI failure.",
             "line": 130
-          },
-          {
-            "path": "src/policies/llm-usage.md",
-            "quote": "Review bots **must** have a separate GitHub account that clearly marks them as an LLM.",
-            "line": 126
           }
         ],
         "rationale_only_mention": "",
         "lean": "none",
         "suggested_improvement": "",
-        "reasoning": "Review is directly and specifically addressed: LLM review bots are allowed with caveats (disclosure via a distinct, blockable account, one-time maintainer approval, non-blocking comments), and treating LLM review as sufficient for merge/reject decisions is banned. Accountability for acting on an LLM review comment is placed on the human reviewer who chooses to endorse it, satisfying both supervision level and accountability holder."
+        "reasoning": "Review is one of the most specifically addressed domains: LLM reviews and 'review bots' are allowed with caveats requiring disclosure, mandatory maintainer approval of the bot account, non-blocking advisory-only comments, and explicit reviewer endorsement/responsibility before any comment can block a PR, plus a requirement that self-review by the author is never substituted."
       },
       {
         "domain": "autonomous",
-        "supervision_level": "banned",
-        "scope_or_volume_limits": "Narrow example only: processes/documentation that require an LLM to execute them (e.g. an AGENTS.md that is the sole place tests are documented) are banned; general autonomous/agentic operation is not addressed.",
+        "supervision_level": "not_specified",
+        "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
+        "accountability_wording": "",
         "proportionality": "not_specified",
-        "addressed": "partial",
-        "evidence": [
-          {
-            "path": "src/policies/llm-usage.md",
-            "quote": "Policies or processes that are written such that an LLM is required to execute them.",
-            "line": 87
-          },
-          {
-            "path": "src/policies/llm-usage.md",
-            "quote": "Documentation must be authored for humans primarily, and LLM documentation may only summarize it, not add new detail.",
-            "line": 89
-          }
-        ],
+        "addressed": "no",
+        "evidence": [],
         "rationale_only_mention": "",
-        "lean": "restrictive",
-        "suggested_improvement": "define agentic/autonomous use beyond process-documentation example; name accountability holder",
-        "reasoning": "The policy bans making an LLM a required executor of project processes, which touches on agentic/autonomous operation, but this is illustrated only through a narrow documentation example (AGENTS.md) rather than a general statement on autonomous agents acting without human oversight (e.g., an agent opening PRs or taking actions unprompted). No accountability holder is named for this clause specifically. Because the area is reached only obliquely and incompletely, this is partial rather than yes."
+        "lean": "none",
+        "suggested_improvement": "no rule on autonomous/agentic action independent of a human author",
+        "reasoning": "The 'Experiment: LLM-created code changes' framework always requires a pre-arranged human reviewer, human disclosure, and author/reviewer understanding of the code -- it is human-in-the-loop code contribution, not a rule about an AI agent acting autonomously on the repository (e.g. opening/merging PRs unsupervised). The clause banning processes 'written such that an LLM is required to execute them' concerns documentation authored for humans, not agent autonomy, and does not set a supervision level for autonomous agent action."
       },
       {
         "domain": "environmental",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
-        "proportionality": "not_applicable",
+        "accountability_wording": "",
+        "proportionality": "not_specified",
         "addressed": "no",
         "evidence": [],
-        "rationale_only_mention": "many others feel that its negative impact on society and the climate are severe enough that no use is acceptable.",
+        "rationale_only_mention": "many others feel that its negative impact on society and the climate are severe enough that no use is acceptable",
         "lean": "restrictive",
-        "suggested_improvement": "no rule on energy/water/hardware footprint of LLM use",
-        "reasoning": "Climate impact is cited only as a viewpoint some community members hold, used to justify why the project has taken a conservative overall stance, but it sets no rule, scope, or accountability for environmental impact. This is a rationale-only mention with a restrictive lean, not an addressed domain."
+        "suggested_improvement": "no supervision level or rule on energy/water/carbon impact",
+        "reasoning": "Climate impact is cited only as a reason some community members reject all LLM use; it is offered as context for the lack of consensus motivating the policy, not as a rule setting any supervision level, scope limit, or accountability holder for environmental impact."
       },
       {
         "domain": "infrastructure",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
-        "proportionality": "not_applicable",
+        "accountability_wording": "",
+        "proportionality": "not_specified",
         "addressed": "no",
         "evidence": [],
         "rationale_only_mention": "",
         "lean": "none",
-        "suggested_improvement": "no mention of infrastructure/server-load impact of LLM tooling",
-        "reasoning": "No text in this document discusses server load, CI/hardware cost, or infrastructure strain from LLM-related tooling (e.g., review bots, experiment PRs). The private Zulip channel and llm-assisted label are procedural bookkeeping, not infrastructure-cost discussion."
+        "suggested_improvement": "no mention of server load or hardware cost/financing",
+        "reasoning": "No text in this file addresses infrastructure strain (server load, hardware cost or financing) in any capacity, either as rule or rationale."
       },
       {
         "domain": "training_data",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
-        "proportionality": "not_applicable",
+        "accountability_wording": "",
+        "proportionality": "not_specified",
         "addressed": "no",
         "evidence": [],
         "rationale_only_mention": "",
         "lean": "none",
-        "suggested_improvement": "no statement on use of project/user data for AI training",
-        "reasoning": "The document does not discuss whether Rust project data, comments, code, or user contributions may be used to train AI models. The copyright discussion present (threshold of originality, Google v. Oracle) concerns fair use of code snippets/API declarations in the context of trivial changes, not training-data use of platform data."
+        "suggested_improvement": "no statement on whether project content/data may train models",
+        "reasoning": "The policy discusses copyright/originality concerns about LLM output reproducing others' training data (e.g. references to 'threshold of originality' and the Google v. Oracle ruling) as background for the 'trivial changes' rule, but never addresses whether this project's own issues, discussions, code, or user data may be used to train models."
       }
     ],
     "unscoped_statements": [
@@ -210,10 +208,10 @@
         "path": "src/policies/llm-usage.md",
         "quote": "It's fine to use LLMs to answer questions, analyze, distill, refine, check, suggest, review. But not to **create**.",
         "areas_named": [
-          "code_contributions",
           "review"
         ],
         "domains_left_ambiguous": [
+          "code_contributions",
           "content",
           "moderation",
           "autonomous"
@@ -222,26 +220,21 @@
       },
       {
         "path": "src/policies/llm-usage.md",
-        "quote": "Making a decision that affects others based on LLM output requires disclosure \u26a0\ufe0f",
+        "quote": "LLMs work best when used as a tool to write *better*, not *faster*.",
         "areas_named": [],
         "domains_left_ambiguous": [
           "code_contributions",
-          "content",
-          "moderation",
-          "review",
-          "autonomous"
+          "content"
         ],
-        "line": 54
+        "line": 22
       }
     ],
-    "overall_posture": "The policy is a detailed, conservative, disclosure-and-review-gated framework specifically for code contributions and PR/comment review on rust-lang/rust (banning LLM-originated public comments, docs, and diagnostics; requiring disclosure for trivial or experimental LLM-created code; restricting review bots to advisory, disclosed, blockable status), but it is silent on notetaker bots, moderation actions performed with AI, environmental/infrastructure costs (mentioned only as rationale), training-data use, and gives only narrow, indirect treatment of autonomous/agentic operation."
+    "overall_posture": "The policy is granular and enforceable for code contributions, documentation/comments, and AI-assisted review (naming supervision levels, scope limits, and accountability holders for each), while remaining entirely silent -- neither rule nor rationale -- on notetaker/meeting bots, AI use in moderation actions, autonomous/agentic repository action, infrastructure strain, and the project's own data being used for training; environmental impact appears only as an unresolved community concern cited as background, not as a rule."
   },
-  "validation_problems": [
-    "content: quote not found in src/policies/llm-usage.md"
-  ],
+  "validation_problems": [],
   "use_composition_partial": {
     "agent_instruction_files": [],
-    "workflow_count": 3,
+    "workflow_count": 0,
     "workflows_with_ai_or_bot_signals": [],
     "awaiting_implementation": {
       "specific_tools_in_use": "Awaiting implementation: named-product detection beyond known file signatures",

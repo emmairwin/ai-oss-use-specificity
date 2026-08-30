@@ -10,8 +10,8 @@
     "note": "Scoring confined to the files named on the command line; 'no' means not addressed in those files."
   },
   "usage": {
-    "input_tokens": 14905,
-    "output_tokens": 6999,
+    "input_tokens": 17025,
+    "output_tokens": 10406,
     "cache_read_input_tokens": 0,
     "cache_creation_input_tokens": 0,
     "api_calls": 2,
@@ -19,22 +19,23 @@
       "doc/devel/contribute.rst"
     ],
     "model": "claude-sonnet-5",
-    "estimated_cost_usd": 0.0998
+    "estimated_cost_usd": 0.13811
   },
   "consent_policy_specificity": {
     "domains": [
       {
         "domain": "code_contributions",
         "supervision_level": "human_in_the_loop",
-        "scope_or_volume_limits": "not_specified (discourages using AI to simultaneously contribute to several projects, but no numeric limit stated)",
-        "accountability_holder": "the human contributor",
+        "scope_or_volume_limits": "not_specified",
+        "accountability_holder": "contributor",
+        "accountability_wording": "the resulting contribution is the responsibility of the human contributor",
         "proportionality": "not_specified",
         "addressed": "yes",
         "evidence": [
           {
             "path": "doc/devel/contribute.rst",
-            "quote": "the resulting contribution is the responsibility of the human contributor",
-            "line": 192
+            "quote": "As with any tool, the resulting contribution is the responsibility of the human contributor.",
+            "line": 191
           },
           {
             "path": "doc/devel/contribute.rst",
@@ -43,168 +44,181 @@
           },
           {
             "path": "doc/devel/contribute.rst",
-            "quote": "pull requests that are :ref:`AI generated <generative_ai>` will be closed",
-            "line": 289
+            "quote": "Translating or proof-reading your comments or PR descriptions. Please keep the wording as close as possible to your original wording.",
+            "line": 207
           }
         ],
         "rationale_only_mention": "",
         "lean": "none",
         "suggested_improvement": "",
-        "reasoning": "The 'Use of Generative AI' section explicitly addresses code/issue/PR contributions, naming acceptable (understanding code, idea generation, translating/proof-reading text) and unacceptable uses (solving beyond one's ability, unverified AI output, breadth-farming), states the human contributor bears responsibility (accountability holder), and effectively requires human oversight/verification (human_in_the_loop). Good-first-issue AI-generated PRs are explicitly closed, reinforcing supervision. No numeric scope/volume limit or proportionality threshold is given."
+        "reasoning": "The Generative AI section explicitly frames acceptable/unacceptable AI uses for PRs, issues and comments (code_contributions domain), requiring the human to understand/verify AI output before use (human_in_the_loop) and stating the contributor bears responsibility for the resulting contribution. Both supervision level and accountability holder are present."
       },
       {
         "domain": "notetaker_bots",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
-        "proportionality": "not_applicable",
+        "accountability_wording": "",
+        "proportionality": "not_specified",
         "addressed": "no",
         "evidence": [],
         "rationale_only_mention": "",
         "lean": "none",
-        "suggested_improvement": "no mention of AI notetaker/meeting-recording bots at all",
-        "reasoning": "The document discusses the monthly new-contributors meeting and links to human-written meeting notes on GitHub, but nowhere mentions AI-based meeting recording, transcription, or notetaker bots."
+        "suggested_improvement": "no supervision level stated for meeting recording/notetaker bots; no accountability holder named",
+        "reasoning": "The file discusses the new contributors meeting and meeting notes but never mentions AI notetakers, recording bots, or transcription tools."
       },
       {
         "domain": "content",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
-        "proportionality": "not_applicable",
+        "accountability_wording": "",
+        "proportionality": "not_specified",
         "addressed": "no",
         "evidence": [],
         "rationale_only_mention": "",
         "lean": "none",
-        "suggested_improvement": "no supervision level or accountability holder for AI use in docs/content",
-        "reasoning": "The Documentation section describes how to contribute docs (typo fixes, docstrings, tutorials, examples) but does not mention generative AI at all in that context. The separate 'Use of Generative AI' section's examples (understanding code, PR descriptions, GitHub/Discourse comments) name code-contribution artifacts, not documentation, blogs, or design assets, so content is not named."
+        "suggested_improvement": "no supervision level for AI use in documentation/blog/design contributions; no accountability holder named",
+        "reasoning": "The Documentation section (typo fixes, docstrings, tutorials) does not mention AI at all, and the separate 'Use of Generative AI' section only names PRs, issues and GitHub/Discourse comments, not documentation or other content artifacts."
       },
       {
         "domain": "moderation",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
-        "proportionality": "not_applicable",
+        "accountability_wording": "",
+        "proportionality": "not_specified",
         "addressed": "no",
-        "evidence": [],
-        "rationale_only_mention": "",
-        "lean": "none",
-        "suggested_improvement": "no statement on AI use in moderation actions",
-        "reasoning": "The policy states maintainers 'may ban and/or report users to GitHub' for irresponsible AI use, but this is enforcement of the AI policy, not a statement about AI being used to perform moderation. No domain-specific rule about AI-assisted moderation exists."
+        "evidence": [
+          {
+            "path": "doc/devel/contribute.rst",
+            "quote": "To ensure project health and preserve limited core developer capacity, we will flag and reject low-value contributions that we believe are AI generated.",
+            "line": 223
+          }
+        ],
+        "rationale_only_mention": "To ensure project health and preserve limited core developer capacity, we will flag and reject low-value contributions that we believe are AI generated. We may ban and/or report users to GitHub if they harm the project or its community through irresponsible use of AI.",
+        "lean": "restrictive",
+        "suggested_improvement": "no stated rule on AI's role in moderation itself; no accountability holder named",
+        "reasoning": "The flagging/rejecting/banning language is enforcement machinery for the code_contributions AI rule, justified by preserving 'limited core developer capacity' (maintainer time/moderation load), not a rule about how AI may be used in moderation actions themselves. This is rationale, not provision, for the moderation domain."
       },
       {
         "domain": "review",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
-        "proportionality": "not_applicable",
+        "accountability_wording": "",
+        "proportionality": "not_specified",
         "addressed": "no",
         "evidence": [],
         "rationale_only_mention": "",
         "lean": "none",
-        "suggested_improvement": "no supervision level or accountability holder for AI-assisted review",
-        "reasoning": "The document describes the human PR review process (triage, pr_guide references, incubator 'pre-review') but never addresses whether reviewers may use AI tools to review contributions."
+        "suggested_improvement": "no supervision level for AI-assisted review; no accountability holder named",
+        "reasoning": "The document discusses human review processes (submitting reviews, PR review comments, pre-reviews in the incubator) but never states whether or how AI tools may be used by a reviewer."
       },
       {
         "domain": "autonomous",
         "supervision_level": "banned",
-        "scope_or_volume_limits": "External AI tooling (bots, agents) directly interacting with the project, including creating issues, PRs, or commenting on GitHub/Discourse",
-        "accountability_holder": "not_specified",
+        "scope_or_volume_limits": "not_specified",
+        "accountability_holder": "contributor",
+        "accountability_wording": "the resulting contribution is the responsibility of the human contributor",
         "proportionality": "not_specified",
-        "addressed": "partial",
+        "addressed": "yes",
         "evidence": [
           {
             "path": "doc/devel/contribute.rst",
             "quote": "External AI tooling (e.g. bots, agents) directly interacting with the project; including creating issues, PRs or commenting on GitHub or Discourse.",
             "line": 214
+          },
+          {
+            "path": "doc/devel/contribute.rst",
+            "quote": "As with any tool, the resulting contribution is the responsibility of the human contributor.",
+            "line": 191
           }
         ],
         "rationale_only_mention": "",
         "lean": "none",
-        "suggested_improvement": "no accountability holder named for banned autonomous AI use",
-        "reasoning": "Autonomous/agentic AI directly interacting with the project is explicitly listed as an 'Unacceptable use' -- a clear ban -- but the policy only states enforcement ('we may ban and/or report users to GitHub'), not who is accountable for authorship if such use occurs. Enforcement language does not satisfy the accountability-holder requirement, so this is partial rather than yes."
+        "suggested_improvement": "",
+        "reasoning": "Agentic/bot interaction with the repository (creating issues, PRs, or comments autonomously) is explicitly listed as an unacceptable use, i.e. banned, under the general framing that a human contributor bears responsibility for tool-assisted work."
       },
       {
         "domain": "environmental",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
-        "proportionality": "not_applicable",
+        "accountability_wording": "",
+        "proportionality": "not_specified",
         "addressed": "no",
         "evidence": [],
         "rationale_only_mention": "",
         "lean": "none",
-        "suggested_improvement": "no mention of environmental impact of AI tooling",
-        "reasoning": "No text in this document discusses energy, water, or carbon costs of AI tooling in any context."
+        "suggested_improvement": "no mention of environmental impact as rule or rationale",
+        "reasoning": "No text in this file references energy, water, hardware, or carbon footprint concerns."
       },
       {
         "domain": "infrastructure",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
-        "proportionality": "not_applicable",
+        "accountability_wording": "",
+        "proportionality": "not_specified",
         "addressed": "no",
         "evidence": [],
         "rationale_only_mention": "",
         "lean": "none",
-        "suggested_improvement": "no mention of server load or hardware cost from AI",
-        "reasoning": "The phrase 'preserve limited core developer capacity' concerns human reviewer bandwidth, not server load or hardware/financing infrastructure, so it does not qualify as addressing this domain even as rationale."
+        "suggested_improvement": "no mention of server load or hardware/financing cost",
+        "reasoning": "The only capacity concern raised is 'limited core developer capacity', which is human/maintainer time (moderation), not machine or financial infrastructure strain."
       },
       {
         "domain": "training_data",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
-        "proportionality": "not_applicable",
+        "accountability_wording": "",
+        "proportionality": "not_specified",
         "addressed": "no",
         "evidence": [],
         "rationale_only_mention": "",
         "lean": "none",
-        "suggested_improvement": "no statement on use of project/user data for AI training",
-        "reasoning": "The document never discusses whether Matplotlib's code, docs, or community data may be used to train AI models, nor any related copyright/data-use concerns."
+        "suggested_improvement": "no statement on use of project data/content for model training",
+        "reasoning": "The file never discusses whether Matplotlib's issues, discussions, or other user-contributed data may be used to train AI models."
       }
     ],
     "unscoped_statements": [
       {
         "path": "doc/devel/contribute.rst",
-        "quote": "Generative AI tools are evolving rapidly and can be helpful. As with any tool, the resulting contribution is the responsibility of the human contributor.",
+        "quote": "As with any tool, the resulting contribution is the responsibility of the human contributor.",
         "areas_named": [
-          "code_contributions"
+          "code_contributions",
+          "autonomous"
         ],
         "domains_left_ambiguous": [
           "content",
           "moderation",
-          "review",
-          "notetaker_bots"
+          "notetaker_bots",
+          "review"
         ],
         "line": 191
+      },
+      {
+        "path": "doc/devel/contribute.rst",
+        "quote": "we will flag and reject low-value contributions that we believe are AI generated",
+        "areas_named": [
+          "code_contributions"
+        ],
+        "domains_left_ambiguous": [
+          "moderation",
+          "content"
+        ],
+        "line": 223
       }
     ],
-    "overall_posture": "Matplotlib's contributing guide specifically addresses generative AI only for code/issue/PR-style contributions -- requiring human responsibility and understanding, banning autonomous bots/agents from directly interacting with the project, and threatening closure/bans for AI-generated low-value or 'good first issue' PRs -- while leaving notetaker bots, documentation/content, moderation, review, environmental impact, infrastructure strain, and training-data use entirely unaddressed."
+    "overall_posture": "The policy speaks specifically and restrictively about AI in code contributions and autonomous/agentic interaction (both tied to human contributor accountability and a ban on bots/agents acting directly on the repo), but is entirely silent on notetaker bots, documentation/content, AI-assisted review, moderation's own use of AI, environmental impact, infrastructure strain, and training data use of project content."
   },
   "validation_problems": [],
   "use_composition_partial": {
     "agent_instruction_files": [],
-    "workflow_count": 21,
-    "workflows_with_ai_or_bot_signals": [
-      {
-        "path": ".github/workflows/autoclose_comment.yml",
-        "signals": [
-          "bot"
-        ]
-      },
-      {
-        "path": ".github/workflows/tests.yml",
-        "signals": [
-          "dependabot"
-        ]
-      },
-      {
-        "path": ".github/workflows/triage_board.yml",
-        "signals": [
-          "bot"
-        ]
-      }
-    ],
+    "workflow_count": 0,
+    "workflows_with_ai_or_bot_signals": [],
     "awaiting_implementation": {
       "specific_tools_in_use": "Awaiting implementation: named-product detection beyond known file signatures",
       "model_type": "Awaiting implementation: underlying model/family",

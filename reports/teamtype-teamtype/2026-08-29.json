@@ -10,8 +10,8 @@
     "note": "Scoring confined to the files named on the command line; 'no' means not addressed in those files."
   },
   "usage": {
-    "input_tokens": 9705,
-    "output_tokens": 4244,
+    "input_tokens": 11835,
+    "output_tokens": 4010,
     "cache_read_input_tokens": 0,
     "cache_creation_input_tokens": 0,
     "api_calls": 2,
@@ -19,19 +19,18 @@
       "CONTRIBUTING.md"
     ],
     "model": "claude-sonnet-5",
-    "estimated_cost_usd": 0.06185
+    "estimated_cost_usd": 0.06377
   },
   "consent_policy_specificity": {
     "domains": [
       {
         "domain": "code_contributions",
-        "addressed": "partial",
         "supervision_level": "banned",
-        "scope_or_volume_limits": "Applies to 'any contributions' containing LLM-generated content, explicitly extended to 'all written communication on GitHub' (pull requests, issues, discussions).",
+        "scope_or_volume_limits": "Applies to all contributions and all written communication on GitHub (pull requests, issues, discussions)",
         "accountability_holder": "not_specified",
-        "proportionality": "not_applicable",
-        "lean": "none",
-        "rationale_only_mention": "",
+        "accountability_wording": "",
+        "proportionality": "not_specified",
+        "addressed": "partial",
         "evidence": [
           {
             "path": "CONTRIBUTING.md",
@@ -40,146 +39,149 @@
           },
           {
             "path": "CONTRIBUTING.md",
-            "quote": "This also includes all written communication on GitHub.",
-            "line": 39
-          },
-          {
-            "path": "CONTRIBUTING.md",
             "quote": "We will close any pull request, issue, or discussion that does not comply to this policy.",
             "line": 40
           }
         ],
-        "suggested_improvement": "no accountability holder named; enforcement stated, not authorship",
-        "reasoning": "The policy states a clear ban on LLM-generated content in contributions and GitHub communication, giving a supervision level and a scope, but it only names who enforces the rule (maintainers closing PRs/issues/discussions), not who is answerable for authorship of compliant content, so accountability_holder is not_specified and the domain is only partially addressed."
+        "rationale_only_mention": "",
+        "lean": "none",
+        "suggested_improvement": "no accountability holder named; only enforcement (closing) stated",
+        "reasoning": "The policy explicitly bans LLM-generated content in contributions and clarifies scope by naming pull requests, issues, and discussions, giving a clear supervision level (banned) and scope. However, it never states who is answerable for the content submitted (e.g. the contributor); it only states that maintainers will close non-compliant items, which is enforcement, not accountability. Per the rules this makes the domain 'partial' rather than 'yes'."
       },
       {
         "domain": "notetaker_bots",
-        "addressed": "no",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
+        "accountability_wording": "",
         "proportionality": "not_specified",
-        "lean": "none",
-        "rationale_only_mention": "",
+        "addressed": "no",
         "evidence": [],
-        "suggested_improvement": "no supervision level; no scope or accountability holder named",
-        "reasoning": "The document contains no mention of meeting recording, transcription, or notetaker bots of any kind."
+        "rationale_only_mention": "",
+        "lean": "none",
+        "suggested_improvement": "no mention of meeting/notetaker bots at all",
+        "reasoning": "CONTRIBUTING.md contains no reference to meetings, recordings, or notetaker/meeting bots of any kind."
       },
       {
         "domain": "content",
-        "addressed": "no",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
+        "accountability_wording": "",
         "proportionality": "not_specified",
-        "lean": "none",
-        "rationale_only_mention": "",
+        "addressed": "no",
         "evidence": [],
-        "suggested_improvement": "no rule naming docs/blogs/design assets specifically",
-        "reasoning": "The LLM ban refers to 'contributions' and 'written communication on GitHub' without naming documentation, blog posts, or design assets; whether these fall under the ban is left ambiguous rather than stated, so this domain is not specifically addressed (see unscoped_statements)."
+        "rationale_only_mention": "",
+        "lean": "none",
+        "suggested_improvement": "no rule naming documentation, blogs, or design assets specifically",
+        "reasoning": "The AI policy names 'contributions' and 'written communication on GitHub' (clarified elsewhere as PRs/issues/discussions), but never names documentation, blog posts, or design assets. A reader could wonder whether documentation PRs fall under the code_contributions ban, but the text does not name content as its own category, so this domain is not addressed as defined."
       },
       {
         "domain": "moderation",
-        "addressed": "no",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
+        "accountability_wording": "",
         "proportionality": "not_specified",
-        "lean": "none",
-        "rationale_only_mention": "",
+        "addressed": "no",
         "evidence": [],
-        "suggested_improvement": "no supervision level; no accountability holder for AI-assisted moderation",
-        "reasoning": "The document describes maintainers closing non-compliant PRs/issues/discussions, which is enforcement of the AI-content ban itself, not a statement about whether AI may be used to perform moderation actions. No rule on AI-assisted moderation is present."
+        "rationale_only_mention": "",
+        "lean": "none",
+        "suggested_improvement": "no rule on AI use in moderation actions",
+        "reasoning": "The document states maintainers will close non-compliant PRs/issues/discussions, but this is enforcement of the LLM-content ban, not a rule about whether AI may be used to perform moderation actions. No supervision level or accountability for AI-assisted moderation is stated."
       },
       {
         "domain": "review",
-        "addressed": "no",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
+        "accountability_wording": "",
         "proportionality": "not_specified",
-        "lean": "none",
-        "rationale_only_mention": "",
+        "addressed": "no",
         "evidence": [],
-        "suggested_improvement": "no statement on AI use in review; no accountability holder",
-        "reasoning": "Nothing in the document addresses whether maintainers or others may use AI tools to review contributions."
+        "rationale_only_mention": "",
+        "lean": "none",
+        "suggested_improvement": "no rule on AI-assisted review of contributions",
+        "reasoning": "CONTRIBUTING.md does not discuss whether reviewers may use AI tools to review contributions; only the submission side (contributors not using LLM-generated content) is addressed."
       },
       {
         "domain": "autonomous",
-        "addressed": "no",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
+        "accountability_wording": "",
         "proportionality": "not_specified",
-        "lean": "none",
-        "rationale_only_mention": "",
+        "addressed": "no",
         "evidence": [],
-        "suggested_improvement": "no supervision level for autonomous/agentic AI use",
-        "reasoning": "The document does not mention autonomous or agentic AI systems acting independently in the project."
+        "rationale_only_mention": "",
+        "lean": "none",
+        "suggested_improvement": "no rule on autonomous/agentic interaction with repository",
+        "reasoning": "There is no mention of autonomous agents or bots acting on the repository independently; the policy only addresses human contributors submitting LLM-generated content."
       },
       {
         "domain": "environmental",
-        "addressed": "no",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
+        "accountability_wording": "",
         "proportionality": "not_specified",
-        "lean": "none",
-        "rationale_only_mention": "",
+        "addressed": "no",
         "evidence": [],
-        "suggested_improvement": "no mention of environmental impact as rationale or rule",
-        "reasoning": "No text in the document references energy, water, or carbon-footprint concerns related to AI, either as rule or as rationale."
+        "rationale_only_mention": "",
+        "lean": "none",
+        "suggested_improvement": "no mention of energy, water, or carbon impact",
+        "reasoning": "No language in the document references environmental cost of AI tools as a rationale or a rule."
       },
       {
         "domain": "infrastructure",
-        "addressed": "no",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
+        "accountability_wording": "",
         "proportionality": "not_specified",
-        "lean": "none",
-        "rationale_only_mention": "",
+        "addressed": "no",
         "evidence": [],
-        "suggested_improvement": "no mention of infrastructure strain as rationale or rule",
-        "reasoning": "No text references server load, hardware cost, or infrastructure strain related to AI use."
+        "rationale_only_mention": "",
+        "lean": "none",
+        "suggested_improvement": "no mention of server load or hardware cost",
+        "reasoning": "No language references infrastructure strain, hardware cost, or financing tied to AI use."
       },
       {
         "domain": "training_data",
-        "addressed": "no",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
+        "accountability_wording": "",
         "proportionality": "not_specified",
-        "lean": "none",
-        "rationale_only_mention": "",
+        "addressed": "no",
         "evidence": [],
-        "suggested_improvement": "no mention of training-data use or provenance",
-        "reasoning": "The document does not discuss use of platform or contributor data for training AI models."
+        "rationale_only_mention": "",
+        "lean": "none",
+        "suggested_improvement": "no rule on project's own data being used for AI training",
+        "reasoning": "The policy only concerns receiving LLM-generated content, not whether the project's own contributions, issues, or discussions may be used as training data for models."
       }
     ],
     "unscoped_statements": [
       {
         "path": "CONTRIBUTING.md",
-        "quote": "We do not accept any contributions that contain content generated by LLMs.",
+        "quote": "We do not accept any contributions that contain content generated by LLMs. This also includes all written communication on GitHub.",
         "areas_named": [
           "code_contributions"
         ],
         "domains_left_ambiguous": [
           "content",
           "moderation",
-          "review",
-          "autonomous",
-          "notetaker_bots"
+          "review"
         ],
         "line": 38
       }
     ],
-    "overall_posture": "The project imposes an outright, blanket ban on LLM-generated content across code contributions and all GitHub written communication (PRs, issues, discussions), with enforcement (closing non-compliant items) but no named accountability holder for authorship; every other domain (notetaker bots, standalone content like docs/blogs, moderation, review, autonomous use, environmental impact, infrastructure strain, and training data) is entirely unaddressed in this document."
+    "overall_posture": "The project bans all LLM-generated content in contributions and GitHub communication (PRs, issues, discussions), enforced by closing non-compliant items, but never assigns accountability for compliance and is entirely silent on notetaker bots, standalone content categories like docs/blogs/design assets, moderation, review, autonomous agent use, environmental impact, infrastructure strain, and training-data reuse."
   },
   "validation_problems": [],
   "use_composition_partial": {
     "agent_instruction_files": [],
-    "workflow_count": 7,
+    "workflow_count": 0,
     "workflows_with_ai_or_bot_signals": [],
     "awaiting_implementation": {
       "specific_tools_in_use": "Awaiting implementation: named-product detection beyond known file signatures",

@@ -1,6 +1,6 @@
 {
   "repo": "go-gitea/gitea",
-  "commit_sha": "eea03676d36fa9bf2aa8830eac28ce0eb35d6f4c",
+  "commit_sha": "8c9305f0603e69efda8fb0402fa993025dd2cb3a",
   "metric_model": "CHAOSS AI Alignment - Community Governed Use",
   "scope": {
     "mode": "named_files",
@@ -9,35 +9,33 @@
     ],
     "note": "Scoring confined to the files named on the command line; 'no' means not addressed in those files."
   },
+  "usage": {
+    "input_tokens": 16485,
+    "output_tokens": 5689,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0,
+    "api_calls": 2,
+    "files_read": [
+      "CONTRIBUTING.md"
+    ],
+    "model": "claude-sonnet-5",
+    "estimated_cost_usd": 0.08986
+  },
   "consent_policy_specificity": {
     "domains": [
       {
         "domain": "code_contributions",
         "supervision_level": "human_in_the_loop",
         "scope_or_volume_limits": "not_specified",
-        "accountability_holder": "The contributor (\"contributors remain responsible for the accuracy, completeness, and intent of what they submit\"); maintainers enforce via closing non-compliant PRs/issues.",
+        "accountability_holder": "contributor",
+        "accountability_wording": "contributors remain responsible for the accuracy, completeness, and intent of what they submit",
         "proportionality": "not_specified",
         "addressed": "yes",
         "evidence": [
           {
             "path": "CONTRIBUTING.md",
-            "quote": "Contributions made with the assistance of AI tools are welcome, but contributors must use them responsibly and disclose that use clearly.",
-            "line": 55
-          },
-          {
-            "path": "CONTRIBUTING.md",
             "quote": "Review AI-generated code closely before marking a pull request ready for review.",
             "line": 57
-          },
-          {
-            "path": "CONTRIBUTING.md",
-            "quote": "Manually test the changes and add appropriate automated tests where feasible.",
-            "line": 58
-          },
-          {
-            "path": "CONTRIBUTING.md",
-            "quote": "Only use AI to assist in contributions that you understand well enough to explain, defend, and revise yourself during review.",
-            "line": 59
           },
           {
             "path": "CONTRIBUTING.md",
@@ -46,164 +44,148 @@
           },
           {
             "path": "CONTRIBUTING.md",
-            "quote": "Do not use AI to reply to questions about your issue or pull request.",
-            "line": 61
-          },
-          {
-            "path": "CONTRIBUTING.md",
             "quote": "AI may be used to help draft issues and pull requests, but contributors remain responsible for the accuracy, completeness, and intent of what they submit.",
             "line": 62
-          },
-          {
-            "path": "CONTRIBUTING.md",
-            "quote": "Maintainers reserve the right to close pull requests and issues that do not disclose AI assistance, that appear to be low-quality AI-generated content, or where the contributor cannot explain or defend the proposed changes themselves.",
-            "line": 64
           }
         ],
         "rationale_only_mention": "",
+        "lean": "none",
         "suggested_improvement": "",
-        "reasoning": "The 'AI Contribution Policy' section explicitly names issues and pull requests, states a disclosure requirement plus mandatory human review/testing of AI-generated code before submission (human_in_the_loop-style supervision), and assigns accountability to the contributor with maintainer enforcement. No volume/scope limit or proportionality threshold is stated, but the two required elements (supervision level, accountability holder) are both present, so this domain is fully addressed."
+        "reasoning": "The 'AI Contribution Policy' section explicitly names pull requests and issues, requires human review/testing before submission (human_in_the_loop), requires disclosure, and states contributors bear responsibility for accuracy/completeness/intent of what they submit, giving both a supervision level and an accountability holder."
       },
       {
         "domain": "notetaker_bots",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
-        "proportionality": "not_applicable",
+        "accountability_wording": "",
+        "proportionality": "not_specified",
         "addressed": "no",
         "evidence": [],
         "rationale_only_mention": "",
-        "suggested_improvement": "The policy would need to name meeting/discussion recording or transcription bots explicitly and state a supervision level and accountability holder for their use.",
-        "reasoning": "CONTRIBUTING.md contains no mention of notetaker or meeting-recording bots, or of recorded discussion/closed-group content in any form."
+        "lean": "none",
+        "suggested_improvement": "no mention of meeting/notetaker bots; no supervision level or holder",
+        "reasoning": "CONTRIBUTING.md contains no reference to meeting recording, notetaker bots, or closed/small-group discussion capture."
       },
       {
         "domain": "content",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
-        "proportionality": "not_applicable",
+        "accountability_wording": "",
+        "proportionality": "not_specified",
         "addressed": "no",
         "evidence": [],
         "rationale_only_mention": "",
-        "suggested_improvement": "The policy would need to state whether AI may be used for documentation, blog posts, or design assets, and name a supervision level and accountability holder for that use.",
-        "reasoning": "The AI Contribution Policy names only issues and pull requests. The separate Documentation section describes where docs live and how they are updated but does not mention AI at all, so AI use for documentation, blogs, or design assets is not addressed."
+        "lean": "none",
+        "suggested_improvement": "no rule for AI use in documentation/blogs/design assets",
+        "reasoning": "The AI policy section is framed around pull requests and issues (code contributions); the Documentation section of CONTRIBUTING.md makes no mention of AI at all, so non-code content is unaddressed."
       },
       {
         "domain": "moderation",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
-        "proportionality": "not_applicable",
+        "accountability_wording": "",
+        "proportionality": "not_specified",
         "addressed": "no",
         "evidence": [],
-        "rationale_only_mention": "",
-        "suggested_improvement": "The policy would need to state whether AI may assist maintainers in moderation actions (locking issues, banning users, etc.) and specify supervision and accountability for that use.",
-        "reasoning": "The Issue locking section describes moderation-like actions (locking closed/merged issue threads) but makes no mention of AI being used to perform or assist moderation. The 'Maintainers reserve the right to close...' clause is enforcement of the AI-disclosure rule, not a statement about AI being used as a moderation tool."
+        "rationale_only_mention": "We welcome new contributors, but cannot sustain the effort of supporting contributors who primarily defer to AI rather than engaging substantively with the review process.",
+        "lean": "restrictive",
+        "suggested_improvement": "no supervision level or accountability holder for moderation actions",
+        "reasoning": "The clause about maintainers 'reserving the right to close' non-compliant PRs is enforcement of the code-contribution disclosure rule, not a statement about AI being used for moderation, and the effort/sustainability sentence is a rationale about reviewer workload rather than a rule for the moderation domain."
       },
       {
         "domain": "review",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
-        "proportionality": "not_applicable",
+        "accountability_wording": "",
+        "proportionality": "not_specified",
         "addressed": "no",
         "evidence": [],
         "rationale_only_mention": "",
-        "suggested_improvement": "The policy would need to state whether maintainers/reviewers may use AI tools to review contributions, and name a supervision level and accountability holder for that reviewer-side use.",
-        "reasoning": "The 'Review AI-generated code closely before marking a pull request ready for review' instruction governs the contributor's own pre-submission check of their AI-assisted code, not who or what may use AI to perform the maintainer-side code review. The Reviewing PRs and Code review sections contain no mention of AI being used by reviewers."
+        "lean": "none",
+        "suggested_improvement": "no rule on AI use by reviewers evaluating contributions",
+        "reasoning": "The policy requires the contributor to review their own AI-generated code before submission, but says nothing about whether maintainers/reviewers themselves may use AI tools when reviewing a PR."
       },
       {
         "domain": "autonomous",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
-        "proportionality": "not_applicable",
+        "accountability_wording": "",
+        "proportionality": "not_specified",
         "addressed": "no",
         "evidence": [],
         "rationale_only_mention": "",
-        "suggested_improvement": "The policy would need to state whether autonomous or agentic AI systems may submit contributions or act without a human directly in the loop, and specify supervision level and accountability holder for such use.",
-        "reasoning": "The policy assumes a human contributor is using AI as an assistive tool ('contributors remain responsible...', 'Only use AI to assist in contributions that you understand') but does not name or address fully autonomous/agentic AI systems operating without direct human submission or action."
+        "lean": "none",
+        "suggested_improvement": "no rule on autonomous/agentic interaction with the repository",
+        "reasoning": "No mention of agents or autonomous AI systems acting on issues/PRs without a human submitter."
       },
       {
         "domain": "environmental",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
-        "proportionality": "not_applicable",
+        "accountability_wording": "",
+        "proportionality": "not_specified",
         "addressed": "no",
         "evidence": [],
         "rationale_only_mention": "",
-        "suggested_improvement": "The policy would need to state a rule addressing energy, water, or carbon footprint concerns tied to AI use, with an associated supervision level and accountability holder, rather than being silent on the topic.",
-        "reasoning": "CONTRIBUTING.md contains no mention of energy use, water use, hardware footprint, or carbon impact related to AI tools, either as rationale or as rule."
+        "lean": "none",
+        "suggested_improvement": "no statement on energy/water/carbon impact of AI use",
+        "reasoning": "CONTRIBUTING.md contains no reference to energy, water, or carbon footprint concerns anywhere in the AI policy or elsewhere."
       },
       {
         "domain": "infrastructure",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
-        "proportionality": "not_applicable",
+        "accountability_wording": "",
+        "proportionality": "not_specified",
         "addressed": "no",
         "evidence": [],
         "rationale_only_mention": "",
-        "suggested_improvement": "The policy would need to state a rule addressing server load or hardware cost strain caused by AI tool use (e.g. automated bulk PR generation), with a supervision level and accountability holder.",
-        "reasoning": "CONTRIBUTING.md does not mention infrastructure strain, server load, or hardware cost/financing in connection with AI use anywhere in the document."
+        "lean": "none",
+        "suggested_improvement": "no statement on server load or hardware cost from AI",
+        "reasoning": "No text addresses server load, hosting/hardware cost, or financing burden tied to AI tooling."
       },
       {
         "domain": "training_data",
         "supervision_level": "not_specified",
         "scope_or_volume_limits": "not_specified",
         "accountability_holder": "not_specified",
-        "proportionality": "not_applicable",
+        "accountability_wording": "",
+        "proportionality": "not_specified",
         "addressed": "no",
         "evidence": [],
         "rationale_only_mention": "",
-        "suggested_improvement": "The policy would need to state a rule on whether/how platform user data (issues, PRs, comments, code) may be used to train AI models, with a supervision level and accountability holder.",
-        "reasoning": "CONTRIBUTING.md does not address the use of Gitea's own contributor/user data (code, issues, comments) for training AI models in any form."
+        "lean": "none",
+        "suggested_improvement": "no statement on project data being used to train models",
+        "reasoning": "No mention of Gitea's own issues, discussions, code, or user data being used (or restricted from use) to train AI models."
       }
     ],
-    "unscoped_statements": [],
-    "overall_posture": "CONTRIBUTING.md contains one specific, named AI policy \u2014 for code contributions (PRs/issues), requiring disclosure and human review/testing with contributor and maintainer accountability \u2014 while notetaker bots, content, moderation, review, autonomous/agentic use, environmental impact, infrastructure strain, and training-data use are entirely unaddressed in this file."
+    "unscoped_statements": [
+      {
+        "path": "CONTRIBUTING.md",
+        "quote": "Disclose AI-assisted content clearly.",
+        "areas_named": [
+          "code_contributions"
+        ],
+        "domains_left_ambiguous": [
+          "content"
+        ],
+        "line": 60
+      }
+    ],
+    "overall_posture": "Gitea's CONTRIBUTING.md addresses AI use specifically and only for code contributions (PRs/issues) \u2014 requiring disclosure, human review before submission, and holding contributors accountable \u2014 while leaving notetaker bots, non-code content, moderation, review, autonomous use, environmental impact, infrastructure strain, and training data on project data entirely unaddressed."
   },
   "validation_problems": [],
   "use_composition_partial": {
-    "agent_instruction_files": [
-      "AGENTS.md",
-      "CLAUDE.md"
-    ],
-    "workflow_count": 17,
-    "workflows_with_ai_or_bot_signals": [
-      {
-        "path": ".github/workflows/cron-licenses.yml",
-        "signals": [
-          "bot"
-        ]
-      },
-      {
-        "path": ".github/workflows/cron-renovate.yml",
-        "signals": [
-          "bot",
-          "renovate"
-        ]
-      },
-      {
-        "path": ".github/workflows/cron-translations.yml",
-        "signals": [
-          "bot"
-        ]
-      },
-      {
-        "path": ".github/workflows/giteabot-backport.yml",
-        "signals": [
-          "bot"
-        ]
-      },
-      {
-        "path": ".github/workflows/giteabot.yml",
-        "signals": [
-          "bot"
-        ]
-      }
-    ],
+    "agent_instruction_files": [],
+    "workflow_count": 0,
+    "workflows_with_ai_or_bot_signals": [],
     "awaiting_implementation": {
       "specific_tools_in_use": "Awaiting implementation: named-product detection beyond known file signatures",
       "model_type": "Awaiting implementation: underlying model/family",
