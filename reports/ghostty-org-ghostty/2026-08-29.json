@@ -34,12 +34,12 @@
           {
             "path": "AI_POLICY.md",
             "quote": "All AI usage in any form must be disclosed. You must state the tool you used",
-            "line": null
+            "line": 5
           },
           {
             "path": "AI_POLICY.md",
             "quote": "The human-in-the-loop must fully understand all code. If you can't explain what your changes do",
-            "line": null
+            "line": 9
           }
         ],
         "rationale_only_mention": "",
@@ -71,7 +71,7 @@
           {
             "path": "AI_POLICY.md",
             "quote": "No AI-generated media is allowed (art, images, videos, audio, etc.). Text and code are the only acceptable AI-generated content, per the other rules in this policy.",
-            "line": null
+            "line": 21
           }
         ],
         "rationale_only_mention": "",
@@ -210,11 +210,7 @@
     ],
     "overall_posture": "Ghostty's AI policy is fairly specific about code contributions and text-based issues/discussions (requiring disclosure and a human-in-the-loop who fully understands the work) and explicitly bans AI-generated media, but it never names notetaker bots, moderation, environmental impact, infrastructure strain, or training data, and only glancingly touches review and autonomous/agentic use through general human-in-the-loop language without stating accountability holders for those areas."
   },
-  "validation_problems": [
-    "code_contributions: quote not found in AI_POLICY.md",
-    "code_contributions: quote not found in AI_POLICY.md",
-    "content: quote not found in AI_POLICY.md"
-  ],
+  "validation_problems": [],
   "use_composition_partial": {
     "agent_instruction_files": [
       "AGENTS.md",

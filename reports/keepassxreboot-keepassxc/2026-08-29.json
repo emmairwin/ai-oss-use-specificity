@@ -34,7 +34,7 @@
           {
             "path": ".github/CONTRIBUTING.md",
             "quote": "If you use Generative AI to write the vast majority of your submission (e.g., agent-based or vibe coding) then you must document your use of AI in your pull request.",
-            "line": null
+            "line": 80
           }
         ],
         "rationale_only_mention": "",
@@ -105,7 +105,7 @@
           {
             "path": ".github/CONTRIBUTING.md",
             "quote": "If you use Generative AI to write the vast majority of your submission (e.g., agent-based or vibe coding) then you must document your use of AI in your pull request.",
-            "line": null
+            "line": 80
           }
         ],
         "rationale_only_mention": "",
@@ -156,10 +156,7 @@
     "unscoped_statements": [],
     "overall_posture": "CONTRIBUTING.md addresses AI use narrowly and only for code submissions: it requires contributors to disclose when Generative AI (including agent-based/\"vibe\" coding) produced the vast majority of a PR's content, and states that all code still undergoes human review, but it is silent on notetaker bots, non-code content, moderation, AI-assisted review, environmental/infrastructure impact, and training data."
   },
-  "validation_problems": [
-    "code_contributions: quote not found in .github/CONTRIBUTING.md",
-    "autonomous: quote not found in .github/CONTRIBUTING.md"
-  ],
+  "validation_problems": [],
   "use_composition_partial": {
     "agent_instruction_files": [
       ".github/copilot-instructions.md"

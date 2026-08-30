@@ -108,7 +108,7 @@
           {
             "path": "docs/source/community/ai_tool_policy.rst",
             "quote": "automated review tools that publish comments without human review are not allowed. However, an opt-in review tool that keeps a human in the loop is acceptable under this policy",
-            "line": null
+            "line": 76
           }
         ],
         "rationale_only_mention": "",
@@ -179,7 +179,6 @@
     "overall_posture": "PROJ's policy is highly specific about code-adjacent contributions (code, RFCs, issues, PR comments), requiring a human in the loop, disclosure, and contributor accountability, and it explicitly bans fully autonomous agentic action and unsupervised automated review tools; however it says nothing about notetaker bots, moderation, environmental impact, infrastructure strain, or training-data use, and leaves accountability unnamed for review and autonomous domains despite setting supervision levels there."
   },
   "validation_problems": [
-    "review: quote not found in docs/source/community/ai_tool_policy.rst",
     "autonomous: quote not found in docs/source/community/ai_tool_policy.rst"
   ],
   "use_composition_partial": {

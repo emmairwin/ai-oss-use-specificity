@@ -44,7 +44,7 @@
           {
             "path": "src/contributing/getting-started.md",
             "quote": "you must verify the output of any AI tool before filing issues against the Servo project... you must be able to reproduce and validate any findings, not simply trust the tool's output.",
-            "line": null
+            "line": 59
           }
         ],
         "rationale_only_mention": "",
@@ -206,9 +206,7 @@
     ],
     "overall_posture": "Servo's getting-started guide is highly specific and restrictive about AI in code, documentation, issues, and comments (banned, contributor-accountable), permits but discourages AI-assisted self-review with no accountability holder named, and is silent on notetaker bots, moderation, autonomous/agentic use, infrastructure strain, and training data, mentioning environmental and copyright concerns only as rationale for the ban rather than as standalone rules."
   },
-  "validation_problems": [
-    "code_contributions: quote not found in src/contributing/getting-started.md"
-  ],
+  "validation_problems": [],
   "use_composition_partial": {
     "agent_instruction_files": [],
     "workflow_count": 2,

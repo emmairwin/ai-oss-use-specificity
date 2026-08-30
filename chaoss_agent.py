@@ -691,22 +691,48 @@ def run(repo: Repo, shortlist: list[str], log_path: Path,
 def locate(body: str, quote: str) -> int | None:
     """Return the 1-based line where the quote starts, or None if absent.
     Whitespace-insensitive, so wrapped markdown still matches."""
-    norm = lambda t: " ".join(t.split()).lower()
-    q = norm(quote)
-    if not q:
+    if not quote.strip():
         return None
+
+    def norm(t: str, loose: bool) -> str:
+        t = t.lower()
+        # Smart punctuation, so a quote typed cleanly still matches the source.
+        for a, b in (("’", "'"), ("‘", "'"), ("“", '"'),
+                     ("”", '"'), ("—", "-"), ("–", "-"),
+                     ("…", "...")):
+            t = t.replace(a, b)
+        if loose:
+            # Markdown emphasis and links: the model quotes rendered text, the
+            # file holds **bold**, _italic_, `code` and [links](url).
+            t = re.sub(r"\[([^\]]*)\]\([^)]*\)", r"\1", t)
+            t = re.sub(r"[*_`~#>]", "", t)
+            t = re.sub(r"[^a-z0-9 ]", "", t)
+        return " ".join(t.split())
+
     lines = body.split("\n")
-    # Build normalized text plus a map from normalized position -> line number.
-    flat, line_at = [], []
-    for i, line in enumerate(lines, 1):
-        for tok in line.split():
-            flat.append(tok.lower())
-            line_at.append(i)
-    hay = " ".join(flat)
-    pos = hay.find(q)
-    if pos == -1:
-        return None
-    return line_at[hay.count(" ", 0, pos)]
+    for loose in (False, True):
+        q = norm(quote, loose)
+        if not q:
+            continue
+        flat, line_at = [], []
+        for i, line in enumerate(lines, 1):
+            for tok in norm(line, loose).split():
+                flat.append(tok)
+                line_at.append(i)
+        hay = " ".join(flat)
+        pos = hay.find(q)
+        if pos != -1:
+            return line_at[hay.count(" ", 0, pos)]
+
+        # Elided quotes: the model joins two fragments with "...". Anchor on
+        # the longest fragment and report the line it starts on.
+        parts = [p for p in re.split(r"\s*\.{3,}\s*", q) if len(p.split()) >= 4]
+        if len(parts) > 1:
+            for frag in sorted(parts, key=len, reverse=True):
+                pos = hay.find(frag)
+                if pos != -1:
+                    return line_at[hay.count(" ", 0, pos)]
+    return None
 
 
 def validate(grid: dict, repo: Repo, tree: list[str]) -> list[str]:

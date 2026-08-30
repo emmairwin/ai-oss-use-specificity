@@ -44,7 +44,7 @@
           {
             "path": "AI_POLICY.md",
             "quote": "we require you to disclose it in the Pull Request description",
-            "line": null
+            "line": 26
           }
         ],
         "rationale_only_mention": "",
@@ -171,9 +171,7 @@
     "unscoped_statements": [],
     "overall_posture": "The policy is highly specific about code contributions - requiring human accountability, disclosure, and banning autonomous PR/comment submission - but is entirely silent on notetaker bots, general content, moderation, reviewer-side AI use, environmental impact, infrastructure strain, and training data use, and only reaches those areas of general concern (maintainer overhead) as rationale rather than rule."
   },
-  "validation_problems": [
-    "code_contributions: quote not found in AI_POLICY.md"
-  ],
+  "validation_problems": [],
   "use_composition_partial": {
     "agent_instruction_files": [],
     "workflow_count": 1,

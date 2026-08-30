@@ -34,7 +34,7 @@
           {
             "path": ".github/CONTRIBUTING.md",
             "quote": "If you use LLM / \"AI\" tools for your contributions, please read and follow our _Generative AI / LLM Policy_",
-            "line": null
+            "line": 7
           },
           {
             "path": ".github/CONTRIBUTING.md",
@@ -165,15 +165,12 @@
           "moderation",
           "autonomous"
         ],
-        "line": null
+        "line": 7
       }
     ],
     "overall_posture": "CONTRIBUTING.md addresses AI use only in passing for code contributions - requiring contributors to fully understand any code they submit and deferring detailed rules to an external, out-of-scope AI policy document - while leaving notetaker bots, content, moderation, review, autonomous use, environmental impact, infrastructure strain, and training-data use completely unaddressed within this file."
   },
-  "validation_problems": [
-    "code_contributions: quote not found in .github/CONTRIBUTING.md",
-    "unscoped: quote not found in .github/CONTRIBUTING.md"
-  ],
+  "validation_problems": [],
   "use_composition_partial": {
     "agent_instruction_files": [],
     "workflow_count": 6,

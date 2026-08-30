@@ -34,7 +34,7 @@
           {
             "path": "AI_POLICY.md",
             "quote": "All AI usage in any form must be disclosed. You must state the tool(s) you used",
-            "line": null
+            "line": 9
           },
           {
             "path": "AI_POLICY.md",
@@ -108,7 +108,7 @@
           {
             "path": "AI_POLICY.md",
             "quote": "Agents are strictly forbidden from interacting with our repository. This includes but is not limited to posting issues, making pull requests, posting comments, posting code reviews",
-            "line": null
+            "line": 5
           }
         ],
         "rationale_only_mention": "",
@@ -196,10 +196,7 @@
     ],
     "overall_posture": "Polars' AI policy is highly specific and restrictive about code contributions (issues/PRs/comments) and about autonomous agent interaction and AI-driven review, requiring disclosure and human-in-the-loop verification and banning agents from directly acting on the repo; it partially bans AI-generated non-code content but never names an accountability holder there or for review, and it is entirely silent on notetaker bots, moderation, environmental impact, infrastructure strain, and training data."
   },
-  "validation_problems": [
-    "code_contributions: quote not found in AI_POLICY.md",
-    "review: quote not found in AI_POLICY.md"
-  ],
+  "validation_problems": [],
   "use_composition_partial": {
     "agent_instruction_files": [],
     "workflow_count": 20,

@@ -34,7 +34,7 @@
           {
             "path": "llvm/docs/AIToolPolicy.md",
             "quote": "contributors can use whatever tools they would like to craft their contributions, but there must be a human in the loop.",
-            "line": null
+            "line": 5
           },
           {
             "path": "llvm/docs/AIToolPolicy.md",
@@ -44,7 +44,7 @@
           {
             "path": "llvm/docs/AIToolPolicy.md",
             "quote": "AI tools must not be used to fix GitHub issues labelled good first issue",
-            "line": null
+            "line": 56
           }
         ],
         "rationale_only_mention": "",
@@ -108,7 +108,7 @@
           {
             "path": "llvm/docs/AIToolPolicy.md",
             "quote": "automated review tools that publish comments without human review are not allowed. However, an opt-in review tool that keeps a human in the loop is acceptable under this policy.",
-            "line": null
+            "line": 49
           }
         ],
         "rationale_only_mention": "",
@@ -127,7 +127,7 @@
           {
             "path": "llvm/docs/AIToolPolicy.md",
             "quote": "it bans agents that take action in our digital spaces without human approval, such as the GitHub @claude agent",
-            "line": null
+            "line": 47
           }
         ],
         "rationale_only_mention": "",
@@ -178,12 +178,7 @@
     "unscoped_statements": [],
     "overall_posture": "LLVM's policy is highly specific and restrictive about code-adjacent contributions (code, RFCs, issues, PR comments), mandating human-in-the-loop review, contributor accountability, disclosure of substantial tool use, and outright bans on unsupervised agents and fully automated review/commenting -- but it never names notetaker bots, moderation, environmental impact, infrastructure strain, or training data, and leaves accountability unspecified for review, autonomous-agent, and content/documentation scenarios despite naming them."
   },
-  "validation_problems": [
-    "code_contributions: quote not found in llvm/docs/AIToolPolicy.md",
-    "code_contributions: quote not found in llvm/docs/AIToolPolicy.md",
-    "review: quote not found in llvm/docs/AIToolPolicy.md",
-    "autonomous: quote not found in llvm/docs/AIToolPolicy.md"
-  ],
+  "validation_problems": [],
   "use_composition_partial": {
     "agent_instruction_files": [],
     "workflow_count": 0,

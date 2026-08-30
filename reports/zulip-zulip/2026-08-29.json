@@ -39,12 +39,12 @@
           {
             "path": "CONTRIBUTING.md",
             "quote": "Do not submit an AI-generated PR you haven't personally understood and tested, as this wastes maintainers' time.",
-            "line": null
+            "line": 131
           },
           {
             "path": "CONTRIBUTING.md",
             "quote": "When you use an LLM to write a PR description or comment, it remains your responsibility to read through the whole thing",
-            "line": null
+            "line": 167
           }
         ],
         "rationale_only_mention": "",
@@ -115,12 +115,12 @@
           {
             "path": "CONTRIBUTING.md",
             "quote": "Fiddling or vibe coding until things seem to work, and then asking maintainers to verify code that you don't understand yourself, does not help the project.",
-            "line": null
+            "line": 78
           },
           {
             "path": "CONTRIBUTING.md",
             "quote": "Do not submit an AI-generated PR you haven't personally understood and tested, as this wastes maintainers' time.",
-            "line": null
+            "line": 131
           }
         ],
         "rationale_only_mention": "",
@@ -192,17 +192,12 @@
           "moderation",
           "review"
         ],
-        "line": null
+        "line": 94
       }
     ],
     "overall_posture": "Zulip's CONTRIBUTING.md gives detailed, specific guidance on AI use for code contributions and related PR/community communication (human-in-the-loop supervision, contributor accountability), but is entirely silent on notetaker bots, content/documentation, moderation, AI-assisted review, environmental impact, infrastructure strain, and training data use."
   },
   "validation_problems": [
-    "code_contributions: quote not found in CONTRIBUTING.md",
-    "code_contributions: quote not found in CONTRIBUTING.md",
-    "autonomous: quote not found in CONTRIBUTING.md",
-    "autonomous: quote not found in CONTRIBUTING.md",
-    "unscoped: quote not found in CONTRIBUTING.md",
     "unscoped: quote not found in CONTRIBUTING.md"
   ],
   "use_composition_partial": {

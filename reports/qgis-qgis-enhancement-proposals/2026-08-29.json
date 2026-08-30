@@ -34,7 +34,7 @@
           {
             "path": "qep-408-ai-tool-policy.md",
             "quote": "there must be a human in the loop. Contributors must read and review all Large Language Model (LLM)-generated code or text before they ask other project members to review it.",
-            "line": null
+            "line": 27
           },
           {
             "path": "qep-408-ai-tool-policy.md",
@@ -113,7 +113,7 @@
           {
             "path": "qep-408-ai-tool-policy.md",
             "quote": "automated review tools that publish comments without human review are not allowed. However, an opt-in review tool that keeps a human in the loop is acceptable under this policy.",
-            "line": null
+            "line": 70
           }
         ],
         "rationale_only_mention": "",
@@ -132,7 +132,7 @@
           {
             "path": "qep-408-ai-tool-policy.md",
             "quote": "An important implication of this policy is that it bans agents that take action in our digital spaces without human approval, such as the GitHub @claude agent.",
-            "line": null
+            "line": 68
           }
         ],
         "rationale_only_mention": "",
@@ -183,11 +183,7 @@
     "unscoped_statements": [],
     "overall_posture": "The policy is a specific, human-in-the-loop framework for contributions, documentation/QEPs, and review tooling (banning fully autonomous agents and unreviewed automated review comments) with contributor accountability, but it never addresses notetaker bots, moderation, environmental impact, infrastructure strain, or training-data use, and leaves accountability unnamed for review and autonomous-agent scenarios."
   },
-  "validation_problems": [
-    "code_contributions: quote not found in qep-408-ai-tool-policy.md",
-    "review: quote not found in qep-408-ai-tool-policy.md",
-    "autonomous: quote not found in qep-408-ai-tool-policy.md"
-  ],
+  "validation_problems": [],
   "use_composition_partial": {
     "agent_instruction_files": [],
     "workflow_count": 0,
