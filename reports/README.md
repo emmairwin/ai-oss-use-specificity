@@ -11,7 +11,7 @@ Out of nine domains: `✓` addressed, `~` partial, `R` raised in the policy's ra
 | `torvalds/linux` ᶠ | 2026-08-29 | 2 | 1 | – | 6 | The policy is fairly specific about AI-assisted code contributions and autonomous bug-finding/fixing (mandating human review, human sign-off/DCO,… | [report](torvalds-linux/2026-08-29.md) | [improve](https://github.com/emmairwin/ai-oss-use-specificity/issues/new?title=Report%20correction%3A%20torvalds%2Flinux&body=Report%3A%20torvalds-linux/2026-08-29.md%0ADomain%3A%0AReported%20as%3A%0AShould%20be%3A%0AQuote%20from%20the%20policy%3A%0A) |
 | `teamtype/teamtype` ᶠ | 2026-08-29 | 0 | 1 | – | 8 | The project imposes an outright, blanket ban on LLM-generated content across code contributions and all GitHub written communication (PRs, issues,… | [report](teamtype-teamtype/2026-08-29.md) | [improve](https://github.com/emmairwin/ai-oss-use-specificity/issues/new?title=Report%20correction%3A%20teamtype%2Fteamtype&body=Report%3A%20teamtype-teamtype/2026-08-29.md%0ADomain%3A%0AReported%20as%3A%0AShould%20be%3A%0AQuote%20from%20the%20policy%3A%0A) |
 | `sunpy/sunpy` ᶠ | 2026-08-29 | 2 | 0 | – | 7 | The README gives one narrowly-scoped rule requiring human understanding and accountability for generative-AI-assisted code and documentation… | [report](sunpy-sunpy/2026-08-29.md) | [improve](https://github.com/emmairwin/ai-oss-use-specificity/issues/new?title=Report%20correction%3A%20sunpy%2Fsunpy&body=Report%3A%20sunpy-sunpy/2026-08-29.md%0ADomain%3A%0AReported%20as%3A%0AShould%20be%3A%0AQuote%20from%20the%20policy%3A%0A) |
-| `servo/book` ᶠ | 2026-08-29 | 2 | 1 | 2 | 4 | Servo's getting-started guide is highly specific and restrictive about AI in code, documentation, issues, and comments (banned,… | [report](servo-book/2026-08-29.md) | [improve](https://github.com/emmairwin/ai-oss-use-specificity/issues/new?title=Report%20correction%3A%20servo%2Fbook&body=Report%3A%20servo-book/2026-08-29.md%0ADomain%3A%0AReported%20as%3A%0AShould%20be%3A%0AQuote%20from%20the%20policy%3A%0A) |
+| `servo/book` ᶠ | 2026-08-29 | 0 | 3 | 2 | 4 | Servo's getting-started guide bans AI-generated content in code, documentation, PRs, issues, and comments (with a detailed FAQ), discourages but… | [report](servo-book/2026-08-29.md) | [improve](https://github.com/emmairwin/ai-oss-use-specificity/issues/new?title=Report%20correction%3A%20servo%2Fbook&body=Report%3A%20servo-book/2026-08-29.md%0ADomain%3A%0AReported%20as%3A%0AShould%20be%3A%0AQuote%20from%20the%20policy%3A%0A) |
 | `scikit-learn/scikit-learn` ᶠ | 2026-08-29 | 2 | 0 | 1 | 6 | The scikit-learn Code of Conduct narrowly and specifically addresses AI-generated pull requests, issues, comments, and reviews, conditioning… | [report](scikit-learn-scikit-learn/2026-08-29.md) | [improve](https://github.com/emmairwin/ai-oss-use-specificity/issues/new?title=Report%20correction%3A%20scikit-learn%2Fscikit-learn&body=Report%3A%20scikit-learn-scikit-learn/2026-08-29.md%0ADomain%3A%0AReported%20as%3A%0AShould%20be%3A%0AQuote%20from%20the%20policy%3A%0A) |
 | `rust-lang/rust-forge` ᶠ | 2026-08-29 ⚠ | 2 | 2 | 1 | 4 | The policy is a detailed, conservative, disclosure-and-review-gated framework specifically for code contributions and PR/comment review on… | [report](rust-lang-rust-forge/2026-08-29.md) | [improve](https://github.com/emmairwin/ai-oss-use-specificity/issues/new?title=Report%20correction%3A%20rust-lang%2Frust-forge&body=Report%3A%20rust-lang-rust-forge/2026-08-29.md%0ADomain%3A%0AReported%20as%3A%0AShould%20be%3A%0AQuote%20from%20the%20policy%3A%0A) |
 | `qgis/QGIS-Enhancement-Proposals` ᶠ | 2026-08-29 | 2 | 2 | 1 | 4 | The policy is a specific, human-in-the-loop framework for contributions, documentation/QEPs, and review tooling (banning fully autonomous agents… | [report](qgis-qgis-enhancement-proposals/2026-08-29.md) | [improve](https://github.com/emmairwin/ai-oss-use-specificity/issues/new?title=Report%20correction%3A%20qgis%2FQGIS-Enhancement-Proposals&body=Report%3A%20qgis-qgis-enhancement-proposals/2026-08-29.md%0ADomain%3A%0AReported%20as%3A%0AShould%20be%3A%0AQuote%20from%20the%20policy%3A%0A) |
@@ -65,7 +65,7 @@ Each project counted once, using its most recent scan (25 projects). The trailin
 - [qgis/QGIS-Enhancement-Proposals](qgis-qgis-enhancement-proposals/2026-08-29.md) yes `human_in_the_loop` `qep-408-ai-tool-policy.md:27`
 - [rust-lang/rust-forge](rust-lang-rust-forge/2026-08-29.md) yes `disclosure_required` `src/policies/llm-usage.md:102`
 - [scikit-learn/scikit-learn](scikit-learn-scikit-learn/2026-08-29.md) yes `human_in_the_loop` `CODE_OF_CONDUCT.md:19`
-- [servo/book](servo-book/2026-08-29.md) yes `banned` `src/contributing/getting-started.md:31`
+- [servo/book](servo-book/2026-08-29.md) partial `banned` `src/contributing/getting-started.md:31`
 - [sunpy/sunpy](sunpy-sunpy/2026-08-29.md) yes `human_in_the_loop` `README.rst:95`
 - [teamtype/teamtype](teamtype-teamtype/2026-08-29.md) partial `banned` `CONTRIBUTING.md:38`
 - [torvalds/linux](torvalds-linux/2026-08-29.md) yes `human_in_the_loop` `Documentation/process/coding-assistants.rst:34`
@@ -83,7 +83,7 @@ Each project counted once, using its most recent scan (25 projects). The trailin
 - [pola-rs/polars](pola-rs-polars/2026-08-29.md) partial `banned` `AI_POLICY.md:29`
 - [qgis/QGIS-Enhancement-Proposals](qgis-qgis-enhancement-proposals/2026-08-29.md) yes `human_in_the_loop` `qep-408-ai-tool-policy.md:73`
 - [rust-lang/rust-forge](rust-lang-rust-forge/2026-08-29.md) partial `banned` `src/policies/llm-usage.md:81`
-- [servo/book](servo-book/2026-08-29.md) yes `banned` `src/contributing/getting-started.md:31`
+- [servo/book](servo-book/2026-08-29.md) partial `banned` `src/contributing/getting-started.md:31`
 - [sunpy/sunpy](sunpy-sunpy/2026-08-29.md) yes `human_in_the_loop` `README.rst:95`
 
 **Moderation actions**: none
@@ -97,7 +97,7 @@ Each project counted once, using its most recent scan (25 projects). The trailin
 - [qgis/QGIS-Enhancement-Proposals](qgis-qgis-enhancement-proposals/2026-08-29.md) partial `human_in_the_loop` `qep-408-ai-tool-policy.md:70`
 - [rust-lang/rust-forge](rust-lang-rust-forge/2026-08-29.md) yes `human_in_the_loop` `src/policies/llm-usage.md:91`
 - [scikit-learn/scikit-learn](scikit-learn-scikit-learn/2026-08-29.md) yes `human_in_the_loop` `CODE_OF_CONDUCT.md:19`
-- [servo/book](servo-book/2026-08-29.md) partial `limited_unsupervised` `src/contributing/getting-started.md:76`
+- [servo/book](servo-book/2026-08-29.md) partial `fully_unsupervised` `src/contributing/getting-started.md:76`
 - [torvalds/linux](torvalds-linux/2026-08-29.md) partial `human_in_the_loop` `Documentation/process/coding-assistants.rst:93`
 - [yt-dlp/yt-dlp](yt-dlp-yt-dlp/2026-08-29.md) partial `banned` `.NO_AI/README.md:11`
 
@@ -155,7 +155,7 @@ These rows count as not-in-policy in the chart above. They are separated here be
 - [rust-lang/rust-forge](rust-lang-rust-forge/2026-08-29.md)
   > many others feel that its negative impact on society and the climate are severe enough that no use is acceptable.
 - [servo/book](servo-book/2026-08-29.md)
-  > AI tools require an unreasonable amount of energy and water to build and operate, their models are built with heavily exploited workers in unacceptable working conditions...
+  > AI tools require an unreasonable amount of energy and water to build and operate.
 
 **Infrastructure strain** (4)
 

@@ -87,6 +87,17 @@ DOMAIN_HINTS = {
 
 # "not_specified" rather than "silent": the metric describes what a document
 # says, not whether a community chose to speak.
+# Free text made these uncomparable: 21 distinct spellings of "the contributor"
+# across 31 filled cells in the first corpus. The verbatim phrasing is kept
+# alongside in accountability_wording.
+ACCOUNTABILITY_HOLDERS = [
+    "contributor",
+    "reviewer",
+    "maintainer",   # kept separate: maintainers are who moderate
+    "project",
+    "not_specified",
+]
+
 SUPERVISION_LEVELS = [
     "banned",
     "human_in_the_loop",
@@ -316,18 +327,36 @@ SUBMIT = {
                         },
                         "accountability_holder": {
                             "type": "string",
-                            "description": "Who is answerable FOR THE AI-ASSISTED "
-                                           "OUTPUT - authorship accountability. "
-                                           "Enforcement authority is NOT this: "
-                                           "'maintainers may close non-compliant "
-                                           "PRs' names who polices the rule, not "
-                                           "who owns the work, and is "
-                                           "'not_specified'. 'Contributors are "
-                                           "responsible for all submitted content' "
-                                           "IS this. If the policy only says who "
-                                           "enforces, answer 'not_specified' and "
-                                           "note the enforcement clause in "
-                                           "reasoning.",
+                            "enum": ACCOUNTABILITY_HOLDERS,
+                            "description": "Who the policy makes answerable FOR "
+                                           "THE AI-ASSISTED OUTPUT. "
+                                           "'contributor' covers every wording of "
+                                           "the person submitting: contributor, "
+                                           "author, submitter, user, patch "
+                                           "author, the human in the loop. "
+                                           "'reviewer' where a reviewer is made "
+                                           "answerable for AI-assisted review. "
+                                           "'maintainer' where maintainers are "
+                                           "made answerable, which is distinct "
+                                           "from contributor because maintainers "
+                                           "are the people who moderate. "
+                                           "'project' where the project, board or "
+                                           "foundation takes it on. Otherwise "
+                                           "'not_specified'. Two things that are "
+                                           "NOT accountability: naming who "
+                                           "ENFORCES ('maintainers may close "
+                                           "non-compliant PRs'), and stating an "
+                                           "OBLIGATION ('contributions must be "
+                                           "rewritten without AI') - an "
+                                           "obligation is a supervision level. "
+                                           "Only a statement of who bears "
+                                           "responsibility counts.",
+                        },
+                        "accountability_wording": {
+                            "type": "string",
+                            "description": "The policy's own phrasing of who is "
+                                           "accountable, verbatim and short. "
+                                           "Empty when 'not_specified'.",
                         },
                         "proportionality": {
                             "type": "string",
@@ -411,7 +440,7 @@ SUBMIT = {
                     },
                     "required": ["domain", "supervision_level",
                                  "scope_or_volume_limits", "accountability_holder",
-                                 "proportionality", "addressed", "evidence",
+                                 "accountability_wording", "proportionality", "addressed", "evidence",
                                  "rationale_only_mention", "lean",
                                  "suggested_improvement",
                                  "reasoning"],
@@ -529,6 +558,8 @@ responsible for all submitted content" is authorship: the holder is the \
 contributor. Getting this wrong inflates a domain from "partial" to "yes", so \
 when only enforcement is stated, answer "not_specified" and mention the \
 enforcement clause in reasoning instead.
+
+- AN OBLIGATION IS NOT AN ACCOUNTABILITY HOLDER. "Contributions must be rewritten without AI tooling" tells someone what to do: that is a supervision level. "Contributors are responsible for all submitted content" says who bears responsibility: that is the accountability holder. Treating every obligation as an implied holder makes the attribute meaningless, because every rule obliges somebody. When the policy only obliges and never assigns responsibility, answer "not_specified".
 
 - A domain the policy does not address is a real, reportable result. Most repos \
 do not address most domains. A grid that is mostly "no" is very likely correct.
