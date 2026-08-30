@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="770" height="408" viewBox="0 0 770 408" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">
 <rect width="770" height="408" fill="#ffffff"/>
 <text x="24" y="36" font-size="14" font-weight="600" fill="#1f2328">Governed by policy</text>
-<text x="24" y="54" font-size="11" fill="#656d76">26 projects &#183; CHAOSS Consent Policy Specificity</text>
+<text x="24" y="54" font-size="11" fill="#656d76">38 projects &#183; CHAOSS Consent Policy Specificity</text>
 <rect x="374" y="26" width="10" height="10" rx="2" fill="#2da44e"/>
 <text x="389" y="35" font-size="11" fill="#656d76">addressed</text>
 <rect x="484" y="26" width="10" height="10" rx="2" fill="#d4a72c"/>
@@ -9,55 +9,58 @@
 <rect x="594" y="26" width="10" height="10" rx="2" fill="#d0d7de"/>
 <text x="609" y="35" font-size="11" fill="#656d76">not in policy</text>
 <text x="224" y="92" font-size="12" fill="#1f2328" text-anchor="end">Code contributions</text>
-<rect x="234.0" y="78" width="271.2" height="20" fill="#2da44e"/>
-<text x="369.6" y="92" font-size="11" fill="#ffffff" text-anchor="middle">15</text>
-<rect x="505.2" y="78" width="144.6" height="20" fill="#d4a72c"/>
-<text x="577.5" y="92" font-size="11" fill="#ffffff" text-anchor="middle">8</text>
-<rect x="649.8" y="78" width="54.2" height="20" fill="#d0d7de"/>
-<text x="676.9" y="92" font-size="11" fill="#57606a" text-anchor="middle">3</text>
-<text x="714" y="92" font-size="11" fill="#656d76">23/26</text>
+<rect x="234.0" y="78" width="296.8" height="20" fill="#2da44e"/>
+<text x="382.4" y="92" font-size="11" fill="#ffffff" text-anchor="middle">24</text>
+<rect x="530.8" y="78" width="173.2" height="20" fill="#d4a72c"/>
+<text x="617.4" y="92" font-size="11" fill="#ffffff" text-anchor="middle">14</text>
+<text x="714" y="92" font-size="11" fill="#656d76">38/38</text>
 <text x="224" y="126" font-size="12" fill="#1f2328" text-anchor="end">Notetaker / meeting bots</text>
 <rect x="234.0" y="112" width="470.0" height="20" fill="#d0d7de"/>
-<text x="469.0" y="126" font-size="11" fill="#57606a" text-anchor="middle">26</text>
-<text x="714" y="126" font-size="11" fill="#656d76">0/26</text>
+<text x="469.0" y="126" font-size="11" fill="#57606a" text-anchor="middle">38</text>
+<text x="714" y="126" font-size="11" fill="#656d76">0/38</text>
 <text x="224" y="160" font-size="12" fill="#1f2328" text-anchor="end">Content</text>
-<rect x="234.0" y="146" width="72.3" height="20" fill="#2da44e"/>
-<text x="270.2" y="160" font-size="11" fill="#ffffff" text-anchor="middle">4</text>
-<rect x="306.3" y="146" width="126.5" height="20" fill="#d4a72c"/>
-<text x="369.6" y="160" font-size="11" fill="#ffffff" text-anchor="middle">7</text>
-<rect x="432.8" y="146" width="271.2" height="20" fill="#d0d7de"/>
-<text x="568.4" y="160" font-size="11" fill="#57606a" text-anchor="middle">15</text>
-<text x="714" y="160" font-size="11" fill="#656d76">11/26</text>
+<rect x="234.0" y="146" width="74.2" height="20" fill="#2da44e"/>
+<text x="271.1" y="160" font-size="11" fill="#ffffff" text-anchor="middle">6</text>
+<rect x="308.2" y="146" width="160.8" height="20" fill="#d4a72c"/>
+<text x="388.6" y="160" font-size="11" fill="#ffffff" text-anchor="middle">13</text>
+<rect x="469.0" y="146" width="235.0" height="20" fill="#d0d7de"/>
+<text x="586.5" y="160" font-size="11" fill="#57606a" text-anchor="middle">19</text>
+<text x="714" y="160" font-size="11" fill="#656d76">19/38</text>
 <text x="224" y="194" font-size="12" fill="#1f2328" text-anchor="end">Moderation actions</text>
-<rect x="234.0" y="180" width="470.0" height="20" fill="#d0d7de"/>
-<text x="469.0" y="194" font-size="11" fill="#57606a" text-anchor="middle">26</text>
-<text x="714" y="194" font-size="11" fill="#656d76">0/26</text>
+<rect x="234.0" y="180" width="160.8" height="20" fill="#d4a72c"/>
+<text x="314.4" y="194" font-size="11" fill="#ffffff" text-anchor="middle">13</text>
+<rect x="394.8" y="180" width="309.2" height="20" fill="#d0d7de"/>
+<text x="549.4" y="194" font-size="11" fill="#57606a" text-anchor="middle">25</text>
+<text x="714" y="194" font-size="11" fill="#656d76">13/38</text>
 <text x="224" y="228" font-size="12" fill="#1f2328" text-anchor="end">Review</text>
-<rect x="234.0" y="214" width="36.2" height="20" fill="#2da44e"/>
-<text x="252.1" y="228" font-size="11" fill="#ffffff" text-anchor="middle">2</text>
-<rect x="270.2" y="214" width="108.5" height="20" fill="#d4a72c"/>
-<text x="324.4" y="228" font-size="11" fill="#ffffff" text-anchor="middle">6</text>
-<rect x="378.6" y="214" width="325.4" height="20" fill="#d0d7de"/>
-<text x="541.3" y="228" font-size="11" fill="#57606a" text-anchor="middle">18</text>
-<text x="714" y="228" font-size="11" fill="#656d76">8/26</text>
+<rect x="234.0" y="214" width="49.5" height="20" fill="#2da44e"/>
+<text x="258.7" y="228" font-size="11" fill="#ffffff" text-anchor="middle">4</text>
+<rect x="283.5" y="214" width="123.7" height="20" fill="#d4a72c"/>
+<text x="345.3" y="228" font-size="11" fill="#ffffff" text-anchor="middle">10</text>
+<rect x="407.2" y="214" width="296.8" height="20" fill="#d0d7de"/>
+<text x="555.6" y="228" font-size="11" fill="#57606a" text-anchor="middle">24</text>
+<text x="714" y="228" font-size="11" fill="#656d76">14/38</text>
 <text x="224" y="262" font-size="12" fill="#1f2328" text-anchor="end">Autonomous / agentic use</text>
-<rect x="234.0" y="248" width="72.3" height="20" fill="#2da44e"/>
-<text x="270.2" y="262" font-size="11" fill="#ffffff" text-anchor="middle">4</text>
-<rect x="306.3" y="248" width="126.5" height="20" fill="#d4a72c"/>
-<text x="369.6" y="262" font-size="11" fill="#ffffff" text-anchor="middle">7</text>
-<rect x="432.8" y="248" width="271.2" height="20" fill="#d0d7de"/>
-<text x="568.4" y="262" font-size="11" fill="#57606a" text-anchor="middle">15</text>
-<text x="714" y="262" font-size="11" fill="#656d76">11/26</text>
+<rect x="234.0" y="248" width="98.9" height="20" fill="#2da44e"/>
+<text x="283.5" y="262" font-size="11" fill="#ffffff" text-anchor="middle">8</text>
+<rect x="332.9" y="248" width="148.4" height="20" fill="#d4a72c"/>
+<text x="407.2" y="262" font-size="11" fill="#ffffff" text-anchor="middle">12</text>
+<rect x="481.4" y="248" width="222.6" height="20" fill="#d0d7de"/>
+<text x="592.7" y="262" font-size="11" fill="#57606a" text-anchor="middle">18</text>
+<text x="714" y="262" font-size="11" fill="#656d76">20/38</text>
 <text x="224" y="296" font-size="12" fill="#1f2328" text-anchor="end">Environmental Impact</text>
 <rect x="234.0" y="282" width="470.0" height="20" fill="#d0d7de"/>
-<text x="469.0" y="296" font-size="11" fill="#57606a" text-anchor="middle">26</text>
-<text x="714" y="296" font-size="11" fill="#656d76">0/26</text>
+<text x="469.0" y="296" font-size="11" fill="#57606a" text-anchor="middle">38</text>
+<text x="714" y="296" font-size="11" fill="#656d76">0/38</text>
 <text x="224" y="330" font-size="12" fill="#1f2328" text-anchor="end">Infrastructure strain</text>
-<rect x="234.0" y="316" width="470.0" height="20" fill="#d0d7de"/>
-<text x="469.0" y="330" font-size="11" fill="#57606a" text-anchor="middle">26</text>
-<text x="714" y="330" font-size="11" fill="#656d76">0/26</text>
+<rect x="234.0" y="316" width="12.4" height="20" fill="#d4a72c"/>
+<rect x="246.4" y="316" width="457.6" height="20" fill="#d0d7de"/>
+<text x="475.2" y="330" font-size="11" fill="#57606a" text-anchor="middle">37</text>
+<text x="714" y="330" font-size="11" fill="#656d76">1/38</text>
 <text x="224" y="364" font-size="12" fill="#1f2328" text-anchor="end">Data use for training</text>
-<rect x="234.0" y="350" width="470.0" height="20" fill="#d0d7de"/>
-<text x="469.0" y="364" font-size="11" fill="#57606a" text-anchor="middle">26</text>
-<text x="714" y="364" font-size="11" fill="#656d76">0/26</text>
+<rect x="234.0" y="350" width="12.4" height="20" fill="#2da44e"/>
+<rect x="246.4" y="350" width="12.4" height="20" fill="#d4a72c"/>
+<rect x="258.7" y="350" width="445.3" height="20" fill="#d0d7de"/>
+<text x="481.4" y="364" font-size="11" fill="#57606a" text-anchor="middle">36</text>
+<text x="714" y="364" font-size="11" fill="#656d76">2/38</text>
 </svg>
