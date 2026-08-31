@@ -12,7 +12,7 @@ The taxonomy below maps to the CHAOSS AI specificity [metric found here](https:/
 | apache | X |  | X |  |  | ~ |  |  |  | [view report][p2] |
 | astropy/astropy-project | X |  | ~ |  |  | X |  |  |  | [view report][p3] |
 | castle-game-engine | X |  | ~ |  | X | X |  |  |  | [view report][p4] |
-| codeberg | ~ |  |  | ~ |  | ~ | R | ~ | X | [view report][p5] |
+| codeberg | X |  |  |  |  |  |  |  |  | [view report][p5] |
 | debian | ~ |  | ~ | ~ | R | X | R | R |  | [view report][p6] |
 | forgejo | X |  | X |  | ~ | X |  |  |  | [view report][p7] |
 | gcc | X |  |  |  | ~ | ~ |  |  |  | [view report][p8] |
@@ -51,7 +51,7 @@ The taxonomy below maps to the CHAOSS AI specificity [metric found here](https:/
 [p2]: apache/2026-08-30.md
 [p3]: astropy-astropy-project/2026-08-30.md
 [p4]: castle-game-engine/2026-08-30.md
-[p5]: codeberg/2026-08-30.md
+[p5]: codeberg/2026-08-31.md
 [p6]: debian/2026-08-30.md
 [p7]: forgejo/2026-08-30.md
 [p8]: gcc/2026-08-30.md
@@ -98,7 +98,7 @@ Bar chart of metric taxonomy captured in policy documents.
 
 Up to three examples per domain, from the projects that govern it.
 
-**Code contributions** (24 addressed, 14 partial, of 38)
+**Code contributions** (25 addressed, 13 partial, of 38)
 
 - [OSGeo/PROJ](osgeo-proj/2026-08-30.md) `human_in_the_loop`
   > there must be a **human in the loop**. Contributors must read and review all AI ... generated code or text before they ask other project members to review it.
@@ -106,8 +106,8 @@ Up to three examples per domain, from the projects that govern it.
   > Human contributors must be the primary author(s) of GDAL contributions
 - [afnix](afnix/2026-08-30.md) `banned` partial
   > AFNix hosted projects do not allow any contributions which are believed to include AI generated content, or to be derived from AI generated content.
-- [codeberg](codeberg/2026-08-30.md) partial
-  > Projects written and maintained with heavy use of LLMs
+- [debian](debian/2026-08-30.md) partial
+  > We will not allow direct contributions to Debian written with the use or assistance of large language models (LLMs) or other generative AI tools.
 
 **Notetaker and meeting bots**: no project addresses this.
 
@@ -122,14 +122,14 @@ Up to three examples per domain, from the projects that govern it.
 - [astropy/astropy-project](astropy-astropy-project/2026-08-30.md) partial
   > In the context of Generative AI, this particularly means conveying information (comments, documentation, etc) in a style the Astropy community uses, and that is appropriate and to the point.
 
-**Moderation and enforcement** (13 partial, of 38)
+**Moderation and enforcement** (12 partial, of 38)
 
 - [OSGeo/PROJ](osgeo-proj/2026-08-30.md) `banned` partial
   > maintainers may lock the conversation and/or close the pull request/issue/RFC. In case of repeated violations of our policy, the PROJ project reserves itself the right to ban temporarily or...
 - [OSGeo/gdal](osgeo-gdal/2026-08-30.md) partial
   > maintainers may lock the conversation and/or close the pull request/issue/RFC
-- [codeberg](codeberg/2026-08-30.md) `human_in_the_loop` partial
-  > Our moderation team will not start off generating an exhaustive list of affected repositories to remove.
+- [debian](debian/2026-08-30.md) partial
+  > Moderators and disciplinary teams may make narrow and tailored exceptions to rule 4, and decide on interpretation.
 
 **Review of contributions** (4 addressed, 10 partial, of 38)
 
@@ -142,7 +142,7 @@ Up to three examples per domain, from the projects that govern it.
 - [forgejo](forgejo/2026-08-30.md) `banned` partial
   > Using general AI for review is forbidden. If the change contains changes to the UX it has to be approved by a human reviewer.
 
-**Autonomous and agentic use** (8 addressed, 12 partial, of 38)
+**Autonomous and agentic use** (8 addressed, 11 partial, of 38)
 
 - [OSGeo/gdal](osgeo-gdal/2026-08-30.md) `banned`
   > Human-coordinated or uncoordinated (OpenClaw, etc) use of agents for submission of contributions to the GDAL repository is *banned*.
@@ -155,15 +155,10 @@ Up to three examples per domain, from the projects that govern it.
 
 **Environmental impact**: no project addresses this.
 
-**Infrastructure strain** (1 partial, of 38)
+**Infrastructure strain**: no project addresses this.
 
-- [codeberg](codeberg/2026-08-30.md) partial
-  > Projects where the amount of resources (e.g. storage, CI/CD) is significantly larger than what the involved amount of people could have created by hand
+**Data use for training** (1 partial, of 38)
 
-**Data use for training** (1 addressed, 1 partial, of 38)
-
-- [codeberg](codeberg/2026-08-30.md) `banned`
-  > The Codeberg forge and its associated services are not and will not use the code or data of projects and users to train "Artificial Intelligence" tools such as Large Language Models
 - [oxide](oxide/2026-08-30.md) `human_in_the_loop` partial
   > when uploading a document to a hosted LLM (ChatGPT, Claude, Gemini, etc.), there must be assurance of data privacy—and specifically, assurance that the model will not use the document to train...
 
@@ -188,8 +183,6 @@ Sometimes the *reason* for a policy will include one of our metric taxonomies (l
 
 ### Environmental impact
 
-- [codeberg](codeberg/2026-08-30.md)
-  > Due to the energy and water demands that are inherent to the data centers built specifically for training LLMs, many communities already today experience rising consumer costs for both electricity...
 - [debian](debian/2026-08-30.md)
   > LLM training consumes a staggering amount of resources... LLM usage accelerates the destruction of our ecosystem (planet earth) and that is a deal-breaker
 - [gentoo](gentoo/2026-08-30.md)

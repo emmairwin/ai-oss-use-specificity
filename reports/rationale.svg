@@ -13,11 +13,11 @@
 <text x="493.7" y="92" font-size="11" fill="#57606a" text-anchor="middle">34</text>
 <text x="714" y="92" font-size="11" fill="#656d76">4/38</text>
 <text x="224" y="126" font-size="12" fill="#1f2328" text-anchor="end">Environmental Impact</text>
-<rect x="234.0" y="112" width="86.6" height="20" fill="#8250df"/>
-<text x="277.3" y="126" font-size="11" fill="#ffffff" text-anchor="middle">7</text>
-<rect x="320.6" y="112" width="383.4" height="20" fill="#d0d7de"/>
-<text x="512.3" y="126" font-size="11" fill="#57606a" text-anchor="middle">31</text>
-<text x="714" y="126" font-size="11" fill="#656d76">7/38</text>
+<rect x="234.0" y="112" width="74.2" height="20" fill="#8250df"/>
+<text x="271.1" y="126" font-size="11" fill="#ffffff" text-anchor="middle">6</text>
+<rect x="308.2" y="112" width="395.8" height="20" fill="#d0d7de"/>
+<text x="506.1" y="126" font-size="11" fill="#57606a" text-anchor="middle">32</text>
+<text x="714" y="126" font-size="11" fill="#656d76">6/38</text>
 <text x="224" y="160" font-size="12" fill="#1f2328" text-anchor="end">Infrastructure strain</text>
 <rect x="234.0" y="146" width="49.5" height="20" fill="#8250df"/>
 <text x="258.7" y="160" font-size="11" fill="#ffffff" text-anchor="middle">4</text>
