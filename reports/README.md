@@ -94,9 +94,9 @@ Bar chart of metric taxonomy captured in policy documents.
 
 ![Coverage by domain](coverage.svg)
 
-### What the rules say
+### Quotes
 
-Up to three examples per domain, from the projects that govern it.
+Up to three examples per taxonomy/theme
 
 **Code contributions** (25 addressed, 13 partial, of 38)
 
