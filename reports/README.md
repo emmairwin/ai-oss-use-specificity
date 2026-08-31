@@ -1,4 +1,4 @@
-# AI policy coverage summary of all (currently 38) projects
+# AI policy coverage summary of all (currently 39) projects
 
 The taxonomy below maps to the CHAOSS AI specificity [metric found here](https://github.com/chaoss/wg-ai-alignment/blob/main/metrics/ai-alignment-community-governed-use/ai-use-consent-policy-specificity.md#taxonomy-of-domains).
 
@@ -20,32 +20,33 @@ The taxonomy below maps to the CHAOSS AI specificity [metric found here](https:/
 | gentoo | ~ |  |  |  |  |  | R |  |  | [view report][p10] |
 | ghostty-org/ghostty | ~ |  | ~ | ~ |  |  |  |  |  | [view report][p11] |
 | go-gitea/gitea | X |  |  | ~ |  |  |  |  |  | [view report][p12] |
-| jazzband/pip-tools | X |  |  | ~ |  | ~ |  |  |  | [view report][p13] |
-| jellyfin/jellyfin.org | X |  |  | ~ |  | X |  |  |  | [view report][p14] |
-| kde-gsoc | ~ |  |  |  |  |  | R |  |  | [view report][p15] |
-| keepassxreboot/keepassxc | ~ |  |  |  |  |  |  |  |  | [view report][p16] |
-| linux-foundation | X |  | ~ |  | R |  |  |  | R | [view report][p17] |
-| llvm/llvm-project | X |  | X | ~ | ~ | ~ |  |  |  | [view report][p18] |
-| mastodon/.github | X |  | ~ |  | X | X |  |  |  | [view report][p19] |
-| matplotlib/matplotlib | X |  |  | ~ |  | ~ |  |  |  | [view report][p20] |
-| nlnet-labs | X |  | ~ |  | X |  |  |  |  | [view report][p21] |
-| openinfra | X |  | ~ |  |  | ~ |  |  |  | [view report][p22] |
-| OSGeo/gdal | X |  |  | ~ | R | X |  | R |  | [view report][p23] |
-| OSGeo/PROJ | X |  | ~ | ~ | ~ | ~ |  |  |  | [view report][p24] |
-| oxide | X |  | X |  | ~ |  |  |  | ~ | [view report][p25] |
-| pola-rs/polars | ~ |  | ~ |  | ~ | ~ |  |  |  | [view report][p26] |
-| postmarketos | ~ |  |  |  |  |  | R | R |  | [view report][p27] |
-| python-attrs/attrs | ~ |  |  |  |  |  |  |  |  | [view report][p28] |
-| qemu/qemu | X |  |  |  |  |  |  |  |  | [view report][p29] |
-| qgis/QGIS-Enhancement-Proposals | X |  | X | ~ | ~ | ~ |  | R |  | [view report][p30] |
-| rust-lang/rust-forge | X |  | X |  | X |  | R |  |  | [view report][p31] |
-| scikit-learn/scikit-learn | ~ |  |  | ~ | ~ |  |  |  |  | [view report][p32] |
-| servo/book | X |  | ~ | ~ | ~ |  | R |  |  | [view report][p33] |
-| sunpy/sunpy | ~ |  | ~ |  |  |  |  |  |  | [view report][p34] |
-| teamtype/teamtype | ~ |  | ~ |  |  |  |  |  |  | [view report][p35] |
-| torvalds/linux | X |  |  |  |  | X |  |  |  | [view report][p36] |
-| yt-dlp/yt-dlp | ~ |  |  |  | ~ | ~ |  |  |  | [view report][p37] |
-| zulip/zulip | X |  |  |  |  |  |  |  |  | [view report][p38] |
+| godot | X |  | ~ | ~ | ~ | ~ |  |  |  | [view report][p13] |
+| jazzband/pip-tools | X |  |  | ~ |  | ~ |  |  |  | [view report][p14] |
+| jellyfin/jellyfin.org | X |  |  | ~ |  | X |  |  |  | [view report][p15] |
+| kde-gsoc | ~ |  |  |  |  |  | R |  |  | [view report][p16] |
+| keepassxreboot/keepassxc | ~ |  |  |  |  |  |  |  |  | [view report][p17] |
+| linux-foundation | X |  | ~ |  | R |  |  |  | R | [view report][p18] |
+| llvm/llvm-project | X |  | X | ~ | ~ | ~ |  |  |  | [view report][p19] |
+| mastodon/.github | X |  | ~ |  | X | X |  |  |  | [view report][p20] |
+| matplotlib/matplotlib | X |  |  | ~ |  | ~ |  |  |  | [view report][p21] |
+| nlnet-labs | X |  | ~ |  | X |  |  |  |  | [view report][p22] |
+| openinfra | X |  | ~ |  |  | ~ |  |  |  | [view report][p23] |
+| OSGeo/gdal | X |  |  | ~ | R | X |  | R |  | [view report][p24] |
+| OSGeo/PROJ | X |  | ~ | ~ | ~ | ~ |  |  |  | [view report][p25] |
+| oxide | X |  | X |  | ~ |  |  |  | ~ | [view report][p26] |
+| pola-rs/polars | ~ |  | ~ |  | ~ | ~ |  |  |  | [view report][p27] |
+| postmarketos | ~ |  |  |  |  |  | R | R |  | [view report][p28] |
+| python-attrs/attrs | ~ |  |  |  |  |  |  |  |  | [view report][p29] |
+| qemu/qemu | X |  |  |  |  |  |  |  |  | [view report][p30] |
+| qgis/QGIS-Enhancement-Proposals | X |  | X | ~ | ~ | ~ |  | R |  | [view report][p31] |
+| rust | X |  | X | ~ | X | ~ | R |  |  | [view report][p32] |
+| scikit-learn/scikit-learn | ~ |  |  | ~ | ~ |  |  |  |  | [view report][p33] |
+| servo/book | X |  | ~ | ~ | ~ |  | R |  |  | [view report][p34] |
+| sunpy/sunpy | ~ |  | ~ |  |  |  |  |  |  | [view report][p35] |
+| teamtype/teamtype | ~ |  | ~ |  |  |  |  |  |  | [view report][p36] |
+| torvalds/linux | X |  |  |  |  | X |  |  |  | [view report][p37] |
+| yt-dlp/yt-dlp | ~ |  |  |  | ~ | ~ |  |  |  | [view report][p38] |
+| zulip/zulip | X |  |  |  |  |  |  |  |  | [view report][p39] |
 
 [p1]: afnix/2026-08-30.md
 [p2]: apache/2026-08-30.md
@@ -59,32 +60,33 @@ The taxonomy below maps to the CHAOSS AI specificity [metric found here](https:/
 [p10]: gentoo/2026-08-30.md
 [p11]: ghostty-org-ghostty/2026-08-30.md
 [p12]: go-gitea-gitea/2026-08-30.md
-[p13]: jazzband-pip-tools/2026-08-30.md
-[p14]: jellyfin-jellyfin-org/2026-08-30.md
-[p15]: kde-gsoc/2026-08-30.md
-[p16]: keepassxreboot-keepassxc/2026-08-30.md
-[p17]: linux-foundation/2026-08-30.md
-[p18]: llvm-llvm-project/2026-08-30.md
-[p19]: mastodon-github/2026-08-30.md
-[p20]: matplotlib-matplotlib/2026-08-30.md
-[p21]: nlnet-labs/2026-08-30.md
-[p22]: openinfra/2026-08-30.md
-[p23]: osgeo-gdal/2026-08-30.md
-[p24]: osgeo-proj/2026-08-30.md
-[p25]: oxide/2026-08-30.md
-[p26]: pola-rs-polars/2026-08-30.md
-[p27]: postmarketos/2026-08-30.md
-[p28]: python-attrs-attrs/2026-08-30.md
-[p29]: qemu-qemu/2026-08-30.md
-[p30]: qgis-qgis-enhancement-proposals/2026-08-30.md
-[p31]: rust-lang-rust-forge/2026-08-30.md
-[p32]: scikit-learn-scikit-learn/2026-08-30.md
-[p33]: servo-book/2026-08-30.md
-[p34]: sunpy-sunpy/2026-08-30.md
-[p35]: teamtype-teamtype/2026-08-30.md
-[p36]: torvalds-linux/2026-08-30.md
-[p37]: yt-dlp-yt-dlp/2026-08-30.md
-[p38]: zulip-zulip/2026-08-30.md
+[p13]: godot/2026-08-31.md
+[p14]: jazzband-pip-tools/2026-08-30.md
+[p15]: jellyfin-jellyfin-org/2026-08-30.md
+[p16]: kde-gsoc/2026-08-30.md
+[p17]: keepassxreboot-keepassxc/2026-08-30.md
+[p18]: linux-foundation/2026-08-30.md
+[p19]: llvm-llvm-project/2026-08-30.md
+[p20]: mastodon-github/2026-08-30.md
+[p21]: matplotlib-matplotlib/2026-08-30.md
+[p22]: nlnet-labs/2026-08-30.md
+[p23]: openinfra/2026-08-30.md
+[p24]: osgeo-gdal/2026-08-30.md
+[p25]: osgeo-proj/2026-08-30.md
+[p26]: oxide/2026-08-30.md
+[p27]: pola-rs-polars/2026-08-30.md
+[p28]: postmarketos/2026-08-30.md
+[p29]: python-attrs-attrs/2026-08-30.md
+[p30]: qemu-qemu/2026-08-30.md
+[p31]: qgis-qgis-enhancement-proposals/2026-08-30.md
+[p32]: rust/2026-08-31.md
+[p33]: scikit-learn-scikit-learn/2026-08-30.md
+[p34]: servo-book/2026-08-30.md
+[p35]: sunpy-sunpy/2026-08-30.md
+[p36]: teamtype-teamtype/2026-08-30.md
+[p37]: torvalds-linux/2026-08-30.md
+[p38]: yt-dlp-yt-dlp/2026-08-30.md
+[p39]: zulip-zulip/2026-08-30.md
 
 ## Included in Policy
 
@@ -92,13 +94,13 @@ Bar chart of metric taxonomy captured in policy documents.
 
 'partial' means the terminology used **leans** towards a given outcome, but might be more or less specific. Worth capturing these, to see how language changes over time.
 
-![Coverage by domain](coverage.svg)
+![Horizontal bar chart of AI policy coverage across 39 open source projects and nine domains. Code contributions 26 addressed and 13 partial; Content and documentation 6 addressed and 14 partial; Moderation and enforcement 0 addressed and 15 partial; Review of contributions 4 addressed and 11 partial; Autonomous and agentic use 8 addressed and 13 partial; Data use for training 0 addressed and 1 partial. No project addresses Notetaker and meeting bots, Environmental impact or Infrastructure strain.](coverage.svg)
 
 ### What the rules say
 
 Up to three examples per domain, from the projects that govern it.
 
-**Code contributions** (25 addressed, 13 partial, of 38)
+**Code contributions** (26 addressed, 13 partial, of 39)
 
 - [OSGeo/PROJ](osgeo-proj/2026-08-30.md) `human_in_the_loop`
   > there must be a **human in the loop**. Contributors must read and review all AI ... generated code or text before they ask other project members to review it.
@@ -111,7 +113,7 @@ Up to three examples per domain, from the projects that govern it.
 
 **Notetaker and meeting bots**: no project addresses this.
 
-**Content and documentation** (6 addressed, 13 partial, of 38)
+**Content and documentation** (6 addressed, 14 partial, of 39)
 
 - [apache](apache/2026-08-30.md) `disclosure_required`
   > The above text applies to documentation as well.
@@ -122,7 +124,7 @@ Up to three examples per domain, from the projects that govern it.
 - [astropy/astropy-project](astropy-astropy-project/2026-08-30.md) partial
   > In the context of Generative AI, this particularly means conveying information (comments, documentation, etc) in a style the Astropy community uses, and that is appropriate and to the point.
 
-**Moderation and enforcement** (13 partial, of 38)
+**Moderation and enforcement** (15 partial, of 39)
 
 - [OSGeo/PROJ](osgeo-proj/2026-08-30.md) `banned` partial
   > maintainers may lock the conversation and/or close the pull request/issue/RFC. In case of repeated violations of our policy, the PROJ project reserves itself the right to ban temporarily or...
@@ -131,7 +133,7 @@ Up to three examples per domain, from the projects that govern it.
 - [codeberg](codeberg/2026-08-31.md) partial
   > Failure to comply with the rules in § 2 (1) leads to immediate removal of the content together with a warning; further violations might result in immediate account suspension.
 
-**Review of contributions** (4 addressed, 10 partial, of 38)
+**Review of contributions** (4 addressed, 11 partial, of 39)
 
 - [castle-game-engine](castle-game-engine/2026-08-30.md) `human_in_the_loop`
   > Use AI for code reviews. It’s useful to have another set of eyes look at your code changes.
@@ -142,7 +144,7 @@ Up to three examples per domain, from the projects that govern it.
 - [forgejo](forgejo/2026-08-30.md) `banned` partial
   > Using general AI for review is forbidden. If the change contains changes to the UX it has to be approved by a human reviewer.
 
-**Autonomous and agentic use** (8 addressed, 11 partial, of 38)
+**Autonomous and agentic use** (8 addressed, 13 partial, of 39)
 
 - [OSGeo/gdal](osgeo-gdal/2026-08-30.md) `banned`
   > Human-coordinated or uncoordinated (OpenClaw, etc) use of agents for submission of contributions to the GDAL repository is *banned*.
@@ -157,7 +159,7 @@ Up to three examples per domain, from the projects that govern it.
 
 **Infrastructure strain**: no project addresses this.
 
-**Data use for training** (1 partial, of 38)
+**Data use for training** (1 partial, of 39)
 
 - [oxide](oxide/2026-08-30.md) `human_in_the_loop` partial
   > when uploading a document to a hosted LLM (ChatGPT, Claude, Gemini, etc.), there must be assurance of data privacy—and specifically, assurance that the model will not use the document to train...
@@ -168,7 +170,7 @@ Bar chart of metric taxonomy captured in accompanying blog posts, or preamble to
 
 Sometimes the *reason* for a policy will include one of our metric taxonomies (like environment) but not be specifically mentioned in the policy itself. Seems worth capturing.
 
-![Raised in policy rationale only](rationale.svg)
+![Horizontal bar chart. Counts of projects that raise a domain in their stated reasons without governing it, out of 39: Environmental impact 7, Infrastructure strain 5, Review of contributions 4, Data use for training 2, Autonomous and agentic use 1. Other projects may still govern these domains; the count is of policies that name the concern and set no rule about it.](rationale.svg)
 
 ### Review of contributions
 
@@ -198,7 +200,7 @@ Sometimes the *reason* for a policy will include one of our metric taxonomies (l
   > KDE cares about licensing, ethics and environment, which are three things that AI does not care about.
 - [postmarketos](postmarketos/2026-08-30.md)
   > They require an unreasonable amount of energy[1] and water[2] to build and operate
-- [rust-lang/rust-forge](rust-lang-rust-forge/2026-08-30.md)
+- [rust](rust/2026-08-31.md)
   > many others feel that its negative impact on society and the climate are severe enough that no use is acceptable
 - [servo/book](servo-book/2026-08-30.md)
   > AI tools require an unreasonable amount of energy and water to build and operate, their models are built with heavily exploited workers in unacceptable working conditions, and they are being used...

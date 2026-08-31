@@ -1,38 +1,38 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="770" height="272" viewBox="0 0 770 272" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">
 <rect width="770" height="272" fill="#ffffff"/>
 <text x="24" y="36" font-size="14" font-weight="600" fill="#1f2328">Raised in policy rationale only</text>
-<text x="24" y="54" font-size="11" fill="#656d76">38 projects &#183; CHAOSS Consent Policy Specificity</text>
+<text x="24" y="54" font-size="11" fill="#656d76">39 projects &#183; CHAOSS Consent Policy Specificity</text>
 <rect x="484" y="26" width="10" height="10" rx="2" fill="#8250df"/>
 <text x="499" y="35" font-size="11" fill="#656d76">policy rationale</text>
 <rect x="594" y="26" width="10" height="10" rx="2" fill="#d0d7de"/>
 <text x="609" y="35" font-size="11" fill="#656d76">not raised</text>
 <text x="224" y="92" font-size="12" fill="#1f2328" text-anchor="end">Review</text>
-<rect x="234.0" y="78" width="49.5" height="20" fill="#8250df"/>
-<text x="258.7" y="92" font-size="11" fill="#ffffff" text-anchor="middle">4</text>
-<rect x="283.5" y="78" width="420.5" height="20" fill="#d0d7de"/>
-<text x="493.7" y="92" font-size="11" fill="#57606a" text-anchor="middle">34</text>
-<text x="714" y="92" font-size="11" fill="#656d76">4/38</text>
+<rect x="234.0" y="78" width="48.2" height="20" fill="#8250df"/>
+<text x="258.1" y="92" font-size="11" fill="#ffffff" text-anchor="middle">4</text>
+<rect x="282.2" y="78" width="421.8" height="20" fill="#d0d7de"/>
+<text x="493.1" y="92" font-size="11" fill="#57606a" text-anchor="middle">35</text>
+<text x="714" y="92" font-size="11" fill="#656d76">4/39</text>
 <text x="224" y="126" font-size="12" fill="#1f2328" text-anchor="end">Autonomous / agentic use</text>
-<rect x="234.0" y="112" width="12.4" height="20" fill="#8250df"/>
-<rect x="246.4" y="112" width="457.6" height="20" fill="#d0d7de"/>
-<text x="475.2" y="126" font-size="11" fill="#57606a" text-anchor="middle">37</text>
-<text x="714" y="126" font-size="11" fill="#656d76">1/38</text>
+<rect x="234.0" y="112" width="12.1" height="20" fill="#8250df"/>
+<rect x="246.1" y="112" width="457.9" height="20" fill="#d0d7de"/>
+<text x="475.0" y="126" font-size="11" fill="#57606a" text-anchor="middle">38</text>
+<text x="714" y="126" font-size="11" fill="#656d76">1/39</text>
 <text x="224" y="160" font-size="12" fill="#1f2328" text-anchor="end">Environmental Impact</text>
-<rect x="234.0" y="146" width="86.6" height="20" fill="#8250df"/>
-<text x="277.3" y="160" font-size="11" fill="#ffffff" text-anchor="middle">7</text>
-<rect x="320.6" y="146" width="383.4" height="20" fill="#d0d7de"/>
-<text x="512.3" y="160" font-size="11" fill="#57606a" text-anchor="middle">31</text>
-<text x="714" y="160" font-size="11" fill="#656d76">7/38</text>
+<rect x="234.0" y="146" width="84.4" height="20" fill="#8250df"/>
+<text x="276.2" y="160" font-size="11" fill="#ffffff" text-anchor="middle">7</text>
+<rect x="318.4" y="146" width="385.6" height="20" fill="#d0d7de"/>
+<text x="511.2" y="160" font-size="11" fill="#57606a" text-anchor="middle">32</text>
+<text x="714" y="160" font-size="11" fill="#656d76">7/39</text>
 <text x="224" y="194" font-size="12" fill="#1f2328" text-anchor="end">Infrastructure strain</text>
-<rect x="234.0" y="180" width="61.8" height="20" fill="#8250df"/>
-<text x="264.9" y="194" font-size="11" fill="#ffffff" text-anchor="middle">5</text>
-<rect x="295.8" y="180" width="408.2" height="20" fill="#d0d7de"/>
-<text x="499.9" y="194" font-size="11" fill="#57606a" text-anchor="middle">33</text>
-<text x="714" y="194" font-size="11" fill="#656d76">5/38</text>
+<rect x="234.0" y="180" width="60.3" height="20" fill="#8250df"/>
+<text x="264.1" y="194" font-size="11" fill="#ffffff" text-anchor="middle">5</text>
+<rect x="294.3" y="180" width="409.7" height="20" fill="#d0d7de"/>
+<text x="499.1" y="194" font-size="11" fill="#57606a" text-anchor="middle">34</text>
+<text x="714" y="194" font-size="11" fill="#656d76">5/39</text>
 <text x="224" y="228" font-size="12" fill="#1f2328" text-anchor="end">Data use for training</text>
-<rect x="234.0" y="214" width="24.7" height="20" fill="#8250df"/>
-<text x="246.4" y="228" font-size="11" fill="#ffffff" text-anchor="middle">2</text>
-<rect x="258.7" y="214" width="445.3" height="20" fill="#d0d7de"/>
-<text x="481.4" y="228" font-size="11" fill="#57606a" text-anchor="middle">36</text>
-<text x="714" y="228" font-size="11" fill="#656d76">2/38</text>
+<rect x="234.0" y="214" width="24.1" height="20" fill="#8250df"/>
+<text x="246.1" y="228" font-size="11" fill="#ffffff" text-anchor="middle">2</text>
+<rect x="258.1" y="214" width="445.9" height="20" fill="#d0d7de"/>
+<text x="481.1" y="228" font-size="11" fill="#57606a" text-anchor="middle">37</text>
+<text x="714" y="228" font-size="11" fill="#656d76">2/39</text>
 </svg>
