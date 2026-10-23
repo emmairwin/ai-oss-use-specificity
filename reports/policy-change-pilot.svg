@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1230" viewBox="0 0 1600 1230" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">
+<title>AI policy changes over time: pilot</title>
+<desc>One timeline from May 2025 to October 2026. Dot color identifies project. Dots above the central line indicate tightening, dots below indicate loosening, and dots on the line indicate a new policy baseline, mixed change, clarification, or no established direction. Distance from the line is qualitative, not a measured score. Numbered notes link to 28 reviewed revisions across 21 projects and show their Consent Policy Specificity domains.</desc>
+<rect width="1600" height="1230" fill="#ffffff"/>
+<text x="28" y="38" font-size="22" font-weight="600" fill="#1f2328">AI policy changes over time: pilot</text>
+<text x="28" y="62" font-size="12" fill="#656d76">28 reviewed revisions across 21 projects · source revision dates, May 2025–October 2026</text>
+<g font-size="10" fill="#424a53">
+<circle cx="36" cy="91" r="5" fill="#0a6e8a"/><text x="46" y="95">curl</text>
+<circle cx="120" cy="91" r="5" fill="#228be6"/><text x="130" y="95">Apache CouchDB</text>
+<circle cx="300" cy="91" r="5" fill="#364fc7"/><text x="310" y="95">scikit-learn</text>
+<circle cx="445" cy="91" r="5" fill="#cf222e"/><text x="455" y="95">Linux kernel</text>
+<circle cx="590" cy="91" r="5" fill="#0b7285"/><text x="600" y="95">Django</text>
+<circle cx="700" cy="91" r="5" fill="#8250df"/><text x="710" y="95">NumPy</text>
+<circle cx="800" cy="91" r="5" fill="#c2255c"/><text x="810" y="95">LLVM</text>
+<circle cx="36" cy="111" r="5" fill="#2f9e44"/><text x="46" y="115">Godot</text>
+<circle cx="135" cy="111" r="5" fill="#e8590c"/><text x="145" y="115">Cilium</text>
+<circle cx="245" cy="111" r="5" fill="#bf8700"/><text x="255" y="115">Rust</text>
+<circle cx="320" cy="111" r="5" fill="#0f766e"/><text x="330" y="115">PyTorch</text>
+<circle cx="430" cy="111" r="5" fill="#b7791f"/><text x="440" y="115">Homebrew</text>
+<circle cx="570" cy="111" r="5" fill="#6f42c1"/><text x="580" y="115">Bevy</text>
+<circle cx="660" cy="111" r="5" fill="#7950f2"/><text x="670" y="115">pandas</text>
+<circle cx="36" cy="131" r="5" fill="#0969da"/><text x="46" y="135">mise</text>
+<circle cx="105" cy="131" r="5" fill="#6e7781"/><text x="115" y="135">Nominatim</text>
+<circle cx="240" cy="131" r="5" fill="#218bff"/><text x="250" y="135">Meilisearch</text>
+<circle cx="375" cy="131" r="5" fill="#a371f7"/><text x="385" y="135">XMTP</text>
+<circle cx="465" cy="131" r="5" fill="#087f5b"/><text x="475" y="135">Apache DataFusion</text>
+<circle cx="665" cy="131" r="5" fill="#1a7f37"/><text x="675" y="135">Python-Markdown</text>
+<circle cx="855" cy="131" r="5" fill="#e16f24"/><text x="865" y="135">Seerr</text>
+<line x1="36" y1="151" x2="67" y2="151" stroke="#656d76" stroke-width="1.5" stroke-dasharray="2 4" stroke-linecap="round"/><text x="74" y="155">dotted lines connect project revisions</text>
+</g>
+
+<g transform="translate(0 40)">
+<text x="210" y="154" font-size="12" font-weight="600" fill="#656d76">TIGHTENING</text>
+<text x="210" y="341" font-size="12" font-weight="600" fill="#656d76">LOOSENING</text>
+<line x1="210" y1="250" x2="1480" y2="250" stroke="#8c959f" stroke-width="2"/>
+<g fill="#656d76" font-size="11" text-anchor="middle">
+<line x1="224" y1="170" x2="224" y2="330" stroke="#d8dee4"/><text x="224" y="365">May ’25</text>
+<line x1="482" y1="170" x2="482" y2="330" stroke="#d8dee4"/><text x="482" y="365">Sep ’25</text>
+<line x1="770" y1="170" x2="770" y2="330" stroke="#d8dee4"/><text x="770" y="365">Jan ’26</text>
+<line x1="1054" y1="170" x2="1054" y2="330" stroke="#d8dee4"/><text x="1054" y="365">May ’26</text>
+<line x1="1345" y1="170" x2="1345" y2="330" stroke="#d8dee4"/><text x="1345" y="365">Sep ’26</text>
+<line x1="1464" y1="170" x2="1464" y2="330" stroke="#d8dee4"/><text x="1464" y="365">Oct ’26</text>
+</g>
+<text x="645" y="400" font-size="10" fill="#656d76" text-anchor="middle">Vertical distance is qualitative; nearby dates are spaced for readability. Exact dates appear below.</text>
+
+<g fill="none" stroke-width="1.5" stroke-dasharray="2 5" stroke-linecap="round" opacity="0.55">
+<path d="M782 250 L1279 280 L1290 205 L1433 307" stroke="#cf222e"/>
+<path d="M907 250 L934 250" stroke="#8250df"/>
+<path d="M1166 280 L1178 307" stroke="#bf8700"/>
+<path d="M1234 250 L1431 280" stroke="#0f766e"/>
+<path d="M1118 250 L1454 220" stroke="#e8590c"/>
+</g>
+
+<g stroke="#ffffff" stroke-width="2">
+<a href="https://github.com/curl/curl/commit/a9aafbea952643753d87262619ed310640748be4" target="_blank"><title>1. curl: AI-use policy baseline, 2025-05-15; diff evidence</title><circle cx="224" cy="250" r="9" fill="#0a6e8a"/></a>
+<a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/Documentation/process/coding-assistants.rst?id=78d979db6cef557c171d6059cbce06c3db89c7ee" target="_blank"><title>4. Linux kernel: AI guidance policy baseline, 2026-01-06; diff evidence</title><circle cx="782" cy="250" r="9" fill="#cf222e"/></a>
+<a href="https://github.com/numpy/numpy/commit/ca46bafdef4f6b993f560b64ec7cd2da33198c05" target="_blank"><title>6. NumPy: new AI policy baseline, 2026-03-04; diff evidence</title><circle cx="907" cy="250" r="9" fill="#8250df"/></a>
+<a href="https://github.com/numpy/numpy/commit/15497f5a4bd7ca4ac728e4cc8437ed4843a70619" target="_blank"><title>8. NumPy: clarified description restriction, 2026-03-07; diff evidence</title><circle cx="934" cy="250" r="9" fill="#8250df"/></a>
+<a href="https://github.com/rust-lang/rust-forge/commit/419f96a19b3b53f6160e371e8b83a8d6cf34ded0" target="_blank"><title>11. Rust: exceptions to a restriction, 2026-06-17; diff evidence</title><circle cx="1166" cy="280" r="9" fill="#bf8700"/></a>
+<a href="https://github.com/rust-lang/rust-forge/commit/ab6f5c68e2f5a1e72fcd45f6b02c5ebf9f9a854b" target="_blank"><title>12. Rust: meeting use and LLM-process restrictions removed, 2026-06-22; diff evidence</title><circle cx="1178" cy="307" r="9" fill="#bf8700"/></a>
+<a href="https://github.com/pytorch/pytorch/commit/ffc572d6aba76129928e0caaa96a93bd0585f903" target="_blank"><title>13. PyTorch: policy guidance reorganized, 2026-07-15; diff evidence</title><circle cx="1234" cy="250" r="9" fill="#0f766e"/></a>
+<a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/Documentation/process/coding-assistants.rst?id=816d9992d9ed434ec52cfbd63080d518e535a41b" target="_blank"><title>15. Linux kernel: attribution requirement simplified, 2026-08-03; diff evidence</title><circle cx="1279" cy="280" r="9" fill="#cf222e"/></a>
+<a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/Documentation/process/coding-assistants.rst?id=3d7c44f73765d98665fb97a4fb89c002c88ba1b9" target="_blank"><title>16. Linux kernel: bug-finding procedure added, 2026-08-04; diff evidence</title><circle cx="1290" cy="205" r="9" fill="#cf222e"/></a>
+<a href="https://github.com/jdx/mise/pull/13886/files" target="_blank"><title>19. mise: restricted AI replies, 2026-10-02; diff evidence</title><circle cx="1405" cy="205" r="9" fill="#0969da"/></a>
+<a href="https://github.com/pytorch/pytorch/commit/5df8cd4b1e7ca1ca2a8a97aeb732ce6a021d3632" target="_blank"><title>20. PyTorch: relaxed content-labeling format, 2026-10-07; diff evidence</title><circle cx="1417" cy="295" r="9" fill="#0f766e"/></a>
+<a href="https://github.com/osm-search/Nominatim/pull/4220/files" target="_blank"><title>22. Nominatim: accountability and refusal option added; proof requirement removed, 2026-10-13; diff evidence</title><circle cx="1450" cy="250" r="9" fill="#6e7781"/></a>
+<a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/Documentation/process/coding-assistants.rst?id=1e035297ffdadf2184c3c773b8c098e372324aaf" target="_blank"><title>23. Linux kernel: attribution requirement removed, 2026-10-14; diff evidence</title><circle cx="1433" cy="307" r="9" fill="#cf222e"/></a>
+<a href="https://github.com/meilisearch/meilisearch/pull/6684/files" target="_blank"><title>24. Meilisearch: contribution rule changed from disclosure to exclusion, 2026-10-15; diff evidence</title><circle cx="1438" cy="205" r="9" fill="#218bff"/></a>
+<a href="https://github.com/xmtp/libxmtp/pull/4574/files" target="_blank"><title>25. XMTP: ban replaced with accountability requirements, 2026-10-15; diff evidence</title><circle cx="1450" cy="295" r="9" fill="#a371f7"/></a>
+<a href="https://github.com/Python-Markdown/markdown/pull/1658/files" target="_blank"><title>27. Python-Markdown: expanded disclosure and template enforcement, 2026-10-19; diff evidence</title><circle cx="1468" cy="205" r="9" fill="#1a7f37"/></a>
+<a href="https://github.com/seerr-team/seerr/pull/3636/files" target="_blank"><title>28. Seerr: clarified limits on AI-driven contributions, 2026-10-21; diff evidence</title><circle cx="1490" cy="205" r="9" fill="#e16f24"/></a>
+<a href="https://github.com/apache/couchdb/pull/5562/files" target="_blank"><title>2. Apache CouchDB: AI-generated material prohibited, 2025-06-13; merged PR diff</title><circle cx="293" cy="250" r="9" fill="#228be6"/></a>
+<a href="https://github.com/scikit-learn/scikit-learn/pull/32566/files" target="_blank"><title>3. scikit-learn: AI disclosure added to policy and PR template, 2025-12-01; merged PR diff</title><circle cx="697" cy="250" r="9" fill="#364fc7"/></a>
+<a href="https://github.com/django/django/pull/19594/files" target="_blank"><title>5. Django: required AI disclosure and verification, 2026-01-08; merged PR diff</title><circle cx="790" cy="205" r="9" fill="#0b7285"/></a>
+<a href="https://github.com/llvm/llvm-project/pull/183408/files" target="_blank"><title>7. LLVM: exception for approved Bazel fixer bot, 2026-03-05; merged PR diff</title><circle cx="920" cy="280" r="9" fill="#c2255c"/></a>
+<a href="https://github.com/godotengine/godot/pull/118688/files" target="_blank"><title>9. Godot: AI agents must self-disclose, 2026-04-21; merged PR diff</title><circle cx="1036" cy="205" r="9" fill="#2f9e44"/></a>
+<a href="https://github.com/cilium/cilium/pull/46126/files" target="_blank"><title>10. Cilium: PR template links policy and asks what contributor checked, 2026-05-26; merged PR diff</title><circle cx="1118" cy="250" r="9" fill="#e8590c"/></a>
+<a href="https://github.com/Homebrew/brew/pull/23317/files" target="_blank"><title>14. Homebrew: AI authorship disallowed and human review responses required, 2026-07-29; merged PR diff</title><circle cx="1270" cy="205" r="9" fill="#b7791f"/></a>
+<a href="https://github.com/bevyengine/bevy-website/pull/2551/files" target="_blank"><title>17. Bevy: blanket ban changed to limited human-driven code use, 2026-08-04; merged PR diff</title><circle cx="1283" cy="250" r="9" fill="#6f42c1"/></a>
+<a href="https://github.com/pandas-dev/pandas/pull/66767/files" target="_blank"><title>18. pandas: human-written communications and specific disclosure required, 2026-08-14; merged PR diff</title><circle cx="1315" cy="205" r="9" fill="#7950f2"/></a>
+<a href="https://github.com/apache/datafusion/pull/24510/files" target="_blank"><title>21. Apache DataFusion: contribution and review guidance revised, 2026-10-08; merged PR diff</title><circle cx="1425" cy="250" r="9" fill="#087f5b"/></a>
+<a href="https://github.com/cilium/cilium/pull/49098/files" target="_blank"><title>26. Cilium: AI declaration added to issue template, 2026-10-16; merged PR diff</title><circle cx="1454" cy="220" r="9" fill="#e8590c"/></a>
+</g>
+<g font-size="9" font-weight="600" text-anchor="middle" fill="#ffffff" pointer-events="none">
+<text x="224" y="253">1</text><text x="293" y="253">2</text><text x="697" y="253">3</text>
+<text x="782" y="253">4</text><text x="790" y="208">5</text><text x="907" y="253">6</text>
+<text x="920" y="283">7</text><text x="934" y="253">8</text><text x="1036" y="208">9</text>
+<text x="1118" y="253">10</text><text x="1166" y="283">11</text><text x="1178" y="310">12</text>
+<text x="1234" y="253">13</text><text x="1270" y="208">14</text><text x="1279" y="283">15</text>
+<text x="1290" y="208">16</text><text x="1283" y="253">17</text><text x="1315" y="208">18</text>
+<text x="1405" y="208">19</text><text x="1417" y="298">20</text><text x="1425" y="253">21</text>
+<text x="1450" y="253">22</text><text x="1433" y="310">23</text><text x="1438" y="208">24</text>
+<text x="1450" y="298">25</text><text x="1454" y="223">26</text><text x="1468" y="208">27</text>
+<text x="1490" y="208">28</text>
+</g>
+</g>
+
+<line x1="28" y1="450" x2="1572" y2="450" stroke="#d8dee4"/>
+<text x="28" y="476" font-size="14" font-weight="600" fill="#1f2328">Policy revisions, in date order</text>
+
+<g font-size="11" fill="#1f2328">
+<a href="https://github.com/curl/curl/commit/a9aafbea952643753d87262619ed310640748be4" target="_blank"><text x="32" y="507" fill="#0a6e8a">1 · May 15 ’25 · curl · view diff ↗</text><text x="32" y="523">Added AI guidance for code, reports and translation.</text><text x="32" y="539" font-size="9" fill="#656d76">Code · Content</text></a>
+<a href="https://github.com/apache/couchdb/pull/5562/files" target="_blank"><text x="32" y="571" fill="#228be6">2 · Jun 13 ’25 · Apache CouchDB · view diff ↗</text><text x="32" y="587">Prohibited AI-generated code, docs and other materials.</text><text x="32" y="603" font-size="9" fill="#656d76">Code · Content</text></a>
+<a href="https://github.com/scikit-learn/scikit-learn/pull/32566/files" target="_blank"><text x="32" y="635" fill="#364fc7">3 · Dec 01 ’25 · scikit-learn · view diff ↗</text><text x="32" y="651">Added AI disclosure for code, tests, docs and research.</text><text x="32" y="667" font-size="9" fill="#656d76">Code · Content</text></a>
+<a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/Documentation/process/coding-assistants.rst?id=78d979db6cef557c171d6059cbce06c3db89c7ee" target="_blank"><text x="32" y="699" fill="#cf222e">4 · Jan 06 · Linux kernel · view diff ↗</text><text x="32" y="715">Added assistant guidance, human sign-off and attribution.</text><text x="32" y="731" font-size="9" fill="#656d76">Code</text></a>
+<a href="https://github.com/django/django/pull/19594/files" target="_blank"><text x="32" y="763" fill="#0b7285">5 · Jan 08 · Django · view diff ↗</text><text x="32" y="779">Required AI disclosure and output verification in PRs.</text><text x="32" y="795" font-size="9" fill="#656d76">Code</text></a>
+<a href="https://github.com/numpy/numpy/commit/ca46bafdef4f6b993f560b64ec7cd2da33198c05" target="_blank"><text x="32" y="827" fill="#8250df">6 · Mar 04 · NumPy · view diff ↗</text><text x="32" y="843">Added policy for contributions, content and agents.</text><text x="32" y="859" font-size="9" fill="#656d76">Code · Content · Autonomous / agentic use</text></a>
+<a href="https://github.com/llvm/llvm-project/pull/183408/files" target="_blank"><text x="32" y="891" fill="#c2255c">7 · Mar 05 · LLVM · view diff ↗</text><text x="32" y="907">Made an exception for the approved Bazel fixer bot.</text><text x="32" y="923" font-size="9" fill="#656d76">Code · Autonomous / agentic use</text></a>
+<a href="https://github.com/numpy/numpy/commit/15497f5a4bd7ca4ac728e4cc8437ed4843a70619" target="_blank"><text x="32" y="955" fill="#8250df">8 · Mar 07 · NumPy · view diff ↗</text><text x="32" y="971">Clarified the ban on AI-written comments and descriptions.</text><text x="32" y="987" font-size="9" fill="#656d76">Code</text></a>
+<a href="https://github.com/godotengine/godot/pull/118688/files" target="_blank"><text x="32" y="1019" fill="#2f9e44">9 · Apr 21 · Godot · view diff ↗</text><text x="32" y="1035">Required AI agents to disclose in issues and PRs.</text><text x="32" y="1051" font-size="9" fill="#656d76">Code · Content · Autonomous / agentic use · Moderation actions</text></a>
+<a href="https://github.com/cilium/cilium/pull/46126/files" target="_blank"><text x="32" y="1083" fill="#e8590c">10 · May 26 · Cilium · view diff ↗</text><text x="32" y="1099">Linked policy in the PR template and asked what was checked.</text><text x="32" y="1115" font-size="9" fill="#656d76">Code</text></a>
+
+<a href="https://github.com/rust-lang/rust-forge/commit/419f96a19b3b53f6160e371e8b83a8d6cf34ded0" target="_blank"><text x="545" y="507" fill="#bf8700">11 · Jun 17 · Rust · view diff ↗</text><text x="545" y="523">Added exceptions to the non-critical restriction.</text><text x="545" y="539" font-size="9" fill="#656d76">Code</text></a>
+<a href="https://github.com/rust-lang/rust-forge/commit/ab6f5c68e2f5a1e72fcd45f6b02c5ebf9f9a854b" target="_blank"><text x="545" y="571" fill="#bf8700">12 · Jun 22 · Rust · view diff ↗</text><text x="545" y="587">Removed meeting-use and LLM-process restrictions.</text><text x="545" y="603" font-size="9" fill="#656d76">Outside taxonomy · LLM-process domain uncertain</text></a>
+<a href="https://github.com/pytorch/pytorch/commit/ffc572d6aba76129928e0caaa96a93bd0585f903" target="_blank"><text x="545" y="635" fill="#0f766e">13 · Jul 15 · PyTorch · view diff ↗</text><text x="545" y="651">Moved contribution guidance; no rule change established.</text><text x="545" y="667" font-size="9" fill="#656d76">Code</text></a>
+<a href="https://github.com/Homebrew/brew/pull/23317/files" target="_blank"><text x="545" y="699" fill="#b7791f">14 · Jul 29 · Homebrew · view diff ↗</text><text x="545" y="715">Disallowed AI authorship and required human review replies.</text><text x="545" y="731" font-size="9" fill="#656d76">Code · Review · Content</text></a>
+<a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/Documentation/process/coding-assistants.rst?id=816d9992d9ed434ec52cfbd63080d518e535a41b" target="_blank"><text x="545" y="763" fill="#cf222e">15 · Aug 03 · Linux kernel · view diff ↗</text><text x="545" y="779">Simplified attribution from named tool/model to “LLM”.</text><text x="545" y="795" font-size="9" fill="#656d76">Code</text></a>
+<a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/Documentation/process/coding-assistants.rst?id=3d7c44f73765d98665fb97a4fb89c002c88ba1b9" target="_blank"><text x="545" y="827" fill="#cf222e">16 · Aug 04 · Linux kernel · view diff ↗</text><text x="545" y="843">Added steps to reproduce, fix and test AI-found bugs.</text><text x="545" y="859" font-size="9" fill="#656d76">Code</text></a>
+<a href="https://github.com/bevyengine/bevy-website/pull/2551/files" target="_blank"><text x="545" y="891" fill="#6f42c1">17 · Aug 04 · Bevy · view diff ↗</text><text x="545" y="907">Replaced blanket ban with limited code assistance.</text><text x="545" y="923" font-size="9" fill="#656d76">Code · Content · Review · Moderation actions</text></a>
+<a href="https://github.com/pandas-dev/pandas/pull/66767/files" target="_blank"><text x="545" y="955" fill="#7950f2">18 · Aug 14 · pandas · view diff ↗</text><text x="545" y="971">Required human-written discussion and specific disclosure.</text><text x="545" y="987" font-size="9" fill="#656d76">Code · Content · Review</text></a>
+<a href="https://github.com/jdx/mise/pull/13886/files" target="_blank"><text x="545" y="1019" fill="#0969da">19 · Oct 02 · mise · view diff ↗</text><text x="545" y="1035">Restricted AI replies to eligible participants; violations may lead to bans.</text><text x="545" y="1051" font-size="9" fill="#656d76">Code · Moderation actions</text></a>
+<a href="https://github.com/pytorch/pytorch/commit/5df8cd4b1e7ca1ca2a8a97aeb732ce6a021d3632" target="_blank"><text x="545" y="1083" fill="#0f766e">20 · Oct 07 · PyTorch · view diff ↗</text><text x="545" y="1099">Relaxed how generated content can be labeled.</text><text x="545" y="1115" font-size="9" fill="#656d76">Code</text></a>
+
+<a href="https://github.com/apache/datafusion/pull/24510/files" target="_blank"><text x="1058" y="507" fill="#087f5b">21 · Oct 08 · Apache DataFusion · view diff ↗</text><text x="1058" y="523">Revised AI contribution guidance and review safeguards.</text><text x="1058" y="539" font-size="9" fill="#656d76">Code · Review · Content · Moderation actions</text></a>
+<a href="https://github.com/osm-search/Nominatim/pull/4220/files" target="_blank"><text x="1058" y="571" fill="#6e7781">22 · Oct 13 · Nominatim · view diff ↗</text><text x="1058" y="587">Added accountability and refusal option; removed proof requirement.</text><text x="1058" y="603" font-size="9" fill="#656d76">Code · Moderation actions</text></a>
+<a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/Documentation/process/coding-assistants.rst?id=1e035297ffdadf2184c3c773b8c098e372324aaf" target="_blank"><text x="1058" y="635" fill="#cf222e">23 · Oct 14 · Linux kernel · view diff ↗</text><text x="1058" y="651">Removed attribution; DCO and human responsibility remain.</text><text x="1058" y="667" font-size="9" fill="#656d76">Code</text></a>
+<a href="https://github.com/meilisearch/meilisearch/pull/6684/files" target="_blank"><text x="1058" y="699" fill="#218bff">24 · Oct 15 · Meilisearch · view diff ↗</text><text x="1058" y="715">Replaced disclosure with exclusion of AI-generated contributions.</text><text x="1058" y="731" font-size="9" fill="#656d76">Code · Content</text></a>
+<a href="https://github.com/xmtp/libxmtp/pull/4574/files" target="_blank"><text x="1058" y="763" fill="#a371f7">25 · Oct 15 · XMTP · view diff ↗</text><text x="1058" y="779">Replaced ban with review, testing and disclosure requirements.</text><text x="1058" y="795" font-size="9" fill="#656d76">Code</text></a>
+<a href="https://github.com/cilium/cilium/pull/49098/files" target="_blank"><text x="1058" y="827" fill="#e8590c">26 · Oct 16 · Cilium · view diff ↗</text><text x="1058" y="843">Added AI disclosure to bug reports.</text><text x="1058" y="859" font-size="9" fill="#656d76">Content · Moderation actions</text></a>
+<a href="https://github.com/Python-Markdown/markdown/pull/1658/files" target="_blank"><text x="1058" y="891" fill="#1a7f37">27 · Oct 19 · Python-Markdown · view diff ↗</text><text x="1058" y="907">Added AI-use disclosure and template enforcement.</text><text x="1058" y="923" font-size="9" fill="#656d76">Code · Content · Moderation actions</text></a>
+<a href="https://github.com/seerr-team/seerr/pull/3636/files" target="_blank"><text x="1058" y="955" fill="#e16f24">28 · Oct 21 · Seerr · view diff ↗</text><text x="1058" y="971">Clarified limits on AI-driven contributions.</text><text x="1058" y="987" font-size="9" fill="#656d76">Code</text></a>
+</g>
+
+</svg>
