@@ -1,8 +1,9 @@
-# First test of the policy-change metric
+# First test of the CHAOSS policy-change metric
 
-This first test applies the metric to a purposive sample of AI-policy revisions using source revision dates. Each entry describes a policy change, not a judgment of a project. It distinguishes policy baselines, substantive rule changes, and revisions that clarify or reorganize existing guidance; only changes with an evidenced direction are described as tightened or loosened.
+This is a first test of the [CHAOSS AI policy change metric](https://github.com/chaoss/wg-ai-alignment/blob/policy-evolution/metrics/ai-alignment-community-governed-use/ai-use-policy-change.md) on a purposive sample of AI-policy revisions, using source revision dates. Each entry describes a policy change, not a judgment of a project. The analysis also references the [CHAOSS AI policy specificity metric](https://github.com/chaoss/wg-ai-alignment/blob/policy-evolution/metrics/ai-alignment-community-governed-use/ai-use-consent-policy-specificity.md) to identify the domains involved.
 
-The sample is purposive, not exhaustive, and includes revisions checked through 2026-10-22. Each entry links to its source diff. New policies are shown as baselines, not automatically as tightening. No later change to curl’s AI policy is confirmed.
+The labels “tightening” and “loosening” are interpretive and open to debate. The entries distinguish first-observed policy baselines, substantive rule changes, and clarifications or reorganizations; direction is assigned only where the evidence supports it.
+
 
 ![Timeline of 28 policy revisions across 21 projects from May 2025 to October 2026 on one central date axis. Dot color identifies the project and dotted lines connect revisions from the same project. Dots above the line indicate tightening, below indicate loosening, and on the line indicate a new policy baseline, mixed change, clarification, or no established AI-policy direction. Numbered markers correspond to source-linked descriptions below. Vertical distance is qualitative, not a measured score.](../images/2026-10-23/policy-change.svg)
 
