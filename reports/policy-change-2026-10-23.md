@@ -1,8 +1,7 @@
-# Policy change history: pilot
+# Policy change history: October 23, 2026
 
-This pilot tracks AI-policy changes using source revision dates. Each entry describes a policy change, not a judgment of a project. “Added” and “removed” are change types; “tightened” and “loosened” describe direction. A revision can include more than one direction.
+This is a first attempt to apply the [CHAOSS AI policy change metric - to a set of data](https://github.com/chaoss/wg-ai-alignment/blob/policy-evolution/metrics/ai-alignment-community-governed-use/ai-use-policy-change.md).  This test tracks AI-policy changes using source revision dates. A decision was made as to whether a policy change was 'tightening' or 'loosening' , but that is not a science in this moment, and is open for debate on how to better label such changes. Diffs are provided. All changes were tracked, as best as possible according to the [CHAOSS AI specificity metric](https://github.com/chaoss/wg-ai-alignment/blob/policy-evolution/metrics/ai-alignment-community-governed-use/ai-use-consent-policy-specificity.md).
 
-The sample is purposive, not exhaustive, and includes revisions checked through 2026-10-22. Each entry links to its source diff. New policies are shown as baselines, not automatically as tightening. No later change to curl’s AI policy is confirmed.
 
 ![Timeline of 28 policy revisions across 21 projects from May 2025 to October 2026 on one central date axis. Dot color identifies the project and dotted lines connect revisions from the same project. Dots above the line indicate tightening, below indicate loosening, and on the line indicate a new policy baseline, mixed change, clarification, or no established AI-policy direction. Numbered markers correspond to source-linked descriptions below. Vertical distance is qualitative, not a measured score.](../images/2026-10-23/policy-change.svg)
 
