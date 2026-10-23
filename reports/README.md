@@ -94,7 +94,7 @@ Bar chart of metric taxonomy captured in policy documents.
 
 'partial' means the terminology used **leans** towards a given outcome, but might be more or less specific. Worth capturing these, to see how language changes over time.
 
-![Horizontal bar chart of AI policy coverage across 39 open source projects and nine domains. Code contributions 26 addressed and 13 partial; Content and documentation 6 addressed and 14 partial; Moderation and enforcement 0 addressed and 15 partial; Review of contributions 4 addressed and 11 partial; Autonomous and agentic use 8 addressed and 13 partial; Data use for training 0 addressed and 1 partial. No project addresses Notetaker and meeting bots, Environmental impact or Infrastructure strain.](coverage.svg)
+![Horizontal bar chart of AI policy coverage across 39 open source projects and nine domains. Code contributions 26 addressed and 13 partial; Content and documentation 6 addressed and 14 partial; Moderation and enforcement 0 addressed and 15 partial; Review of contributions 4 addressed and 11 partial; Autonomous and agentic use 8 addressed and 13 partial; Data use for training 0 addressed and 1 partial. No project addresses Notetaker and meeting bots, Environmental impact or Infrastructure strain.](../images/2026-10-22/coverage.svg)
 
 Up to three examples per taxonomy/theme
 
@@ -186,7 +186,7 @@ Bar chart of metric taxonomy captured in accompanying blog posts, or preamble to
 
 Sometimes the *reason* for a policy will include one of our metric taxonomies (like environment) but not be specifically mentioned in the policy itself. Seems worth capturing.
 
-![Horizontal bar chart. Counts of projects that raise a domain in their stated reasons without governing it, out of 39: Environmental impact 7, Infrastructure strain 5, Review of contributions 4, Data use for training 2, Autonomous and agentic use 1. Other projects may still govern these domains; the count is of policies that name the concern and set no rule about it.](rationale.svg)
+![Horizontal bar chart. Counts of projects that raise a domain in their stated reasons without governing it, out of 39: Environmental impact 7, Infrastructure strain 5, Review of contributions 4, Data use for training 2, Autonomous and agentic use 1. Other projects may still govern these domains; the count is of policies that name the concern and set no rule about it.](../images/2026-10-22/rationale.svg)
 
 ### Review of contributions
 

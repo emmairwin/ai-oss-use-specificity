@@ -4,7 +4,7 @@ This pilot tracks AI-policy changes using source revision dates. Each row descri
 
 The sample is purposive, not exhaustive, and includes revisions checked through 2026-10-22. Each entry links to its source diff. New policies are shown as baselines, not automatically as tightening. No later change to curl’s AI policy is confirmed.
 
-![Timeline of 28 policy revisions across 21 projects from May 2025 to October 2026 on one central date axis. Dot color identifies the project and dotted lines connect revisions from the same project. Dots above the line indicate tightening, below indicate loosening, and on the line indicate a new policy baseline, mixed change, clarification, or no established AI-policy direction. Each entry includes Consent Policy Specificity domain labels. Vertical distance is qualitative, not a measured score.](policy-change-pilot.svg)
+![Timeline of 28 policy revisions across 21 projects from May 2025 to October 2026 on one central date axis. Dot color identifies the project and dotted lines connect revisions from the same project. Dots above the line indicate tightening, below indicate loosening, and on the line indicate a new policy baseline, mixed change, clarification, or no established AI-policy direction. Each entry includes Consent Policy Specificity domain labels. Vertical distance is qualitative, not a measured score.](../images/2026-10-23/policy-change.svg)
 
 Select a numbered marker or its description in the chart to open the source diff.
 

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="770" height="272" viewBox="0 0 770 272" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">
+<rect width="770" height="272" fill="#ffffff"/>
+<text x="24" y="36" font-size="14" font-weight="600" fill="#1f2328">Mentioned in policy rationale</text>
+<text x="24" y="54" font-size="11" fill="#656d76">Projects mentioning the domain in policy rationale &#183; CHAOSS Consent Policy Specificity</text>
+<rect x="484" y="26" width="10" height="10" rx="2" fill="#8250df"/>
+<text x="499" y="35" font-size="11" fill="#656d76">policy rationale</text>
+<line x1="234" y1="70" x2="234" y2="244" stroke="#d8dee4" stroke-width="1"/>
+<line x1="369" y1="70" x2="369" y2="244" stroke="#eaeef2" stroke-width="1"/>
+<line x1="504" y1="70" x2="504" y2="244" stroke="#eaeef2" stroke-width="1"/>
+<line x1="639" y1="70" x2="639" y2="244" stroke="#eaeef2" stroke-width="1"/>
+<text x="224" y="92" font-size="12" fill="#1f2328" text-anchor="end">Review</text>
+<rect x="234.0" y="78" width="135" height="20" fill="#8250df"/>
+<text x="375" y="92" font-size="11" fill="#656d76">5</text>
+<text x="224" y="126" font-size="12" fill="#1f2328" text-anchor="end">Autonomous / agentic use</text>
+<rect x="234.0" y="112" width="108" height="20" fill="#8250df"/>
+<text x="348" y="126" font-size="11" fill="#656d76">4</text>
+<text x="224" y="160" font-size="12" fill="#1f2328" text-anchor="end">Environmental Impact</text>
+<rect x="234.0" y="146" width="405" height="20" fill="#8250df"/>
+<text x="645" y="160" font-size="11" fill="#656d76">15</text>
+<text x="224" y="194" font-size="12" fill="#1f2328" text-anchor="end">Infrastructure strain</text>
+<rect x="234.0" y="180" width="162" height="20" fill="#8250df"/>
+<text x="402" y="194" font-size="11" fill="#656d76">6</text>
+<text x="224" y="228" font-size="12" fill="#1f2328" text-anchor="end">Data use for training</text>
+<rect x="234.0" y="214" width="162" height="20" fill="#8250df"/>
+<text x="402" y="228" font-size="11" fill="#656d76">6</text>
+<text x="234" y="260" font-size="10" fill="#656d76" text-anchor="middle">0</text>
+<text x="369" y="260" font-size="10" fill="#656d76" text-anchor="middle">5</text>
+<text x="504" y="260" font-size="10" fill="#656d76" text-anchor="middle">10</text>
+<text x="639" y="260" font-size="10" fill="#656d76" text-anchor="middle">15</text>
+</svg>

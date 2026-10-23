@@ -114,7 +114,7 @@ Do not place first-observed baselines on a tightening/loosening scale. Show a le
 
 Example timeline from the pilot:
 
-![Example timeline of 28 policy revisions across 21 projects. Markers link to source evidence, colors identify projects, and numbered entries list revisions in chronological order with domain labels.](policy-change-pilot.svg)
+![Example timeline of 28 policy revisions across 21 projects. Markers link to source evidence, colors identify projects, and numbered entries list revisions in chronological order with domain labels.](../images/2026-10-23/policy-change.svg)
 
 ## References
 
