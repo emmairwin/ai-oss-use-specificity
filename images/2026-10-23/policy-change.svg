@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1600" height="480" viewBox="0 0 1600 480" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">
-<title>AI policy changes over time: pilot</title>
+<title>First test of the AI policy-change metric</title>
 <desc>One timeline from May 2025 to October 2026. Dot color identifies project. Dots above the central line indicate tightening, dots below indicate loosening, and dots on the line indicate a new policy baseline, mixed change, clarification, or no established direction. Distance from the line is qualitative, not a measured score. The 28 numbered markers correspond to source-linked change descriptions in the accompanying Markdown report; markers are not links.</desc>
 <rect width="1600" height="480" fill="#ffffff"/>
-<text x="28" y="38" font-size="22" font-weight="600" fill="#1f2328">AI policy changes over time: pilot</text>
+<text x="28" y="38" font-size="22" font-weight="600" fill="#1f2328">First test of the AI policy-change metric</text>
 <text x="28" y="62" font-size="12" fill="#656d76">28 reviewed revisions across 21 projects · source revision dates, May 2025–October 2026</text>
 <g font-size="10" fill="#424a53">
 <circle cx="36" cy="91" r="5" fill="#0a6e8a"/><text x="46" y="95">curl</text>
@@ -68,7 +68,7 @@
 <circle cx="1438" cy="205" r="9" fill="#218bff"><title>24. Meilisearch: contribution rule changed from disclosure to exclusion, 2026-10-15</title></circle>
 <circle cx="1450" cy="295" r="9" fill="#a371f7"><title>25. XMTP: ban replaced with accountability requirements, 2026-10-15</title></circle>
 <circle cx="1468" cy="205" r="9" fill="#1a7f37"><title>27. Python-Markdown: expanded disclosure and template enforcement, 2026-10-19</title></circle>
-<circle cx="1490" cy="205" r="9" fill="#e16f24"><title>28. Seerr: clarified limits on AI-driven contributions, 2026-10-21</title></circle>
+<circle cx="1490" cy="250" r="9" fill="#e16f24"><title>28. Seerr: corrected inconsistent policy wording; direction not established, 2026-10-21</title></circle>
 <circle cx="293" cy="250" r="9" fill="#228be6"><title>2. Apache CouchDB: AI-generated material prohibited, 2025-06-13</title></circle>
 <circle cx="697" cy="250" r="9" fill="#364fc7"><title>3. scikit-learn: AI disclosure added to policy and PR template, 2025-12-01</title></circle>
 <circle cx="790" cy="205" r="9" fill="#0b7285"><title>5. Django: required AI disclosure and verification, 2026-01-08</title></circle>
@@ -76,7 +76,7 @@
 <circle cx="1036" cy="205" r="9" fill="#2f9e44"><title>9. Godot: AI agents must self-disclose, 2026-04-21</title></circle>
 <circle cx="1118" cy="250" r="9" fill="#e8590c"><title>10. Cilium: PR template links policy and asks what contributor checked, 2026-05-26</title></circle>
 <circle cx="1270" cy="205" r="9" fill="#b7791f"><title>14. Homebrew: AI authorship disallowed and human review responses required, 2026-07-29</title></circle>
-<circle cx="1283" cy="250" r="9" fill="#6f42c1"><title>17. Bevy: blanket ban changed to limited human-driven code use, 2026-08-04</title></circle>
+<circle cx="1302" cy="250" r="9" fill="#6f42c1"><title>17. Bevy: blanket ban changed to limited human-driven code use, 2026-08-11</title></circle>
 <circle cx="1315" cy="205" r="9" fill="#7950f2"><title>18. pandas: human-written communications and specific disclosure required, 2026-08-14</title></circle>
 <circle cx="1425" cy="250" r="9" fill="#087f5b"><title>21. Apache DataFusion: contribution and review guidance revised, 2026-10-08</title></circle>
 <circle cx="1454" cy="220" r="9" fill="#e8590c"><title>26. Cilium: AI declaration added to issue template, 2026-10-16</title></circle>
@@ -87,11 +87,11 @@
 <text x="920" y="283">7</text><text x="934" y="253">8</text><text x="1036" y="208">9</text>
 <text x="1118" y="253">10</text><text x="1166" y="283">11</text><text x="1178" y="310">12</text>
 <text x="1234" y="253">13</text><text x="1270" y="208">14</text><text x="1279" y="283">15</text>
-<text x="1290" y="208">16</text><text x="1283" y="253">17</text><text x="1315" y="208">18</text>
+<text x="1290" y="208">16</text><text x="1302" y="253">17</text><text x="1315" y="208">18</text>
 <text x="1405" y="208">19</text><text x="1417" y="298">20</text><text x="1425" y="253">21</text>
 <text x="1450" y="253">22</text><text x="1433" y="310">23</text><text x="1438" y="208">24</text>
 <text x="1450" y="298">25</text><text x="1454" y="223">26</text><text x="1468" y="208">27</text>
-<text x="1490" y="208">28</text>
+<text x="1490" y="253">28</text>
 </g>
 </g>
 
