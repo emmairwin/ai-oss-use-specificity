@@ -40,20 +40,9 @@ Domain labels use the Consent Policy Specificity taxonomy. A revision can affect
 27. **2026-10-19 · Python-Markdown** — Required disclosure of AI use, tools, and generated content; requires templates and allows immediate closure when they are ignored. **Domains:** Code; Content; Moderation actions. **Change:** tightened disclosure and enforcement. [Source diff](https://github.com/Python-Markdown/markdown/pull/1658/files)
 28. **2026-10-21 · Seerr** — Corrected a contradictory notice to match the existing rule: code must be contributor-written, and reviewing or testing AI output does not make AI-driven work acceptable. **Domain:** Code. **Change:** policy clarification and consistency correction; a directional change is not established. [Source diff](https://github.com/seerr-team/seerr/pull/3636/files)
 
-## Not yet classified
-
-- **CPython:** Excluded from this first test because the sampled revisions did not establish a tightening or loosening of its AI-specific guidance.
-- **Apache Airflow:** Its Gen-AI guidance was added in January 2026, but a later directional revision has not been confirmed in the history sampled so far.
-- **Linux kernel:** The existing August 30 report predates the October 14 removal of the attribution requirement; it is a dated snapshot, not a description of the current policy.
-- **curl:** The AI-use guidance was added on 2025-05-15. Later edits to the contributing document were checked; the May 2026 wording fix was outside the AI-guidance section. No later AI-policy change is established here.
-
-## What the expanded sample suggests
-
-The 28 revisions across 21 projects include tightening, loosening, baselines, clarifications, and mixed changes. This sample is not representative and cannot show an ecosystem-wide trend. The Linux kernel changes on August 3 and 4 concern different provisions.
 
 ## Method notes
 
-- Dates are commit or merge dates from the linked source; they may differ from the policy’s effective date. The Bevy date is the PR merge date, not the date it was opened.
-- File moves are recorded separately from rule changes.
-- Direction compares the revised rule with its prior wording. A new policy is a baseline unless earlier evidence supports a comparison.
-- Linux kernel revisions link to GitHub commit pages for the same upstream commit IDs, as the original source host was inaccessible in some review environments.
+- List of projects comes from policies and other lists tracked in the CHAOSS moderation/README file
+- I used Claude Code to look for policy related to AI in any governance files; and to identify changes in files - and whether or not those mention AI.
+- I then reviewed (human in the loop) diffs that came up and tracked as either 'tightening' or 'loosening' as my own evaluation for now.
