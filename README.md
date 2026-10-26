@@ -4,10 +4,12 @@ Reports on how specifically open source projects' AI policies cover each of
 nine domains, using the CHAOSS metric
 [Consent Policy Specificity](https://github.com/chaoss/wg-ai-alignment/blob/main/metrics/ai-alignment-community-governed-use/ai-use-consent-policy-specificity.md).
 
-Policies come from the CHAOSS AI Alignment working group's
-[collected list](https://github.com/chaoss/wg-ai-alignment/blob/main/moderation/README.md).
+Project and policy origins are curated from the CHAOSS AI Alignment working
+group's [collected list](https://github.com/chaoss/wg-ai-alignment/blob/main/moderation/README.md)
+and Melissa W.'s
+[open-source-ai-contribution-policies](https://github.com/melissawm/open-source-ai-contribution-policies).
 
-**[Reports](reports/)** — 39 projects, one report each, plus a summary table
+**[Reports](reports/)** — 169 projects, one report each, plus a summary table
 and charts.
 
 ## The nine domains
@@ -30,4 +32,3 @@ policy stating its position precisely scores the same as a restrictive one.
 
 Most grids are sparse. Most projects cover code contributions, many cover
 documentation, few cover anything else.
-

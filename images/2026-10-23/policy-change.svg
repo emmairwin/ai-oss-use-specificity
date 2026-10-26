@@ -3,7 +3,7 @@
 <desc>One timeline from May 2025 to October 2026. Dot color identifies project. Dots above the central line indicate tightening, dots below indicate loosening, and dots on the line indicate a new policy baseline, mixed change, clarification, or no established direction. Distance from the line is qualitative, not a measured score. The 28 numbered markers correspond to source-linked change descriptions in the accompanying Markdown report; markers are not links.</desc>
 <rect width="1600" height="480" fill="#ffffff"/>
 <text x="28" y="38" font-size="22" font-weight="600" fill="#1f2328">First test of the AI policy-change metric</text>
-<text x="28" y="62" font-size="12" fill="#656d76">28 reviewed revisions across 21 projects · source revision dates, May 2025–October 2026</text>
+<text x="28" y="62" font-size="12" fill="#656d76">28 revisions (provisional): 24 substantive provisions (4 baselines + 20 revisions), 4 clarifications / operational changes / reorganizations · 21 projects</text>
 <g font-size="10" fill="#424a53">
 <circle cx="36" cy="91" r="5" fill="#0a6e8a"/><text x="46" y="95">curl</text>
 <circle cx="120" cy="91" r="5" fill="#228be6"/><text x="130" y="95">Apache CouchDB</text>

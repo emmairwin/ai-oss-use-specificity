@@ -4,181 +4,181 @@ This index contains 169 uniquely named projects and 169 linked reports. Report s
 
 The taxonomy below maps to the CHAOSS AI specificity [metric found here](https://github.com/chaoss/wg-ai-alignment/blob/main/metrics/ai-alignment-community-governed-use/ai-use-consent-policy-specificity.md#taxonomy-of-domains).
 
-🟥 **1** Code contributions · 🟧 **2** Notetaker and meeting bots · 🟨 **3** Content and documentation · 🟩 **4** Moderation and enforcement · 🟦 **5** Review of contributions · 🟪 **6** Autonomous and agentic use · 🟫 **7** Environmental impact · ⬛ **8** Infrastructure strain · ⬜ **9** Data use for training
+The table columns use the nine CHAOSS domain names.
 
 `X` specific rule: supervision plus at least one other specificity attribute (scope, accountability, or proportionality) · `~` partial: only one specificity attribute, or the domain is covered only by general wording · `R` rationale mention, not a rule · blank: no rule found in the scanned document. This scoring boundary is this project's interpretation, not a threshold defined by the CHAOSS metric.
 
-| Project | 🟥 1 | 🟧 2 | 🟨 3 | 🟩 4 | 🟦 5 | 🟪 6 | 🟫 7 | ⬛ 8 | ⬜ 9 | |
+| Project | Code contributions | Notetaker and meeting bots | Content and documentation | Moderation and enforcement | Review of contributions | Autonomous and agentic use | Environmental impact | Infrastructure strain | Data use for training | Report |
 |---|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|---|
-| afnix | ~ |  |  |  |  |  |  |  |  | [view report][p1] |
-| Alacritty | X |  | ~ |  |  |  |  |  |  | [view report][p2] |
-| Allium | X |  |  | ~ |  |  |  |  |  | [view report][p3] |
-| Amberol | X |  | X |  |  |  |  |  |  | [view report][p4] |
-| apache | X |  | X |  |  | ~ |  |  |  | [view report][p5] |
-| Apache Airflow | X |  |  | X |  |  |  |  |  | [view report][p6] |
-| Apache CouchDB | X |  | ~ |  |  |  |  |  |  | [view report][p7] |
-| Apache DataFusion | X |  |  |  |  | R |  |  |  | [view report][p8] |
-| Apache Kvrocks | X |  | ~ | ~ |  | ~ |  |  |  | [view report][p9] |
-| Apache PouchDB | X |  | ~ |  |  |  |  |  |  | [view report][p10] |
-| Arcalibre | ~ |  |  |  |  |  | R |  | R | [view report][p11] |
-| Arrow | X |  |  | ~ | X | X |  |  |  | [view report][p12] |
-| Asahi Linux | X |  |  | ~ |  | R | R |  |  | [view report][p13] |
-| astropy/astropy-project | X |  | ~ |  |  | X |  |  |  | [view report][p14] |
-| Avoyd | ~ |  |  |  |  |  |  |  |  | [view report][p15] |
-| Bevy | X |  | X | X | ~ | ~ |  |  |  | [view report][p16] |
-| Bobby | X |  | ~ |  |  |  |  |  |  | [view report][p17] |
-| borgmatic | X |  |  |  |  | X |  |  |  | [view report][p18] |
-| CapyPDF | X |  |  | ~ |  |  |  |  |  | [view report][p19] |
-| castle-game-engine | X |  | ~ |  | X | X |  |  |  | [view report][p20] |
-| Cataclysm: Dark Days Ahead | X |  |  |  |  |  |  |  |  | [view report][p21] |
-| CC Open Source | X |  | ~ |  |  |  |  |  |  | [view report][p22] |
-| CCExtractor | X |  |  | ~ | X | ~ |  |  |  | [view report][p23] |
-| Cheese Paper | X |  |  |  |  |  |  |  |  | [view report][p24] |
-| chezmoi | X |  |  | ~ |  |  |  |  |  | [view report][p25] |
-| Chimera Linux | ~ |  |  |  |  |  |  |  |  | [view report][p26] |
-| ChiPass | ~ |  |  |  |  |  |  |  |  | [view report][p27] |
-| cilium | X |  | X | ~ | ~ |  |  |  |  | [view report][p28] |
-| Clojure | X |  |  |  | ~ |  |  |  |  | [view report][p29] |
-| CloudNativePG | X |  | ~ | ~ |  | ~ |  |  |  | [view report][p30] |
-| codeberg | X |  |  | ~ |  | R | R | R | R | [view report][p31] |
-| conda | X |  |  | ~ | X | X |  |  |  | [view report][p32] |
-| CPython | X |  | ~ | ~ |  |  |  |  |  | [view report][p33] |
-| CuPy | X |  |  | ~ |  |  |  |  |  | [view report][p34] |
-| curl | X |  | ~ | ~ |  |  |  |  |  | [view report][p35] |
-| DataJourneyHQ | X |  |  |  | R |  |  |  |  | [view report][p36] |
-| debian | ~ |  | ~ | ~ | R | X | R | R |  | [view report][p37] |
-| Decker | X |  |  |  |  |  |  |  |  | [view report][p38] |
-| Django | X |  | ~ | ~ | X | X |  |  |  | [view report][p39] |
-| dlt | X |  |  | ~ |  | X |  |  |  | [view report][p40] |
-| do | X |  |  | ~ |  |  |  |  |  | [view report][p41] |
-| Drupal | X |  | ~ | X | ~ | R |  |  |  | [view report][p42] |
-| Dune 3D | X |  |  |  |  |  |  |  |  | [view report][p43] |
-| EasyBuild | X | ~ | X |  | X |  |  |  |  | [view report][p44] |
-| Elastic | X |  | X |  |  |  |  |  |  | [view report][p45] |
-| Elementary OS | X |  | X |  |  |  | R |  |  | [view report][p46] |
-| EmulatorKit | ~ |  |  |  |  |  |  |  |  | [view report][p47] |
-| Endless Sky | X |  | ~ |  |  |  |  |  |  | [view report][p48] |
-| Evi | X |  |  | ~ |  |  |  |  |  | [view report][p49] |
-| Exim | ~ |  |  |  |  |  |  |  |  | [view report][p50] |
-| FastAPI | X |  |  | ~ |  | ~ |  |  |  | [view report][p51] |
-| Fedify | X |  | X | ~ |  |  |  |  |  | [view report][p52] |
-| Fedora | X |  | X | X | X | ~ |  | ~ |  | [view report][p53] |
-| Fennel | X |  |  | ~ |  |  |  |  | X | [view report][p54] |
-| Firefox | X |  |  |  | X |  |  |  |  | [view report][p55] |
-| Flutter | ~ |  |  |  |  |  |  |  |  | [view report][p56] |
-| forgejo | X |  | X |  | ~ | X |  |  |  | [view report][p57] |
-| Fractal | X |  | X |  |  |  | R |  | R | [view report][p58] |
-| gaypanel | ~ |  |  |  |  |  |  |  |  | [view report][p59] |
-| gcc | X |  |  |  | ~ | ~ |  |  |  | [view report][p60] |
-| gdal-site | X |  |  |  | R | ~ |  |  |  | [view report][p61] |
-| Gedit | X |  | ~ |  |  |  |  |  |  | [view report][p62] |
-| gentoo | ~ |  |  |  |  |  | R |  |  | [view report][p63] |
-| ghostty-org/ghostty | ~ |  | ~ | ~ |  |  |  |  |  | [view report][p64] |
-| GIMP | X |  | ~ |  |  |  |  |  |  | [view report][p65] |
-| Gitte | X |  |  |  |  |  |  |  |  | [view report][p66] |
-| Glasgow Interface Explorer | X |  |  |  |  |  |  |  |  | [view report][p67] |
-| GNOME Extensions | X |  |  | ~ |  |  |  |  |  | [view report][p68] |
-| GNOME Loupe | X |  | X |  |  |  |  |  |  | [view report][p69] |
-| go-gitea/gitea | X |  |  | ~ |  |  |  |  |  | [view report][p70] |
-| godot | X |  | ~ | ~ | ~ | ~ |  |  |  | [view report][p71] |
-| goose | X |  |  | ~ | X | ~ |  |  |  | [view report][p72] |
-| GoToSocial | X |  | ~ |  |  |  |  |  |  | [view report][p73] |
-| Gram | X |  | ~ | X |  |  |  |  |  | [view report][p74] |
-| Halloy | X |  | ~ |  |  |  |  |  |  | [view report][p75] |
-| Highscore | X |  | X |  |  |  |  |  |  | [view report][p76] |
-| Homebrew | X |  |  |  | ~ |  |  |  |  | [view report][p77] |
-| Icechunk | X |  | X | ~ | ~ | X |  |  |  | [view report][p78] |
-| Idris | X |  |  |  |  | X |  |  |  | [view report][p79] |
-| Inkscape |  |  |  |  |  |  |  |  |  | [view report][p80] |
-| Inochi2D | X |  | ~ | ~ |  |  |  |  |  | [view report][p81] |
-| IREE (Intermediate Representation Execution Environment) | X |  | ~ |  |  | X |  |  |  | [view report][p82] |
-| jazzband/pip-tools | X |  |  | ~ |  | ~ |  |  |  | [view report][p83] |
-| jellyfin/jellyfin.org | X |  |  | ~ |  | X |  |  |  | [view report][p84] |
-| Joomla | X |  | ~ | ~ |  |  |  |  |  | [view report][p85] |
-| Jqwik | X |  |  |  |  |  |  |  |  | [view report][p86] |
-| jsoup | X |  |  |  |  |  |  |  |  | [view report][p87] |
-| kde-gsoc | ~ |  |  |  |  |  | R |  |  | [view report][p88] |
-| keepassxreboot/keepassxc | ~ |  |  |  |  |  |  |  |  | [view report][p89] |
-| Kornia | ~ |  |  |  |  |  |  |  |  | [view report][p90] |
-| Kubernetes | X |  | ~ | ~ | ~ |  |  |  |  | [view report][p91] |
-| Leiningen | ~ |  |  |  |  |  |  |  |  | [view report][p92] |
-| libadwaita | X |  | X |  |  |  |  |  |  | [view report][p93] |
-| libmanette | X |  | X |  |  |  |  |  |  | [view report][p94] |
-| libxml2 | X |  |  |  |  |  |  |  |  | [view report][p95] |
-| Lighthouse | X |  |  | ~ |  | ~ |  |  |  | [view report][p96] |
-| LinkML | X |  | ~ |  | X | X |  |  |  | [view report][p97] |
-| linux-foundation | X |  | ~ |  | R |  |  |  | R | [view report][p98] |
-| llvm/llvm-project | X |  | X | ~ | ~ | ~ |  |  |  | [view report][p99] |
-| Lobsters | X |  |  |  |  |  |  |  |  | [view report][p100] |
-| LÖVE | X |  |  |  |  |  |  |  |  | [view report][p101] |
-| mastodon/.github | X |  | ~ |  | X | X |  |  |  | [view report][p102] |
-| matplotlib/matplotlib | X |  |  | ~ |  | ~ |  |  |  | [view report][p103] |
-| MDAnalysis | X |  | X | ~ | X | X |  |  |  | [view report][p104] |
-| Mesa | X |  |  |  | X | X |  |  |  | [view report][p105] |
-| mGBA | X |  |  | ~ |  |  |  |  |  | [view report][p106] |
-| MicroPython | X |  |  | ~ |  | X |  |  |  | [view report][p107] |
-| Mikan | X |  |  |  |  |  |  |  |  | [view report][p108] |
-| Molecular Nodes | X |  | X | X | X | X |  |  |  | [view report][p109] |
-| napari | X |  |  | ~ |  | X |  |  |  | [view report][p110] |
-| NetBSD | X |  |  |  |  |  |  |  |  | [view report][p111] |
-| nlnet-labs | X |  | ~ |  | X |  |  |  |  | [view report][p112] |
-| NumPy | X |  |  | ~ |  | X |  |  |  | [view report][p113] |
-| nvim-tree | X |  | ~ | ~ | X | ~ |  |  |  | [view report][p114] |
-| OCaml | X |  |  |  | ~ |  |  |  |  | [view report][p115] |
-| OkHttp | X |  | ~ | ~ |  |  |  |  |  | [view report][p116] |
-| Open edX | X |  | ~ | ~ | X | ~ |  |  |  | [view report][p117] |
-| openinfra | X |  | ~ |  |  | ~ |  |  |  | [view report][p118] |
-| OpenJDK | X |  | X | ~ | X |  |  |  |  | [view report][p119] |
-| OpenTTD | X |  |  | ~ |  | ~ |  |  |  | [view report][p120] |
-| OSGeo/gdal | X |  |  | ~ | R | X |  | R |  | [view report][p121] |
-| OSGeo/PROJ | X |  | ~ | ~ | ~ | ~ |  |  |  | [view report][p122] |
-| oxide | X |  | X |  | ~ |  |  |  | ~ | [view report][p123] |
-| Pallets | X |  | ~ | ~ | ~ |  | R |  |  | [view report][p124] |
-| Pandas | X |  | ~ | ~ | ~ |  |  |  |  | [view report][p125] |
-| Pandemonium Engine | X |  | X |  |  |  | R |  |  | [view report][p126] |
-| pgwatch | X |  |  | ~ | ~ |  |  |  |  | [view report][p127] |
-| pip | X |  |  | ~ |  | X |  |  |  | [view report][p128] |
-| pkgconf | X |  |  | ~ |  | X |  |  |  | [view report][p129] |
-| Poezio | X |  | ~ |  |  |  |  |  |  | [view report][p130] |
-| pola-rs/polars | ~ |  | ~ |  | ~ | ~ |  |  |  | [view report][p131] |
-| Polyphony | X |  | X | X |  |  | R |  | R | [view report][p132] |
-| postmarketos | ~ |  |  |  |  |  | R | R |  | [view report][p133] |
-| Processing/p5.js | X |  | ~ | ~ | X | X | R |  |  | [view report][p134] |
-| Pytest | X |  |  | ~ |  | X |  |  |  | [view report][p135] |
-| python-attrs/attrs | ~ |  |  |  |  |  |  |  |  | [view report][p136] |
-| PyTorch | X |  |  | ~ | ~ |  |  |  |  | [view report][p137] |
-| PyVista | X |  | ~ |  |  | ~ |  | ~ |  | [view report][p138] |
-| qemu/qemu | X |  |  |  |  |  |  |  |  | [view report][p139] |
-| qgis/QGIS-Enhancement-Proposals | X |  | X | ~ | ~ | ~ |  | R |  | [view report][p140] |
-| qutip | X |  | ~ | ~ | X | X |  |  |  | [view report][p141] |
-| Redox OS | X |  |  | ~ |  |  |  |  |  | [view report][p142] |
-| Requests | X |  |  | ~ | X | X |  |  |  | [view report][p143] |
-| rust | X |  | X | ~ | X | ~ | R |  |  | [view report][p144] |
-| Schism Tracker | X |  |  |  | ~ |  |  |  |  | [view report][p145] |
-| SciActive | X |  | X | ~ |  | X |  |  | R | [view report][p146] |
-| scikit-image | X |  |  |  |  |  |  |  |  | [view report][p147] |
-| scikit-learn/scikit-learn | ~ |  |  | ~ | ~ |  |  |  |  | [view report][p148] |
-| SciPy | X |  |  | ~ |  | X |  |  |  | [view report][p149] |
-| SDL | X |  |  |  |  |  |  |  |  | [view report][p150] |
-| SDL_net | X |  |  |  |  |  |  |  |  | [view report][p151] |
-| SearXNG | X |  | ~ | ~ |  |  |  |  |  | [view report][p152] |
-| Sentinel | X |  |  | X |  |  |  |  |  | [view report][p153] |
-| servo/book | X |  | ~ | ~ | ~ |  | R |  |  | [view report][p154] |
-| Smederee | X |  |  |  |  |  |  |  |  | [view report][p155] |
-| snac | X |  |  |  |  |  |  |  |  | [view report][p156] |
-| Sphinx | X |  |  | ~ |  | X |  |  |  | [view report][p157] |
-| STAC | X |  | X | X | X | X |  |  |  | [view report][p158] |
-| stb | X |  | ~ |  |  |  |  |  |  | [view report][p159] |
-| sunpy/sunpy | ~ |  | ~ |  |  |  |  |  |  | [view report][p160] |
-| SymPy | X |  |  | ~ |  |  |  |  |  | [view report][p161] |
-| teamtype/teamtype | ~ |  | ~ |  |  |  |  |  |  | [view report][p162] |
-| Telegraf | X |  |  |  |  |  |  |  |  | [view report][p163] |
-| Tenacity | X |  |  | ~ |  |  |  | R |  | [view report][p164] |
-| TorchGeo | X |  | ~ | ~ |  | X |  |  |  | [view report][p165] |
-| torvalds/linux | X |  |  |  |  | X |  |  |  | [view report][p166] |
-| Tusky | X |  |  |  |  |  |  |  |  | [view report][p167] |
-| yt-dlp/yt-dlp | ~ |  |  |  | ~ | ~ |  |  |  | [view report][p168] |
-| zulip/zulip | X |  |  |  |  |  |  |  |  | [view report][p169] |
+| afnix | ~ |  |  |  |  |  |  |  |  | [report][p1] |
+| Alacritty | X |  | ~ |  |  |  |  |  |  | [report][p2] |
+| Allium | X |  |  | ~ |  |  |  |  |  | [report][p3] |
+| Amberol | X |  | X |  |  |  |  |  |  | [report][p4] |
+| apache | X |  | X |  |  | ~ |  |  |  | [report][p5] |
+| Apache Airflow | X |  |  | X |  |  |  |  |  | [report][p6] |
+| Apache CouchDB | X |  | ~ |  |  |  |  |  |  | [report][p7] |
+| Apache DataFusion | X |  |  |  |  | R |  |  |  | [report][p8] |
+| Apache Kvrocks | X |  | ~ | ~ |  | ~ |  |  |  | [report][p9] |
+| Apache PouchDB | X |  | ~ |  |  |  |  |  |  | [report][p10] |
+| Arcalibre | ~ |  |  |  |  |  | R |  | R | [report][p11] |
+| Arrow | X |  |  | ~ | X | X |  |  |  | [report][p12] |
+| Asahi Linux | X |  |  | ~ |  | R | R |  |  | [report][p13] |
+| astropy/astropy-project | X |  | ~ |  |  | X |  |  |  | [report][p14] |
+| Avoyd | ~ |  |  |  |  |  |  |  |  | [report][p15] |
+| Bevy | X |  | X | X | ~ | ~ |  |  |  | [report][p16] |
+| Bobby | X |  | ~ |  |  |  |  |  |  | [report][p17] |
+| borgmatic | X |  |  |  |  | X |  |  |  | [report][p18] |
+| CapyPDF | X |  |  | ~ |  |  |  |  |  | [report][p19] |
+| castle-game-engine | X |  | ~ |  | X | X |  |  |  | [report][p20] |
+| Cataclysm: Dark Days Ahead | X |  |  |  |  |  |  |  |  | [report][p21] |
+| CC Open Source | X |  | ~ |  |  |  |  |  |  | [report][p22] |
+| CCExtractor | X |  |  | ~ | X | ~ |  |  |  | [report][p23] |
+| Cheese Paper | X |  |  |  |  |  |  |  |  | [report][p24] |
+| chezmoi | X |  |  | ~ |  |  |  |  |  | [report][p25] |
+| Chimera Linux | ~ |  |  |  |  |  |  |  |  | [report][p26] |
+| ChiPass | ~ |  |  |  |  |  |  |  |  | [report][p27] |
+| cilium | X |  | X | ~ | ~ |  |  |  |  | [report][p28] |
+| Clojure | X |  |  |  | ~ |  |  |  |  | [report][p29] |
+| CloudNativePG | X |  | ~ | ~ |  | ~ |  |  |  | [report][p30] |
+| codeberg | X |  |  | ~ |  | R | R | R | R | [report][p31] |
+| conda | X |  |  | ~ | X | X |  |  |  | [report][p32] |
+| CPython | X |  | ~ | ~ |  |  |  |  |  | [report][p33] |
+| CuPy | X |  |  | ~ |  |  |  |  |  | [report][p34] |
+| curl | X |  | ~ | ~ |  |  |  |  |  | [report][p35] |
+| DataJourneyHQ | X |  |  |  | R |  |  |  |  | [report][p36] |
+| debian | ~ |  | ~ | ~ | R | X | R | R |  | [report][p37] |
+| Decker | X |  |  |  |  |  |  |  |  | [report][p38] |
+| Django | X |  | ~ | ~ | X | X |  |  |  | [report][p39] |
+| dlt | X |  |  | ~ |  | X |  |  |  | [report][p40] |
+| do | X |  |  | ~ |  |  |  |  |  | [report][p41] |
+| Drupal | X |  | ~ | X | ~ | R |  |  |  | [report][p42] |
+| Dune 3D | X |  |  |  |  |  |  |  |  | [report][p43] |
+| EasyBuild | X | ~ | X |  | X |  |  |  |  | [report][p44] |
+| Elastic | X |  | X |  |  |  |  |  |  | [report][p45] |
+| Elementary OS | X |  | X |  |  |  | R |  |  | [report][p46] |
+| EmulatorKit | ~ |  |  |  |  |  |  |  |  | [report][p47] |
+| Endless Sky | X |  | ~ |  |  |  |  |  |  | [report][p48] |
+| Evi | X |  |  | ~ |  |  |  |  |  | [report][p49] |
+| Exim | ~ |  |  |  |  |  |  |  |  | [report][p50] |
+| FastAPI | X |  |  | ~ |  | ~ |  |  |  | [report][p51] |
+| Fedify | X |  | X | ~ |  |  |  |  |  | [report][p52] |
+| Fedora | X |  | X | X | X | ~ |  | ~ |  | [report][p53] |
+| Fennel | X |  |  | ~ |  |  |  |  | X | [report][p54] |
+| Firefox | X |  |  |  | X |  |  |  |  | [report][p55] |
+| Flutter | ~ |  |  |  |  |  |  |  |  | [report][p56] |
+| forgejo | X |  | X |  | ~ | X |  |  |  | [report][p57] |
+| Fractal | X |  | X |  |  |  | R |  | R | [report][p58] |
+| gaypanel | ~ |  |  |  |  |  |  |  |  | [report][p59] |
+| gcc | X |  |  |  | ~ | ~ |  |  |  | [report][p60] |
+| gdal-site | X |  |  |  | R | ~ |  |  |  | [report][p61] |
+| Gedit | X |  | ~ |  |  |  |  |  |  | [report][p62] |
+| gentoo | ~ |  |  |  |  |  | R |  |  | [report][p63] |
+| ghostty-org/ghostty | ~ |  | ~ | ~ |  |  |  |  |  | [report][p64] |
+| GIMP | X |  | ~ |  |  |  |  |  |  | [report][p65] |
+| Gitte | X |  |  |  |  |  |  |  |  | [report][p66] |
+| Glasgow Interface Explorer | X |  |  |  |  |  |  |  |  | [report][p67] |
+| GNOME Extensions | X |  |  | ~ |  |  |  |  |  | [report][p68] |
+| GNOME Loupe | X |  | X |  |  |  |  |  |  | [report][p69] |
+| go-gitea/gitea | X |  |  | ~ |  |  |  |  |  | [report][p70] |
+| godot | X |  | ~ | ~ | ~ | ~ |  |  |  | [report][p71] |
+| goose | X |  |  | ~ | X | ~ |  |  |  | [report][p72] |
+| GoToSocial | X |  | ~ |  |  |  |  |  |  | [report][p73] |
+| Gram | X |  | ~ | X |  |  |  |  |  | [report][p74] |
+| Halloy | X |  | ~ |  |  |  |  |  |  | [report][p75] |
+| Highscore | X |  | X |  |  |  |  |  |  | [report][p76] |
+| Homebrew | X |  |  |  | ~ |  |  |  |  | [report][p77] |
+| Icechunk | X |  | X | ~ | ~ | X |  |  |  | [report][p78] |
+| Idris | X |  |  |  |  | X |  |  |  | [report][p79] |
+| Inkscape |  |  |  |  |  |  |  |  |  | [report][p80] |
+| Inochi2D | X |  | ~ | ~ |  |  |  |  |  | [report][p81] |
+| IREE (Intermediate Representation Execution Environment) | X |  | ~ |  |  | X |  |  |  | [report][p82] |
+| jazzband/pip-tools | X |  |  | ~ |  | ~ |  |  |  | [report][p83] |
+| jellyfin/jellyfin.org | X |  |  | ~ |  | X |  |  |  | [report][p84] |
+| Joomla | X |  | ~ | ~ |  |  |  |  |  | [report][p85] |
+| Jqwik | X |  |  |  |  |  |  |  |  | [report][p86] |
+| jsoup | X |  |  |  |  |  |  |  |  | [report][p87] |
+| kde-gsoc | ~ |  |  |  |  |  | R |  |  | [report][p88] |
+| keepassxreboot/keepassxc | ~ |  |  |  |  |  |  |  |  | [report][p89] |
+| Kornia | ~ |  |  |  |  |  |  |  |  | [report][p90] |
+| Kubernetes | X |  | ~ | ~ | ~ |  |  |  |  | [report][p91] |
+| Leiningen | ~ |  |  |  |  |  |  |  |  | [report][p92] |
+| libadwaita | X |  | X |  |  |  |  |  |  | [report][p93] |
+| libmanette | X |  | X |  |  |  |  |  |  | [report][p94] |
+| libxml2 | X |  |  |  |  |  |  |  |  | [report][p95] |
+| Lighthouse | X |  |  | ~ |  | ~ |  |  |  | [report][p96] |
+| LinkML | X |  | ~ |  | X | X |  |  |  | [report][p97] |
+| linux-foundation | X |  | ~ |  | R |  |  |  | R | [report][p98] |
+| llvm/llvm-project | X |  | X | ~ | ~ | ~ |  |  |  | [report][p99] |
+| Lobsters | X |  |  |  |  |  |  |  |  | [report][p100] |
+| LÖVE | X |  |  |  |  |  |  |  |  | [report][p101] |
+| mastodon/.github | X |  | ~ |  | X | X |  |  |  | [report][p102] |
+| matplotlib/matplotlib | X |  |  | ~ |  | ~ |  |  |  | [report][p103] |
+| MDAnalysis | X |  | X | ~ | X | X |  |  |  | [report][p104] |
+| Mesa | X |  |  |  | X | X |  |  |  | [report][p105] |
+| mGBA | X |  |  | ~ |  |  |  |  |  | [report][p106] |
+| MicroPython | X |  |  | ~ |  | X |  |  |  | [report][p107] |
+| Mikan | X |  |  |  |  |  |  |  |  | [report][p108] |
+| Molecular Nodes | X |  | X | X | X | X |  |  |  | [report][p109] |
+| napari | X |  |  | ~ |  | X |  |  |  | [report][p110] |
+| NetBSD | X |  |  |  |  |  |  |  |  | [report][p111] |
+| nlnet-labs | X |  | ~ |  | X |  |  |  |  | [report][p112] |
+| NumPy | X |  |  | ~ |  | X |  |  |  | [report][p113] |
+| nvim-tree | X |  | ~ | ~ | X | ~ |  |  |  | [report][p114] |
+| OCaml | X |  |  |  | ~ |  |  |  |  | [report][p115] |
+| OkHttp | X |  | ~ | ~ |  |  |  |  |  | [report][p116] |
+| Open edX | X |  | ~ | ~ | X | ~ |  |  |  | [report][p117] |
+| openinfra | X |  | ~ |  |  | ~ |  |  |  | [report][p118] |
+| OpenJDK | X |  | X | ~ | X |  |  |  |  | [report][p119] |
+| OpenTTD | X |  |  | ~ |  | ~ |  |  |  | [report][p120] |
+| OSGeo/gdal | X |  |  | ~ | R | X |  | R |  | [report][p121] |
+| OSGeo/PROJ | X |  | ~ | ~ | ~ | ~ |  |  |  | [report][p122] |
+| oxide | X |  | X |  | ~ |  |  |  | ~ | [report][p123] |
+| Pallets | X |  | ~ | ~ | ~ |  | R |  |  | [report][p124] |
+| Pandas | X |  | ~ | ~ | ~ |  |  |  |  | [report][p125] |
+| Pandemonium Engine | X |  | X |  |  |  | R |  |  | [report][p126] |
+| pgwatch | X |  |  | ~ | ~ |  |  |  |  | [report][p127] |
+| pip | X |  |  | ~ |  | X |  |  |  | [report][p128] |
+| pkgconf | X |  |  | ~ |  | X |  |  |  | [report][p129] |
+| Poezio | X |  | ~ |  |  |  |  |  |  | [report][p130] |
+| pola-rs/polars | ~ |  | ~ |  | ~ | ~ |  |  |  | [report][p131] |
+| Polyphony | X |  | X | X |  |  | R |  | R | [report][p132] |
+| postmarketos | ~ |  |  |  |  |  | R | R |  | [report][p133] |
+| Processing/p5.js | X |  | ~ | ~ | X | X | R |  |  | [report][p134] |
+| Pytest | X |  |  | ~ |  | X |  |  |  | [report][p135] |
+| python-attrs/attrs | ~ |  |  |  |  |  |  |  |  | [report][p136] |
+| PyTorch | X |  |  | ~ | ~ |  |  |  |  | [report][p137] |
+| PyVista | X |  | ~ |  |  | ~ |  | ~ |  | [report][p138] |
+| qemu/qemu | X |  |  |  |  |  |  |  |  | [report][p139] |
+| qgis/QGIS-Enhancement-Proposals | X |  | X | ~ | ~ | ~ |  | R |  | [report][p140] |
+| qutip | X |  | ~ | ~ | X | X |  |  |  | [report][p141] |
+| Redox OS | X |  |  | ~ |  |  |  |  |  | [report][p142] |
+| Requests | X |  |  | ~ | X | X |  |  |  | [report][p143] |
+| rust | X |  | X | ~ | X | ~ | R |  |  | [report][p144] |
+| Schism Tracker | X |  |  |  | ~ |  |  |  |  | [report][p145] |
+| SciActive | X |  | X | ~ |  | X |  |  | R | [report][p146] |
+| scikit-image | X |  |  |  |  |  |  |  |  | [report][p147] |
+| scikit-learn/scikit-learn | ~ |  |  | ~ | ~ |  |  |  |  | [report][p148] |
+| SciPy | X |  |  | ~ |  | X |  |  |  | [report][p149] |
+| SDL | X |  |  |  |  |  |  |  |  | [report][p150] |
+| SDL_net | X |  |  |  |  |  |  |  |  | [report][p151] |
+| SearXNG | X |  | ~ | ~ |  |  |  |  |  | [report][p152] |
+| Sentinel | X |  |  | X |  |  |  |  |  | [report][p153] |
+| servo/book | X |  | ~ | ~ | ~ |  | R |  |  | [report][p154] |
+| Smederee | X |  |  |  |  |  |  |  |  | [report][p155] |
+| snac | X |  |  |  |  |  |  |  |  | [report][p156] |
+| Sphinx | X |  |  | ~ |  | X |  |  |  | [report][p157] |
+| STAC | X |  | X | X | X | X |  |  |  | [report][p158] |
+| stb | X |  | ~ |  |  |  |  |  |  | [report][p159] |
+| sunpy/sunpy | ~ |  | ~ |  |  |  |  |  |  | [report][p160] |
+| SymPy | X |  |  | ~ |  |  |  |  |  | [report][p161] |
+| teamtype/teamtype | ~ |  | ~ |  |  |  |  |  |  | [report][p162] |
+| Telegraf | X |  |  |  |  |  |  |  |  | [report][p163] |
+| Tenacity | X |  |  | ~ |  |  |  | R |  | [report][p164] |
+| TorchGeo | X |  | ~ | ~ |  | X |  |  |  | [report][p165] |
+| torvalds/linux | X |  |  |  |  | X |  |  |  | [report][p166] |
+| Tusky | X |  |  |  |  |  |  |  |  | [report][p167] |
+| yt-dlp/yt-dlp | ~ |  |  |  | ~ | ~ |  |  |  | [report][p168] |
+| zulip/zulip | X |  |  |  |  |  |  |  |  | [report][p169] |
 
 [p1]: afnix/2026-08-30.md
 [p2]: alacritty/2026-10-21.md
@@ -377,9 +377,9 @@ Bar chart of metric taxonomy captured in policy documents.
 
 For the charts, `X` and `~` are combined: a domain counts when the scanned policy contains a rule or guidance about it, whether specific or general. Blank entries are left out; `R` rationale mentions are shown separately below.
 
-![Horizontal bar chart showing policy mention counts by domain, combining addressed and partial entries: code contributions 168, notetaker and meeting bots 1, content and documentation 75, moderation and enforcement 79, review of contributions 47, autonomous and agentic use 59, environmental impact 0, infrastructure strain 2, and data use for training 2.](../images/2026-10-22/coverage.svg)
+![Horizontal bar chart showing policy coverage counts by domain. Entries marked X or ~ count as coverage: code contributions 168, notetaker and meeting bots 1, content and documentation 75, moderation and enforcement 79, review of contributions 47, autonomous and agentic use 59, environmental impact 0, infrastructure strain 2, and data use for training 2.](../images/2026-10-22/coverage.svg)
 
-![Pie chart showing the distribution of policy mentions across the nine domains, combining addressed and partial entries. Blank entries and rationale-only mentions are excluded; one report may count in multiple domains.](../images/2026-10-22/coverage-pie.svg)
+![Pie chart showing the distribution of policy coverage counts across the nine domains. Entries marked X or ~ count; blank entries and rationale-only mentions are excluded. One report may count in multiple domains.](../images/2026-10-22/coverage-pie.svg)
 
 Up to three examples per taxonomy/theme
 

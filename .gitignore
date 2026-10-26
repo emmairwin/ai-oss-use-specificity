@@ -11,6 +11,7 @@ requirements.txt
 eval/
 .claude/
 STATUS.md
+reports/POLICY-CHANGE-METRIC-PROPOSAL.md
 
 # working files
 __pycache__/
