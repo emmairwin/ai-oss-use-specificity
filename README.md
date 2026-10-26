@@ -23,7 +23,7 @@ who holds accountability, proportionality.
 
 ## Reading a report
 
-`X` addressed, `~` partial, `R` raised in the policy's rationale but not
+`X` addressed, `~` coverage below the X specificity threshold, `R` raised in the policy's rationale but not
 governed, blank not mentioned. Footnotes give the policy's own words and a link
 to the line.
 
