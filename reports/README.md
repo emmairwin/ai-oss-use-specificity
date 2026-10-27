@@ -1,12 +1,12 @@
 # AI policy coverage summary: 169 projects
 
-This index contains 169 uniquely named projects and 169 linked reports. Report snapshots have different dates; the newest project reports are dated 2026-10-21. Summary charts were generated 2026-10-22.
+This index contains 169 uniquely named projects and 169 linked reports. Report snapshots have different dates; the newest project reports are dated 2026-10-21. Summary charts were updated 2026-10-27.
 
 The taxonomy below maps to the CHAOSS AI specificity [metric found here](https://github.com/chaoss/wg-ai-alignment/blob/main/metrics/ai-alignment-community-governed-use/ai-use-consent-policy-specificity.md#taxonomy-of-domains).
 
 The table columns use the nine CHAOSS domain names.
 
-`X` specific rule: supervision plus at least one other specificity attribute (scope, accountability, or proportionality) · `~` coverage below the X specificity threshold: only one specificity attribute, or the domain is covered only by general wording · `R` rationale mention, not a rule · blank: no rule found in the scanned document. This scoring boundary is this project's interpretation, not a threshold defined by the CHAOSS metric.
+`X` specific rule: supervision plus at least one other specificity attribute (scope, accountability, or proportionality) · `~` coverage below the X specificity threshold: only one specificity attribute, or the domain is covered only by general wording · `R` rationale mention, not a rule · blank: no rule found in the scanned document. `discouraged` is advisory language against AI use, not an explicit prohibition. This scoring boundary is this project's interpretation, not a threshold defined by the CHAOSS metric.
 
 | Project | Code contributions | Notetaker and meeting bots | Content and documentation | Moderation and enforcement | Review of contributions | Autonomous and agentic use | Environmental impact | Infrastructure strain | Data use for training | Report |
 |---|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|---|
@@ -24,7 +24,7 @@ The table columns use the nine CHAOSS domain names.
 | Arrow | X |  |  | ~ | X | X |  |  |  | [report][p12] |
 | Asahi Linux | X |  |  | ~ |  | R | R |  |  | [report][p13] |
 | astropy/astropy-project | X |  | ~ |  |  | X |  |  |  | [report][p14] |
-| Avoyd | ~ |  |  |  |  |  |  |  |  | [report][p15] |
+| Avoyd |  |  |  |  |  |  |  |  |  | [report][p15] |
 | Bevy | X |  | X | X | ~ | ~ |  |  |  | [report][p16] |
 | Bobby | X |  | ~ |  |  |  |  |  |  | [report][p17] |
 | borgmatic | X |  |  |  |  | X |  |  |  | [report][p18] |
@@ -40,7 +40,7 @@ The table columns use the nine CHAOSS domain names.
 | cilium | X |  | X | ~ | ~ |  |  |  |  | [report][p28] |
 | Clojure | X |  |  |  | ~ |  |  |  |  | [report][p29] |
 | CloudNativePG | X |  | ~ | ~ |  | ~ |  |  |  | [report][p30] |
-| codeberg | X |  |  | ~ |  | R | R | R | R | [report][p31] |
+| codeberg |  |  |  | ~ |  | R | R | R | R | [report][p31] |
 | conda | X |  |  | ~ | X | X |  |  |  | [report][p32] |
 | CPython | X |  | ~ | ~ |  |  |  |  |  | [report][p33] |
 | CuPy | X |  |  | ~ |  |  |  |  |  | [report][p34] |
@@ -146,7 +146,7 @@ The table columns use the nine CHAOSS domain names.
 | Processing/p5.js | X |  | ~ | ~ | X | X | R |  |  | [report][p134] |
 | Pytest | X |  |  | ~ |  | X |  |  |  | [report][p135] |
 | python-attrs/attrs | ~ |  |  |  |  |  |  |  |  | [report][p136] |
-| PyTorch | X |  |  | ~ | ~ |  |  |  |  | [report][p137] |
+| PyTorch |  |  |  | ~ | ~ |  |  |  |  | [report][p137] |
 | PyVista | X |  | ~ |  |  | ~ |  | ~ |  | [report][p138] |
 | qemu/qemu | X |  |  |  |  |  |  |  |  | [report][p139] |
 | qgis/QGIS-Enhancement-Proposals | X |  | X | ~ | ~ | ~ |  | R |  | [report][p140] |
@@ -354,7 +354,7 @@ The table columns use the nine CHAOSS domain names.
 
 The 169 reports are counted once per project. The grouping charts summarize code-contribution stance, content/documentation stance, and document type. The document-type chart excludes 3 social posts, so its document-type categories sum to 166; those posts remain included in the 169-report stance counts.
 
-The [full list of 84 code-contribution ban statements](CODE-CONTRIBUTION-BANS.md) provides the quoted evidence and source links behind the `banned` count.
+The [full list of 79 code-contribution entries classified as banned](CODE-CONTRIBUTION-BANS.md) provides quoted evidence, source links, and scope qualifications. Its count includes contributor-specific, conditional, and attestation-based restrictions; it is not a count of verified blanket bans.
 
 ![Bar charts of code-contribution and content/documentation stances and document types across the report set. Document-type counts exclude 3 social posts.](../images/2026-10-22/groupings.svg)
 
@@ -379,7 +379,7 @@ Bar chart of metric taxonomy captured in policy documents.
 
 For the charts, `X` and `~` are combined: a domain counts when the scanned policy contains a rule or guidance about it, whether specific or general. Blank entries are left out; `R` rationale mentions are shown separately below.
 
-![Horizontal bar chart showing policy coverage counts by domain. Entries marked X or ~ count as coverage: code contributions 168, notetaker and meeting bots 1, content and documentation 75, moderation and enforcement 79, review of contributions 47, autonomous and agentic use 59, environmental impact 0, infrastructure strain 2, and data use for training 2.](../images/2026-10-22/coverage.svg)
+![Horizontal bar chart showing policy coverage counts by domain. Entries marked X or ~ count as coverage: code contributions 165, notetaker and meeting bots 1, content and documentation 75, moderation and enforcement 79, review of contributions 47, autonomous and agentic use 59, environmental impact 0, infrastructure strain 2, and data use for training 2.](../images/2026-10-22/coverage.svg)
 
 ![Pie chart showing the distribution of policy coverage counts across the nine domains. Entries marked X or ~ count; blank entries and rationale-only mentions are excluded. One report may count in multiple domains.](../images/2026-10-22/coverage-pie.svg)
 
@@ -387,7 +387,7 @@ Up to three examples per taxonomy/theme
 
 ### Code contributions
 
-145 X, 23 ~, out of 169
+143 X, 22 ~, out of 169
 
 - [Alacritty](alacritty/2026-10-21.md) `banned`
   > “Contributions **must not** include content generated by large language models or other probabilistic tools, including but not limited to Copilot or ChatGPT. This policy covers code,...
@@ -395,9 +395,6 @@ Up to three examples per taxonomy/theme
   > “As such, **generative AI contributions are not welcome**. Due to the complexity in detecting generative AI contributions, some may slip through the cracks. If it is discovered that a contribution...
 - [Arcalibre](arcalibre/2026-10-21.md) `` `~`
   > “There must be a new effort, free from AI encumbrances, that is built from the ground-up as a community effort.”
-- [Avoyd](avoyd/2026-10-21.md) `banned` `~`
-  > “We do not use generative AI / Large Language Models in Avoyd nor in any of our work at enkisoftware.”
-
 ### Notetaker and meeting bots
 
 1 ~, out of 169

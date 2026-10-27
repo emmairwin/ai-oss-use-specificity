@@ -24,8 +24,9 @@ who holds accountability, proportionality.
 ## Reading a report
 
 `X` addressed, `~` coverage below the X specificity threshold, `R` raised in the policy's rationale but not
-governed, blank not mentioned. Footnotes give the policy's own words and a link
-to the line.
+governed, blank not mentioned. `discouraged` marks advisory language against AI
+use rather than an explicit prohibition. Footnotes give the policy's own words
+and a link to the line.
 
 Scores describe what a policy says, not whether it is any good. A permissive
 policy stating its position precisely scores the same as a restrictive one.
