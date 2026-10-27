@@ -354,6 +354,8 @@ The table columns use the nine CHAOSS domain names.
 
 The 169 reports are counted once per project. The grouping charts summarize code-contribution stance, content/documentation stance, and document type. The document-type chart excludes 3 social posts, so its document-type categories sum to 166; those posts remain included in the 169-report stance counts.
 
+The [full list of 84 code-contribution ban statements](CODE-CONTRIBUTION-BANS.md) provides the quoted evidence and source links behind the `banned` count.
+
 ![Bar charts of code-contribution and content/documentation stances and document types across the report set. Document-type counts exclude 3 social posts.](../images/2026-10-22/groupings.svg)
 
 ![Pie charts of code-contribution stance, content/documentation stance, and document types across the report set. Document-type counts exclude 3 social posts.](../images/2026-10-22/groupings-pie.svg)

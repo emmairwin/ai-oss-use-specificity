@@ -1,5 +1,7 @@
 # Report groupings
 
+Full source statements and links for the 84 reports classified as banned for code contributions: [Code-contribution ban statements](CODE-CONTRIBUTION-BANS.md).
+
 Generated: 2026-10-22. Total reports: 169.
 
 ## By stance
