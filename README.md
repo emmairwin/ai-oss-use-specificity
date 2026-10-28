@@ -2,7 +2,8 @@
 
 Reports on how specifically open source projects' AI policies cover each of
 nine domains, using the CHAOSS metric
-[Consent Policy Specificity](https://github.com/chaoss/wg-ai-alignment/blob/main/metrics/ai-alignment-community-governed-use/ai-use-consent-policy-specificity.md).
+[Consent Policy Specificity](https://github.com/chaoss/wg-ai-alignment/blob/main/metrics/ai-alignment-community-governed-use/ai-use-consent-policy-specificity.md),
+plus a tenth, slop, added by this project.
 
 Project and policy origins are curated from the CHAOSS AI Alignment working
 group's [collected list](https://github.com/chaoss/wg-ai-alignment/blob/main/moderation/README.md)
@@ -12,13 +13,22 @@ and Melissa W.'s
 **[Reports](reports/)** — reports for the [CHAOSS list of projects](reports/chaoss_list_of_projects/README.md)
 and the [critical dependencies with AI policies](reports/critical-dependencies/README.md).
 
-## The nine domains
+## The ten domains
 
 Code contributions, notetaker and meeting bots, content, moderation, review,
 autonomous and agentic use, environmental impact, infrastructure strain, data
-use for training.
+use for training, and slop.
 
-Each is checked for four attributes: supervision level, scope or volume limit,
+Slop is not in the CHAOSS metric text. It records wording in a project's own
+policy that is negative or dismissive of AI as a technology or its output in
+general (for example "No AI slop will be accepted"). It captures attitude, not
+a rule, so only the addressed mark and a quote are recorded.
+
+Reports in `reports/chaoss_list_of_projects/` were scored before slop was
+added and cover nine domains. Re-running them with the updated agent will add
+the tenth.
+
+The other nine are each checked for four attributes: supervision level, scope or volume limit,
 who holds accountability, proportionality.
 
 ## Reading a report

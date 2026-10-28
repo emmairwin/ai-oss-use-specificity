@@ -4,7 +4,7 @@ Part of the [project cohorts index](../README.md).
 
 This cohort is the first 20 projects **with an AI-related policy** among the packages ranked highest by dependent repository count in [ecosyste.ms' Critical feed](https://github.com/ecosyste-ms/critical), retrieved from the [Critical API](https://packages.ecosyste.ms/api/v1/critical?sort=dependent_repos_count&order=desc&per_page=100&page=1) on 2026-10-27. The ranking uses the feed's `dependent_repos_count` field in descending order (`sort=dependent_repos_count`, `order=desc`, `per_page=100`, pages 1-20, 2,000 package records). Packages were mapped to their GitHub repositories, and a repository that backs several packages is counted once at its highest-ranked package, giving 1,514 distinct repositories. Repositories were taken in feed order until 20 qualified; the 20th qualifier is at feed position 708. Position numbers below are positions among distinct repositories, not package record numbers.
 
-**One project per GitHub owner.** Several owners publish many popular packages with identical policy files, which would crowd the list. Each owner appears once. Where an owner has several qualifying repositories, the one with the most substantive AI language is shown (a dedicated AI policy or contributing guidance over a one-line security-report sentence), with feed position as the tie-break. Many further repositories from owners already in the cohort (roughly 122 had an automated match in a policy-like file, not all hand-reviewed) are not listed separately (for example `chalk/wrap-ansi`, `yargs/yargs-parser`, `sindresorhus/camelcase`, `sindresorhus/globby`, `nodeca/js-yaml`).
+**One project per GitHub owner.** Several owners publish many popular packages with identical policy files, which would crowd the list. Each owner appears once. Where an owner has several qualifying repositories, the one with the most substantive AI language is shown (a dedicated AI policy or contributing guidance over a one-line security-report sentence), with feed position as the tie-break. 122 further repositories from owners already in the cohort also had AI-related language and are not listed separately (for example `chalk/wrap-ansi`, `yargs/yargs-parser`, `sindresorhus/camelcase`, `sindresorhus/globby`, `nodeca/js-yaml`).
 
 A repository qualifies when an official project document contains explicit AI-related wording: a rule, requirement, permission, restriction, or guidance. Four qualify only through a security-report sentence about AI; that wording is scoped to vulnerability reports and is not treated as a project-wide rule on AI-assisted code. They are marked separately in the chart and table. Feed figures are dependent repositories, not downloads.
 
@@ -27,6 +27,10 @@ For each repository the file tree was listed and every documentation-type file a
 | PR or issue template | 5 | chimurai/http-proxy-middleware, typescript-eslint/typescript-eslint, eemeli/yaml, prettier/prettier, eslint/eslint |
 | README section | 1 | gulpjs/interpret |
 | Other guidance | 1 | csstools/postcss-plugins |
+
+## Slop domain
+
+The grid has a tenth domain, **Slop**: wording in a project's own policy text that is negative or dismissive of AI as a technology or of its output in general. It records attitude, not a rule, so supervision, scope and accountability are left blank. 4 of the 20 use such wording: chalk/supports-color, sindresorhus/type-fest, csstools/postcss-plugins, yeoman/update-notifier. Neutral quality language, such as prettier's “Low-quality AI content will be closed immediately.”, was not counted. The check searched the AI-related documents above for terms such as slop, garbage, junk, mediocre and spam, then read each match.
 
 ## Projects
 
@@ -55,7 +59,7 @@ For each repository the file tree was listed and every documentation-type file a
 
 ## Reviewed and excluded
 
-Positions 1-708 contain other repositories that had no AI-related language in the documents reviewed, or whose only match was not a policy:
+Positions 1-708 contain 566 other repositories that had no AI-related language in the documents reviewed, or whose only match was not a policy:
 
 - digitalbazaar/forge (143): Only a changelog entry crediting Claude Code for development work; no policy.
 - jestjs/jest (197), facebook/jest (364): Changelog entry only.

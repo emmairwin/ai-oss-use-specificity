@@ -8,6 +8,8 @@ A separate analysis of the top 20 projects in ecosyste.ms' Critical feed is avai
 
 The taxonomy below maps to the CHAOSS AI specificity [metric found here](https://github.com/chaoss/wg-ai-alignment/blob/main/metrics/ai-alignment-community-governed-use/ai-use-consent-policy-specificity.md#taxonomy-of-domains).
 
+These reports predate the tenth domain, slop (negative or dismissive wording about AI), added to the agent afterwards; they have not been re-scored for it, and the charts below show nine domains. The [critical dependencies](../critical-dependencies/README.md) cohort includes slop.
+
 `X` specific rule: supervision plus at least one other specificity attribute (scope, accountability, or proportionality) · `~` coverage below the X specificity threshold: only one specificity attribute, or the domain is covered only by general wording · `R` rationale mention, not a rule · blank: no rule found in the scanned document. `discouraged` is advisory language against AI use, not an explicit prohibition. This scoring boundary is this project's interpretation, not a threshold defined by the CHAOSS metric.
 
 | Project | Code contributions | Notetaker and meeting bots | Content and documentation | Moderation and enforcement | Review of contributions | Autonomous and agentic use | Environmental impact | Infrastructure strain | Data use for training | Report |
