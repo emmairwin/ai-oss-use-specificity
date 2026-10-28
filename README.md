@@ -9,8 +9,8 @@ group's [collected list](https://github.com/chaoss/wg-ai-alignment/blob/main/mod
 and Melissa W.'s
 [open-source-ai-contribution-policies](https://github.com/melissawm/open-source-ai-contribution-policies).
 
-**[Reports](reports/)** — 169 projects, one report each, plus a summary table
-and charts.
+**[Reports](reports/)** — reports for the [CHAOSS list of projects](reports/chaoss_list_of_projects/README.md)
+and the [critical dependencies with AI policies](reports/critical-dependencies/README.md).
 
 ## The nine domains
 

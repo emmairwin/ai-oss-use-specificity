@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1068" viewBox="0 0 900 1068" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">
+<title>Critical dependencies with AI policy language, one per owner, grouped by the files where it was found</title>
+<desc>Twenty critical dependencies from distinct GitHub owners, taken in ecosyste.ms Critical feed order, that have AI-related language in an official project document. Bars show dependent repository counts. A second chart groups the 20 by document type: 5 security policy, 3 ai policy document, 13 contributing guide, 7 agent guidance, 5 pr or issue template, 1 readme section, 1 other guidance. A project can appear in more than one group.</desc>
+<rect width="900" height="1068" fill="#ffffff"/>
+<text x="28" y="40" font-size="22" font-weight="600" fill="#1f2328">Critical dependencies with an AI policy</text>
+<text x="28" y="64" font-size="12" fill="#656d76">First 20 qualifying projects, one per GitHub owner, in ecosyste.ms Critical feed order · retrieved 2026-10-27</text>
+<text x="28" y="100" font-size="15" font-weight="600" fill="#1f2328">Dependent repositories</text>
+<rect x="28" y="112" width="12" height="12" fill="#1a7f37"/><text x="46" y="122" font-size="11" fill="#424a53">AI policy, contributing guide, template or agent guidance</text>
+<rect x="400" y="112" width="12" height="12" fill="#bf8700"/><text x="418" y="122" font-size="11" fill="#424a53">AI wording only in security-report guidance</text>
+<line x1="310" y1="146" x2="310" y2="630" stroke="#d8dee4"/>
+<text x="310" y="140" font-size="10" fill="#656d76" text-anchor="middle">0M</text>
+<line x1="400" y1="146" x2="400" y2="630" stroke="#d8dee4"/>
+<text x="400" y="140" font-size="10" fill="#656d76" text-anchor="middle">1M</text>
+<line x1="490" y1="146" x2="490" y2="630" stroke="#d8dee4"/>
+<text x="490" y="140" font-size="10" fill="#656d76" text-anchor="middle">2M</text>
+<line x1="580" y1="146" x2="580" y2="630" stroke="#d8dee4"/>
+<text x="580" y="140" font-size="10" fill="#656d76" text-anchor="middle">3M</text>
+<line x1="670" y1="146" x2="670" y2="630" stroke="#d8dee4"/>
+<text x="670" y="140" font-size="10" fill="#656d76" text-anchor="middle">4M</text>
+<line x1="760" y1="146" x2="760" y2="630" stroke="#d8dee4"/>
+<text x="760" y="140" font-size="10" fill="#656d76" text-anchor="middle">5M</text>
+<line x1="850" y1="146" x2="850" y2="630" stroke="#d8dee4"/>
+<text x="850" y="140" font-size="10" fill="#656d76" text-anchor="middle">6M</text>
+<text x="300" y="165" font-size="11" fill="#1f2328" text-anchor="end">chalk/supports-color · #1</text>
+<rect x="310" y="153" width="519" height="16" fill="#bf8700"/>
+<text x="834" y="165" font-size="10" fill="#424a53">5.77M</text>
+<text x="300" y="189" font-size="11" fill="#1f2328" text-anchor="end">yargs/yargs · #18</text>
+<rect x="310" y="177" width="440" height="16" fill="#1a7f37"/>
+<text x="755" y="189" font-size="10" fill="#424a53">4.89M</text>
+<text x="300" y="213" font-size="11" fill="#1f2328" text-anchor="end">babel/babel · #21</text>
+<rect x="310" y="201" width="421" height="16" fill="#1a7f37"/>
+<text x="736" y="213" font-size="10" fill="#424a53">4.67M</text>
+<text x="300" y="237" font-size="11" fill="#1f2328" text-anchor="end">sindresorhus/type-fest · #114</text>
+<rect x="310" y="225" width="295" height="16" fill="#1a7f37"/>
+<text x="610" y="237" font-size="10" fill="#424a53">3.28M</text>
+<text x="300" y="261" font-size="11" fill="#1f2328" text-anchor="end">chimurai/http-proxy-middleware · #148</text>
+<rect x="310" y="249" width="268" height="16" fill="#1a7f37"/>
+<text x="583" y="261" font-size="10" fill="#424a53">2.98M</text>
+<text x="300" y="285" font-size="11" fill="#1f2328" text-anchor="end">acornjs/acorn · #209</text>
+<rect x="310" y="273" width="239" height="16" fill="#1a7f37"/>
+<text x="554" y="285" font-size="10" fill="#424a53">2.65M</text>
+<text x="300" y="309" font-size="11" fill="#1f2328" text-anchor="end">microsoft/TypeScript · #334</text>
+<rect x="310" y="297" width="189" height="16" fill="#1a7f37"/>
+<text x="504" y="309" font-size="10" fill="#424a53">2.10M</text>
+<text x="300" y="333" font-size="11" fill="#1f2328" text-anchor="end">follow-redirects/follow-redirects · #360</text>
+<rect x="310" y="321" width="182" height="16" fill="#bf8700"/>
+<text x="497" y="333" font-size="10" fill="#424a53">2.02M</text>
+<text x="300" y="357" font-size="11" fill="#1f2328" text-anchor="end">typescript-eslint/typescript-eslint · #390</text>
+<rect x="310" y="345" width="172" height="16" fill="#1a7f37"/>
+<text x="487" y="357" font-size="10" fill="#424a53">1.91M</text>
+<text x="300" y="381" font-size="11" fill="#1f2328" text-anchor="end">eemeli/yaml · #392</text>
+<rect x="310" y="369" width="170" height="16" fill="#1a7f37"/>
+<text x="485" y="381" font-size="10" fill="#424a53">1.89M</text>
+<text x="300" y="405" font-size="11" fill="#1f2328" text-anchor="end">prettier/prettier · #454</text>
+<rect x="310" y="393" width="153" height="16" fill="#1a7f37"/>
+<text x="468" y="405" font-size="10" fill="#424a53">1.70M</text>
+<text x="300" y="429" font-size="11" fill="#1f2328" text-anchor="end">csstools/postcss-plugins · #464</text>
+<rect x="310" y="417" width="150" height="16" fill="#1a7f37"/>
+<text x="465" y="429" font-size="10" fill="#424a53">1.66M</text>
+<text x="300" y="453" font-size="11" fill="#1f2328" text-anchor="end">gulpjs/interpret · #482</text>
+<rect x="310" y="441" width="147" height="16" fill="#1a7f37"/>
+<text x="462" y="453" font-size="10" fill="#424a53">1.63M</text>
+<text x="300" y="477" font-size="11" fill="#1f2328" text-anchor="end">eslint/eslint · #502</text>
+<rect x="310" y="465" width="141" height="16" fill="#1a7f37"/>
+<text x="456" y="477" font-size="10" fill="#424a53">1.57M</text>
+<text x="300" y="501" font-size="11" fill="#1f2328" text-anchor="end">mde/ejs · #518</text>
+<rect x="310" y="489" width="138" height="16" fill="#1a7f37"/>
+<text x="453" y="501" font-size="10" fill="#424a53">1.53M</text>
+<text x="300" y="525" font-size="11" fill="#1f2328" text-anchor="end">jsdom/jsdom · #542</text>
+<rect x="310" y="513" width="129" height="16" fill="#1a7f37"/>
+<text x="444" y="525" font-size="10" fill="#424a53">1.44M</text>
+<text x="300" y="549" font-size="11" fill="#1f2328" text-anchor="end">yeoman/update-notifier · #579</text>
+<rect x="310" y="537" width="119" height="16" fill="#bf8700"/>
+<text x="434" y="549" font-size="10" fill="#424a53">1.32M</text>
+<text x="300" y="573" font-size="11" fill="#1f2328" text-anchor="end">andris9/encoding · #582</text>
+<rect x="310" y="561" width="118" height="16" fill="#bf8700"/>
+<text x="433" y="573" font-size="10" fill="#424a53">1.31M</text>
+<text x="300" y="597" font-size="11" fill="#1f2328" text-anchor="end">rollup/rollup · #653</text>
+<rect x="310" y="585" width="102" height="16" fill="#1a7f37"/>
+<text x="417" y="597" font-size="10" fill="#424a53">1.13M</text>
+<text x="300" y="621" font-size="11" fill="#1f2328" text-anchor="end">nodeca/argparse · #708</text>
+<rect x="310" y="609" width="97" height="16" fill="#1a7f37"/>
+<text x="412" y="621" font-size="10" fill="#424a53">1.08M</text>
+<text x="28" y="710" font-size="15" font-weight="600" fill="#1f2328">Files where AI-related language was found</text>
+<text x="28" y="729" font-size="11" fill="#656d76">Projects per document type. A project counts once per type, so counts add to more than 20.</text>
+<text x="300" y="767" font-size="12" fill="#1f2328" text-anchor="end">Security policy</text>
+<rect x="310" y="753" width="135" height="20" fill="#bf8700"/>
+<text x="451" y="768" font-size="12" font-weight="600" fill="#1f2328">5</text>
+<text x="300" y="801" font-size="12" fill="#1f2328" text-anchor="end">AI policy document</text>
+<rect x="310" y="787" width="81" height="20" fill="#1a7f37"/>
+<text x="397" y="802" font-size="12" font-weight="600" fill="#1f2328">3</text>
+<text x="300" y="835" font-size="12" fill="#1f2328" text-anchor="end">Contributing guide</text>
+<rect x="310" y="821" width="351" height="20" fill="#1a7f37"/>
+<text x="667" y="836" font-size="12" font-weight="600" fill="#1f2328">13</text>
+<text x="300" y="869" font-size="12" fill="#1f2328" text-anchor="end">Agent guidance</text>
+<rect x="310" y="855" width="189" height="20" fill="#1a7f37"/>
+<text x="505" y="870" font-size="12" font-weight="600" fill="#1f2328">7</text>
+<text x="300" y="903" font-size="12" fill="#1f2328" text-anchor="end">PR or issue template</text>
+<rect x="310" y="889" width="135" height="20" fill="#1a7f37"/>
+<text x="451" y="904" font-size="12" font-weight="600" fill="#1f2328">5</text>
+<text x="300" y="937" font-size="12" fill="#1f2328" text-anchor="end">README section</text>
+<rect x="310" y="923" width="27" height="20" fill="#1a7f37"/>
+<text x="343" y="938" font-size="12" font-weight="600" fill="#1f2328">1</text>
+<text x="300" y="971" font-size="12" fill="#1f2328" text-anchor="end">Other guidance</text>
+<rect x="310" y="957" width="27" height="20" fill="#1a7f37"/>
+<text x="343" y="972" font-size="12" font-weight="600" fill="#1f2328">1</text>
+<text x="28" y="1044" font-size="11" fill="#656d76">Counts describe the documents reviewed; they do not establish that other project policies do not exist.</text>
+</svg>
