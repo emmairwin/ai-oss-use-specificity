@@ -364,6 +364,56 @@ The [full list of 79 code-contribution entries classified as banned](CODE-CONTRI
 
 ![Pie charts of code-contribution stance, content/documentation stance, and document types across the report set.](images/2026-10-22/groupings-pie.svg)
 
+### Project reports
+
+Each project links to its report used in the charts above.
+
+| Project | Project | Project | Project |
+|---|---|---|---|
+| [afnix][p1] | [Alacritty][p2] | [Allium][p3] | [Amberol][p4] |
+| [apache][p5] | [Apache Airflow][p6] | [Apache CouchDB][p7] | [Apache DataFusion][p8] |
+| [Apache Kvrocks][p9] | [Apache PouchDB][p10] | [Arcalibre][p11] | [Arrow][p12] |
+| [Asahi Linux][p13] | [astropy/astropy-project][p14] | [Avoyd][p15] | [Bevy][p16] |
+| [Bobby][p17] | [borgmatic][p18] | [CapyPDF][p19] | [castle-game-engine][p20] |
+| [Cataclysm: Dark Days Ahead][p21] | [CC Open Source][p22] | [CCExtractor][p23] | [Cheese Paper][p24] |
+| [chezmoi][p25] | [Chimera Linux][p26] | [ChiPass][p27] | [cilium][p28] |
+| [Clojure][p29] | [CloudNativePG][p30] | [codeberg][p31] | [conda][p32] |
+| [CPython][p33] | [CuPy][p34] | [curl][p35] | [DataJourneyHQ][p36] |
+| [debian][p37] | [Decker][p38] | [Django][p39] | [dlt][p40] |
+| [do][p41] | [Drupal][p42] | [Dune 3D][p43] | [EasyBuild][p44] |
+| [Elastic][p45] | [Elementary OS][p46] | [EmulatorKit][p47] | [Endless Sky][p48] |
+| [Evi][p49] | [Exim][p50] | [FastAPI][p51] | [Fedify][p52] |
+| [Fedora][p53] | [Fennel][p54] | [Firefox][p55] | [Flutter][p56] |
+| [forgejo][p57] | [Fractal][p58] | [gaypanel][p59] | [gcc][p60] |
+| [gdal-site][p61] | [Gedit][p62] | [gentoo][p63] | [ghostty-org/ghostty][p64] |
+| [GIMP][p65] | [Gitte][p66] | [Glasgow Interface Explorer][p67] | [GNOME Extensions][p68] |
+| [GNOME Loupe][p69] | [go-gitea/gitea][p70] | [godot][p71] | [goose][p72] |
+| [GoToSocial][p73] | [Gram][p74] | [Halloy][p75] | [Highscore][p76] |
+| [Homebrew][p77] | [Icechunk][p78] | [Idris][p79] | [Inkscape][p80] |
+| [Inochi2D][p81] | [IREE (Intermediate Representation Execution Environment)][p82] | [jazzband/pip-tools][p83] | [jellyfin/jellyfin.org][p84] |
+| [Joomla][p85] | [Jqwik][p86] | [jsoup][p87] | [kde-gsoc][p88] |
+| [keepassxreboot/keepassxc][p89] | [Kornia][p90] | [Kubernetes][p91] | [Leiningen][p92] |
+| [libadwaita][p93] | [libmanette][p94] | [libxml2][p95] | [Lighthouse][p96] |
+| [LinkML][p97] | [linux-foundation][p98] | [llvm/llvm-project][p99] | [Lobsters][p100] |
+| [LÖVE][p101] | [mastodon/.github][p102] | [matplotlib/matplotlib][p103] | [MDAnalysis][p104] |
+| [Mesa][p105] | [mGBA][p106] | [MicroPython][p107] | [Mikan][p108] |
+| [Molecular Nodes][p109] | [napari][p110] | [NetBSD][p111] | [nlnet-labs][p112] |
+| [NumPy][p113] | [nvim-tree][p114] | [OCaml][p115] | [OkHttp][p116] |
+| [Open edX][p117] | [openinfra][p118] | [OpenJDK][p119] | [OpenTTD][p120] |
+| [OSGeo/gdal][p121] | [OSGeo/PROJ][p122] | [oxide][p123] | [Pallets][p124] |
+| [Pandas][p125] | [Pandemonium Engine][p126] | [pgwatch][p127] | [pip][p128] |
+| [pkgconf][p129] | [Poezio][p130] | [pola-rs/polars][p131] | [Polyphony][p132] |
+| [postmarketos][p133] | [Processing/p5.js][p134] | [Pytest][p135] | [python-attrs/attrs][p136] |
+| [PyTorch][p137] | [PyVista][p138] | [qemu/qemu][p139] | [qgis/QGIS-Enhancement-Proposals][p140] |
+| [qutip][p141] | [Redox OS][p142] | [Requests][p143] | [rust][p144] |
+| [Schism Tracker][p145] | [SciActive][p146] | [scikit-image][p147] | [scikit-learn/scikit-learn][p148] |
+| [SciPy][p149] | [SDL][p150] | [SDL_net][p151] | [SearXNG][p152] |
+| [Sentinel][p153] | [servo/book][p154] | [Smederee][p155] | [snac][p156] |
+| [Sphinx][p157] | [STAC][p158] | [stb][p159] | [sunpy/sunpy][p160] |
+| [SymPy][p161] | [teamtype/teamtype][p162] | [Telegraf][p163] | [Tenacity][p164] |
+| [TorchGeo][p165] | [torvalds/linux][p166] | [Tusky][p167] | [yt-dlp/yt-dlp][p168] |
+| [zulip/zulip][p169] | | | |
+
 The coverage charts appear in [Included in Policy](#included-in-policy), and the rationale charts appear in [Included in Rationale](#included-in-rationale).
 
 ### Policy changes over time
