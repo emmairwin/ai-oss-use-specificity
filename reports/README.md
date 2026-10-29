@@ -1,6 +1,6 @@
-# Project cohorts
+# Project reports
 
-The project reports are organized by the cohort they analyze:
+Browse the project reports:
 
-- [CHAOSS list of projects](chaoss_list_of_projects/README.md) — 169 projects, with coverage reports, grouping summaries, and charts.
-- [Critical dependencies](critical-dependencies/README.md) — the first 20 projects with AI-related policy language in ecosyste.ms' Critical feed order, with coverage reports and charts grouped by the document type where the language was found.
+- [CHAOSS list of projects](chaoss_list_of_projects/README.md) — reports and charts for 169 projects.
+- [Critical dependencies](critical-dependencies/README.md) — reports and charts for the first 20 projects with AI policies in ecosyste.ms' Critical feed.

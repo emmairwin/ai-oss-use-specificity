@@ -2,15 +2,15 @@
 
 Part of the [project cohorts index](../README.md).
 
-This index contains 169 uniquely named projects and 169 linked reports. Report snapshots have different dates; the newest project reports are dated 2026-10-21. Summary charts were updated 2026-10-27.
+This list has 169 projects and 169 reports. The latest project reports are dated 2026-10-21. The charts were updated 2026-10-27.
 
 A separate analysis of the top 20 projects in ecosyste.ms' Critical feed is available in [Critical dependencies](../critical-dependencies/README.md).
 
-The taxonomy below maps to the CHAOSS AI specificity [metric found here](https://github.com/chaoss/wg-ai-alignment/blob/main/metrics/ai-alignment-community-governed-use/ai-use-consent-policy-specificity.md#taxonomy-of-domains).
+The topics follow the CHAOSS [policy specificity metric](https://github.com/chaoss/wg-ai-alignment/blob/main/metrics/ai-alignment-community-governed-use/ai-use-consent-policy-specificity.md#taxonomy-of-domains).
 
-These reports predate the tenth domain, slop (negative or dismissive wording about AI), added to the agent afterwards; they have not been re-scored for it, and the charts below show nine domains. The [critical dependencies](../critical-dependencies/README.md) cohort includes slop.
+These reports were scored before slop was added to the metric, so they cover nine topics. They have not been rescored. The [critical dependencies](../critical-dependencies/README.md) reports cover all ten.
 
-`X` specific rule: supervision plus at least one other specificity attribute (scope, accountability, or proportionality) · `~` coverage below the X specificity threshold: only one specificity attribute, or the domain is covered only by general wording · `R` rationale mention, not a rule · blank: no rule found in the scanned document. `discouraged` is advisory language against AI use, not an explicit prohibition. This scoring boundary is this project's interpretation, not a threshold defined by the CHAOSS metric.
+In the table, `X` means the policy gives supervision guidance and at least one other detail: scope, accountability, or proportionality. `~` means it mentions the topic but gives less detail, or only general guidance. `R` means the policy gives a reason for a rule but does not set a rule for that topic. A blank means no rule was found in the document reviewed. `discouraged` means the policy advises against use but does not ban it. These scoring cutoffs are our interpretation; the CHAOSS metric does not set them.
 
 | Project | Code contributions | Notetaker and meeting bots | Content and documentation | Moderation and enforcement | Review of contributions | Autonomous and agentic use | Environmental impact | Infrastructure strain | Data use for training | Report |
 |---|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|---|
@@ -356,9 +356,9 @@ These reports predate the tenth domain, slop (negative or dismissive wording abo
 
 ## Report set and supplementary charts
 
-The 169 reports are counted once per project. The grouping charts summarize code-contribution stance, content/documentation stance, and document type.
+Each project is counted once. The charts group reports by rules for code contributions, content and documentation, and document type.
 
-The [full list of 79 code-contribution entries classified as banned](CODE-CONTRIBUTION-BANS.md) provides quoted evidence, source links, and scope qualifications. Its count includes contributor-specific, conditional, and attestation-based restrictions; it is not a count of verified blanket bans.
+The [79 reports classified as banning code contributions](CODE-CONTRIBUTION-BANS.md) include source quotes, links, and scope details. Some restrictions apply only to certain contributors or situations; this is not a count of blanket bans.
 
 ![Bar charts of code-contribution and content/documentation stances and document types across the report set.](images/2026-10-22/groupings.svg)
 
@@ -414,11 +414,11 @@ Each project links to its report used in the charts above.
 | [TorchGeo][p165] | [torvalds/linux][p166] | [Tusky][p167] | [yt-dlp/yt-dlp][p168] |
 | [zulip/zulip][p169] | | | |
 
-The coverage charts appear in [Included in Policy](#included-in-policy), and the rationale charts appear in [Included in Rationale](#included-in-rationale).
+See [Included in Policy](#included-in-policy) for the coverage charts and [Included in Rationale](#included-in-rationale) for reasons given in policies.
 
 ### Policy changes over time
 
-The separate first test of the CHAOSS policy-change metric tracks 28 revisions across 21 projects: 4 first-observed baselines, 20 subsequent substantive rule revisions, and 4 clarifications, operational changes, or reorganizations. See the linked report for source links and classifications.
+A separate pilot of the CHAOSS policy-change metric tracks 28 changes across 21 projects: 4 first-seen versions, 20 rule changes, and 4 clarifications or process updates. See the linked report for sources and details.
 
 [![Timeline of 28 policy revisions across 21 projects. Click the chart to open the report with source-linked descriptions.](images/2026-10-23/policy-change.svg)](policy-change-2026-10-23.md)
 
@@ -427,17 +427,17 @@ The separate first test of the CHAOSS policy-change metric tracks 28 revisions a
 
 ## Included in Policy
 
-Bar chart of metric taxonomy captured in policy documents.
+This chart shows which topics appear in project policies.
 
-`X` means the policy gives supervision guidance for the domain and at least one other detail: scope, accountability, or proportionality. `~` means only one of those details is stated, or the domain is included only through general wording. A blank means no rule for that domain was found in the scanned document. These scoring thresholds are this project's interpretation; the CHAOSS metric does not define them.
+`X` means the policy gives supervision guidance and at least one other detail: scope, accountability, or proportionality. `~` means it gives only one of those details, or mentions the topic in general terms. A blank means no rule was found in the document reviewed. These cutoffs are our interpretation; the CHAOSS metric does not define them.
 
-For the charts, `X` and `~` are combined: a domain counts when the scanned policy contains a rule or guidance about it, whether specific or general. Blank entries are left out; `R` rationale mentions are shown separately below.
+The charts count both `X` and `~` as coverage. Blank entries are not counted. `R` entries are shown separately below.
 
 ![Horizontal bar chart showing policy coverage counts by domain. Entries marked X or ~ count as coverage: code contributions 165, notetaker and meeting bots 1, content and documentation 75, moderation and enforcement 79, review of contributions 47, autonomous and agentic use 59, environmental impact 0, infrastructure strain 2, and data use for training 2.](images/2026-10-22/coverage.svg)
 
 ![Pie chart showing the distribution of policy coverage counts across the nine domains. Entries marked X or ~ count; blank entries and rationale-only mentions are excluded. One report may count in multiple domains.](images/2026-10-22/coverage-pie.svg)
 
-Up to three examples per taxonomy/theme
+Up to three examples for each topic
 
 ### Code contributions
 
@@ -532,9 +532,9 @@ No project addresses this.
 
 ## Included in Rationale
 
-Charts of metric taxonomy mentioned in policy rationale.
+These charts show topics that policies mention as reasons for their rules.
 
-Sometimes policy rationale mentions one of the metric domains (such as environmental impact). These counts record those rationale mentions and do not imply the domain is absent from the policy.
+These counts do not mean the topic is absent from the policy; they only count mentions given as a reason.
 
 ![Horizontal bar chart of policy rationale mentions: Environmental impact 15, Infrastructure strain 6, Data use for training 6, Review of contributions 5, Autonomous and agentic use 4.](images/2026-10-22/rationale.svg)
 

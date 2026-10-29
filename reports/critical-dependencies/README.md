@@ -2,15 +2,19 @@
 
 Part of the [project cohorts index](../README.md).
 
-This cohort is the first 20 projects **with an AI-related policy** among the packages ranked highest by dependent repository count in [ecosyste.ms' Critical feed](https://github.com/ecosyste-ms/critical), retrieved from the [Critical API](https://packages.ecosyste.ms/api/v1/critical?sort=dependent_repos_count&order=desc&per_page=100&page=1) on 2026-10-27. The ranking uses the feed's `dependent_repos_count` field in descending order (`sort=dependent_repos_count`, `order=desc`, `per_page=100`, pages 1-20, 2,000 package records). Packages were mapped to their GitHub repositories, and a repository that backs several packages is counted once at its highest-ranked package, giving 1,514 distinct repositories. Repositories were taken in feed order until 20 qualified; the 20th qualifier is at feed position 708. Position numbers below are positions among distinct repositories, not package record numbers.
+This report lists the first 20 projects **with an AI-related policy** among packages ranked by dependent repository count in [ecosyste.ms' Critical feed](https://github.com/ecosyste-ms/critical). The [Critical API](https://packages.ecosyste.ms/api/v1/critical?sort=dependent_repos_count&order=desc&per_page=100&page=1) was retrieved on 2026-10-27. It sorts by `dependent_repos_count`, highest first. We downloaded 20 pages of 100 packages each (2,000 package records).
 
-**One project per GitHub owner.** Several owners publish many popular packages with identical policy files, which would crowd the list. Each owner appears once. Where an owner has several qualifying repositories, the one with the most substantive AI language is shown (a dedicated AI policy or contributing guidance over a one-line security-report sentence), with feed position as the tie-break. 122 further repositories from owners already in the cohort also had AI-related language and are not listed separately (for example `chalk/wrap-ansi`, `yargs/yargs-parser`, `sindresorhus/camelcase`, `sindresorhus/globby`, `nodeca/js-yaml`).
+Packages were mapped to GitHub repositories. If several packages use the same repository, we counted it once at its highest-ranked package. This gave 1,514 distinct repositories. We followed the feed order until 20 projects qualified; the last was at position 708. Positions in the table are repository positions, not package positions.
 
-A repository qualifies when an official project document contains explicit AI-related wording: a rule, requirement, permission, restriction, or guidance. Four qualify only through a security-report sentence about AI; that wording is scoped to vulnerability reports and is not treated as a project-wide rule on AI-assisted code. They are marked separately in the chart and table. Feed figures are dependent repositories, not downloads.
+**One project per GitHub owner.** If several repositories from one owner qualified, we chose the one with the most detailed policy, preferring a dedicated policy or contributor guide over a sentence limited to security reports. Feed position breaks ties. Another 122 repositories from listed owners also qualified, but are not listed separately. Examples include `chalk/wrap-ansi`, `yargs/yargs-parser`, `sindresorhus/camelcase`, `sindresorhus/globby`, and `nodeca/js-yaml`.
+
+A project qualifies when an official project document gives a rule, requirement, permission, restriction, or guidance about AI. Four projects qualify only because their security policy mentions AI in vulnerability reports. That wording applies to security reports, not code contributions, and is marked separately in the chart and table. Feed counts measure dependent repositories, not downloads.
 
 ## Documents reviewed
 
-For each repository the file tree was listed and every documentation-type file at the repository root, and in `docs/`, `doc/` and `.github/`, was read and searched for AI-related terms (AI, LLM, large language model, ChatGPT, Copilot, Claude, Gemini, Codex, Cursor, generative, agentic, autonomous agent, machine-generated and related phrases). That covers README, CONTRIBUTING, CODE_OF_CONDUCT, SECURITY, GOVERNANCE, FAQ, `AI_POLICY.md`, `AGENTS.md` and `CLAUDE.md`, pull-request and issue templates, and other Markdown, text and reStructuredText files in those locations. Every match was then read by hand. Not covered: paths nested more than one level under `docs/`, organization-level `.github` repositories, project websites, wikis, and social posts. A policy that lives only there would have been missed; for example, typescript-eslint's AI Contribution Policy is published on its website and was not read. Each report lists the documents it relied on.
+For each repository, we listed the files and read documentation at the root and in `docs/`, `doc/`, `.github/`, and agent-config folders. This included `README`, `CONTRIBUTING`, `CODE_OF_CONDUCT`, `SECURITY`, `GOVERNANCE`, `FAQ`, `AI_POLICY.md`, `AGENTS.md`, and `CLAUDE.md` files, pull-request and issue templates, and other Markdown, text, and reStructuredText documents. We searched these files for AI-related wording and checked each match by hand.
+
+We did not review files more than one level below `docs/`, organization-level `.github` repositories, websites, wikis, or social posts. Policies found only in those places may be missing. For example, typescript-eslint's AI Contribution Policy is on its website and was not reviewed. Each project report lists the documents used.
 
 ![Bar charts of dependent repository counts for the 20 qualifying projects and the document types where AI-related language was found.](critical-dependencies.svg)
 
@@ -18,7 +22,7 @@ For each repository the file tree was listed and every documentation-type file a
 
 ## Policy coverage by domain
 
-Projects with an `X` or `~` entry in each domain, out of 20. As in the CHAOSS list, one report can count in several domains. The Slop count is wording found, not a rule.
+This table and the charts count projects with an `X` or `~` in each domain, out of 20. A project can count in more than one domain. Slop counts wording found in a policy; it is not a rule.
 
 ![Horizontal bar chart showing policy coverage counts by domain. Entries marked X or ~ count as coverage: code contributions 15, notetaker and meeting bots 0, content and documentation 6, moderation and enforcement 0, review of contributions 1, autonomous and agentic use 3, environmental impact 0, infrastructure strain 0, data use for training 0, slop 4.](coverage.svg)
 
@@ -49,9 +53,9 @@ Projects with an `X` or `~` entry in each domain, out of 20. As in the CHAOSS li
 | README.md | 1 | gulpjs/interpret: `README.md` |
 | AUTHORING_GUIDELINES.md | 1 | csstools/postcss-plugins: `AUTHORING_GUIDELINES.md` |
 
-## Slop domain
+## Slop
 
-The grid has a tenth domain, **Slop**: wording in a project's own policy text that is negative or dismissive of AI as a technology or of its output in general. It records attitude, not a rule, so supervision, scope and accountability are left blank. 4 of the 20 use such wording: chalk/supports-color, sindresorhus/type-fest, csstools/postcss-plugins, yeoman/update-notifier. Neutral quality language, such as prettier's “Low-quality AI content will be closed immediately.”, was not counted. The check searched the AI-related documents above for terms such as slop, garbage, junk, mediocre and spam, then read each match.
+The Slop row records negative or dismissive wording about AI or its output in a project's own policy. It captures tone, not a rule, so supervision, scope, and accountability are left blank. Four projects use such wording: chalk/supports-color, sindresorhus/type-fest, csstools/postcss-plugins, and yeoman/update-notifier. Neutral quality language, such as prettier's “Low-quality AI content will be closed immediately.”, was not counted. We searched the documents above for words such as slop, garbage, junk, mediocre, and spam, then read each match.
 
 ## Projects
 
