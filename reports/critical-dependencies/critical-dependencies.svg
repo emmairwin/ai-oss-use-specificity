@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="900" height="1068" viewBox="0 0 900 1068" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">
 <title>Critical dependencies with AI policy language, one per owner, grouped by the files where it was found</title>
-<desc>Twenty critical dependencies from distinct GitHub owners, taken in ecosyste.ms Critical feed order, that have AI-related language in an official project document. Bars show dependent repository counts. A second chart groups the 20 by document type: 5 security policy (security.md), 3 ai policy (ai_policy.md), 13 contributing (contributing.md), 7 agent guidance (agents.md), 5 pr / issue templates, 1 readme.md, 1 other file. A project can appear in more than one group.</desc>
+<desc>Twenty critical dependencies from distinct GitHub owners, taken in ecosyste.ms Critical feed order, that have AI-related language in an official project document. Bars show dependent repository counts. A second chart groups the 20 by the file name where the language was found (projects per file name): SECURITY.md, security.md: 5; AI_POLICY.md, ai-policy.md: 3; CONTRIBUTING.md, contributing.md: 13; AGENTS.md, CLAUDE.md: 7; PULL_REQUEST_TEMPLATE.md, ISSUE_TEMPLATE/*: 5; README.md: 1; AUTHORING_GUIDELINES.md: 1. A project can appear in more than one group.</desc>
 <rect width="900" height="1068" fill="#ffffff"/>
 <text x="28" y="40" font-size="22" font-weight="600" fill="#1f2328">Critical dependencies with an AI policy</text>
 <text x="28" y="64" font-size="12" fill="#656d76">First 20 qualifying projects, one per GitHub owner, in ecosyste.ms Critical feed order · retrieved 2026-10-27</text>
@@ -81,27 +81,27 @@
 <text x="300" y="621" font-size="11" fill="#1f2328" text-anchor="end">nodeca/argparse · #708</text>
 <rect x="310" y="609" width="97" height="16" fill="#1a7f37"/>
 <text x="412" y="621" font-size="10" fill="#424a53">1.08M</text>
-<text x="28" y="710" font-size="15" font-weight="600" fill="#1f2328">Files where AI-related language was found</text>
-<text x="28" y="729" font-size="11" fill="#656d76">Projects per document type. A project counts once per type, so counts add to more than 20.</text>
-<text x="300" y="767" font-size="12" fill="#1f2328" text-anchor="end">Security policy (SECURITY.md)</text>
+<text x="28" y="710" font-size="15" font-weight="600" fill="#1f2328">Files where AI-related language was found, by file name</text>
+<text x="28" y="729" font-size="11" fill="#656d76">Projects per file name. A project counts once per file name, so counts add to more than 20.</text>
+<text x="300" y="767" font-size="12" fill="#1f2328" text-anchor="end">SECURITY.md, security.md</text>
 <rect x="310" y="753" width="135" height="20" fill="#bf8700"/>
 <text x="451" y="768" font-size="12" font-weight="600" fill="#1f2328">5</text>
-<text x="300" y="801" font-size="12" fill="#1f2328" text-anchor="end">AI policy (AI_POLICY.md)</text>
+<text x="300" y="801" font-size="12" fill="#1f2328" text-anchor="end">AI_POLICY.md, ai-policy.md</text>
 <rect x="310" y="787" width="81" height="20" fill="#1a7f37"/>
 <text x="397" y="802" font-size="12" font-weight="600" fill="#1f2328">3</text>
-<text x="300" y="835" font-size="12" fill="#1f2328" text-anchor="end">Contributing (CONTRIBUTING.md)</text>
+<text x="300" y="835" font-size="12" fill="#1f2328" text-anchor="end">CONTRIBUTING.md, contributing.md</text>
 <rect x="310" y="821" width="351" height="20" fill="#1a7f37"/>
 <text x="667" y="836" font-size="12" font-weight="600" fill="#1f2328">13</text>
-<text x="300" y="869" font-size="12" fill="#1f2328" text-anchor="end">Agent guidance (AGENTS.md)</text>
+<text x="300" y="869" font-size="12" fill="#1f2328" text-anchor="end">AGENTS.md, CLAUDE.md</text>
 <rect x="310" y="855" width="189" height="20" fill="#1a7f37"/>
 <text x="505" y="870" font-size="12" font-weight="600" fill="#1f2328">7</text>
-<text x="300" y="903" font-size="12" fill="#1f2328" text-anchor="end">PR / issue templates</text>
+<text x="300" y="903" font-size="12" fill="#1f2328" text-anchor="end">PULL_REQUEST_TEMPLATE.md, ISSUE_TEMPLATE/*</text>
 <rect x="310" y="889" width="135" height="20" fill="#1a7f37"/>
 <text x="451" y="904" font-size="12" font-weight="600" fill="#1f2328">5</text>
 <text x="300" y="937" font-size="12" fill="#1f2328" text-anchor="end">README.md</text>
 <rect x="310" y="923" width="27" height="20" fill="#1a7f37"/>
 <text x="343" y="938" font-size="12" font-weight="600" fill="#1f2328">1</text>
-<text x="300" y="971" font-size="12" fill="#1f2328" text-anchor="end">Other file</text>
+<text x="300" y="971" font-size="12" fill="#1f2328" text-anchor="end">AUTHORING_GUIDELINES.md</text>
 <rect x="310" y="957" width="27" height="20" fill="#1a7f37"/>
 <text x="343" y="972" font-size="12" font-weight="600" fill="#1f2328">1</text>
 <text x="28" y="1024" font-size="12" fill="#1f2328">Slop domain (dismissive wording about AI): found in 4 of 20 projects.</text>

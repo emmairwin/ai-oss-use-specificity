@@ -37,17 +37,17 @@ Projects with an `X` or `~` entry in each domain, out of 20. As in the CHAOSS li
 | Data use for training | 0 | - |
 | Slop | 4 | chalk/supports-color, sindresorhus/type-fest, csstools/postcss-plugins, yeoman/update-notifier |
 
-## By document type
+## By file name
 
-| Document type | Count | Projects and the files where AI-related language was found |
+| File name | Count | Projects and the exact file found in |
 |---|---:|---|
-| Security policy (SECURITY.md) | 5 | chalk/supports-color: `.github/security.md`<br>sindresorhus/type-fest: `.github/security.md`<br>follow-redirects/follow-redirects: `SECURITY.md`<br>yeoman/update-notifier: `.github/security.md`<br>andris9/encoding: `SECURITY.md` |
-| AI policy (AI_POLICY.md) | 3 | yargs/yargs: `AI_POLICY.md`<br>babel/babel: `AI_POLICY.md`<br>eslint/eslint: `docs/src/contribute/ai-policy.md` |
-| Contributing (CONTRIBUTING.md) | 13 | yargs/yargs: `contributing.md`<br>babel/babel: `CONTRIBUTING.md`<br>sindresorhus/type-fest: `.github/contributing.md`<br>acornjs/acorn: `CONTRIBUTING.md`<br>microsoft/TypeScript: `CONTRIBUTING.md`<br>eemeli/yaml: `docs/CONTRIBUTING.md`<br>prettier/prettier: `CONTRIBUTING.md`<br>csstools/postcss-plugins: `CONTRIBUTING.md`<br>eslint/eslint: `CONTRIBUTING.md`<br>mde/ejs: `CONTRIBUTING.md`<br>jsdom/jsdom: `Contributing.md`<br>rollup/rollup: `CONTRIBUTING.md`<br>nodeca/argparse: `CONTRIBUTING.md` |
-| Agent guidance (AGENTS.md) | 7 | babel/babel: `AGENTS.md`<br>sindresorhus/type-fest: `AGENTS.md`<br>chimurai/http-proxy-middleware: `AGENTS.md`<br>eslint/eslint: `AGENTS.md`<br>jsdom/jsdom: `AGENTS.md`<br>andris9/encoding: `CLAUDE.md`<br>rollup/rollup: `AGENTS.md` |
-| PR / issue templates | 5 | chimurai/http-proxy-middleware: `.github/PULL_REQUEST_TEMPLATE.md`<br>typescript-eslint/typescript-eslint: `.github/ISSUE_TEMPLATE/01-bug-report-plugin.yaml`<br>eemeli/yaml: `.github/pull_request_template.md`, `.github/ISSUE_TEMPLATE/bug_report.yaml`<br>prettier/prettier: `.github/PULL_REQUEST_TEMPLATE.md`<br>eslint/eslint: `.github/PULL_REQUEST_TEMPLATE.md` |
+| SECURITY.md, security.md | 5 | chalk/supports-color: `.github/security.md`<br>sindresorhus/type-fest: `.github/security.md`<br>follow-redirects/follow-redirects: `SECURITY.md`<br>yeoman/update-notifier: `.github/security.md`<br>andris9/encoding: `SECURITY.md` |
+| AI_POLICY.md, ai-policy.md | 3 | yargs/yargs: `AI_POLICY.md`<br>babel/babel: `AI_POLICY.md`<br>eslint/eslint: `docs/src/contribute/ai-policy.md` |
+| CONTRIBUTING.md, contributing.md | 13 | yargs/yargs: `contributing.md`<br>babel/babel: `CONTRIBUTING.md`<br>sindresorhus/type-fest: `.github/contributing.md`<br>acornjs/acorn: `CONTRIBUTING.md`<br>microsoft/TypeScript: `CONTRIBUTING.md`<br>eemeli/yaml: `docs/CONTRIBUTING.md`<br>prettier/prettier: `CONTRIBUTING.md`<br>csstools/postcss-plugins: `CONTRIBUTING.md`<br>eslint/eslint: `CONTRIBUTING.md`<br>mde/ejs: `CONTRIBUTING.md`<br>jsdom/jsdom: `Contributing.md`<br>rollup/rollup: `CONTRIBUTING.md`<br>nodeca/argparse: `CONTRIBUTING.md` |
+| AGENTS.md, CLAUDE.md | 7 | babel/babel: `AGENTS.md`<br>sindresorhus/type-fest: `AGENTS.md`<br>chimurai/http-proxy-middleware: `AGENTS.md`<br>eslint/eslint: `AGENTS.md`<br>jsdom/jsdom: `AGENTS.md`<br>andris9/encoding: `CLAUDE.md`<br>rollup/rollup: `AGENTS.md` |
+| PULL_REQUEST_TEMPLATE.md, ISSUE_TEMPLATE/* | 5 | chimurai/http-proxy-middleware: `.github/PULL_REQUEST_TEMPLATE.md`<br>typescript-eslint/typescript-eslint: `.github/ISSUE_TEMPLATE/01-bug-report-plugin.yaml`<br>eemeli/yaml: `.github/pull_request_template.md`, `.github/ISSUE_TEMPLATE/bug_report.yaml`<br>prettier/prettier: `.github/PULL_REQUEST_TEMPLATE.md`<br>eslint/eslint: `.github/PULL_REQUEST_TEMPLATE.md` |
 | README.md | 1 | gulpjs/interpret: `README.md` |
-| Other file | 1 | csstools/postcss-plugins: `AUTHORING_GUIDELINES.md` |
+| AUTHORING_GUIDELINES.md | 1 | csstools/postcss-plugins: `AUTHORING_GUIDELINES.md` |
 
 ## Slop domain
 
