@@ -1,45 +1,50 @@
-# AI policy specificity
+# AI use policies in open source
 
-Reports on how specifically open source projects' AI policies cover each of
-nine domains, using the CHAOSS metric
-[Consent Policy Specificity](https://github.com/chaoss/wg-ai-alignment/blob/main/metrics/ai-alignment-community-governed-use/ai-use-consent-policy-specificity.md),
-plus a tenth, slop, added by this project.
+Open source projects set their own rules for AI use. This project collects
+those rules and summarizes what they say. It does not rate whether a policy is
+good or bad, or argue for or against AI.
 
-Project and policy origins are curated from the CHAOSS AI Alignment working
-group's [collected list](https://github.com/chaoss/wg-ai-alignment/blob/main/moderation/README.md)
+## Browse the reports
+
+- [CHAOSS project list](reports/chaoss_list_of_projects/README.md)
+- [Critical dependencies with AI policies](reports/critical-dependencies/README.md)
+
+The project list draws on the CHAOSS AI Alignment working group's
+[collected projects](https://github.com/chaoss/wg-ai-alignment/blob/main/moderation/README.md)
 and Melissa W.'s
-[open-source-ai-contribution-policies](https://github.com/melissawm/open-source-ai-contribution-policies).
+[open-source AI contribution policies](https://github.com/melissawm/open-source-ai-contribution-policies).
 
-**[Reports](reports/)** — reports for the [CHAOSS list of projects](reports/chaoss_list_of_projects/README.md)
-and the [critical dependencies with AI policies](reports/critical-dependencies/README.md).
+## What the reports cover
 
-## The ten domains
+Reports check whether a project's policy addresses nine topics: code
+contributions, meeting bots, content and documentation, moderation, review,
+autonomous or agent-based use, environmental impact, infrastructure strain,
+and use of project data to train AI.
 
-Code contributions, notetaker and meeting bots, content, moderation, review,
-autonomous and agentic use, environmental impact, infrastructure strain, data
-use for training, and slop.
+For each topic, the report looks at how clearly the policy explains who
+supervises the work, what limits apply, who is responsible, and whether the
+rules are proportionate.
 
-Slop is not in the CHAOSS metric text. It records wording in a project's own
-policy that is negative or dismissive of AI as a technology or its output in
-general (for example "No AI slop will be accepted"). It captures attitude, not
-a rule, so only the addressed mark and a quote are recorded.
+The reports use a [CHAOSS metric](https://github.com/chaoss/wg-ai-alignment/blob/main/metrics/ai-alignment-community-governed-use/ai-use-consent-policy-specificity.md).
+In the tables:
 
-Reports in `reports/chaoss_list_of_projects/` were scored before slop was
-added and cover nine domains. Re-running them with the updated agent will add
-the tenth.
+- `X` means the policy gives supervision guidance and at least one other
+  detail.
+- `~` means the topic is mentioned, but fewer details are given.
+- `R` means the policy mentions the topic as a reason for a rule, but does not
+  set a rule about it.
+- A blank means the reviewed policy did not mention the topic.
 
-The other nine are each checked for four attributes: supervision level, scope or volume limit,
-who holds accountability, proportionality.
+Quotes and links in each report let you check the project's own wording.
+`discouraged` means the policy advises against AI use but does not explicitly
+ban it.
 
-## Reading a report
+## An extra topic: "slop"
 
-`X` addressed, `~` coverage below the X specificity threshold, `R` raised in the policy's rationale but not
-governed, blank not mentioned. `discouraged` marks advisory language against AI
-use rather than an explicit prohibition. Footnotes give the policy's own words
-and a link to the line.
+This project added a tenth topic that is not part of the CHAOSS metric. It
+records a project's own negative or dismissive wording about AI or its output.
+It captures tone, not a rule. The reports mark it as addressed and include a
+quote.
 
-Scores describe what a policy says, not whether it is any good. A permissive
-policy stating its position precisely scores the same as a restrictive one.
-
-Most grids are sparse. Most projects cover code contributions, many cover
-documentation, few cover anything else.
+The CHAOSS project-list reports were scored before this topic was added, so
+they cover nine topics. The critical-dependencies reports include all ten.
