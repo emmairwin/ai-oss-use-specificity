@@ -2,31 +2,29 @@
 
 Part of the [project cohorts index](../README.md).
 
-This report lists the first 20 projects **with an AI-related policy** among packages ranked by dependent repository count in [ecosyste.ms' Critical feed](https://github.com/ecosyste-ms/critical). The [Critical API](https://packages.ecosyste.ms/api/v1/critical?sort=dependent_repos_count&order=desc&per_page=100&page=1) was retrieved on 2026-10-27. It sorts by `dependent_repos_count`, highest first. We downloaded 20 pages of 100 packages each (2,000 package records).
+The first 20 projects with policies in [ecosyste.ms' Critical feed](https://github.com/ecosyste-ms/critical), ranked by dependent repositories. Data retrieved [from the API](https://packages.ecosyste.ms/api/v1/critical?sort=dependent_repos_count&order=desc&per_page=100&page=1) on 2026-10-27: 20 pages (2,000 packages), mapped to 1,514 repositories. The 20th project is at position 708.
 
-Packages were mapped to GitHub repositories. If several packages use the same repository, we counted it once at its highest-ranked package. This gave 1,514 distinct repositories. We followed the feed order until 20 projects qualified; the last was at position 708. Positions in the table are repository positions, not package positions.
+Positions are repository ranks, not package ranks. Repositories shared by packages count once, at the highest package rank.
 
-**One project per GitHub owner.** If several repositories from one owner qualified, we chose the one with the most detailed policy, preferring a dedicated policy or contributor guide over a sentence limited to security reports. Feed position breaks ties. Another 122 repositories from listed owners also qualified, but are not listed separately. Examples include `chalk/wrap-ansi`, `yargs/yargs-parser`, `sindresorhus/camelcase`, `sindresorhus/globby`, and `nodeca/js-yaml`.
+One project per GitHub owner. We chose the repository with the clearest policy; feed rank breaks ties. Another 122 qualifying repositories from these owners are omitted.
 
-A project qualifies when an official project document gives a rule, requirement, permission, restriction, or guidance about AI. Four projects qualify only because their security policy mentions AI in vulnerability reports. That wording applies to security reports, not code contributions, and is marked separately in the chart and table. Feed counts measure dependent repositories, not downloads.
+Four projects qualify only through security-report guidance. This is not a code-contribution rule; those cases are marked in the table. Feed counts are dependent repositories, not downloads.
 
-## Documents reviewed
+## Sources checked
 
-For each repository, we listed the files and read documentation at the root and in `docs/`, `doc/`, `.github/`, and agent-config folders. This included `README`, `CONTRIBUTING`, `CODE_OF_CONDUCT`, `SECURITY`, `GOVERNANCE`, `FAQ`, `AI_POLICY.md`, `AGENTS.md`, and `CLAUDE.md` files, pull-request and issue templates, and other Markdown, text, and reStructuredText documents. We searched these files for AI-related wording and checked each match by hand.
+We checked root files, `docs/`, `doc/`, `.github/`, and agent-config folders, including policies, contribution guides, templates, and other documentation. Each matching passage was reviewed by hand.
 
-We did not review files more than one level below `docs/`, organization-level `.github` repositories, websites, wikis, or social posts. Policies found only in those places may be missing. For example, typescript-eslint's AI Contribution Policy is on its website and was not reviewed. Each project report lists the documents used.
+We did not check deeper `docs/` paths, organization-level `.github` repositories, websites, wikis, or social posts. For example, typescript-eslint's website policy was not reviewed. Each project report lists its sources.
 
-![Bar charts of dependent repository counts for the 20 qualifying projects and the document types where AI-related language was found.](critical-dependencies.svg)
-
-[View the SVG chart](critical-dependencies.svg).
+![Charts of project ranks and source file types.](critical-dependencies.svg)
 
 ## Policy coverage by domain
 
-This table and the charts count projects with an `X` or `~` in each domain, out of 20. A project can count in more than one domain. Slop counts wording found in a policy; it is not a rule.
+Counts include `X` and `~`; a project may appear in multiple domains. Slop records negative or dismissive wording, not a rule.
 
-![Horizontal bar chart showing policy coverage counts by domain. Entries marked X or ~ count as coverage: code contributions 15, notetaker and meeting bots 0, content and documentation 6, moderation and enforcement 0, review of contributions 1, autonomous and agentic use 3, environmental impact 0, infrastructure strain 0, data use for training 0, slop 4.](coverage.svg)
+![Bar chart of policy coverage by domain.](coverage.svg)
 
-![Pie chart showing the distribution of 29 policy coverage entries across the ten domains. Entries marked X or ~ count; blank entries are excluded. One report may count in multiple domains.](coverage-pie.svg)
+![Pie chart of policy coverage across ten domains.](coverage-pie.svg)
 
 | Domain | Projects | Which |
 |---|---:|---|
@@ -52,10 +50,6 @@ This table and the charts count projects with an `X` or `~` in each domain, out 
 | PULL_REQUEST_TEMPLATE.md, ISSUE_TEMPLATE/* | 5 | chimurai/http-proxy-middleware: `.github/PULL_REQUEST_TEMPLATE.md`<br>typescript-eslint/typescript-eslint: `.github/ISSUE_TEMPLATE/01-bug-report-plugin.yaml`<br>eemeli/yaml: `.github/pull_request_template.md`, `.github/ISSUE_TEMPLATE/bug_report.yaml`<br>prettier/prettier: `.github/PULL_REQUEST_TEMPLATE.md`<br>eslint/eslint: `.github/PULL_REQUEST_TEMPLATE.md` |
 | README.md | 1 | gulpjs/interpret: `README.md` |
 | AUTHORING_GUIDELINES.md | 1 | csstools/postcss-plugins: `AUTHORING_GUIDELINES.md` |
-
-## Slop
-
-The Slop row records negative or dismissive wording about AI or its output in a project's own policy. It captures tone, not a rule, so supervision, scope, and accountability are left blank. Four projects use such wording: chalk/supports-color, sindresorhus/type-fest, csstools/postcss-plugins, and yeoman/update-notifier. Neutral quality language, such as prettier's “Low-quality AI content will be closed immediately.”, was not counted. We searched the documents above for words such as slop, garbage, junk, mediocre, and spam, then read each match.
 
 ## Projects
 

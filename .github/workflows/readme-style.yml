@@ -1,0 +1,17 @@
+name: README style
+
+on:
+  pull_request:
+    paths:
+      - "**/README.md"
+      - "README.md"
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Check changed README prose
+        run: python3 scripts/check_readme_style.py "${{ github.event.pull_request.base.sha }}"
