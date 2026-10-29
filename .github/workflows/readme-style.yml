@@ -5,6 +5,8 @@ on:
     paths:
       - "**/README.md"
       - "README.md"
+      - "reports/critical-dependencies/**"
+      - "scripts/check_critical_dependency_sources.py"
 
 jobs:
   check:
@@ -15,3 +17,5 @@ jobs:
           fetch-depth: 0
       - name: Check changed README prose
         run: python3 scripts/check_readme_style.py "${{ github.event.pull_request.base.sha }}"
+      - name: Check critical-dependencies source inventory
+        run: python3 scripts/check_critical_dependency_sources.py
