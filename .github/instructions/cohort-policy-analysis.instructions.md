@@ -5,6 +5,7 @@ applyTo: "reports/**"
 # Project cohort policy analysis
 
 - Keep each cohort separate, with its own landing page, project reports, and visual summaries. A cohort index should explain its selection method and link to source reports and charts.
+- Keep landing-page text brief and non-redundant. Use bullets only when they make separate criteria easier to compare; prose may be clearer when ideas depend on each other. Review clarity rather than assuming a format is clearer.
 - If the requested cohort is the top N projects **with AI policies**, continue down the stated ranking until N projects with an explicit AI-related policy are verified. Do not equate the top N ranked repositories with the top N that have policies, and do not count a generic contribution guide as an AI policy.
 - Search beyond README files. Inspect repository trees and policy-bearing document types represented in the CHAOSS cohort summaries: policy documents, contribution guides, codes of conduct, `AGENTS.md`/agent guidance, pull-request templates, READMEs, FAQs, and other relevant official project documents. Check root, `docs/`, and hidden `.github/` paths. Use social posts only when explicitly in scope and no more authoritative source is available.
 - Treat a project as having a qualifying AI policy only when an official source contains an explicit AI-related rule, requirement, permission, restriction, or guidance. Record exactly which documents were reviewed; a missing rule in one document is not evidence that the whole project has no policy.

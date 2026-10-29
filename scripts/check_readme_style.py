@@ -130,6 +130,10 @@ def main():
         return 1
 
     print(f"README style check passed: {len(files)} changed README file(s).")
+    print(
+        "Manual review: choose prose or bullets for clarity; bullets are not "
+        "automatically clearer. Check for repetition."
+    )
     return 0
 
 

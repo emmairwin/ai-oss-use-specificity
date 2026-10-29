@@ -2,13 +2,14 @@
 
 Part of the [project cohorts index](../README.md).
 
-The first 20 projects with policies in [ecosyste.ms' Critical feed](https://github.com/ecosyste-ms/critical), ranked by dependent repositories. Data retrieved [from the API](https://packages.ecosyste.ms/api/v1/critical?sort=dependent_repos_count&order=desc&per_page=100&page=1) on 2026-10-27: 20 pages (2,000 packages), mapped to 1,514 repositories. The 20th project is at position 708.
+## Selection criteria
 
-Positions are repository ranks, not package ranks. Repositories shared by packages count once, at the highest package rank.
-
-One project per GitHub owner. We chose the repository with the clearest policy; feed rank breaks ties. Another 122 qualifying repositories from these owners are omitted.
-
-Four projects qualify only through security-report guidance. This is not a code-contribution rule; those cases are marked in the table. Feed counts are dependent repositories, not downloads.
+- **Source:** [ecosyste.ms Critical feed](https://github.com/ecosyste-ms/critical), ranked by dependent repositories. Data retrieved [from the API](https://packages.ecosyste.ms/api/v1/critical?sort=dependent_repos_count&order=desc&per_page=100&page=1) on 2026-10-27.
+- **Coverage:** 20 pages (2,000 packages), mapped to 1,514 distinct repositories. The 20th qualifying repository is at position 708.
+- **Ranking:** Count each repository once at its highest-ranked package. Positions refer to repositories, not packages.
+- **One per owner:** Choose the repository with the clearest policy; use feed position to break ties. 122 other qualifying repositories from these owners are omitted.
+- **Security-only cases:** Four qualify through security-report guidance only. These are marked in the table and do not count as code-contribution rules.
+- **Counts:** The feed measures dependent repositories, not downloads.
 
 ## Sources checked
 
