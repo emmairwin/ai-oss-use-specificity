@@ -10,7 +10,7 @@ The 28 revisions include 24 that introduce or revise substantive policy provisio
 
 The chart shows the timeline and project colors. The numbered list below gives the change descriptions and clickable source links.
 
-Domain labels use the Consent Policy Specificity taxonomy. A revision can affect multiple domains. “Outside taxonomy” is a note, not a domain, and is excluded from domain comparisons.
+## List of changes by 'diff' 
 
 1. **2025-05-15 · curl** — Added AI-use guidance for code and content; AI-assisted security findings must be disclosed and verified. **Domains:** Code; Content. **Change:** first-observed baseline. [Source diff](https://github.com/curl/curl/commit/a9aafbea952643753d87262619ed310640748be4)
 2. **2025-06-13 · Apache CouchDB** — Prohibited AI-generated code, documentation, commit messages, and other project materials. **Domains:** Code; Content. **Change:** restrictive baseline. [Source diff](https://github.com/apache/couchdb/pull/5562/files)
