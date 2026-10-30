@@ -172,34 +172,31 @@ PIE_COLORS = [
     "#bc4c00", "#1a7f37", "#6e7781", "#d4a72c",
 ]
 OTHER_FILES_COLOR = "#8c959f"
-WEB_PAGES_COLOR = "#d0d7de"
 
 
 def pie_slices(groups: dict[tuple[str, str], list[tuple[str, str]]]) -> list[tuple[str, int, str]]:
     ordered = sorted(groups.items(), key=lambda item: (-len(item[1]), item[0][1].casefold()))
     named = [(label, len(entries)) for (kind, label), entries in ordered if kind == "file" and len(entries) > 1]
     singles = [entries for (kind, _), entries in ordered if kind == "file" and len(entries) == 1]
-    pages = [entries for (kind, _), entries in ordered if kind == "page"]
     slices = [(label, count, PIE_COLORS[i % len(PIE_COLORS)]) for i, (label, count) in enumerate(named)]
     if singles:
         slices.append((f"Other repo files, each used by only one project ({len(singles)} different names)", sum(map(len, singles)), OTHER_FILES_COLOR))
-    if pages:
-        slices.append((f"Policy on a website, not in a repo file ({len(pages)} projects)", sum(map(len, pages)), WEB_PAGES_COLOR))
     return slices
 
 
 def svg_chart(groups: dict[tuple[str, str], list[tuple[str, str]]]) -> str:
     slices = pie_slices(groups)
     total = sum(count for _, count, _ in slices)
+    unmatched = sum(len(entries) for (kind, _), entries in groups.items() if kind == "page")
     width, height = 1020, 80 + max(420, 28 * len(slices) + 40)
     cx, cy, radius = 230, 80 + 190, 180
     parts = [
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">',
         "<title>CHAOSS cohort primary source files</title>",
-        f"<desc>Pie chart of the {total} primary sources cited by cohort reports, grouped by exact file name. Single-report file names and web-page paths are combined; the README lists every one.</desc>",
+        f"<desc>Pie chart of {total} projects grouped by the repository file that holds or links to the AI policy. {unmatched} projects with no repository file found are not charted.</desc>",
         f'<rect width="{width}" height="{height}" fill="#ffffff"/>',
         '<text x="24" y="34" font-size="16" font-weight="600" fill="#1f2328">Primary source files</text>',
-        f'<text x="24" y="56" font-size="12" fill="#656d76">{total} projects, grouped by the file their AI policy was read from; every project is listed in the README index and WEB_PAGES.md</text>',
+        f'<text x="24" y="56" font-size="12" fill="#656d76">{total} projects, by the repo file that holds or links to the AI policy. {unmatched} more have no repo file found (WEB_PAGES.md).</text>',
     ]
     angle = -math.pi / 2
     for label, count, color in slices:

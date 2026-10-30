@@ -113,5 +113,120 @@
   "project": "Telegraf",
   "file_url": "https://github.com/influxdata/telegraf/blob/master/CONTRIBUTING.md",
   "file_name": "CONTRIBUTING.md"
+ },
+ "https://asahilinux.org/docs/project/policies/slop/": {
+  "project": "Asahi Linux",
+  "file_url": "https://github.com/AsahiLinux/docs/blob/main/docs/project/policies/slop.md",
+  "file_name": "slop.md"
+ },
+ "https://opensource.creativecommons.org/contributing-code/": {
+  "project": "CC Open Source",
+  "file_url": "https://github.com/creativecommons/ccos-website-source/blob/main/content/contributing-code/contents.lr",
+  "file_name": "contents.lr"
+ },
+ "https://ccextractor.org/public/gsoc/ai_policy/": {
+  "project": "CCExtractor",
+  "file_url": "https://github.com/CCExtractor/website/blob/master/content/public/gsoc/ai_policy.md",
+  "file_name": "ai_policy.md"
+ },
+ "https://devguide.python.org/getting-started/generative-ai/": {
+  "project": "CPython",
+  "file_url": "https://github.com/python/devguide/blob/main/getting-started/ai-tools.rst",
+  "file_name": "ai-tools.rst"
+ },
+ "https://codeberg.org/ByteOfBrie/cheese-paper#ai": {
+  "project": "Cheese Paper",
+  "file_url": "https://codeberg.org/ByteOfBrie/cheese-paper/src/branch/main/README.md",
+  "file_name": "README.md"
+ },
+ "https://docs.djangoproject.com/en/dev/internals/contributing/writing-code/submitting-patches/#ai-assisted-contributions": {
+  "project": "Django",
+  "file_url": "https://github.com/django/django/blob/main/docs/internals/contributing/writing-code/submitting-patches.txt",
+  "file_name": "submitting-patches.txt"
+ },
+ "https://docs.easybuild.io/policies/ai/": {
+  "project": "EasyBuild",
+  "file_url": "https://github.com/easybuilders/easybuild-docs/blob/develop/docs/policies/ai.md",
+  "file_name": "ai.md"
+ },
+ "https://gitlab.gnome.org/World/elastic#use-of-generative-ai": {
+  "project": "Elastic",
+  "file_url": "https://gitlab.gnome.org/World/elastic/-/blob/main/README.md",
+  "file_name": "README.md"
+ },
+ "https://code.exim.org/exim/exim#contributing-to-exim": {
+  "project": "Exim",
+  "file_url": "https://code.exim.org/exim/exim/src/branch/master/README.md",
+  "file_name": "README.md"
+ },
+ "https://tiangolo.com/open-source/contributing/#automated-code-and-ai": {
+  "project": "FastAPI",
+  "file_url": "https://github.com/tiangolo/tiangolo.com/blob/master/docs/open-source/contributing.md",
+  "file_name": "contributing.md"
+ },
+ "https://firefox-source-docs.mozilla.org/contributing/ai-coding.html": {
+  "project": "Firefox",
+  "file_url": "https://github.com/mozilla-firefox/firefox/blob/main/docs/contributing/ai-coding.md",
+  "file_name": "ai-coding.md"
+ },
+ "https://gjs.guide/extensions/review-guidelines/review-guidelines.html#extensions-must-not-be-ai-generated": {
+  "project": "GNOME Extensions",
+  "file_url": "https://gitlab.gnome.org/World/javascript/gjs-guide/-/blob/main/docs/extensions/review-guidelines/review-guidelines.md",
+  "file_name": "review-guidelines.md"
+ },
+ "https://icechunk.io/en/latest/ai-policy/": {
+  "project": "Icechunk",
+  "file_url": "https://github.com/earth-mover/icechunk/blob/main/icechunk-python/docs/docs/reference/ai-policy.md",
+  "file_name": "ai-policy.md"
+ },
+ "https://www.kubernetes.dev/docs/guide/pull-requests/#ai-guidance": {
+  "project": "Kubernetes",
+  "file_url": "https://github.com/kubernetes/community/blob/main/contributors/guide/pull-requests.md",
+  "file_name": "pull-requests.md"
+ },
+ "https://numpy.org/devdocs/dev/ai_policy.html": {
+  "project": "NumPy",
+  "file_url": "https://github.com/numpy/numpy/blob/main/doc/source/dev/ai_policy.rst",
+  "file_name": "ai_policy.rst"
+ },
+ "https://palletsprojects.com/contributing/llm-ai": {
+  "project": "Pallets",
+  "file_url": "https://github.com/pallets/website/blob/main/content/contributing/llm-ai.md",
+  "file_name": "llm-ai.md"
+ },
+ "https://codeberg.org/poezio/poezio#use-of-generative-ai": {
+  "project": "Poezio",
+  "file_url": "https://codeberg.org/poezio/poezio/src/branch/main/README.rst",
+  "file_name": "README.rst"
+ },
+ "https://scipy.github.io/devdocs/dev/conduct/ai_policy.html": {
+  "project": "SciPy",
+  "file_url": "https://github.com/scipy/scipy/blob/main/doc/source/dev/conduct/ai_policy.rst",
+  "file_name": "ai_policy.rst"
+ },
+ "https://docs.sympy.org/dev/contributing/ai-generated-code-policy.html": {
+  "project": "SymPy",
+  "file_url": "https://github.com/sympy/sympy/blob/master/doc/src/contributing/ai-generated-code-policy.rst",
+  "file_name": "ai-generated-code-policy.rst"
+ },
+ "https://curl.se/dev/contribute.html#on-ai-use-in-curl": {
+  "project": "curl",
+  "file_url": "https://github.com/curl/curl/blob/master/docs/CONTRIBUTE.md",
+  "file_name": "CONTRIBUTE.md"
+ },
+ "https://codeberg.org/cgranade/do#license-and-ai-policy": {
+  "project": "do",
+  "file_url": "https://codeberg.org/cgranade/do/src/branch/main/README.md",
+  "file_name": "README.md"
+ },
+ "https://gdal.org/en/stable/community/ai_tool_policy.html": {
+  "project": "gdal-site",
+  "file_url": "https://github.com/OSGeo/gdal/blob/master/doc/source/community/ai_tool_policy.rst",
+  "file_name": "ai_tool_policy.rst"
+ },
+ "https://contributing.godotengine.org/en/latest/pull_requests/pull_request_guidelines.html": {
+  "project": "godot",
+  "file_url": "https://github.com/godotengine/godot-contributing-docs/blob/main/development/contribution_rules.rst",
+  "file_name": "contribution_rules.rst"
  }
 }
