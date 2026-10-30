@@ -111,16 +111,27 @@ def collect_sources() -> dict[tuple[str, str], list[tuple[str, str]]]:
 
 def markdown_index(groups: dict[tuple[str, str], list[tuple[str, str]]]) -> str:
     ordered = sorted(groups.items(), key=lambda item: (-len(item[1]), item[0][1].casefold()))
-    lines = [
-        "| Source file name or web-page path | Count | Projects and exact sources |",
-        "|---|---:|---|",
-    ]
-    for (kind, label), entries in ordered:
-        display = f"`{label}`"
-        links = "<br>".join(
+    def links(entries: list[tuple[str, str]]) -> str:
+        return "<br>".join(
             f"[{name}](<{url}>)" for name, url in sorted(entries, key=lambda entry: entry[0].casefold())
         )
-        lines.append(f"| {display} | {len(entries)} | {links} |")
+
+    def table(items: list[tuple[tuple[str, str], list[tuple[str, str]]]], header: str) -> list[str]:
+        rows = [f"| {header} | Count | Projects and exact sources |", "|---|---:|---|"]
+        rows += [f"| `{label}` | {len(entries)} | {links(entries)} |" for (_, label), entries in items]
+        return rows
+
+    shared = [item for item in ordered if len(item[1]) > 1]
+    files = [item for item in ordered if len(item[1]) == 1 and item[0][0] == "file"]
+    pages = [item for item in ordered if len(item[1]) == 1 and item[0][0] == "page"]
+    lines = table(shared, "Source file name used by more than one report")
+    for items, title, header in (
+        (files, "file names used by one report", "Source file name"),
+        (pages, "web-page paths used by one report", "Web-page path"),
+    ):
+        if items:
+            lines += ["", f"<details>", f"<summary>{len(items)} {title}</summary>", ""]
+            lines += table(items, header) + ["", "</details>"]
     return "\n".join(lines)
 
 
