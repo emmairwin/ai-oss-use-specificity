@@ -1,12 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1068" viewBox="0 0 900 1068" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1112" viewBox="0 0 900 1112" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">
 <title>Critical dependencies with AI policy language, one per owner, grouped by the files where it was found</title>
 <desc>Twenty projects from distinct owners in the feed mapping, with AI-related language in official documents. Bars show dependent repository counts. A second chart groups projects by file name: SECURITY.md, security.md: 5; AI_POLICY.md, ai-policy.md: 3; CONTRIBUTING.md, contributing.md: 13; AGENTS.md, CLAUDE.md: 6; PULL_REQUEST_TEMPLATE.md, ISSUE_TEMPLATE/*: 5; README.md: 1; AUTHORING_GUIDELINES.md: 1. A project can appear in more than one group. update-notifier has since moved from yeoman to sindresorhus.</desc>
-<rect width="900" height="1068" fill="#ffffff"/>
+<rect width="900" height="1112" fill="#ffffff"/>
 <text x="28" y="40" font-size="22" font-weight="600" fill="#1f2328">Critical dependencies with an AI policy</text>
 <text x="28" y="64" font-size="12" fill="#656d76">First 20 qualifying projects, one per GitHub owner, in ecosyste.ms Critical feed order · retrieved 2026-10-27</text>
 <text x="28" y="100" font-size="15" font-weight="600" fill="#1f2328">Dependent repositories</text>
 <rect x="28" y="112" width="12" height="12" fill="#1a7f37"/><text x="46" y="122" font-size="11" fill="#424a53">AI policy, contributing guide, template or agent guidance</text>
-<rect x="400" y="112" width="12" height="12" fill="#bf8700"/><text x="418" y="122" font-size="11" fill="#424a53">AI wording only in security-report guidance</text>
+<rect x="400" y="112" width="12" height="12" fill="#bf8700"/><text x="418" y="122" font-size="11" fill="#424a53">No contributor-facing AI rule (security reports only)</text>
 <line x1="310" y1="146" x2="310" y2="630" stroke="#d8dee4"/>
 <text x="310" y="140" font-size="10" fill="#656d76" text-anchor="middle">0M</text>
 <line x1="400" y1="146" x2="400" y2="630" stroke="#d8dee4"/>
@@ -82,7 +82,7 @@
 <rect x="310" y="609" width="97" height="16" fill="#1a7f37"/>
 <text x="412" y="621" font-size="10" fill="#424a53">1.08M</text>
 <text x="28" y="710" font-size="15" font-weight="600" fill="#1f2328">Files where AI-related language was found, by file name</text>
-<text x="28" y="729" font-size="11" fill="#656d76">Projects per file name. A project counts once per file name, so counts add to more than 20.</text>
+<text x="28" y="729" font-size="11" fill="#656d76">Projects per file name. A project counts once per file name, so counts add to more than 20.</text><text x="28" y="745" font-size="11" fill="#656d76">SECURITY.md: 5 projects. Four are the amber bars above; type-fest also has a contributing guide, so it is green.</text>
 <text x="300" y="767" font-size="12" fill="#1f2328" text-anchor="end">SECURITY.md, security.md</text>
 <rect x="310" y="753" width="135" height="20" fill="#bf8700"/>
 <text x="451" y="768" font-size="12" font-weight="600" fill="#1f2328">5</text>
@@ -105,5 +105,5 @@
 <rect x="310" y="957" width="27" height="20" fill="#1a7f37"/>
 <text x="343" y="972" font-size="12" font-weight="600" fill="#1f2328">1</text>
 <text x="28" y="1024" font-size="12" fill="#1f2328">Slop domain (dismissive wording about AI): found in 4 of 20 projects.</text>
-<text x="28" y="1044" font-size="11" fill="#656d76">Counts describe the documents reviewed; they do not establish that other project policies do not exist.</text>
+<text x="28" y="1044" font-size="11" fill="#656d76">Counts describe the documents reviewed; they do not establish that other project policies do not exist.</text><text x="28" y="1064" font-size="11" fill="#656d76">Amber: supports-color, follow-redirects, update-notifier, encoding. encoding also has CLAUDE.md, but it only instructs the maintainers' own agent.</text>
 </svg>
