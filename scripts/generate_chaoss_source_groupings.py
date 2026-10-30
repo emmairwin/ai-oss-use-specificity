@@ -1,5 +1,6 @@
-from __future__ import annotations
+﻿from __future__ import annotations
 
+import math
 import re
 from collections import defaultdict
 from html import escape
@@ -123,37 +124,60 @@ def markdown_index(groups: dict[tuple[str, str], list[tuple[str, str]]]) -> str:
     return "\n".join(lines)
 
 
-def svg_chart(groups: dict[tuple[str, str], list[tuple[str, str]]]) -> str:
+PIE_COLORS = [
+    "#1f6feb", "#2da44e", "#bf8700", "#cf222e", "#8250df", "#0969da",
+    "#bc4c00", "#1a7f37", "#6e7781", "#d4a72c",
+]
+OTHER_FILES_COLOR = "#8c959f"
+WEB_PAGES_COLOR = "#d0d7de"
+
+
+def pie_slices(groups: dict[tuple[str, str], list[tuple[str, str]]]) -> list[tuple[str, int, str]]:
     ordered = sorted(groups.items(), key=lambda item: (-len(item[1]), item[0][1].casefold()))
-    width = 1660
-    row_height = 22
-    height = 88 + row_height * len(ordered)
-    label_x = 24
-    bar_x = 1120
-    max_bar_width = 400
-    max_count = max(len(entries) for _, entries in ordered)
+    named = [(label, len(entries)) for (kind, label), entries in ordered if kind == "file" and len(entries) > 1]
+    singles = [entries for (kind, _), entries in ordered if kind == "file" and len(entries) == 1]
+    pages = [entries for (kind, _), entries in ordered if kind == "page"]
+    slices = [(label, count, PIE_COLORS[i % len(PIE_COLORS)]) for i, (label, count) in enumerate(named)]
+    if singles:
+        slices.append((f"{len(singles)} other file names, one report each", sum(map(len, singles)), OTHER_FILES_COLOR))
+    if pages:
+        slices.append((f"{len(pages)} web-page paths, one report each", sum(map(len, pages)), WEB_PAGES_COLOR))
+    return slices
+
+
+def svg_chart(groups: dict[tuple[str, str], list[tuple[str, str]]]) -> str:
+    slices = pie_slices(groups)
+    total = sum(count for _, count, _ in slices)
+    width, height = 900, 80 + max(420, 28 * len(slices) + 40)
+    cx, cy, radius = 230, 80 + 190, 180
     parts = [
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">',
-        "<title>CHAOSS cohort source files and web pages</title>",
-        f"<desc>Horizontal bars count the {sum(len(entries) for _, entries in ordered)} primary sources cited by cohort reports, grouped by exact file name or web-page URL path. {len(ordered)} source names are shown.</desc>",
+        "<title>CHAOSS cohort primary source files</title>",
+        f"<desc>Pie chart of the {total} primary sources cited by cohort reports, grouped by exact file name. Single-report file names and web-page paths are combined; the README lists every one.</desc>",
         f'<rect width="{width}" height="{height}" fill="#ffffff"/>',
-        '<text x="24" y="34" font-size="16" font-weight="600" fill="#1f2328">Primary source files and web pages</text>',
-        f'<text x="24" y="56" font-size="12" fill="#656d76">{sum(len(entries) for _, entries in ordered)} reports; file names or exact web-page paths from each report source link</text>',
+        '<text x="24" y="34" font-size="16" font-weight="600" fill="#1f2328">Primary source files</text>',
+        f'<text x="24" y="56" font-size="12" fill="#656d76">{total} reports; full per-file and per-page list is in the README index</text>',
     ]
-    for index, ((_, label), entries) in enumerate(ordered):
-        y = 82 + index * row_height
-        count = len(entries)
-        bar_width = max(2, round(max_bar_width * count / max_count))
+    angle = -math.pi / 2
+    for label, count, color in slices:
+        sweep = 2 * math.pi * count / total
+        x1, y1 = cx + radius * math.cos(angle), cy + radius * math.sin(angle)
+        x2, y2 = cx + radius * math.cos(angle + sweep), cy + radius * math.sin(angle + sweep)
+        large = 1 if sweep > math.pi else 0
+        parts.append(
+            f'<path d="M {cx} {cy} L {x1:.2f} {y1:.2f} A {radius} {radius} 0 {large} 1 {x2:.2f} {y2:.2f} Z" fill="{color}" stroke="#ffffff" stroke-width="2"/>'
+        )
+        angle += sweep
+    for index, (label, count, color) in enumerate(slices):
+        y = 100 + index * 28
         parts.extend(
             [
-                f'<text x="{label_x}" y="{y + 13}" font-size="11" fill="#1f2328">{escape(label)}</text>',
-                f'<rect x="{bar_x}" y="{y}" width="{bar_width}" height="15" rx="2" fill="#1f6feb"/>',
-                f'<text x="{bar_x + bar_width + 8}" y="{y + 12}" font-size="11" fill="#1f2328">{count}</text>',
+                f'<rect x="470" y="{y}" width="16" height="16" rx="2" fill="{color}"/>',
+                f'<text x="496" y="{y + 13}" font-size="13" fill="#1f2328">{escape(label)}: {count} ({count / total:.0%})</text>',
             ]
         )
     parts.append("</svg>")
     return "\n".join(parts) + "\n"
-
 
 def update_readme_index(index: str) -> None:
     text = README.read_text(encoding="utf-8")

@@ -184,7 +184,7 @@ See the [79 code-contribution reports classified as banned](CODE-CONTRIBUTION-BA
 
 ![Pie charts of code-contribution and content/documentation stances across the report set.](images/2026-10-22/groupings-pie.svg)
 
-![Bar chart of source files and web-page paths cited by the reports, grouped by exact file name or URL path.](images/2026-10-29/sources-by-name.svg)
+![Pie chart of primary source files cited by the reports: CONTRIBUTING.md 48, AI_POLICY.md 12, other named files, and single-report web pages.](images/2026-10-29/sources-by-name.svg)
 
 ### Policy changes over time
 
