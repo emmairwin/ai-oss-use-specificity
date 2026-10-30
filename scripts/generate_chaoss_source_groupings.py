@@ -1,6 +1,7 @@
 ﻿from __future__ import annotations
 
 import math
+import json
 import re
 from collections import defaultdict
 from html import escape
@@ -14,6 +15,7 @@ README = COHORT / "README.md"
 CHART = COHORT / "images" / "2026-10-29" / "sources-pie.svg"
 BEGIN = "<!-- BEGIN GENERATED SOURCE INDEX -->"
 END = "<!-- END GENERATED SOURCE INDEX -->"
+LINKING_FILES = json.loads((Path(__file__).with_name("chaoss_linking_files.json")).read_text(encoding="utf-8"))
 FILE_EXTENSIONS = {
     ".adoc",
     ".lua",
@@ -105,6 +107,11 @@ def collect_sources() -> dict[tuple[str, str], list[tuple[str, str]]]:
         if relative not in names:
             raise ValueError(f"Report missing from landing page: {relative}")
         url = source_url(report)
+        linking_file = LINKING_FILES.get(url)
+        if linking_file:
+            # The repository file that links to the policy page is the counted source.
+            groups[("file", linking_file["file_name"])].append((names[relative], linking_file["file_url"]))
+            continue
         groups[source_label(url)].append((names[relative], url))
     return groups
 
@@ -142,8 +149,9 @@ def web_pages_markdown(groups: dict[tuple[str, str], list[tuple[str, str]]]) -> 
         "# Web-page sources",
         "",
         "Most reports cite a policy file in a code repository, such as `CONTRIBUTING.md` or `AI_POLICY.md`. "
-        f"The {len(pages)} reports below cite something else: a page on a project website, documentation site, wiki, "
-        "blog, or a repository home page, where the URL does not point to a single file. "
+        "When a repository file (for example `CONTRIBUTING.md` or `README.md`) links out to the policy page, that file is counted instead, so it does not appear here. "
+        f"The {len(pages)} reports below cite a policy page on a project website, documentation site, wiki, "
+        "blog, or a repository home page, and no linking repository file was found. "
         "Each is listed by its host and path, as given in the report's `Source:` link.",
         "",
         "Examples: `bevy.org/learn/contribute/policies/ai/` is a documentation page, and "
@@ -176,7 +184,7 @@ def pie_slices(groups: dict[tuple[str, str], list[tuple[str, str]]]) -> list[tup
     if singles:
         slices.append((f"{len(singles)} other file names, one report each", sum(map(len, singles)), OTHER_FILES_COLOR))
     if pages:
-        slices.append((f"{len(pages)} web-page paths, one report each", sum(map(len, pages)), WEB_PAGES_COLOR))
+        slices.append((f"{len(pages)} other policy pages with no linking repo file, named in WEB_PAGES.md", sum(map(len, pages)), WEB_PAGES_COLOR))
     return slices
 
 

@@ -1,0 +1,117 @@
+{
+ "https://datafusion.apache.org/contributor-guide/index.html#ai-assisted-contributions": {
+  "project": "Apache DataFusion",
+  "file_url": "https://github.com/apache/datafusion/blob/main/CONTRIBUTING.md",
+  "file_name": "CONTRIBUTING.md"
+ },
+ "https://kvrocks.apache.org/community/contributing/#guidelines-for-ai-assisted-contributions": {
+  "project": "Apache Kvrocks",
+  "file_url": "https://github.com/apache/kvrocks/blob/master/README.md",
+  "file_name": "README.md"
+ },
+ "https://arrow.apache.org/docs/dev/developers/overview.html#ai-generated-code": {
+  "project": "Arrow",
+  "file_url": "https://github.com/apache/arrow/blob/main/CONTRIBUTING.md",
+  "file_name": "CONTRIBUTING.md"
+ },
+ "https://bevy.org/learn/contribute/policies/ai/": {
+  "project": "Bevy",
+  "file_url": "https://github.com/bevyengine/bevy/blob/main/CONTRIBUTING.md",
+  "file_name": "CONTRIBUTING.md"
+ },
+ "https://castle-engine.io/ai": {
+  "project": "castle-game-engine",
+  "file_url": "https://github.com/castle-engine/castle-engine/blob/master/AGENTS.md",
+  "file_name": "AGENTS.md"
+ },
+ "https://www.chezmoi.io/developer-guide/": {
+  "project": "chezmoi",
+  "file_url": "https://github.com/twpayne/chezmoi/blob/master/README.md",
+  "file_name": "README.md"
+ },
+ "https://clojure.org/dev/contributor_agreement#_no_generated_code": {
+  "project": "Clojure",
+  "file_url": "https://github.com/clojure/clojure/blob/master/CONTRIBUTING.md",
+  "file_name": "CONTRIBUTING.md"
+ },
+ "https://docs.conda.io/projects/conda/en/latest/dev-guide/contributing.html#generative-ai": {
+  "project": "conda",
+  "file_url": "https://github.com/conda/conda/blob/main/AGENTS.md",
+  "file_name": "AGENTS.md"
+ },
+ "https://docs.cupy.dev/en/stable/contribution.html#ai-policies": {
+  "project": "CuPy",
+  "file_url": "https://github.com/cupy/cupy/blob/main/README.md",
+  "file_name": "README.md"
+ },
+ "https://docs.elementary.io/contributor-guide/development/generative-ai-policy": {
+  "project": "Elementary OS",
+  "file_url": "https://github.com/elementary/.github/blob/master/CONTRIBUTING.md",
+  "file_name": "CONTRIBUTING.md"
+ },
+ "https://glasgow-embedded.org/latest/contribute.html#contributing-code-or-documentation": {
+  "project": "Glasgow Interface Explorer",
+  "file_url": "https://github.com/GlasgowEmbedded/glasgow/blob/main/CONTRIBUTING.md",
+  "file_name": "CONTRIBUTING.md"
+ },
+ "https://halloy.chat/contributing#ai": {
+  "project": "Halloy",
+  "file_url": "https://github.com/squidowl/halloy/blob/main/README.md",
+  "file_name": "README.md"
+ },
+ "https://iree.dev/developers/general/contributing/#ai-tool-use": {
+  "project": "IREE (Intermediate Representation Execution Environment)",
+  "file_url": "https://github.com/iree-org/iree/blob/main/CONTRIBUTING.md",
+  "file_name": "CONTRIBUTING.md"
+ },
+ "https://developer.joomla.org/generative-ai-policy.html": {
+  "project": "Joomla",
+  "file_url": "https://github.com/joomla/joomla-cms/blob/master/.github/CONTRIBUTING.md",
+  "file_name": "CONTRIBUTING.md"
+ },
+ "https://gitlab.gnome.org/GNOME/libxml2#strict-no-llm--no-ai-policy": {
+  "project": "libxml2",
+  "file_url": "https://gitlab.gnome.org/GNOME/libxml2/-/blob/master/README.md",
+  "file_name": "README.md"
+ },
+ "https://github.com/micropython/micropython/wiki/ContributorGuidelines#generative-ai-policy": {
+  "project": "MicroPython",
+  "file_url": "https://github.com/micropython/micropython/blob/master/CONTRIBUTING.md",
+  "file_name": "CONTRIBUTING.md"
+ },
+ "https://napari.org/dev/developers/contributing/ai.html": {
+  "project": "napari",
+  "file_url": "https://github.com/napari/napari/blob/main/CONTRIBUTING.md",
+  "file_name": "CONTRIBUTING.md"
+ },
+ "https://nlnetlabs.nl/llm-policy/": {
+  "project": "nlnet-labs",
+  "file_url": "https://github.com/NLnetLabs/unbound/blob/master/CONTRIBUTING.md",
+  "file_name": "CONTRIBUTING.md"
+ },
+ "https://openjdk.org/legal/ai": {
+  "project": "OpenJDK",
+  "file_url": "https://github.com/openjdk/jdk/blob/master/.github/pull_request_template.md",
+  "file_name": "pull_request_template.md"
+ },
+ "https://pandas.pydata.org/docs/dev/development/contributing.html#automated-contributions-policy": {
+  "project": "Pandas",
+  "file_url": "https://github.com/pandas-dev/pandas/blob/main/README.md",
+  "file_name": "README.md"
+ },
+ "https://forge.rust-lang.org/policies/llm-usage.html": {
+  "project": "rust",
+  "file_url": "https://github.com/rust-lang/rust/blob/main/CONTRIBUTING.md",
+  "file_name": "CONTRIBUTING.md"
+ },
+ "https://scikit-image.org/docs/dev/development/contribute.html#ai-policy": {
+  "project": "scikit-image",
+  "file_url": "https://github.com/scikit-image/scikit-image/blob/main/.github/PULL_REQUEST_TEMPLATE.md",
+  "file_name": "PULL_REQUEST_TEMPLATE.md"
+ },
+ "https://www.influxdata.com/ai-generated-code-contributions-policy/": {
+  "project": "Telegraf",
+  "file_url": "https://github.com/influxdata/telegraf/blob/master/CONTRIBUTING.md",
+  "file_name": "CONTRIBUTING.md"
+ }
+}
