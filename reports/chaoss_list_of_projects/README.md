@@ -213,11 +213,9 @@ Counts include `X` and `~`; `R` and blank entries are excluded.
 
 ## Included in Rationale
 
-These charts count topics cited as reasons for policies; they do not show whether a separate rule exists.
+This chart counts topics cited as reasons for policies; it does not show whether a separate rule exists.
 
-![Horizontal bar chart of policy rationale mentions: Environmental impact 15, Infrastructure strain 6, Data use for training 6, Review of contributions 5, Autonomous and agentic use 4.](images/2026-10-22/rationale.svg)
-
-![Pie chart of the same policy rationale mention counts across five domains.](images/2026-10-22/rationale-pie.svg)
+![Pie chart of policy rationale mention counts across five domains: Environmental impact 15, Infrastructure strain 6, Data use for training 6, Review of contributions 5, Autonomous and agentic use 4.](images/2026-10-22/rationale-pie.svg)
 
 ## Sources by file name and page path
 
