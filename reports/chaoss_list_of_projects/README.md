@@ -1,4 +1,4 @@
-# AI policy coverage: 169 projects
+﻿# AI policy coverage: 169 projects
 
 Part of the [project cohorts index](../README.md).
 
@@ -108,7 +108,7 @@ These reports use the [CHAOSS policy specificity metric](https://github.com/chao
 | [linux-foundation](linux-foundation/2026-08-30.md) | X |  | ~ |  | R |  |  |  | R |
 | [llvm/llvm-project](llvm-llvm-project/2026-08-30.md) | X |  | X | ~ | ~ | ~ |  |  |  |
 | [Lobsters](lobsters/2026-10-21.md) | X |  |  |  |  |  |  |  |  |
-| [LÖVE](love2d/2026-10-21.md) | X |  |  |  |  |  |  |  |  |
+| [LÃ–VE](love2d/2026-10-21.md) | X |  |  |  |  |  |  |  |  |
 | [mastodon/.github](mastodon-github/2026-08-30.md) | X |  | ~ |  | X | X |  |  |  |
 | [matplotlib/matplotlib](matplotlib-matplotlib/2026-08-30.md) | X |  |  | ~ |  | ~ |  |  |  |
 | [MDAnalysis](mdanalysis/2026-10-21.md) | X |  | X | ~ | X | X |  |  |  |
@@ -184,7 +184,7 @@ See the [79 code-contribution reports classified as banned](CODE-CONTRIBUTION-BA
 
 ![Pie charts of code-contribution and content/documentation stances across the report set.](images/2026-10-22/groupings-pie.svg)
 
-![Pie chart of primary source files cited by the reports: CONTRIBUTING.md 48, AI_POLICY.md 12, other named files, and single-report web pages.](images/2026-10-29/sources-by-name.svg)
+![Pie chart of primary source files cited by the reports: CONTRIBUTING.md 48, AI_POLICY.md 12, other named files, and single-report web pages.](images/2026-10-29/sources-pie.svg)
 
 ### Policy changes over time
 
@@ -235,7 +235,7 @@ The index uses the primary source link in each report. It names repository files
 | `AI-POLICY.md` | 2 | [cilium](<https://github.com/cilium/community/blob/main/AI-POLICY.md>)<br>[TorchGeo](<https://github.com/torchgeo/governance/blob/main/AI-POLICY.md>) |
 | `ai_tool_policy.rst` | 2 | [OSGeo/gdal](<https://github.com/OSGeo/gdal/blob/c70081f0c26d22a53b9f1986a9cc9faa23240dde/doc/source/community/ai_tool_policy.rst>)<br>[OSGeo/PROJ](<https://github.com/OSGeo/PROJ/blob/3641df4d02b1d7cea174282666bea15deda00466/docs/source/community/ai_tool_policy.rst>) |
 | `CONTRIBUTING.rst` | 2 | [Pytest](<https://github.com/pytest-dev/pytest/blob/main/CONTRIBUTING.rst#aillm-assisted-contributions-policy>)<br>[PyVista](<https://github.com/pyvista/pyvista/blob/main/CONTRIBUTING.rst#generative-ai>) |
-| `readme.md` | 2 | [CapyPDF](<https://github.com/jpakkane/capypdf/blob/master/readme.md#ai-policy>)<br>[LÖVE](<https://github.com/love2d/love/blob/main/readme.md#contributing>) |
+| `readme.md` | 2 | [CapyPDF](<https://github.com/jpakkane/capypdf/blob/master/readme.md#ai-policy>)<br>[LÃ–VE](<https://github.com/love2d/love/blob/main/readme.md#contributing>) |
 
 <details>
 <summary>25 file names used by one report</summary>
@@ -305,7 +305,7 @@ The index uses the primary source link in each report. It names repository files
 | `Web page: forge.rust-lang.org/policies/llm-usage.html` | 1 | [rust](<https://forge.rust-lang.org/policies/llm-usage.html>) |
 | `Web page: gcc.gnu.org/ai-policy.html` | 1 | [gcc](<https://gcc.gnu.org/ai-policy.html>) |
 | `Web page: gdal.org/en/stable/community/ai_tool_policy.html` | 1 | [gdal-site](<https://gdal.org/en/stable/community/ai_tool_policy.html>) |
-| `Web page: github.com/DataJourneyHQ/DataJourney/wiki/Contribution-Guidelines-(AI‐Aware)` | 1 | [DataJourneyHQ](<https://github.com/DataJourneyHQ/DataJourney/wiki/Contribution-Guidelines-(AI%E2%80%90Aware)>) |
+| `Web page: github.com/DataJourneyHQ/DataJourney/wiki/Contribution-Guidelines-(AIâ€Aware)` | 1 | [DataJourneyHQ](<https://github.com/DataJourneyHQ/DataJourney/wiki/Contribution-Guidelines-(AI%E2%80%90Aware)>) |
 | `Web page: github.com/micropython/micropython/wiki/ContributorGuidelines` | 1 | [MicroPython](<https://github.com/micropython/micropython/wiki/ContributorGuidelines#generative-ai-policy>) |
 | `Web page: gitlab.gnome.org/GNOME/libxml2` | 1 | [libxml2](<https://gitlab.gnome.org/GNOME/libxml2#strict-no-llm--no-ai-policy>) |
 | `Web page: gitlab.gnome.org/World/elastic` | 1 | [Elastic](<https://gitlab.gnome.org/World/elastic#use-of-generative-ai>) |

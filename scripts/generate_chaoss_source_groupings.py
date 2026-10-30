@@ -11,7 +11,7 @@ from urllib.parse import unquote, urlparse
 ROOT = Path(__file__).resolve().parents[1]
 COHORT = ROOT / "reports" / "chaoss_list_of_projects"
 README = COHORT / "README.md"
-CHART = COHORT / "images" / "2026-10-29" / "sources-by-name.svg"
+CHART = COHORT / "images" / "2026-10-29" / "sources-pie.svg"
 BEGIN = "<!-- BEGIN GENERATED SOURCE INDEX -->"
 END = "<!-- END GENERATED SOURCE INDEX -->"
 FILE_EXTENSIONS = {
