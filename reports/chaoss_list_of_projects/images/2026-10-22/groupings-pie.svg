@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="900" height="820" viewBox="0 0 900 820" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="520" viewBox="0 0 900 520" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">
 <title>Report group counts as pie charts</title>
-<desc>Three pie charts show code-contribution rules mentioned, content-and-documentation rules mentioned, and document type.</desc>
+<desc>Two pie charts show code-contribution stances and content-and-documentation stances mentioned in the 169 reports.</desc>
 <rect width="900" height="820" fill="#ffffff"/>
 <text x="24" y="36" font-size="16" font-weight="600" fill="#1f2328">Report group counts</text>
 <text x="24" y="58" font-size="12" fill="#656d76">Mention counts include all 169 reports.</text>
@@ -47,32 +47,4 @@
 <circle cx="250" cy="482" r="6" fill="#8250df"/>
 <text x="266" y="486" font-size="12" fill="#1f2328">not stated <tspan font-weight="600">3</tspan></text>
 
-<line x1="24" y1="526" x2="876" y2="526" stroke="#d8dee4"/>
-<text x="24" y="555" font-size="13" font-weight="600" fill="#1f2328">Document type</text>
-<g transform="translate(20,535)">
-<path d="M 105.00 48.00 A 82 82 0 0 1 114.29 48.53 L 105 130 Z" fill="#0969da" stroke="#ffffff" stroke-width="1.5"/>
-<path d="M 114.29 48.53 A 82 82 0 0 1 126.47 50.86 L 105 130 Z" fill="#54aeff" stroke="#ffffff" stroke-width="1.5"/>
-<path d="M 126.47 50.86 A 82 82 0 0 1 120.43 210.54 L 105 130 Z" fill="#1f6feb" stroke="#ffffff" stroke-width="1.5"/>
-<path d="M 120.43 210.54 A 82 82 0 0 1 117.37 211.06 L 105 130 Z" fill="#8250df" stroke="#ffffff" stroke-width="1.5"/>
-<path d="M 117.37 211.06 A 82 82 0 0 1 101.90 211.94 L 105 130 Z" fill="#bf8700" stroke="#ffffff" stroke-width="1.5"/>
-<path d="M 101.90 211.94 A 82 82 0 0 1 58.32 62.58 L 105 130 Z" fill="#2da44e" stroke="#ffffff" stroke-width="1.5"/>
-<path d="M 58.32 62.58 A 82 82 0 0 1 63.55 59.25 L 105 130 Z" fill="#cf222e" stroke="#ffffff" stroke-width="1.5"/>
-<path d="M 63.55 59.25 A 82 82 0 0 1 105.00 48.00 L 105 130 Z" fill="#6e7781" stroke="#ffffff" stroke-width="1.5"/>
-</g>
-<circle cx="250" cy="582" r="6" fill="#0969da"/>
-<text x="266" y="586" font-size="12" fill="#1f2328">agents_md <tspan font-weight="600">3</tspan></text>
-<circle cx="250" cy="608" r="6" fill="#54aeff"/>
-<text x="266" y="612" font-size="12" fill="#1f2328">code_of_conduct <tspan font-weight="600">4</tspan></text>
-<circle cx="250" cy="634" r="6" fill="#1f6feb"/>
-<text x="266" y="638" font-size="12" fill="#1f2328">contributing_section <tspan font-weight="600">71</tspan></text>
-<circle cx="250" cy="660" r="6" fill="#8250df"/>
-<text x="266" y="664" font-size="12" fill="#1f2328">faq <tspan font-weight="600">1</tspan></text>
-<circle cx="250" cy="686" r="6" fill="#bf8700"/>
-<text x="266" y="690" font-size="12" fill="#1f2328">other <tspan font-weight="600">5</tspan></text>
-<circle cx="250" cy="712" r="6" fill="#2da44e"/>
-<text x="266" y="716" font-size="12" fill="#1f2328">policy_document <tspan font-weight="600">66</tspan></text>
-<circle cx="250" cy="738" r="6" fill="#cf222e"/>
-<text x="266" y="742" font-size="12" fill="#1f2328">pr_template <tspan font-weight="600">2</tspan></text>
-<circle cx="250" cy="764" r="6" fill="#6e7781"/>
-<text x="266" y="768" font-size="12" fill="#1f2328">readme_section <tspan font-weight="600">14</tspan></text>
 </svg>

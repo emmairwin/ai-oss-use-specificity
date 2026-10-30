@@ -17,30 +17,6 @@ Generated: 2026-10-27. Total reports: 169.
 | no code rule | 4 | Avoyd, codeberg, Inkscape, PyTorch |
 | not stated | 6 | Arcalibre, CuPy, debian, Flutter, GNOME Extensions, Telegraf |
 
-## By document type
+## Source files and pages
 
-| Document type | Count | Projects |
-|---|---:|---|
-| agents_md | 3 | borgmatic, Schism Tracker, SDL_net |
-| code_of_conduct | 4 | GoToSocial, Gram, Polyphony, scikit-learn/scikit-learn |
-| contributing_section | 71 | Alacritty, Allium, Amberol, Apache Airflow, Apache CouchDB, Apache DataFusion, Apache Kvrocks, Apache PouchDB, Arrow, Bobby, Cataclysm: Dark Days Ahead, CC Open Source, chezmoi, ChiPass, conda, CPython, CuPy, curl, Django, dlt, Dune 3D, Endless Sky, Evi, Fennel, Flutter, Fractal, gaypanel, Glasgow Interface Explorer, GNOME Loupe, go-gitea/gitea, goose, Halloy, Highscore, Homebrew, Idris, Inochi2D, IREE (Intermediate Representation Execution Environment), jazzband/pip-tools, jellyfin/jellyfin.org, Jqwik, jsoup, keepassxreboot/keepassxc, Kubernetes, Leiningen, libadwaita, libmanette, Lobsters, Mesa, mGBA, Mikan, nvim-tree, OkHttp, OpenTTD, Pandas, pkgconf, Pytest, python-attrs/attrs, PyTorch, PyVista, qutip, Redox OS, scikit-image, Sentinel, servo/book, Smederee, snac, stb, teamtype/teamtype, Tenacity, Tusky, zulip/zulip |
-| faq | 1 | Avoyd |
-| other | 5 | Clojure, DataJourneyHQ, EmulatorKit, MicroPython, NetBSD |
-| policy_document | 66 | afnix, apache, Asahi Linux, astropy/astropy-project, Bevy, castle-game-engine, CCExtractor, cilium, CloudNativePG, codeberg, debian, Drupal, EasyBuild, Elementary OS, FastAPI, Fedify, Fedora, Firefox, forgejo, gcc, gdal-site, Gedit, gentoo, ghostty-org/ghostty, GNOME Extensions, godot, Icechunk, Joomla, kde-gsoc, Kornia, LinkML, linux-foundation, llvm/llvm-project, mastodon/.github, matplotlib/matplotlib, MDAnalysis, Molecular Nodes, napari, nlnet-labs, NumPy, OCaml, Open edX, openinfra, OpenJDK, OSGeo/gdal, OSGeo/PROJ, oxide, Pallets, pgwatch, pip, pola-rs/polars, postmarketos, Processing/p5.js, qemu/qemu, qgis/QGIS-Enhancement-Proposals, Requests, rust, SciActive, SciPy, SearXNG, Sphinx, STAC, SymPy, Telegraf, TorchGeo, torvalds/linux |
-| pr_template | 2 | GIMP, SDL |
-| readme_section | 14 | CapyPDF, Cheese Paper, Decker, do, Elastic, Exim, Gitte, libxml2, Lighthouse, LÖVE, Pandemonium Engine, Poezio, sunpy/sunpy, yt-dlp/yt-dlp |
-| social_post | 3 | Arcalibre, Chimera Linux, Inkscape |
-
-## Document type × stance
-
-| Document type | banned | disclosure_required | human_in_the_loop | discouraged | no code rule | not stated |
-|---|:---:|:---:|:---:|:---:|:---:|:---:|
-| agents_md | 3 | 0 | 0 | 0 | 0 | 0 |
-| code_of_conduct | 3 | 0 | 1 | 0 | 0 | 0 |
-| contributing_section | 41 | 12 | 15 | 0 | 1 | 2 |
-| faq | 0 | 0 | 0 | 0 | 1 | 0 |
-| other | 3 | 1 | 1 | 0 | 0 | 0 |
-| policy_document | 14 | 17 | 31 | 0 | 1 | 3 |
-| pr_template | 2 | 0 | 0 | 0 | 0 | 0 |
-| readme_section | 12 | 0 | 1 | 1 | 0 | 0 |
-| social_post | 1 | 0 | 0 | 0 | 1 | 1 |
+The older document-type groupings are superseded by the source index and exact-name chart on the [cohort landing page](README.md). Each project is grouped by the primary source URL in its report; repository file names are shown as written, while web pages without a file path are identified by their exact host and path.
