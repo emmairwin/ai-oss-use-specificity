@@ -32,8 +32,9 @@ FILE_GROUPS = {
 
 REPORT_LINK = re.compile(r"\[Report\]\(([^)]+)\)")
 RAW_SOURCE = re.compile(r"AI-related document: <([^>]+)>")
-REPOSITORY_ENTRY = re.compile(r"([^:<]+):\s*(.+)")
-CODE_PATH = re.compile(r"`([^`]+)`")
+FILE_LINK = re.compile(r"\[([^\]]+)\]\(([^)]+)\)")
+REPOSITORY_ENTRY = re.compile(r"\[([^\]]+)\]\([^)]+\)(?: \((.+)\))?")
+BLOB_URL = re.compile(r"https://github\.com/([^/]+/[^/]+)/blob/[^/]+/(.+)")
 
 
 def fail(message):
@@ -115,10 +116,18 @@ def indexed_files(readme):
             match = REPOSITORY_ENTRY.fullmatch(entry.strip())
             if not match:
                 raise ValueError(f"Could not parse file index entry: {entry}")
-            repository, file_listing = match.groups()
-            paths = CODE_PATH.findall(file_listing)
-            if not paths or ", ".join(f"`{path}`" for path in paths) != file_listing:
-                raise ValueError(f"Could not parse file paths in index entry: {entry}")
+            repository, extra = match.groups()
+            links = FILE_LINK.findall(entry)
+            if not links or links[0][0] != repository:
+                raise ValueError(f"Could not parse file links in index entry: {entry}")
+            if extra != (", ".join(f"[{n}]({u})" for n, u in links[1:]) or None):
+                raise ValueError(f"Could not parse file links in index entry: {entry}")
+            paths = []
+            for _, url in links:
+                link_match = BLOB_URL.fullmatch(url)
+                if not link_match or link_match.group(1).casefold() != repository.casefold():
+                    raise ValueError(f"Link does not belong to {repository}: {url}")
+                paths.append(link_match.group(2))
             for path in paths:
                 indexed[repository.casefold()].add(path)
                 if not FILE_GROUPS[category](path):
