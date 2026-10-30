@@ -221,7 +221,7 @@ These charts count topics cited as reasons for policies; they do not show whethe
 
 ## Sources by file name and page path
 
-The index uses the primary source link in each report. It names repository files where the URL identifies a file; non-file web sources are listed by their exact host and path. These primary sources are not a complete inventory of every document reviewed. Regenerate the chart and index with `python scripts/generate_chaoss_source_groupings.py`.
+The index uses the primary source link in each report. It names repository files where the URL identifies a file; non-file web sources (project websites, documentation pages, wikis, repository home pages) are listed by host and path in [WEB_PAGES.md](WEB_PAGES.md). These primary sources are not a complete inventory of every document reviewed. Regenerate the chart and index with `python scripts/generate_chaoss_source_groupings.py`.
 
 <!-- BEGIN GENERATED SOURCE INDEX -->
 
@@ -270,77 +270,6 @@ The index uses the primary source link in each report. It names repository files
 
 </details>
 
-<details>
-<summary>65 web-page paths used by one report</summary>
-
-| Web-page path | Count | Projects and exact sources |
-|---|---:|---|
-| `Web page: arrow.apache.org/docs/dev/developers/overview.html` | 1 | [Arrow](<https://arrow.apache.org/docs/dev/developers/overview.html#ai-generated-code>) |
-| `Web page: asahilinux.org/docs/project/policies/slop/` | 1 | [Asahi Linux](<https://asahilinux.org/docs/project/policies/slop/>) |
-| `Web page: bevy.org/learn/contribute/policies/ai/` | 1 | [Bevy](<https://bevy.org/learn/contribute/policies/ai/>) |
-| `Web page: blog.rereading.space/rereading-because-books-are-art-and-art-is-labor` | 1 | [Arcalibre](<https://blog.rereading.space/rereading-because-books-are-art-and-art-is-labor>) |
-| `Web page: castle-engine.io/ai` | 1 | [castle-game-engine](<https://castle-engine.io/ai>) |
-| `Web page: ccextractor.org/public/gsoc/ai_policy/` | 1 | [CCExtractor](<https://ccextractor.org/public/gsoc/ai_policy/>) |
-| `Web page: clojure.org/dev/contributor_agreement` | 1 | [Clojure](<https://clojure.org/dev/contributor_agreement#_no_generated_code>) |
-| `Web page: code.exim.org/exim/exim` | 1 | [Exim](<https://code.exim.org/exim/exim#contributing-to-exim>) |
-| `Web page: codeberg.org/ByteOfBrie/cheese-paper` | 1 | [Cheese Paper](<https://codeberg.org/ByteOfBrie/cheese-paper#ai>) |
-| `Web page: codeberg.org/cgranade/do` | 1 | [do](<https://codeberg.org/cgranade/do#license-and-ai-policy>) |
-| `Web page: codeberg.org/poezio/poezio` | 1 | [Poezio](<https://codeberg.org/poezio/poezio#use-of-generative-ai>) |
-| `Web page: community.kde.org/GSoC` | 1 | [kde-gsoc](<https://community.kde.org/GSoC>) |
-| `Web page: contributing.godotengine.org/en/latest/pull_requests/pull_request_guidelines.html` | 1 | [godot](<https://contributing.godotengine.org/en/latest/pull_requests/pull_request_guidelines.html>) |
-| `Web page: curl.se/dev/contribute.html` | 1 | [curl](<https://curl.se/dev/contribute.html#on-ai-use-in-curl>) |
-| `Web page: datafusion.apache.org/contributor-guide/index.html` | 1 | [Apache DataFusion](<https://datafusion.apache.org/contributor-guide/index.html#ai-assisted-contributions>) |
-| `Web page: developer.joomla.org/generative-ai-policy.html` | 1 | [Joomla](<https://developer.joomla.org/generative-ai-policy.html>) |
-| `Web page: devguide.python.org/getting-started/generative-ai/` | 1 | [CPython](<https://devguide.python.org/getting-started/generative-ai/>) |
-| `Web page: docs.afnix.fr/policies/ai.html` | 1 | [afnix](<https://docs.afnix.fr/policies/ai.html>) |
-| `Web page: docs.conda.io/projects/conda/en/latest/dev-guide/contributing.html` | 1 | [conda](<https://docs.conda.io/projects/conda/en/latest/dev-guide/contributing.html#generative-ai>) |
-| `Web page: docs.cupy.dev/en/stable/contribution.html` | 1 | [CuPy](<https://docs.cupy.dev/en/stable/contribution.html#ai-policies>) |
-| `Web page: docs.djangoproject.com/en/dev/internals/contributing/writing-code/submitting-patches/` | 1 | [Django](<https://docs.djangoproject.com/en/dev/internals/contributing/writing-code/submitting-patches/#ai-assisted-contributions>) |
-| `Web page: docs.easybuild.io/policies/ai/` | 1 | [EasyBuild](<https://docs.easybuild.io/policies/ai/>) |
-| `Web page: docs.elementary.io/contributor-guide/development/generative-ai-policy` | 1 | [Elementary OS](<https://docs.elementary.io/contributor-guide/development/generative-ai-policy>) |
-| `Web page: docs.fedoraproject.org/en-US/council/policy/ai-contribution-policy/` | 1 | [Fedora](<https://docs.fedoraproject.org/en-US/council/policy/ai-contribution-policy/>) |
-| `Web page: docs.postmarketos.org/policies-and-processes/development/ai-policy.html` | 1 | [postmarketos](<https://docs.postmarketos.org/policies-and-processes/development/ai-policy.html>) |
-| `Web page: docs.sympy.org/dev/contributing/ai-generated-code-policy.html` | 1 | [SymPy](<https://docs.sympy.org/dev/contributing/ai-generated-code-policy.html>) |
-| `Web page: firefox-source-docs.mozilla.org/contributing/ai-coding.html` | 1 | [Firefox](<https://firefox-source-docs.mozilla.org/contributing/ai-coding.html>) |
-| `Web page: forge.rust-lang.org/policies/llm-usage.html` | 1 | [rust](<https://forge.rust-lang.org/policies/llm-usage.html>) |
-| `Web page: gcc.gnu.org/ai-policy.html` | 1 | [gcc](<https://gcc.gnu.org/ai-policy.html>) |
-| `Web page: gdal.org/en/stable/community/ai_tool_policy.html` | 1 | [gdal-site](<https://gdal.org/en/stable/community/ai_tool_policy.html>) |
-| `Web page: github.com/DataJourneyHQ/DataJourney/wiki/Contribution-Guidelines-(AIâ€Aware)` | 1 | [DataJourneyHQ](<https://github.com/DataJourneyHQ/DataJourney/wiki/Contribution-Guidelines-(AI%E2%80%90Aware)>) |
-| `Web page: github.com/micropython/micropython/wiki/ContributorGuidelines` | 1 | [MicroPython](<https://github.com/micropython/micropython/wiki/ContributorGuidelines#generative-ai-policy>) |
-| `Web page: gitlab.gnome.org/GNOME/libxml2` | 1 | [libxml2](<https://gitlab.gnome.org/GNOME/libxml2#strict-no-llm--no-ai-policy>) |
-| `Web page: gitlab.gnome.org/World/elastic` | 1 | [Elastic](<https://gitlab.gnome.org/World/elastic#use-of-generative-ai>) |
-| `Web page: gjs.guide/extensions/review-guidelines/review-guidelines.html` | 1 | [GNOME Extensions](<https://gjs.guide/extensions/review-guidelines/review-guidelines.html#extensions-must-not-be-ai-generated>) |
-| `Web page: glasgow-embedded.org/latest/contribute.html` | 1 | [Glasgow Interface Explorer](<https://glasgow-embedded.org/latest/contribute.html#contributing-code-or-documentation>) |
-| `Web page: gts.chimera-linux.org/@chimera/statuses/01KK78VSB4G5S75STYEY3YTR2H` | 1 | [Chimera Linux](<https://gts.chimera-linux.org/@chimera/statuses/01KK78VSB4G5S75STYEY3YTR2H>) |
-| `Web page: halloy.chat/contributing` | 1 | [Halloy](<https://halloy.chat/contributing#ai>) |
-| `Web page: icechunk.io/en/latest/ai-policy/` | 1 | [Icechunk](<https://icechunk.io/en/latest/ai-policy/>) |
-| `Web page: iree.dev/developers/general/contributing/` | 1 | [IREE (Intermediate Representation Execution Environment)](<https://iree.dev/developers/general/contributing/#ai-tool-use>) |
-| `Web page: kvrocks.apache.org/community/contributing/` | 1 | [Apache Kvrocks](<https://kvrocks.apache.org/community/contributing/#guidelines-for-ai-assisted-contributions>) |
-| `Web page: napari.org/dev/developers/contributing/ai.html` | 1 | [napari](<https://napari.org/dev/developers/contributing/ai.html>) |
-| `Web page: nlnetlabs.nl/llm-policy/` | 1 | [nlnet-labs](<https://nlnetlabs.nl/llm-policy/>) |
-| `Web page: numpy.org/devdocs/dev/ai_policy.html` | 1 | [NumPy](<https://numpy.org/devdocs/dev/ai_policy.html>) |
-| `Web page: openinfra.org/legal/ai-policy` | 1 | [openinfra](<https://openinfra.org/legal/ai-policy>) |
-| `Web page: openjdk.org/legal/ai` | 1 | [OpenJDK](<https://openjdk.org/legal/ai>) |
-| `Web page: opensource.creativecommons.org/contributing-code/` | 1 | [CC Open Source](<https://opensource.creativecommons.org/contributing-code/>) |
-| `Web page: palletsprojects.com/contributing/llm-ai` | 1 | [Pallets](<https://palletsprojects.com/contributing/llm-ai>) |
-| `Web page: pandas.pydata.org/docs/dev/development/contributing.html` | 1 | [Pandas](<https://pandas.pydata.org/docs/dev/development/contributing.html#automated-contributions-policy>) |
-| `Web page: rfd.shared.oxide.computer/rfd/0576` | 1 | [oxide](<https://rfd.shared.oxide.computer/rfd/0576>) |
-| `Web page: sciactive.com/human-contribution-policy/` | 1 | [SciActive](<https://sciactive.com/human-contribution-policy/>) |
-| `Web page: scikit-image.org/docs/dev/development/contribute.html` | 1 | [scikit-image](<https://scikit-image.org/docs/dev/development/contribute.html#ai-policy>) |
-| `Web page: scipy.github.io/devdocs/dev/conduct/ai_policy.html` | 1 | [SciPy](<https://scipy.github.io/devdocs/dev/conduct/ai_policy.html>) |
-| `Web page: social.treehouse.systems/@dysfun/116182391411729473` | 1 | [Inkscape](<https://social.treehouse.systems/@dysfun/116182391411729473>) |
-| `Web page: tiangolo.com/open-source/contributing/` | 1 | [FastAPI](<https://tiangolo.com/open-source/contributing/#automated-code-and-ai>) |
-| `Web page: wiki.gentoo.org/wiki/Project:Council/AI_policy` | 1 | [gentoo](<https://wiki.gentoo.org/wiki/Project:Council/AI_policy>) |
-| `Web page: www.apache.org/legal/generative-tooling.html` | 1 | [apache](<https://www.apache.org/legal/generative-tooling.html>) |
-| `Web page: www.chezmoi.io/developer-guide/` | 1 | [chezmoi](<https://www.chezmoi.io/developer-guide/>) |
-| `Web page: www.debian.org/vote/2026/vote_002` | 1 | [debian](<https://www.debian.org/vote/2026/vote_002>) |
-| `Web page: www.drupal.org/docs/develop/issues/issue-procedures-and-etiquette/policy-on-the-use-of-ai-when-contributing-to-drupal` | 1 | [Drupal](<https://www.drupal.org/docs/develop/issues/issue-procedures-and-etiquette/policy-on-the-use-of-ai-when-contributing-to-drupal>) |
-| `Web page: www.enkisoftware.com/faq` | 1 | [Avoyd](<https://www.enkisoftware.com/faq#nogenAI>) |
-| `Web page: www.influxdata.com/ai-generated-code-contributions-policy/` | 1 | [Telegraf](<https://www.influxdata.com/ai-generated-code-contributions-policy/>) |
-| `Web page: www.kubernetes.dev/docs/guide/pull-requests/` | 1 | [Kubernetes](<https://www.kubernetes.dev/docs/guide/pull-requests/#ai-guidance>) |
-| `Web page: www.linuxfoundation.org/legal/generative-ai` | 1 | [linux-foundation](<https://www.linuxfoundation.org/legal/generative-ai>) |
-| `Web page: www.netbsd.org/developers/commit-guidelines.html` | 1 | [NetBSD](<https://www.netbsd.org/developers/commit-guidelines.html>) |
-
-</details>
+65 sources are web pages, not repository files. See [WEB_PAGES.md](WEB_PAGES.md) for the full list.
 
 <!-- END GENERATED SOURCE INDEX -->
