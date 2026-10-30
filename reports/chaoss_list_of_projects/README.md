@@ -182,8 +182,6 @@ These reports use the [CHAOSS policy specificity metric](https://github.com/chao
 
 See the [79 code-contribution reports classified as banned](CODE-CONTRIBUTION-BANS.md) for source wording and scope. This is not a count of blanket bans.
 
-![Bar charts of code-contribution and content/documentation stances and document types across the report set.](images/2026-10-22/groupings.svg)
-
 ![Pie charts of code-contribution stance, content/documentation stance, and document types across the report set.](images/2026-10-22/groupings-pie.svg)
 
 ### Policy changes over time
