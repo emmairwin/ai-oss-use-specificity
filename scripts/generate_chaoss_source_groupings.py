@@ -182,16 +182,16 @@ def pie_slices(groups: dict[tuple[str, str], list[tuple[str, str]]]) -> list[tup
     pages = [entries for (kind, _), entries in ordered if kind == "page"]
     slices = [(label, count, PIE_COLORS[i % len(PIE_COLORS)]) for i, (label, count) in enumerate(named)]
     if singles:
-        slices.append((f"{len(singles)} other file names, one report each", sum(map(len, singles)), OTHER_FILES_COLOR))
+        slices.append((f"Other repo files, each used by only one project ({len(singles)} different names)", sum(map(len, singles)), OTHER_FILES_COLOR))
     if pages:
-        slices.append((f"{len(pages)} other policy pages with no linking repo file, named in WEB_PAGES.md", sum(map(len, pages)), WEB_PAGES_COLOR))
+        slices.append((f"Policy on a website, not in a repo file ({len(pages)} projects)", sum(map(len, pages)), WEB_PAGES_COLOR))
     return slices
 
 
 def svg_chart(groups: dict[tuple[str, str], list[tuple[str, str]]]) -> str:
     slices = pie_slices(groups)
     total = sum(count for _, count, _ in slices)
-    width, height = 900, 80 + max(420, 28 * len(slices) + 40)
+    width, height = 1020, 80 + max(420, 28 * len(slices) + 40)
     cx, cy, radius = 230, 80 + 190, 180
     parts = [
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">',
@@ -199,7 +199,7 @@ def svg_chart(groups: dict[tuple[str, str], list[tuple[str, str]]]) -> str:
         f"<desc>Pie chart of the {total} primary sources cited by cohort reports, grouped by exact file name. Single-report file names and web-page paths are combined; the README lists every one.</desc>",
         f'<rect width="{width}" height="{height}" fill="#ffffff"/>',
         '<text x="24" y="34" font-size="16" font-weight="600" fill="#1f2328">Primary source files</text>',
-        f'<text x="24" y="56" font-size="12" fill="#656d76">{total} reports; full per-file and per-page list is in the README index</text>',
+        f'<text x="24" y="56" font-size="12" fill="#656d76">{total} projects, grouped by the file their AI policy was read from; every project is listed in the README index and WEB_PAGES.md</text>',
     ]
     angle = -math.pi / 2
     for label, count, color in slices:

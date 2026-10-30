@@ -1,9 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="900" height="500" viewBox="0 0 900 500" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="1020" height="500" viewBox="0 0 1020 500" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">
 <title>CHAOSS cohort primary source files</title>
 <desc>Pie chart of the 169 primary sources cited by cohort reports, grouped by exact file name. Single-report file names and web-page paths are combined; the README lists every one.</desc>
-<rect width="900" height="500" fill="#ffffff"/>
+<rect width="1020" height="500" fill="#ffffff"/>
 <text x="24" y="34" font-size="16" font-weight="600" fill="#1f2328">Primary source files</text>
-<text x="24" y="56" font-size="12" fill="#656d76">169 reports; full per-file and per-page list is in the README index</text>
+<text x="24" y="56" font-size="12" fill="#656d76">169 projects, grouped by the file their AI policy was read from; every project is listed in the README index and WEB_PAGES.md</text>
 <path d="M 230 270 L 230.00 90.00 A 180 180 0 0 1 368.01 385.56 Z" fill="#1f6feb" stroke="#ffffff" stroke-width="2"/>
 <path d="M 230 270 L 368.01 385.56 A 180 180 0 0 1 304.64 433.80 Z" fill="#2da44e" stroke="#ffffff" stroke-width="2"/>
 <path d="M 230 270 L 304.64 433.80 A 180 180 0 0 1 240.03 449.72 Z" fill="#bf8700" stroke="#ffffff" stroke-width="2"/>
@@ -37,7 +37,7 @@
 <rect x="470" y="352" width="16" height="16" rx="2" fill="#d4a72c"/>
 <text x="496" y="365" font-size="13" fill="#1f2328">readme.md: 2 (1%)</text>
 <rect x="470" y="380" width="16" height="16" rx="2" fill="#8c959f"/>
-<text x="496" y="393" font-size="13" fill="#1f2328">25 other file names, one report each: 25 (15%)</text>
+<text x="496" y="393" font-size="13" fill="#1f2328">Other repo files, each used by only one project (25 different names): 25 (15%)</text>
 <rect x="470" y="408" width="16" height="16" rx="2" fill="#d0d7de"/>
-<text x="496" y="421" font-size="13" fill="#1f2328">42 other policy pages with no linking repo file, named in WEB_PAGES.md: 42 (25%)</text>
+<text x="496" y="421" font-size="13" fill="#1f2328">Policy on a website, not in a repo file (42 projects): 42 (25%)</text>
 </svg>
