@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1600" height="480" viewBox="0 0 1600 480" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">
 <title>First test of the AI policy-change metric</title>
-<desc>One timeline from May 2025 to October 2026. Dot color identifies project. Dots above the central line indicate tightening, dots below indicate loosening, and dots on the line indicate a new policy baseline, mixed change, clarification, or no established direction. Distance from the line is qualitative, not a measured score. The 28 numbered markers correspond to source-linked change descriptions in the accompanying Markdown report; markers are not links.</desc>
+<desc>One timeline from May 2025 to October 2026. Dot color identifies project and solid colored lines connect revisions from the same project. Dots above the central line indicate tightening, dots below indicate loosening, and dots on the line indicate a new policy baseline, mixed change, clarification, or no established direction. Distance from the line is qualitative, not a measured score. Hovering a dot shows its description; dots are not links.</desc>
 <rect width="1600" height="480" fill="#ffffff"/>
 <text x="28" y="38" font-size="22" font-weight="600" fill="#1f2328">First test of the AI policy-change metric</text>
 <text x="28" y="62" font-size="12" fill="#656d76">28 revisions: 24 substantive provisions (4 baselines + 20 revisions), 4 clarifications / operational changes / reorganizations · 21 projects</text>
@@ -26,7 +26,7 @@
 <circle cx="465" cy="131" r="5" fill="#087f5b"/><text x="475" y="135">Apache DataFusion</text>
 <circle cx="665" cy="131" r="5" fill="#1a7f37"/><text x="675" y="135">Python-Markdown</text>
 <circle cx="855" cy="131" r="5" fill="#e16f24"/><text x="865" y="135">Seerr</text>
-<line x1="36" y1="151" x2="67" y2="151" stroke="#656d76" stroke-width="1.5" stroke-dasharray="2 4" stroke-linecap="round"/><text x="74" y="155">dotted lines connect project revisions</text>
+<line x1="36" y1="151" x2="67" y2="151" stroke="#656d76" stroke-width="3" stroke-linecap="round"/><text x="74" y="155">colored lines connect revisions of one project, in date order</text>
 </g>
 
 <g transform="translate(0 40)">
@@ -43,11 +43,11 @@
 </g>
 <text x="645" y="400" font-size="10" fill="#656d76" text-anchor="middle">Vertical distance is qualitative; nearby dates are spaced for readability. Exact dates appear below.</text>
 
-<g fill="none" stroke-width="1.5" stroke-dasharray="2 5" stroke-linecap="round" opacity="0.55">
+<g fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.85">
 <path d="M782 250 L1279 280 L1290 205 L1433 307" stroke="#cf222e"/>
 <path d="M907 250 L934 250" stroke="#8250df"/>
 <path d="M1166 280 L1178 307" stroke="#bf8700"/>
-<path d="M1234 250 L1431 280" stroke="#0f766e"/>
+<path d="M1234 250 L1417 295" stroke="#0f766e"/>
 <path d="M1118 250 L1454 220" stroke="#e8590c"/>
 </g>
 
@@ -81,17 +81,12 @@
 <circle cx="1425" cy="250" r="9" fill="#087f5b"><title>21. Apache DataFusion: contribution and review guidance revised, 2026-10-08</title></circle>
 <circle cx="1454" cy="220" r="9" fill="#e8590c"><title>26. Cilium: AI declaration added to issue template, 2026-10-16</title></circle>
 </g>
-<g font-size="9" font-weight="600" text-anchor="middle" fill="#ffffff" pointer-events="none">
-<text x="224" y="253">1</text><text x="293" y="253">2</text><text x="697" y="253">3</text>
-<text x="782" y="253">4</text><text x="790" y="208">5</text><text x="907" y="253">6</text>
-<text x="920" y="283">7</text><text x="934" y="253">8</text><text x="1036" y="208">9</text>
-<text x="1118" y="253">10</text><text x="1166" y="283">11</text><text x="1178" y="310">12</text>
-<text x="1234" y="253">13</text><text x="1270" y="208">14</text><text x="1279" y="283">15</text>
-<text x="1290" y="208">16</text><text x="1302" y="253">17</text><text x="1315" y="208">18</text>
-<text x="1405" y="208">19</text><text x="1417" y="298">20</text><text x="1425" y="253">21</text>
-<text x="1450" y="253">22</text><text x="1433" y="310">23</text><text x="1438" y="208">24</text>
-<text x="1450" y="298">25</text><text x="1454" y="223">26</text><text x="1468" y="208">27</text>
-<text x="1490" y="253">28</text>
+<g font-size="10" font-weight="600">
+<text x="740" y="268" text-anchor="end" fill="#cf222e">Linux kernel</text>
+<text x="920" y="238" text-anchor="middle" fill="#8250df">NumPy</text>
+<text x="1150" y="322" text-anchor="end" fill="#bf8700">Rust</text>
+<text x="1234" y="236" text-anchor="middle" fill="#0f766e">PyTorch</text>
+<text x="1118" y="236" text-anchor="middle" fill="#e8590c">Cilium</text>
 </g>
 </g>
 

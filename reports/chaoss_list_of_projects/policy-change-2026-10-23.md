@@ -12,9 +12,9 @@ The first chart counts tightening and loosening revisions over time, as running 
 
 ![Timeline of 52 policy revisions across 29 projects from May 2025 to October 2026. Each project has its own row on a shared date axis, and each dot is one revision. Dots above the row line indicate tightening, dots below indicate loosening, and dots on the line indicate a new policy baseline, mixed change, clarification, or no established AI-policy direction. Colored lines connect revisions of projects with more than one revision; gray rows are projects with a single revision.](images/2026-10-23/policy-change-rows.svg)
 
-The earlier version of the timeline, covering the first 28 revisions across 21 projects, is kept for comparison:
+The first version of the timeline, covering the first 28 revisions across 21 projects on one central date axis, is kept for comparison:
 
-![Timeline of 28 policy revisions across 21 projects from May 2025 to October 2026 on one central date axis. Dot color identifies the project and dotted lines connect revisions from the same project. Dots above the line indicate tightening, below indicate loosening, and on the line indicate a new policy baseline, mixed change, clarification, or no established AI-policy direction. Numbered markers correspond to source-linked descriptions in the earlier report version. Vertical distance is qualitative, not a measured score.](images/2026-10-23/policy-change-original.svg)
+![Timeline of 28 policy revisions across 21 projects from May 2025 to October 2026 on one central date axis. Dot color identifies the project and dotted lines connect revisions from the same project. Dots above the line indicate tightening, below indicate loosening, and on the line indicate a new policy baseline, mixed change, clarification, or no established AI-policy direction. Hovering a dot shows its description. Vertical distance is qualitative, not a measured score.](images/2026-10-23/policy-change-original.svg)
 
 ### What this can and cannot tell us
 
