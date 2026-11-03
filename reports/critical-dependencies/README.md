@@ -20,6 +20,8 @@ We did not check deeper `docs/` paths, organization-level `.github` repositories
 
 ![Charts of project ranks and source file types.](critical-dependencies.svg)
 
+![Pie chart of the files where AI-related language was found, by file name, using the same file colors as the cohort pie chart.](source-files-pie.svg)
+
 ## Policy coverage by domain
 
 Counts include `X` and `~`; a project may appear in multiple domains. Slop records negative or dismissive wording, not a rule.

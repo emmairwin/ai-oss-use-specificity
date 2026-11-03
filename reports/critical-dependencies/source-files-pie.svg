@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1020" height="548" viewBox="0 0 1020 548" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">
+<title>Critical dependencies: files where AI-related language was found</title>
+<desc>Pie chart of 34 project-and-file pairs across 20 critical dependencies, grouped by file name: CONTRIBUTING.md, contributing.md: 13; AGENTS.md, CLAUDE.md: 6; SECURITY.md, security.md: 5; PULL_REQUEST_TEMPLATE.md, ISSUE_TEMPLATE/*: 5; AI_POLICY.md, ai-policy.md: 3; README.md: 1; AUTHORING_GUIDELINES.md: 1. A project counts once per file name and can appear in more than one slice.</desc>
+<rect width="1020" height="548" fill="#ffffff"/>
+<text x="24" y="34" font-size="16" font-weight="600" fill="#1f2328">Files where AI-related language was found</text>
+<text x="24" y="56" font-size="12" fill="#656d76">20 critical dependencies. A project counts once per file name, so the 34 slices add up to more than 20 projects.</text>
+<path d="M 230 270 L 230.00 90.00 A 180 180 0 0 1 351.27 403.02 Z" fill="#1f6feb" stroke="#ffffff" stroke-width="2"><title>CONTRIBUTING.md, contributing.md: 13</title></path>
+<path d="M 230 270 L 351.27 403.02 A 180 180 0 0 1 164.98 437.85 Z" fill="#cf222e" stroke="#ffffff" stroke-width="2"><title>AGENTS.md, CLAUDE.md: 6</title></path>
+<path d="M 230 270 L 164.98 437.85 A 180 180 0 0 1 56.87 319.26 Z" fill="#1b7c83" stroke="#ffffff" stroke-width="2"><title>SECURITY.md, security.md: 5</title></path>
+<path d="M 230 270 L 56.87 319.26 A 180 180 0 0 1 86.36 161.53 Z" fill="#bf3989" stroke="#ffffff" stroke-width="2"><title>PULL_REQUEST_TEMPLATE.md, ISSUE_TEMPLATE/*: 5</title></path>
+<path d="M 230 270 L 86.36 161.53 A 180 180 0 0 1 164.98 102.15 Z" fill="#bf8700" stroke="#ffffff" stroke-width="2"><title>AI_POLICY.md, ai-policy.md: 3</title></path>
+<path d="M 230 270 L 164.98 102.15 A 180 180 0 0 1 196.93 93.06 Z" fill="#2da44e" stroke="#ffffff" stroke-width="2"><title>README.md: 1</title></path>
+<path d="M 230 270 L 196.93 93.06 A 180 180 0 0 1 230.00 90.00 Z" fill="#7c4a2d" stroke="#ffffff" stroke-width="2"><title>AUTHORING_GUIDELINES.md: 1</title></path>
+<rect x="470" y="100" width="16" height="16" rx="2" fill="#1f6feb"/>
+<text x="496" y="113" font-size="13" fill="#1f2328">CONTRIBUTING.md, contributing.md: 13 (38%)</text>
+<rect x="470" y="128" width="16" height="16" rx="2" fill="#cf222e"/>
+<text x="496" y="141" font-size="13" fill="#1f2328">AGENTS.md, CLAUDE.md: 6 (18%)</text>
+<rect x="470" y="156" width="16" height="16" rx="2" fill="#1b7c83"/>
+<text x="496" y="169" font-size="13" fill="#1f2328">SECURITY.md, security.md: 5 (15%)</text>
+<rect x="470" y="184" width="16" height="16" rx="2" fill="#bf3989"/>
+<text x="496" y="197" font-size="13" fill="#1f2328">PULL_REQUEST_TEMPLATE.md, ISSUE_TEMPLATE/*: 5 (15%)</text>
+<rect x="470" y="212" width="16" height="16" rx="2" fill="#bf8700"/>
+<text x="496" y="225" font-size="13" fill="#1f2328">AI_POLICY.md, ai-policy.md: 3 (9%)</text>
+<rect x="470" y="240" width="16" height="16" rx="2" fill="#2da44e"/>
+<text x="496" y="253" font-size="13" fill="#1f2328">README.md: 1 (3%)</text>
+<rect x="470" y="268" width="16" height="16" rx="2" fill="#7c4a2d"/>
+<text x="496" y="281" font-size="13" fill="#1f2328">AUTHORING_GUIDELINES.md: 1 (3%)</text>
+<text x="24" y="482" font-size="11" fill="#656d76">Colors match the file-name pie chart in the project cohorts report where the same file appears.</text>
+<text x="24" y="500" font-size="11" fill="#656d76">SECURITY.md: 5 projects. Four have no contributor-facing AI rule (security reports only); type-fest also has a contributing guide.</text>
+<text x="24" y="518" font-size="11" fill="#656d76">Counts describe the documents reviewed; they do not establish that other project policies do not exist.</text>
+</svg>
