@@ -1,4 +1,4 @@
-﻿# AI policy coverage: 169 projects
+# AI policy coverage: 169 projects
 
 Part of the [project cohorts index](../README.md).
 
@@ -188,7 +188,7 @@ See the [79 code-contribution reports classified as banned](CODE-CONTRIBUTION-BA
 
 ### Policy changes over time
 
-[![Timeline of 28 policy revisions across 21 projects; opens the linked report.](images/2026-10-23/policy-change.svg)](policy-change-2026-10-23.md)
+[![Timeline of 52 policy revisions across 29 projects; opens the linked report.](images/2026-10-23/policy-change-rows.svg)](policy-change-2026-10-23.md)
 
 
 ## Included in Policy
