@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="376" viewBox="0 0 1000 376" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">
+<title>Each tightening and loosening revision by date</title>
+<desc>Scatter chart of 31 AI-policy revisions from May 2025 to October 2026. Each red dot above the axis is one tightening revision and each blue dot below the axis is one loosening revision; dots stack when revisions are close in time. Hovering a dot shows the project and change.</desc>
+<rect width="1000" height="376" fill="#fff"/>
+<text x="28" y="34" font-size="20" font-weight="600" fill="#1f2328">Tightening and loosening revisions, by date</text>
+<text x="28" y="56" font-size="12" fill="#656d76">Each dot is one revision: 19 tightening above the line, 12 loosening below it, across 29 sampled projects. Dots stack when revisions fall close together in time. Hover a dot for the project and change.</text>
+<circle cx="36" cy="86" r="6.5" fill="#c0392b"/><text x="50" y="90" font-size="12" fill="#1f2328">Tightening <tspan fill="#656d76">19</tspan></text>
+<circle cx="170" cy="86" r="6.5" fill="#2166ac"/><text x="184" y="90" font-size="12" fill="#1f2328">Loosening <tspan fill="#656d76">12</tspan></text>
+<line x1="90" y1="104" x2="90" y2="286" stroke="#eef1f4"/>
+<text x="90" y="304" font-size="11" fill="#656d76" text-anchor="middle">May ’25</text>
+<line x1="138" y1="104" x2="138" y2="286" stroke="#eef1f4"/>
+<line x1="185" y1="104" x2="185" y2="286" stroke="#eef1f4"/>
+<line x1="233" y1="104" x2="233" y2="286" stroke="#eef1f4"/>
+<line x1="281" y1="104" x2="281" y2="286" stroke="#eef1f4"/>
+<text x="281" y="304" font-size="11" fill="#656d76" text-anchor="middle">Sep ’25</text>
+<line x1="327" y1="104" x2="327" y2="286" stroke="#eef1f4"/>
+<line x1="375" y1="104" x2="375" y2="286" stroke="#eef1f4"/>
+<line x1="422" y1="104" x2="422" y2="286" stroke="#eef1f4"/>
+<line x1="470" y1="104" x2="470" y2="286" stroke="#eef1f4"/>
+<text x="470" y="304" font-size="11" fill="#656d76" text-anchor="middle">Jan ’26</text>
+<line x1="518" y1="104" x2="518" y2="286" stroke="#eef1f4"/>
+<line x1="562" y1="104" x2="562" y2="286" stroke="#eef1f4"/>
+<line x1="610" y1="104" x2="610" y2="286" stroke="#eef1f4"/>
+<line x1="656" y1="104" x2="656" y2="286" stroke="#eef1f4"/>
+<text x="656" y="304" font-size="11" fill="#656d76" text-anchor="middle">May ’26</text>
+<line x1="704" y1="104" x2="704" y2="286" stroke="#eef1f4"/>
+<line x1="751" y1="104" x2="751" y2="286" stroke="#eef1f4"/>
+<line x1="799" y1="104" x2="799" y2="286" stroke="#eef1f4"/>
+<line x1="847" y1="104" x2="847" y2="286" stroke="#eef1f4"/>
+<text x="847" y="304" font-size="11" fill="#656d76" text-anchor="middle">Sep ’26</text>
+<line x1="893" y1="104" x2="893" y2="286" stroke="#eef1f4"/>
+<line x1="80" y1="198" x2="956" y2="198" stroke="#8c959f" stroke-width="2"/>
+<text x="72" y="186" font-size="11" font-weight="700" fill="#c0392b" text-anchor="end">TIGHTENING</text>
+<text x="72" y="220" font-size="11" font-weight="700" fill="#2166ac" text-anchor="end">LOOSENING</text>
+<circle cx="406" cy="184" r="6.5" fill="#c0392b" stroke="#fff" stroke-width="1.5"><title>2025-11-21 · Zulip: accuracy of LLM-assisted communication required</title></circle>
+<circle cx="481" cy="184" r="6.5" fill="#c0392b" stroke="#fff" stroke-width="1.5"><title>2026-01-08 · Django: required AI disclosure and verification</title></circle>
+<circle cx="531" cy="184" r="6.5" fill="#c0392b" stroke="#fff" stroke-width="1.5"><title>2026-02-09 · Zulip: AI-generated messages banned</title></circle>
+<circle cx="563" cy="184" r="6.5" fill="#c0392b" stroke="#fff" stroke-width="1.5"><title>2026-03-02 · astropy: reviewer engagement required</title></circle>
+<circle cx="568" cy="212" r="6.5" fill="#2166ac" stroke="#fff" stroke-width="1.5"><title>2026-03-05 · LLVM: exception for approved Bazel fixer bot</title></circle>
+<circle cx="630" cy="212" r="6.5" fill="#2166ac" stroke="#fff" stroke-width="1.5"><title>2026-04-14 · scikit-image: policy addition reverted</title></circle>
+<circle cx="641" cy="184" r="6.5" fill="#c0392b" stroke="#fff" stroke-width="1.5"><title>2026-04-21 · Godot: AI agents must self-disclose</title></circle>
+<circle cx="641" cy="168" r="6.5" fill="#c0392b" stroke="#fff" stroke-width="1.5"><title>2026-04-21 · scikit-image: AI policy wording restored</title></circle>
+<circle cx="683" cy="184" r="6.5" fill="#c0392b" stroke="#fff" stroke-width="1.5"><title>2026-05-18 · GDAL: use of LLM tools limited drastically</title></circle>
+<circle cx="729" cy="212" r="6.5" fill="#2166ac" stroke="#fff" stroke-width="1.5"><title>2026-06-17 · Rust: exceptions to a restriction</title></circle>
+<circle cx="737" cy="228" r="6.5" fill="#2166ac" stroke="#fff" stroke-width="1.5"><title>2026-06-22 · Rust: meeting use and LLM-process restrictions removed</title></circle>
+<circle cx="780" cy="184" r="6.5" fill="#c0392b" stroke="#fff" stroke-width="1.5"><title>2026-07-20 · astropy: disclosure requirement added</title></circle>
+<circle cx="782" cy="168" r="6.5" fill="#c0392b" stroke="#fff" stroke-width="1.5"><title>2026-07-21 · astropy: autonomous agents not accepted</title></circle>
+<circle cx="785" cy="152" r="6.5" fill="#c0392b" stroke="#fff" stroke-width="1.5"><title>2026-07-23 · pytest: sharpened on unattended contributions</title></circle>
+<circle cx="785" cy="212" r="6.5" fill="#2166ac" stroke="#fff" stroke-width="1.5"><title>2026-07-23 · pytest: softened tone, kept enforcement</title></circle>
+<circle cx="786" cy="228" r="6.5" fill="#2166ac" stroke="#fff" stroke-width="1.5"><title>2026-07-24 · astropy: disclosure narrowed to substantive use</title></circle>
+<circle cx="794" cy="136" r="6.5" fill="#c0392b" stroke="#fff" stroke-width="1.5"><title>2026-07-29 · Homebrew: AI authorship disallowed and human review responses required</title></circle>
+<circle cx="802" cy="212" r="6.5" fill="#2166ac" stroke="#fff" stroke-width="1.5"><title>2026-08-03 · Linux kernel: attribution requirement simplified</title></circle>
+<circle cx="804" cy="184" r="6.5" fill="#c0392b" stroke="#fff" stroke-width="1.5"><title>2026-08-04 · Linux kernel: bug-finding procedure added</title></circle>
+<circle cx="819" cy="184" r="6.5" fill="#c0392b" stroke="#fff" stroke-width="1.5"><title>2026-08-14 · pandas: human-written communications and specific disclosure required</title></circle>
+<circle cx="836" cy="212" r="6.5" fill="#2166ac" stroke="#fff" stroke-width="1.5"><title>2026-08-25 · Kornia: simplified; AI tools welcome</title></circle>
+<circle cx="883" cy="184" r="6.5" fill="#c0392b" stroke="#fff" stroke-width="1.5"><title>2026-09-24 · QGIS: QEP 428: no AI contributions</title></circle>
+<circle cx="892" cy="212" r="6.5" fill="#2166ac" stroke="#fff" stroke-width="1.5"><title>2026-09-30 · Redox OS: adopted Pop policy; tools allowed for research</title></circle>
+<circle cx="893" cy="168" r="6.5" fill="#c0392b" stroke="#fff" stroke-width="1.5"><title>2026-10-01 · Redox OS: returned to prior ban wording</title></circle>
+<circle cx="895" cy="152" r="6.5" fill="#c0392b" stroke="#fff" stroke-width="1.5"><title>2026-10-02 · mise: restricted AI replies</title></circle>
+<circle cx="903" cy="228" r="6.5" fill="#2166ac" stroke="#fff" stroke-width="1.5"><title>2026-10-07 · PyTorch: relaxed content-labeling format</title></circle>
+<circle cx="914" cy="212" r="6.5" fill="#2166ac" stroke="#fff" stroke-width="1.5"><title>2026-10-14 · Linux kernel: attribution requirement removed</title></circle>
+<circle cx="915" cy="184" r="6.5" fill="#c0392b" stroke="#fff" stroke-width="1.5"><title>2026-10-15 · Meilisearch: contribution rule changed from disclosure to exclusion</title></circle>
+<circle cx="915" cy="244" r="6.5" fill="#2166ac" stroke="#fff" stroke-width="1.5"><title>2026-10-15 · XMTP: ban replaced with accountability requirements</title></circle>
+<circle cx="917" cy="168" r="6.5" fill="#c0392b" stroke="#fff" stroke-width="1.5"><title>2026-10-16 · Cilium: AI declaration added to issue template</title></circle>
+<circle cx="921" cy="152" r="6.5" fill="#c0392b" stroke="#fff" stroke-width="1.5"><title>2026-10-19 · Python-Markdown: expanded disclosure and template enforcement</title></circle>
+<text x="28" y="342" font-size="11" fill="#656d76">Not shown: 21 revisions that neither tighten nor loosen (first recorded policies, mixed changes, wording-only clarifications).</text>
+<text x="28" y="360" font-size="11" fill="#656d76">Direction was assigned by the report author from the linked diffs and has not been independently validated. Projects were chosen for having revision histories, so this describes the sample, not all projects.</text>
+</svg>
