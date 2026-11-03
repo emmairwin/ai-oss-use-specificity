@@ -6,9 +6,17 @@ The labels “tightening” and “loosening” are interpretive and open to deb
 
 The 52 revisions include 47 that introduce or revise substantive policy provisions: 11 first-observed baselines and 36 subsequent substantive rule revisions. The remaining 5 clarify, operationalize, or reorganize existing guidance without establishing a substantive rule change. A substantive provision alters a permission, prohibition, obligation, exception, or enforcement rule. Baselines are separated from subsequent revisions because the sample does not establish a prior AI-specific rule for comparison, not because the baseline provisions are non-substantive.
 
-![Timeline of 52 policy revisions across 29 projects from May 2025 to October 2026. Each project has its own row on a shared date axis, and each dot is one revision. Within a row, dots above the row line indicate tightening, dots below indicate loosening, and dots on the line indicate a new policy baseline, mixed change, clarification, or no established AI-policy direction. Colored lines connect revisions of projects with more than one revision; gray rows are projects with a single revision. Hovering a dot shows its description, which is also listed below with a source link. Vertical distance is qualitative, not a measured score.](images/2026-10-23/policy-change-rows.svg)
+![Line chart of cumulative policy revisions in 29 sampled projects from May 2025 to October 2026. Tightening rises to 19 revisions and loosening to 12. Both lines rise throughout and neither takes off; tightening stays ahead. 21 other revisions (first recorded policies, mixed changes and wording-only clarifications) are not plotted.](images/2026-10-23/policy-change-cumulative.svg)
 
-The chart gives each project its own row, so you can follow one project's changes from left to right. The list below, in date order, gives the change descriptions and clickable source links.
+The chart counts tightening and loosening revisions over time, as running totals. The list below, in date order, gives each change description with a clickable source diff.
+
+### What this can and cannot tell us
+
+- **No clear trend.** Of 52 revisions across 29 projects, 19 tightened and 12 loosened an existing policy; 21 did neither (11 first recorded policies, 5 mixed changes, 5 wording-only clarifications). By project, 16 tightened, 10 loosened and 5 did both. The gap between tightening and loosening is within what chance would produce (two-sided sign test p≈0.28).
+- **Not a random sample.** Projects were chosen because they had revision histories, so this describes the sample, not all projects. Counts rising over time can partly reflect how the sample was built.
+- **Labels are the report author’s.** Direction was assigned from the linked diffs and has not been independently validated.
+- **Dates are when a change was recorded**, not necessarily when it was decided or adopted, and a “first recorded policy” is the first one seen in a project’s history, not necessarily its first ever.
+- **Revisions are not independent.** A few projects account for several revisions each, and each two-month window has only a handful.
 
 ## List of changes by 'diff' 
 
