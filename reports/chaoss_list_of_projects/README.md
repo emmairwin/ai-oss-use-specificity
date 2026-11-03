@@ -190,6 +190,8 @@ See the [79 code-contribution reports classified as banned](CODE-CONTRIBUTION-BA
 
 [![Line chart of cumulative policy revisions in 29 sampled projects from May 2025 to October 2026. Tightening rises to 19 revisions and loosening to 12. Both lines rise throughout and neither takes off; tightening stays ahead. 21 other revisions (first recorded policies, mixed changes and wording-only clarifications) are not plotted.](images/2026-10-23/policy-change-cumulative.svg)](policy-change-2026-10-23.md)
 
+[![Timeline of 52 policy revisions across 29 projects, one row per project; opens the linked report.](images/2026-10-23/policy-change-rows.svg)](policy-change-2026-10-23.md)
+
 
 ## Included in Policy
 

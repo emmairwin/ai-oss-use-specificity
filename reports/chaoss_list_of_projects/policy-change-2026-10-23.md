@@ -8,7 +8,9 @@ The 52 revisions include 47 that introduce or revise substantive policy provisio
 
 ![Line chart of cumulative policy revisions in 29 sampled projects from May 2025 to October 2026. Tightening rises to 19 revisions and loosening to 12. Both lines rise throughout and neither takes off; tightening stays ahead. 21 other revisions (first recorded policies, mixed changes and wording-only clarifications) are not plotted.](images/2026-10-23/policy-change-cumulative.svg)
 
-The chart counts tightening and loosening revisions over time, as running totals. The list below, in date order, gives each change description with a clickable source diff.
+The first chart counts tightening and loosening revisions over time, as running totals. The second gives each project its own row on a shared date axis, so you can follow one project's changes from left to right; dots above a row line indicate tightening, dots below indicate loosening, and dots on the line indicate a baseline, mixed change, clarification, or no established direction. Vertical distance is qualitative, not a measured score. The list below, in date order, gives each change description with a clickable source diff.
+
+![Timeline of 52 policy revisions across 29 projects from May 2025 to October 2026. Each project has its own row on a shared date axis, and each dot is one revision. Dots above the row line indicate tightening, dots below indicate loosening, and dots on the line indicate a new policy baseline, mixed change, clarification, or no established AI-policy direction. Colored lines connect revisions of projects with more than one revision; gray rows are projects with a single revision.](images/2026-10-23/policy-change-rows.svg)
 
 ### What this can and cannot tell us
 
