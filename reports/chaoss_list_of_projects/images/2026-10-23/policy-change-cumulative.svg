@@ -1,9 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1000" height="585" viewBox="0 0 1000 585" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">
 <title>AI policy changes go in both directions, with no clear trend and slightly more tightening</title>
-<desc>Line chart of cumulative AI-policy revisions from May 2025 to October 2026 in 29 sampled projects. By the end: 19 tightening and 12 loosening revisions.</desc>
+<desc>Line chart of cumulative AI-policy revisions from May 2025 to October 2026 in 29 sampled projects. By the end: 20 tightening and 12 loosening revisions.</desc>
 <rect width="1000" height="585" fill="#fff"/>
 <text x="28" y="34" font-size="20" font-weight="600" fill="#1f2328">AI policy changes go in both directions, with no clear trend and slightly more tightening</text>
-<text x="28" y="56" font-size="12" fill="#656d76">Cumulative tightening and loosening revisions across 29 sampled projects. 16 projects tightened, 10 loosened, 5 did both.</text>
+<text x="28" y="56" font-size="12" fill="#656d76">Cumulative tightening and loosening revisions across 29 sampled projects. 17 projects tightened, 10 loosened, 5 did both.</text>
 <line x1="72" y1="450" x2="808" y2="450" stroke="#8c959f" stroke-width="2"/>
 <text x="64" y="454" font-size="11" fill="#656d76" text-anchor="end">0</text>
 <line x1="72" y1="365" x2="808" y2="365" stroke="#eaeef2" stroke-width="1"/>
@@ -25,16 +25,16 @@
 <text x="710" y="468" font-size="11" fill="#656d76" text-anchor="middle">Jul–Aug</text>
 <text x="800" y="468" font-size="11" fill="#656d76" text-anchor="middle">Sep–Oct</text>
 <text x="440" y="488" font-size="11" fill="#656d76" text-anchor="middle">end of two-month window</text>
-<path d="M80 450 L170 450 L260 450 L350 433 L440 399 L530 348 L620 331 L710 229 L800 127" fill="none" stroke="#c0392b" stroke-width="3" stroke-linejoin="round"/>
+<path d="M80 450 L170 450 L260 450 L350 416 L440 382 L530 331 L620 314 L710 212 L800 110" fill="none" stroke="#c0392b" stroke-width="3" stroke-linejoin="round"/>
 <circle cx="80" cy="450" r="3.5" fill="#c0392b" stroke="#fff" stroke-width="1.5"/>
 <circle cx="170" cy="450" r="3.5" fill="#c0392b" stroke="#fff" stroke-width="1.5"/>
 <circle cx="260" cy="450" r="3.5" fill="#c0392b" stroke="#fff" stroke-width="1.5"/>
-<circle cx="350" cy="433" r="3.5" fill="#c0392b" stroke="#fff" stroke-width="1.5"/>
-<circle cx="440" cy="399" r="3.5" fill="#c0392b" stroke="#fff" stroke-width="1.5"/>
-<circle cx="530" cy="348" r="3.5" fill="#c0392b" stroke="#fff" stroke-width="1.5"/>
-<circle cx="620" cy="331" r="3.5" fill="#c0392b" stroke="#fff" stroke-width="1.5"/>
-<circle cx="710" cy="229" r="3.5" fill="#c0392b" stroke="#fff" stroke-width="1.5"/>
-<circle cx="800" cy="127" r="3.5" fill="#c0392b" stroke="#fff" stroke-width="1.5"/>
+<circle cx="350" cy="416" r="3.5" fill="#c0392b" stroke="#fff" stroke-width="1.5"/>
+<circle cx="440" cy="382" r="3.5" fill="#c0392b" stroke="#fff" stroke-width="1.5"/>
+<circle cx="530" cy="331" r="3.5" fill="#c0392b" stroke="#fff" stroke-width="1.5"/>
+<circle cx="620" cy="314" r="3.5" fill="#c0392b" stroke="#fff" stroke-width="1.5"/>
+<circle cx="710" cy="212" r="3.5" fill="#c0392b" stroke="#fff" stroke-width="1.5"/>
+<circle cx="800" cy="110" r="3.5" fill="#c0392b" stroke="#fff" stroke-width="1.5"/>
 <path d="M80 450 L170 450 L260 450 L350 450 L440 450 L530 416 L620 382 L710 314 L800 246" fill="none" stroke="#2166ac" stroke-width="3" stroke-linejoin="round"/>
 <circle cx="80" cy="450" r="3.5" fill="#2166ac" stroke="#fff" stroke-width="1.5"/>
 <circle cx="170" cy="450" r="3.5" fill="#2166ac" stroke="#fff" stroke-width="1.5"/>
@@ -45,9 +45,9 @@
 <circle cx="620" cy="382" r="3.5" fill="#2166ac" stroke="#fff" stroke-width="1.5"/>
 <circle cx="710" cy="314" r="3.5" fill="#2166ac" stroke="#fff" stroke-width="1.5"/>
 <circle cx="800" cy="246" r="3.5" fill="#2166ac" stroke="#fff" stroke-width="1.5"/>
-<text x="816" y="131" font-size="13" font-weight="700" fill="#c0392b">19  Tightening</text>
+<text x="816" y="114" font-size="13" font-weight="700" fill="#c0392b">20  Tightening</text>
 <text x="816" y="250" font-size="13" font-weight="700" fill="#2166ac">12  Loosening</text>
 <text x="28" y="533" font-size="11" fill="#656d76">Each line adds up revisions of one kind, so it can only rise; steeper means more of that kind of change. The last window ends 21 Oct 2026.</text>
-<text x="28" y="551" font-size="11" fill="#656d76">Not shown: 21 revisions that neither tighten nor loosen (first recorded policies, mixed changes, wording-only clarifications).</text>
+<text x="28" y="551" font-size="11" fill="#656d76">Not shown: 20 revisions that neither tighten nor loosen (first recorded policies, mixed changes, wording-only clarifications).</text>
 <text x="28" y="569" font-size="11" fill="#656d76">Direction was assigned by the report author from the linked diffs and has not been independently validated. Projects were chosen for having revision histories, so this describes the sample, not all projects.</text>
 </svg>
